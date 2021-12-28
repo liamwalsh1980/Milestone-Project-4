@@ -38,8 +38,6 @@ em {
     text-transform: uppercase;
     color: #131418;
     font-family: 'Russo One';
-    font-size: 32px;
-    margin-top: 5%;
 }
 
 .main-logo-link {
@@ -47,9 +45,13 @@ em {
 }
 
 .shop-now-button {
-    background: #131418;
+    background: #852C34;
     color: #D6D0CE;
     min-width: 260px;
+    border-color: #131418;
+    border-width: thick;
+    font-weight: bold;
+    font-size: 20px;
     margin-top: 10%;
 }
 
@@ -105,23 +107,13 @@ em {
 }
 
 @media (max-width: 992px) {
-
-    .main-header {
-        margin-top: 25%;
-    }
-
     .shop-now-button {
-        margin-top: 17%;
+        margin-top: 10%;
     }
 }
 
 @media (max-width: 576px) {
-
-    .main-header {
-        margin-top: 50%;
-    }
-
     .shop-now-button {
-        margin-top: 12%;
+        margin-top: 20%;
     }
 }
