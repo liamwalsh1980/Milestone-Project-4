@@ -28,8 +28,9 @@ body {
 
 .main-header {
     text-transform: uppercase;
-    color: #757273;
+    color: #ad1025;
     font-family: 'Russo One';
+    font-size: 32px;
 }
 
 .main-logo-link {
@@ -53,8 +54,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #e8d88d;
-    color: #131418;
+    color: #ad1025;
 }
 
 .text-black {
