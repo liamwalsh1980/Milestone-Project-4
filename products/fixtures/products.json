@@ -1,0 +1,660 @@
+
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "name": "Carrera Virtuoso Mens Road Bike",
+            "description": "Shimano Claris 2x8 (16 speed), Mechanical Disc Brakes with Alloy blades and Hi-tensile steel steerer",
+            "price": 380.00,
+            "category": 1,
+            "rating": 3.3, 
+            "image_url": "https://cdn.media.halfords.com/i/washford/348270?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "1.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+           "name": "Carrera Vanquish Mens Road Bike",
+            "description": "Shimano Claris 2x8 (16 speed), Mechanical Disc Brakes and Full Carbon fork, tapered ",
+            "price": 450.00,
+            "category": 1,
+            "rating": 3.2,
+            "image_url": "https://cdn.media.halfords.com/i/washford/348526?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "2.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "name": "Quella Nero Fixie Bike ",
+            "description": "Hi-Tensile Steel, Dual Pivot Caliper Brakes and Flip/Flop Hub - Switch from Fixed Gear to Single Speed",
+            "price": 379.00,
+            "category": 1,
+            "rating": 3.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/245040?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "3.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "name": "Apollo Paradox Mens Road Bike",
+            "description": "Approximate 12.1kg Weight, Alloy Frame Material and Shimano Tourney 2x7 thumb shifters",
+            "price": 230.00,
+            "category": 1,
+            "rating": 4.1,
+            "image_url": "https://cdn.media.halfords.com/i/washford/601212?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "4.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "name": "Boardman SLR 8.9 Disc Mens Road",
+            "description": "Full Shimano 105 Hydraulic Disc groupset, Lightweight carbon frame and fork with Amazing gear range from 11-30T cassette",
+            "price": 1600.00,
+            "category": 1,
+            "rating": 4.4, 
+            "image_url": "https://cdn.media.halfords.com/i/washford/365622?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "5.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "name": "Boardman SLR 8.6 Mens Road Bike",
+            "description": "Verstaile Shimano Claris 2x8 gearing, Alloy frame and full carbon fork with 25mm puncture resistant tyres",
+            "price": 550.00,
+            "category": 1,
+            "rating": 4.4,
+            "image_url": "https://cdn.media.halfords.com/i/washford/364926?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "6.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "name": "Boardman SLR 8.9 105 Womens Road Bike",
+            "description": "High performance Shimano 105 gears, Lightweight carbon frame and fork with Fade colourway with premium satin finish",
+            "price": 1100.00,
+            "category": 2,
+            "rating": 5.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/365702?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "7.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "name": "Carrera Virtuoso Womens Road Bike",
+            "description": "Shimano Claris 2x8 (16 speed), Mechanical Disc Brakes, Alloy blades and Hi-tensile steel steerer",
+            "price": 380.00,
+            "category": 2,
+            "rating": 4.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/348654?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "8.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "name": "Boardman SLR 9.6 Disc Mens Road Bike",
+            "description": "Boardman C10 carbon frame and fork, Shimano R8000 Ultegra Di2 groupset and Alexrims Carbon Wheelset",
+            "price": 3500.00,
+            "category": 1,
+            "rating": 4.5,
+            "image_url": "https://cdn.media.halfords.com/i/washford/372518?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "9.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "name": "Boardman SLR 8.6 Womens Road Bike",
+            "description": "Verstaile Shimano Claris 2x8 gearing, Alloy frame and full carbon fork and 25mm puncture resistant tyres",
+            "price": 550.00,
+            "category": 2,
+            "rating": 4.5,
+            "image_url": "https://cdn.media.halfords.com/i/washford/365662?w=740&h=555&qlt=default&fmt=auto",
+            "image": "10.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "name": "Boardman SLR 8.9 105 Mens Road Bike",
+            "description": "High performance Shimano 105 gears, Lightweight carbon frame and fork with Fade colourway with premium satin finish",
+            "price": 1100.00,
+            "category": 1,
+            "rating": 4.5,
+            "image_url": "https://cdn.media.halfords.com/i/washford/365462?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "11.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "name": "Boardman SLR 8.8 Mens Road Bike",
+            "description": "Solid and dependable Shimano Tiagra 20 speed, Alloy frame and full carbon fork with 28mm puncture resistant tyres",
+            "price": 800.00,
+            "category": 1,
+            "rating": 3.7,
+            "image_url": "https://cdn.media.halfords.com/i/washford/365406?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "12.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "name": "Carrera Zelos Womens Road Bike",
+            "description": "Shimano Tourney 2x7 (14 speed), Mechanical Disc Brakes and Hi-tensile Steel Forks",
+            "price": 340.00,
+            "category": 2,
+            "rating": 4.2,
+            "image_url": "https://cdn.media.halfords.com/i/washford/348606?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "13.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "name": "Carrera Zelos Mens Road Bike",
+            "description": "Shimano Tourney 2x7 (14 speed), Mechanical Disc Brakes and Hi-tensile Steel Forks",
+            "price": 340.00,
+            "category": 1,
+            "rating": 4.1,
+            "image_url": "https://cdn.media.halfords.com/i/washford/348198?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "14.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "name": "Quella Varsity Cambridge Fixie Bike",
+            "description": "4130 Cro-Mo Frame and Fork, Dual Pivot Caliper Brakes and Flip/Flop Rear Hub",
+            "price": 479.00,
+            "category": 3,
+            "rating": 3.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/491061?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "15.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "name": "Quella Varsity Oxford Fixie Bike",
+            "description": "4130 Cro-Mo Frame and Fork, Dual Pivot Caliper Brakes and Flip/Flop Rear Hub ",
+            "price": 479.00,
+            "category": 3,
+            "rating": 5.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/491111?w=740&h=555&qlt=default&fmt=auto&v=1 ",
+            "image": "16.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "name": "Quella Nero Fixie Bike ",
+            "description": "Hi-Tensile Steel Frame and Fork Materials, Dual Pivot Caliper Brakes and Flip/Flop Hub - Switch from Fixed Gear to Single Speed ",
+            "price": 399.00,
+            "category": 3,
+            "rating": 5.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/537818?w=740&h=555&qlt=default&fmt=auto&v=1 ",
+            "image": "17.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "name": "Apollo Jewel Womens Mountain Bike",
+            "description": "Explore your local tracks and trails with this superb Apollo Jewel Women’s Mountain Bike. Built to last while remaining comfortable, this brilliant women’s mountain bike is ideal for all levels of rider, mixing quality components with affordability.",
+            "price": 185.00,
+            "category": 2,
+            "rating": 3.9,
+            "image_url": "https://cdn.media.halfords.com/i/washford/566361?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "18.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "name": "Pendleton Somerby Hybrid Bike",
+            "description": "The Pendleton Somerby Hybrid Bike is the personification of style coupled with a classic design. The classic step-through frame to make hopping on and off easy, the beautiful Somerby has a sprung leather-style saddle for comfort with 7 speed Shimano gearing to help you up hills",
+            "price": 300.00,
+            "category": 2,
+            "rating": 4.6,
+            "image_url": "https://cdn.media.halfords.com/i/washford/507530?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "19.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "name": "Apollo Jewel Womens Mountain Bike",
+            "description": "Explore your local tracks and trails with this superb Apollo Jewel Women’s Mountain Bike. Built to last while remaining comfortable, this brilliant women’s mountain bike is ideal for all levels of rider, mixing quality components with affordability",
+            "price": 185.00,
+            "category": 2,
+            "rating": 4.3,
+            "image_url": "https://cdn.media.halfords.com/i/washford/566403?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "20.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "name": " Carrera Crossfire 1 Womens Hybrid Bike",
+            "description": " The Carrera Crossfire 1 Womens Hybird Bike is a great all-rounder with the emphasis on a more leisurely ride. It can handle a daily ride but it’s also great for those weekend jaunts. This model features an all-new design with updated geometry, and you’ll feel the benefit of this in the suspension fork that gives added comfort when you’re out on the trail.",
+            "price": 300.00,
+            "category": 2,
+            "rating": 4.4,
+            "image_url": " https://cdn.media.halfords.com/i/washford/346446?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "21.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "name": " Apollo Cafe Womens Hybrid Bike",
+            "description": " Enjoy the great outdoors with the Apollo Cafe Womens Hybrid Bike. the Cafe provides a smooth ride while its 6 speed Shimano gear is great for those rural hills. Coupled with the large 700c wheels it is perfect for all occasions, whether it be a ride through town or a leisurely ride through the park. The Apollo hybrid saddle provides superior comfort when going over bumps or rocky road.",
+            "price": 200.00,
+            "category": 2,
+            "rating": 4.4,
+            "image_url": " https://cdn.media.halfords.com/i/washford/566767?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "22.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "name": " Apollo Spiral Womens Mountain Bike",
+            "description": " The Apollo Spiral Women's Mountain Bike is the ideal ride for people who consider themselves thrill seekers, it has everything you need to enjoy riding on cycle paths or being adventurous and going off-road. Its Shimano 18 speed gears let you fearlessly tackle every hill you encounter and will allow you to race along the flats and out on some trails on the weekend. The alloy/steel frame is complemented by full suspension, which will help to make your journeys smooth. Apollo's women's gel saddle provides superior comfort when thrashing the trails.",
+            "price": 215.00,
+            "category": 2,
+            "rating": 4.3,
+            "image_url": " https://cdn.media.halfords.com/i/washford/566445?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "23.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "name": " Carrera Sulcata 1 Mens Mountain Bike",
+            "description": " The Carrera Sulcata 1 is your partner for the ultimate off-road adventure. Powerful tektro hydraulic disc brakes ensure controlled stopping downhill whilst a 2x10 Shimano drivetrain and lockout fork ensure climbing is just as effortless.",
+            "price": 410.00,
+            "category": 1,
+            "rating": 4.8,
+            "image_url": " https://cdn.media.halfords.com/i/washford/477390?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "24.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "name": " Carrera Karkinos Mens Mountain Bike",
+            "description": " A limited edition for the 2021 Autumn/Winter season, the Carrera Karkinos is almost exactly the same as the UK’s best selling Carrera Vengeance mountain bike. Its Shimano 2x drivetrain keeps gear changes simple with no more gears than you truly need but with great range thanks to a wide range rear cassette. The Disc brakes on the Karkinos give all-weather confidence whilst the capable Suntour XCM fork will not only add comfort but will give extra grip when the going get a bit bumpier.",
+            "price": 345.00,
+            "category": 1,
+            "rating": 5.0,
+            "image_url": " https://cdn.media.halfords.com/i/washford/537950?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "25.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "name": " Carrera Sulcata 3.2 Mens Mountain Bike",
+            "description": " The Carrera Sulcata 3.2 is the perfect companion for trails across the UK and beyond. The bike features powerful Shimano hydraulic brakes and a lightweight Suntour fork complete with lock out ability to help ascend or descend with confidence and ease. With a lightweight alloy frame the Sulcata 3.2 is the ideal blend of stable and low effort. Climbing has never been easier with the smooth shifting Shimano Deore 1x11 drivetrain, with a huge 51T cassette on the back wheel to help chew through the most intimidating climbs.",
+            "price": 525.00,
+            "category": 1,
+            "rating": 5.0,
+            "image_url": " https://cdn.media.halfords.com/i/washford/493206?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "26.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "name": "Apollo Valier Mens Mountain Bike",
+            "description": " The Apollo Valier Men's Mountain Bike will get your blood pumping, with 21 Speed Shimano trigger shift gearing and Apollo front suspension makes sure you can attack those trails at speed, and with mechanical disc brakes and light-alloy wheels, the excitement and fun are backed up by great braking power!",
+            "price": 265.00,
+            "category": 1,
+            "rating": 4.5,
+            "image_url": " https://cdn.media.halfords.com/i/washford/560463?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "27.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "name": " Raleigh Evo Electric Folding Bike",
+            "description": " The Raleigh Evo Electric Folding Bike is the ultimate convenience solution if you are looking for an electric bike that doesn’t take up too much room and is easy to transport. The Evo’s 20” wheels have been carefully selected to offer the perfect balance between practical riding and compact folded size.",
+            "price": 1595.00,
+            "category": 3,
+            "rating": 4.4,
+            "image_url": " https://cdn.media.halfords.com/i/washford/858578?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "28.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "name": " Pendleton Somerby Hybrid Bike",
+            "description": " The Pendleton Somerby Hybrid Bike is the personification of style coupled with a classic design. The classic step-through frame to make hopping on and off easy, the beautiful Somerby has a sprung leather-style saddle for comfort with 7 speed Shimano gearing to help you up hills.",
+            "price": 300.00,
+            "category": 3,
+            "rating": 4.3,
+            "image_url": " https://cdn.media.halfords.com/i/washford/271054?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "29.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "name": " Xiaomi Mi Smart Electric Folding Bike",
+            "description": " The Xiaomi Electric Bike is the perfect commuting companion. With a 208wh battery offering up to 25 miles of power assistance on a single charge, this bike will easily cover the average commute and can re-charge in 3 hours. Equipped with a TTM torque sensor, the bike can sense the thread power of the cyclist and output an appropriate amount of electrical power to assist from the first second, depending on the power mode chosen.",
+            "price": 1099.00,
+            "category": 3,
+            "rating": 3.8,
+            "image_url": " https://cdn.media.halfords.com/i/washford/474350?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "30.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "name": "Voodoo Limba Adventure Bike",
+            "description": " The Voodoo brand was created just over 20 years ago with the simple aim of providing bikes that connect us to the outdoors. That’s why every Voodoo adventure bike is designed to excel both on and off road - whether exploring off the beaten track on gravel trails, heading out on a touring adventure, or simply cruising along smooth tarmac.",
+            "price": 500.00,
+            "category": 1,
+            "rating": 4.0,
+            "image_url": " https://cdn.media.halfords.com/i/washford/452942?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "31.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "name": " Boardman ADV 8.6 Mens Adventure Bike",
+            "description": " The ADV 8.6 is Boardman’s entry level Adventure bike. Retaining many of the amazing features of the outgoing ADV 8.8, its comfortable geometry and go-anywhere design mean you can count on it no matter where you plan to ride.",
+            "price": 750.00,
+            "category": 1,
+            "rating": 4.1,
+            "image_url": " https://cdn.media.halfords.com/i/washford/365774?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "32.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "name": " Boardman ADV 8.9E Mens Adventure Electric Bike",
+            "description": " Whether you want to ride further or faster, or just want a bit of help up the hills, the Boardman ADV 8.9E Men’s Adventure Electric Bike 2021 is a great option. Designed to offer maximum versatility for UK riding adventures, the Boardman ADV 8.9E Men’s Adventure Electric Bike can turn its hand to almost anything, thanks to its perfect blend of road bike speed with a more relaxed position, and off-road focussed geometry.",
+            "price": 2500.00,
+            "category": 1,
+            "rating": 3.7,
+            "image_url": " https://cdn.media.halfords.com/i/washford/439294?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "33.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "name": " Boardman CXR 8.9 Cyclocross Bike",
+            "description": " Unleash your inner racer with the Boardman CXR 8.9 Cyclocross Bike.  The durable aluminium CXR frame has an aggressive geometry and is paired with full carbon forks to save weight and help you get up to race speed. Sram Apex 1x11 gearing system is low maintenance and ready for the muddiest of terrains and Sram Apex hydraulic disc brakes will also perform well when you get to those tricky corners and descents. Lightweight Boardman wheels come here with the credible Donnelly Crusade PDX tyres as standard so you’ll gain plenty of kudos from other cross racers.",
+            "price": 1100.00,
+            "category": 1,
+            "rating": 4.6,
+            "image_url": " https://cdn.media.halfords.com/i/washford/528981?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "34.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "name": " Boardman ADV 8.9 Mens Adventure Bike",
+            "description": " The Boardman ADV 8.9 takes the previous generation’s top model and turns it up a notch to ensure that it really lives up to the Adventure name. Whether you’re commuting or flying through forest trails the 8.9 is a performer that’s thrilling to ride.",
+            "price": 1100.00,
+            "category": 1,
+            "rating": 4.7,
+            "image_url": " https://cdn.media.halfords.com/i/washford/389606?w=740&h=555&qlt=default&fmt=auto",
+            "image": "35.jpg"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "name": " Boardman ADV 9.0 Mens Adventure Bike",
+            "description": " The 2021 Boardman ADV 9.0 Adventure Bike Carbon has been designed to excel on the UK’s network of bridleways, fire roads and towpaths, while still making rapid progress on tarmac too. Carefully considered design combined with Boardman’s high-modulus C10 Carbon has yielded a frame tough enough for rough rides, but with a painted weight of 990g including all frame hardware. Excellent ride comfort is achieved with bow-curve seat stays and seat tube cut out allowing movement of the rear axle and seatpost, absorbing impacts and vibration.",
+            "price": 1800.00,
+            "category": 1,
+            "rating": 5.0,
+            "image_url": " https://cdn.media.halfords.com/i/washford/426982?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "36.jpg"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.product",
+        "fields": {
+            "name": " Boardman ADV 8.6 Womens Adventure Bike",
+            "description": " The ADV 8.6 is Boardman’s entry level Adventure bike. Retaining many of the amazing features of the outgoing ADV 8.8, its comfortable geometry and go-anywhere design mean you can count on it no matter where you plan to ride.",
+            "price": 750.00,
+            "category": 2,
+            "rating": 1.0,
+            "image_url": " https://cdn.media.halfords.com/i/washford/365854?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "37.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.product",
+        "fields": {
+            "name": "Lazer Compact Helmet Flash Titanium",
+            "description": "Style and performance on a budget, Turnfit TS plus adjustment: simply turn the dial at the rear of the helmet for a great fit, In-mould construction, 20 cooling vents with a weight of 325g",
+            "price": 30.00,
+            "category": 4,
+            "rating": 4.8,
+            "image_url": "https://cdn.media.halfords.com/i/washford/134054?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "38.jpg"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.product",
+        "fields": {
+            "name": "HardnutZ High Vis Pink Helmet",
+            "description": "Lightweight material with PC outer shell and inner EPS, Dial fit adjuster for a comfortable fit, 19 vents for great ventilation and 13 silver reflective panels",
+            "price": 40.00,
+            "category": 4,
+            "rating": 4.9,
+            "image_url": "https://cdn.media.halfords.com/i/washford/334836?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "39.jpg"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.product",
+        "fields": {
+            "name": "ABUS Urban-I 3.0 Helmet",
+            "description": "In-Mold for a durable connection with the outer shell with shock-absorbing helmet material (EPS), High visibility due to reflectors, Foamed-in fly net, Ponytail compatibility: Perfect fit for people with long hair, Full-ring: Adjustable ring connected to adjustment system enclosing all of the head, Excellent ventilation with 12 air inlets and 5 air outlets and Zoom Ace Urban: Finely adjustable adjustment system with handy adjustment wheel for customisable fit",
+            "price": 68.00,
+            "category": 4,
+            "rating": 5.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/377918?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "40.jpg"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.product",
+        "fields": {
+            "name": "ABUS Helmet Moventor Helmet",
+            "description": " Ponytail compatibility: Helmet well suited for braided hairstyles, ActiCage: Structural reinforcement integrated in the EPS to optimise stability, Zoom Ace: Fine-adjustable adjustment system with non-slip adjustment wheel for individual fit, In-Mold for a durable connection with the outer shell with shock-absorbing helmet material (EPS) and Good ventilation with 5 air inlets and 7 air outlets connected with flow channels",
+            "price": 60.00,
+            "category": 4,
+            "rating": 5.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/206670?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "41.jpg"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.product",
+        "fields": {
+            "name": "Limar Air Master Helmet",
+            "description": "Triple Shell In Mould construction, EPS interior protection, 15 vents and Standard clip closure system",
+            "price": 130.00,
+            "category": 4,
+            "rating": 4.0,
+            "image_url": "https://cdn.media.halfords.com/i/washford/186014?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "42.jpg" 
+        }
+    },
+    {
+        "pk": 43,
+        "model": "products.product",
+        "fields": {
+            "name": "Zefal Profil Max FP20 Track Pump",
+            "description": "Z-Switch System: Easy change from Presta to Schrader or Dunlop via a simple switch, Wide Guage: Precise inflation via a highly visible gauge, Steel Base: Better stability and Ball and Bladder heads",
+            "price": 25.00,
+            "category": 5,
+            "rating": 4.7,
+            "image_url": "https://cdn.media.halfords.com/i/washford/439646?w=740&h=555&qlt=default&fmt=auto",
+            "image": "43.jpg"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "products.product",
+        "fields": {
+            "name": "Elite Corsa Bio Bottle 750ml",
+            "description": "Push-pull valve in soft rubber for easier opening and closing while riding, Food-grade squeezable polyethylene, Screw opening for cleaning and filling, Safety fit opening to minimise hindrance in case of accidental impact with the wheels and 750ml capacity",
+            "price": 6.00,
+            "category": 5,
+            "rating": 5.0,
+            "image_url": " https://cdn.media.halfords.com/i/washford/465422?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "44.jpg"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "products.product",
+        "fields": {
+            "name": "Kryptolok Standard U-Lock With 4 Foot Kryptoflex Cable Sold Secure",
+            "description": "The Kryptonite KryptoLok D-Lock with 4 Foot Kryptoflex Cable offers the complete bike lock solution! You can use the 4 foot cable to secure the front wheel or your accessories, whilst the D-Lock secures the frame. The 13mm hardened performance steel shackle resists against cutting and leverage attacks, whilst the new patent pending hardened double deadbolt design gives additional protection against twist attacks. The high security disc-style cylinder is pick and drill resistant & it also comes with anti-rattle bumpers to reduce noise whilst you're out and about. It includes a new dust cover and a Transit FlexFrame-U transportation system which makes it easy to carry around",
+            "price": 38.00,
+            "category": 5,
+            "rating": 4.5,
+            "image_url": "https://cdn.media.halfords.com/i/washford/580651?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "45.jpg"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "products.product",
+        "fields": {
+            "name": "SKS Beavertail XL Mudguard Set",
+            "description": "The SKS Beavertail XL Mudguard Set is an all-round clip-on mudguard with an innovative design. It features robust steel brackets for safe and easy mounting and has optimised dirt protection. Made from shock-resistant plastic, the Beavertail XL mudguards are durable and will last daily exposure and wear and tear. Weighing just 300g, you’ll barely notice it. These guards are ideal for commuters who want to stay dry and clean.",
+            "price": 20.00,
+            "category": 5,
+            "rating": 4.1,
+            "image_url": "https://cdn.media.halfords.com/i/washford/118046?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "46.jpg"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "products.product",
+        "fields": {
+            "name": "Elite 3c Water Bottle Cage",
+            "description": "Being able to fit on most bike frames, the Elite 3c Water Bottle Cage is a handy way to hold your water bottle for when you need it the most. Fits most standard water bottles and bike frames.",
+            "price": 8.00,
+            "category": 5,
+            "rating": 4.8,
+            "image_url": "https://cdn.media.halfords.com/i/washford/695858?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "47.jpg"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "products.product",
+        "fields": {
+            "name": "Ridge Thermal Gel Gloves Fluro",
+            "description": "Water resistant and windproof fabric, Fluro fabric and reflective trims for visibility day and night, Silicone palm print for handlebar control, Gel padding for comfort and Perspiration thumb wipe",
+            "price": 18.00,
+            "category": 5,
+            "rating": 4.5,
+            "image_url": "https://cdn.media.halfords.com/i/washford/283246?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "48.jpg"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "products.product",
+        "fields": {
+            "name": "Ridge Unisex Waterproof Jacket - Fluorescent",
+            "description": "Whether for leisure, fitness or commuting this Ridge Unisex Waterproof Jacket - Fluorescent Yellow with removeable hood is perfect for on and off the bike.  A rear zipped pocket is perfect for keeping your essentials safe. The bright colour and reflective details are great for improved visibility and will help keep you safe on the road.",
+            "price": 25.00,
+            "category": 5,
+            "rating": 4.3,
+            "image_url": "https://cdn.media.halfords.com/i/washford/153262?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "49.jpg"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "products.product",
+        "fields": {
+            "name": " Cateye EL135/LD155 Bike Light Set",
+            "description": " The Cateye EL135/LD155 Set is an absolute must have for all of those who appreciate safety and they love a good hard-working light. Stylish, hassle-free to fit and with 3 different modes available, you are set for any ride.",
+            "price": 25.00,
+            "category": 5,
+            "rating": 4.5,
+            "image_url": " https://cdn.media.halfords.com/i/washford/698583?w=740&h=555&qlt=default&fmt=auto&v=1",
+            "image": "50.jpg"
+        }
+    }
+] 
+
+
+
+
+
+
+
