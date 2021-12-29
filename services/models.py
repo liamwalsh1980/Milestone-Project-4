@@ -2,6 +2,10 @@ from django.db import models
 
 
 class ServiceCategory(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Service Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
