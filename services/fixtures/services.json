@@ -1,0 +1,38 @@
+[
+    {
+        "sk": 1,
+        "model": "services.service",
+        "fields": {
+            "name": "Professional cleaning service",
+            "description": "Get on the road quicker by booking a cleaning service for your bike. Book a date and time thats suitable to bring your bike in for a clean",
+            "category": 1,
+            "rating": 5.0, 
+            "image_url": "https://i1.adis.ws/i/washford/haluk-clp-cycle-care-services-newbike-icon",
+            "image": "service_1.jpg"
+        }
+    },
+    {
+        "sk": 2,
+        "model": "services.service",
+        "fields": {
+            "name": "Annual maintenance service",
+            "description": "Let the experts check your bike over and make sure its safe to ride. Book a date and time thats suitable to bring your bike in for a service",
+            "category": 1,
+            "rating": 5.0, 
+            "image_url": "https://i1.adis.ws/i/washford/haluk-clp-cycle-care-services-renewingbike-icon",
+            "image": "service_2.jpg"
+        }
+    },
+    {
+        "sk": 3,
+        "model": "services.service",
+        "fields": {
+            "name": "Sell your bike service",
+            "description": "Sell your bike and put what its worth towards a new one. Book a date and time thats suitable to bring your bike in for a free appraisal",
+            "category": 1,
+            "rating": 5.0, 
+            "image_url": "https://i1.adis.ws/i/washford/haluk-clp-cycle-care-services-oldbike-icon",
+            "image": "1.jpg"
+        }
+    }
+]

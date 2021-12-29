@@ -2,7 +2,7 @@
     { 
         "pk": 1, 
         "model": "products.category", 
-        "fields": { 
+        "fields": {
             "name": "mens_bikes", 
             "friendly_name": "Mens Bikes" 
         } 

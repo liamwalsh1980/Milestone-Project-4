@@ -1,0 +1,10 @@
+[
+    { 
+        "sk": 1, 
+        "model": "services.servicecategory", 
+        "fields": { 
+            "name": "bike_services", 
+            "friendly_name": "Bike Services" 
+        } 
+    }
+]
