@@ -3,5 +3,5 @@ from .import views
 
 urlpatterns = [
     # Route URL
-    path('', views.index, name='home')
+    path('', views.all_services, name='services')
 ]
