@@ -104,6 +104,10 @@ em:hover,
 	z-index: -1;
 }
 
+.service-header {
+    font-size: 28px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
