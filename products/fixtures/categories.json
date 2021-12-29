@@ -19,7 +19,7 @@
         "pk": 3, 
         "model": "products.category", 
         "fields": { 
-            "name": "urban", 
+            "name": "urban_bikes", 
             "friendly_name": "Urban Bikes" 
         } 
     }, 
