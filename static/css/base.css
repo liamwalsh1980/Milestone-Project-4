@@ -39,6 +39,12 @@ em:hover,
     font-family: 'Russo One';
 }
 
+.sub-header {
+    text-transform: uppercase;
+    font-family: 'Russo One';
+    color: #852C34;
+}
+
 .main-header {
     text-transform: uppercase;
     color: #131418;
@@ -86,6 +92,16 @@ em:hover,
 .banner {
     color: #D6D0CE;
     background-color: #131418;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 /* -------------------------------- Media Queries */
