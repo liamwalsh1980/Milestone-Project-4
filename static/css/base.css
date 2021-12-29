@@ -21,6 +21,11 @@ em {
     color: #852C34;
 }
 
+em:hover,
+.fa-biking:hover {
+    color: #fadf4b;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -51,7 +56,7 @@ em {
     border-color: #131418;
     border-width: thick;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 10%;
 }
 
@@ -67,6 +72,7 @@ em {
 .btn-black:active,
 .btn-black:focus {
     color: #fadf4b;
+    background-color: #757273;
 }
 
 .text-black {
@@ -78,7 +84,7 @@ em {
 }
 
 .banner {
-    color: #852C34;
+    color: #D6D0CE;
     background-color: #131418;
 }
 
