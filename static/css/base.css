@@ -163,6 +163,14 @@ em:hover,
     border-top: #131418 3px solid;
   }
 
+.social-media-icons {
+    color: #131418;
+}
+
+.unordered-list-footer {
+    display: inline;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
