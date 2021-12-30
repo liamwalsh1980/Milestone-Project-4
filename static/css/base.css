@@ -66,6 +66,16 @@ em:hover,
     margin-top: 10%;
 }
 
+.book-now-button {
+    background: #852C34;
+    color: #D6D0CE;
+    min-width: 260px;
+    border-color: #131418;
+    border-width: thick;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .btn-black {
     background: #131418;
     color: #D6D0CE;
@@ -74,6 +84,9 @@ em:hover,
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
+.book-now-button:hover,
+.book-now-button:active,
+.book-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -105,8 +118,24 @@ em:hover,
 }
 
 .service-header {
-    font-size: 28px;
+    font-size: 24px;
 }
+
+.border-1 {
+    color: red;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #D6D0CE;
+    color: #131418;
+    padding: 0;
+    margin: 0;
+    border-top: #131418 3px solid;
+  }
 
 /* -------------------------------- Media Queries */
 
@@ -133,13 +162,26 @@ em:hover,
 }
 
 @media (max-width: 992px) {
-    .shop-now-button {
+    .shop-now-button,
+    .book-now-button {
         margin-top: 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    .book-now-button {
+        margin-top: 5%;
     }
 }
 
 @media (max-width: 576px) {
     .shop-now-button {
         margin-top: 20%;
+    }
+}
+
+@media (max-width: 576px) {
+    .book-now-button {
+        margin-top: 10%;
     }
 }

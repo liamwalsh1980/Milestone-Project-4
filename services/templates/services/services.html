@@ -24,7 +24,7 @@
                     <div class="row">
                         {% for service in services %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="card h-100 border-0">
+                                <div class="card h-100 border-1">
                                     {% if service.image %}
                                     <a href="">
                                         <img class="card-img-top img-fluid" src="{{ service.image.url }}" alt="{{ service.name }}">
@@ -35,14 +35,14 @@
                                     </a>
                                     {% endif %}
                                     <div class="card-body pb-0">
-                                        <p class="mb-0 font-weight-bold text-black text-center service-header">{{ service.name }}</p>
+                                        <p class="mb-0 font-weight-bold text-black text-left service-header">{{ service.name }}</p>
                                     </div>
-                                    <div class="card-footer bg-white pt-0 border-0 text-center">
+                                    <div class="card-footer bg-white pt-0 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
-                                                <p class="lead mb-0 text-center text-black">{{ service.description }}</p>
+                                                <p class="mb-0 text-left text-black">{{ service.description }}</p>
                                                 {% if service.rating %}
-                                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5.0</small>    
+                                                    <small class="text-left text-muted"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5.0</small>    
                                                 {% else %}
                                                     <small class="text-muted">No Rating</small>
                                                 {% endif %}
@@ -69,6 +69,14 @@
                             {% endif %}
                         {% endfor %}
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <p class="lead text-black">How it works? Book a service and a member of our team will be in touch</p>
+                    <h4>
+                        <a href="" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book Now</a>
+                    </h4>
                 </div>
             </div>
         </div>
