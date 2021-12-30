@@ -76,6 +76,14 @@ em:hover,
     font-size: 18px;
 }
 
+.padding-bottom {
+    padding-bottom: 10%;
+}
+
+.border-1 {
+    padding: 20px;
+}
+
 .btn-black {
     background: #131418;
     color: #D6D0CE;
