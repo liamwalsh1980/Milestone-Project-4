@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2 offset-md-0">
-                    <div class="image-container my-5">
+                    <div class="image-container my-5 pt-5">
                         {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -26,7 +26,7 @@
                         {% endif %}
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 pt-5">
                     <div class="product-details-container mb-5 mt-md-5">
                         <p class="mb-0 text-black">{{ product.name }}</p>
                         <p class="lead mb-0 text-left font-weight-bold text-black">£{{ product.price }}</p>
@@ -39,7 +39,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="padding-bottom"></div>
         </div>
 {% endblock %}

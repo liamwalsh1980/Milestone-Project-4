@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 offset-md-0">
+                    <div class="image-container my-5">
+                        {% if service.image %}
+                        <a href="{{ service.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ service.image.url }}" alt="{{ service.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ service.name }}">
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="product-details-container mb-5 mt-md-5 pt-5">
+                        <p class="mb-0 text-black">{{ service.name }}</p>
+                        {% if service.rating %}
+                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5.0</small>
+                        {% else %}
+                            <small class="text-muted">No Rating</small>
+                        {% endif %}
+                        <p class="mt-3 text-black">{{ service.description }}</p>
+                        <hr class="w-75 mb-1">
+                        <p class="pt-3 text-black">How it works?</p>
+                        <p class="text-black">Book a service and a member of our team will be in touch</p>
+                        <h4 class="text-center">
+                            <a href="" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book Now</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="padding-bottom"></div>
+        </div>
+{% endblock %}

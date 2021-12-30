@@ -5,25 +5,13 @@ html {
     height: 100%;
 }
 
+ /* Homepage */
 body {
     background: url('/media/hero-image-test.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #D6D0CE;
     font-family: 'Ubuntu';
-}
-
-.background-navbar {
-    background-color: #D6D0CE;
-}
-
-em {
-    color: #852C34;
-}
-
-em:hover,
-.fa-biking:hover {
-    color: #fadf4b;
 }
 
 .icon {
@@ -38,10 +26,6 @@ em:hover,
     text-transform: uppercase;
     font-family: 'Russo One';
 }
-
-/* .logo-font-size {
-    font-size: 30px;
-} */
 
 .nav-link {
     text-transform: uppercase;
@@ -62,6 +46,23 @@ em:hover,
 
 .main-logo-link {
     width: fit-content;
+}
+
+/* Margin and Padding */
+
+.padding-bottom {
+    padding-bottom: 10%;
+}
+
+.border-1 {
+    padding: 20px;
+}
+
+/* Buttons */
+
+.btn-black {
+    background: #131418;
+    color: #D6D0CE;
 }
 
 .shop-now-button {
@@ -85,19 +86,6 @@ em:hover,
     font-size: 18px;
 }
 
-.padding-bottom {
-    padding-bottom: 10%;
-}
-
-.border-1 {
-    padding: 20px;
-}
-
-.btn-black {
-    background: #131418;
-    color: #D6D0CE;
-}
-
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -109,6 +97,21 @@ em:hover,
 .btn-black:focus {
     color: #fadf4b;
     background-color: #757273;
+}
+
+/* Colours */
+
+.background-navbar {
+    background-color: #D6D0CE;
+}
+
+em {
+    color: #852C34;
+}
+
+em:hover,
+.fa-biking:hover {
+    color: #fadf4b;
 }
 
 .text-black {
@@ -124,6 +127,18 @@ em:hover,
     background-color: #131418;
 }
 
+.border-1 {
+    color: red;
+}
+
+/* Font sizes */
+
+.service-header {
+    font-size: 24px;
+}
+
+/* Templates */
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -134,13 +149,7 @@ em:hover,
 	z-index: -1;
 }
 
-.service-header {
-    font-size: 24px;
-}
-
-.border-1 {
-    color: red;
-}
+/*  footer */
 
 .footer {
     position: fixed;
