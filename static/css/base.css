@@ -39,6 +39,15 @@ em:hover,
     font-family: 'Russo One';
 }
 
+/* .logo-font-size {
+    font-size: 30px;
+} */
+
+.nav-link {
+    text-transform: uppercase;
+    font-family: 'Russo One';
+}
+
 .sub-header {
     text-transform: uppercase;
     font-family: 'Russo One';
@@ -180,6 +189,7 @@ em:hover,
     }
 }
 
+/* margin on top for both buttons to create white space */
 @media (max-width: 992px) {
     .shop-now-button,
     .book-now-button {
@@ -204,3 +214,44 @@ em:hover,
         margin-top: 10%;
     }
 }
+
+/* Logo size adjusted for tablet size */
+
+@media (max-width: 1100px) {
+    .logo-font-size {
+        font-size: 28px;
+    }
+}
+
+/* Mobile navbar with icons resized */
+
+@media (max-width: 475px) {
+    .navbar-size {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 425px) {
+    .navbar-size {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 410px) {
+    .navbar-size {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar-size {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 370px) {
+    .navbar-size {
+        font-size: 8px;
+    }
+}
+
