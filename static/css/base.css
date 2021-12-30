@@ -169,6 +169,17 @@ em:hover,
     }
 }
 
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 150px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
 @media (max-width: 992px) {
     .shop-now-button,
     .book-now-button {

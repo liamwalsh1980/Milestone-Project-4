@@ -3,5 +3,6 @@ from .import views
 
 urlpatterns = [
     # Route URL
-    path('', views.all_products, name='products')
+    path('', views.all_products, name='products'),
+    path('<product_id>', views.product_detail, name='product_detail'),
 ]
