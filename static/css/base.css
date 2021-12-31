@@ -144,7 +144,8 @@ em:focus,
 
 /* Font sizes */
 
-.service-header {
+.service-header,
+.product-header {
     font-size: 24px;
 }
 
@@ -158,6 +159,19 @@ em:focus,
 	position: fixed;
 	background: white;
 	z-index: -1;
+}
+
+a.category-badge > span.badge {
+    background: #131418 !important;
+    color: #D6D0CE !important;
+    border-color: #131418;
+    border-width: thick;
+    font-weight: bold;
+}
+
+a.category-badge > span.badge:hover {
+    background: #852C34 !important;
+    color: #fadf4b !important;
 }
 
 /*  footer */
