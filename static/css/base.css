@@ -110,9 +110,20 @@ em {
 }
 
 em:hover,
-.fa-biking:hover {
+em:active,
+em:focus,
+.fa-biking:hover,
+.fa-biking:active,
+.fa-biking:focus {
     color: #fadf4b;
 }
+
+.social-media-icons:hover,
+.social-media-icons:active,
+.social-media-icons:focus {
+    color: #852C34;
+}
+
 
 .text-black {
     color: #131418 !important;
@@ -171,6 +182,15 @@ em:hover,
     display: inline;
 }
 
+.social-media-icons {
+    font-size: 18px
+}
+
+.social-media-icons:hover,
+.social-media-icons:active,
+.social-media-icons:focus
+
+
 /* footer {
     padding-top: 5%;
 } */
@@ -228,6 +248,10 @@ em:hover,
     .shop-now-button {
         margin-top: 20%;
     }
+
+    .padding-bottom {
+        padding-bottom: 30%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -279,9 +303,9 @@ em:hover,
 
 /* Footer mobile padding */
 
-@media (max-width: 475px) {
+/* @media (max-width: 475px) {
     footer {
-        padding-top: 25%;
+        margin-top: 100px
     }
-}
+} */
 
