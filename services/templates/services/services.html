@@ -41,6 +41,13 @@
                                         <div class="row">
                                             <div class="col">
                                                 <p class="mb-0 text-left text-black">{{ service.description }}</p>
+                                                {% if service.category %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'services' %}?category={{ service.category.name }}">
+                                                        <i class="fas fa-tag mr-1"></i>{{ service.category.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
                                                 {% if service.rating %}
                                                     <small class="text-left text-muted"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5.0</small>    
                                                 {% else %}
