@@ -9,7 +9,7 @@ html {
 body {
     background: url('/media/hero-image-test.jpeg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 200px);
     color: #D6D0CE;
     font-family: 'Ubuntu';
 }
@@ -171,6 +171,10 @@ em:hover,
     display: inline;
 }
 
+/* footer {
+    padding-top: 5%;
+} */
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -228,7 +232,8 @@ em:hover,
 
 @media (max-width: 576px) {
     .book-now-button {
-        margin-top: 10%;
+        margin-top: 5%;
+        margin-bottom: 20%;
     }
 }
 
@@ -269,6 +274,14 @@ em:hover,
 @media (max-width: 370px) {
     .navbar-size {
         font-size: 8px;
+    }
+}
+
+/* Footer mobile padding */
+
+@media (max-width: 475px) {
+    footer {
+        padding-top: 25%;
     }
 }
 
