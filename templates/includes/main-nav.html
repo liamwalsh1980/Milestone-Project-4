@@ -13,36 +13,36 @@
         </li>
 
         <li class="nav-item dropdown mr-3">
-            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="bikes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Bikes
             </a>
-            <div class="dropdown-menu border-0 background-navbar" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Men's</a>
-                <a href="" class="dropdown-item">Womens</a>
-                <a href="" class="dropdown-item">Urban</a>
-                <a href="" class="dropdown-item">All Bikes</a>
+            <div class="dropdown-menu border-0 background-navbar" aria-labelledby="bikes-link">
+                <a href="{% url 'products' %}?category=mens_bikes" class="dropdown-item">Mens Bikes</a>
+                <a href="{% url 'products' %}?category=womens_bikes" class="dropdown-item">Womens Bikes</a>
+                <a href="{% url 'products' %}?category=urban_bikes" class="dropdown-item">Urban Bikes</a>
+                <a href="{% url 'products' %}?category=mens_bikes,womens_bikes,urban_bikes" class="dropdown-item">All Bikes</a>
             </div>
         </li>
 
         <li class="nav-item dropdown mr-3">
-            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
-            <div class="dropdown-menu border-0 background-navbar" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Helmets</a>
-                <a href="" class="dropdown-item">Other Accessories</a>
-                <a href="" class="dropdown-item">All Accessories</a>
+            <div class="dropdown-menu border-0 background-navbar" aria-labelledby="accessories-link">
+                <a href="{% url 'products' %}?category=helmets" class="dropdown-item">Helmets</a>
+                <a href="{% url 'products' %}?category=other_accessories" class="dropdown-item">Other Accessories</a>
+                <a href="{% url 'products' %}?category=helmets,other_accessories" class="dropdown-item">All Accessories</a>
             </div>
         </li>
 
         <li class="nav-item dropdown mr-3">
-            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="all-services-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
             </a>
-            <div class="dropdown-menu border-0 background-navbar" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Cleaning</a>
-                <a href="" class="dropdown-item">Repair</a>
-                <a href="" class="dropdown-item">Sell Your Bike</a>
+            <div class="dropdown-menu border-0 background-navbar" aria-labelledby="all-services-link">
+                <a href="{% url 'services' %}4" class="dropdown-item">Cleaning</a>
+                <a href="{% url 'services' %}5" class="dropdown-item">Repair</a>
+                <a href="{% url 'services' %}6" class="dropdown-item">Sell Your Bike</a>
                 <a href="{% url 'services' %}" class="dropdown-item">All Services</a>
             </div>
         </li>
