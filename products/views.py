@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.db.models.functions import Lower
 # Used to handle complex query in the database to achieve 'or' logic
 # To match either from product name or product description - use Q
 from django.db.models import Q
@@ -23,6 +24,7 @@ def all_products(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
+                # Annotation allows for adding a temporary field on the model 
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'

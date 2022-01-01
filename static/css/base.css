@@ -99,6 +99,20 @@ body {
     background-color: #757273;
 }
 
+.btt-button {
+    height: 36px;
+    width: 36px;
+    position: sticky;
+    margin-right: 1.5%;
+    left: 95%;
+    bottom: 14%;
+    font-size: 24px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /* Colours */
 
 .background-navbar {
