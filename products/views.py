@@ -24,7 +24,7 @@ def all_products(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                # Annotation allows for adding a temporary field on the model 
+                # Annotation allows for adding a temporary field on the model
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'

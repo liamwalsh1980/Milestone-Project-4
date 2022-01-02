@@ -27,6 +27,18 @@ body {
     font-family: 'Russo One';
 }
 
+.logo-font span {
+    color: #852C34;
+}
+
+.remove-underline {
+    text-decoration: none !important;
+}
+
+.logo-font span:hover {
+    color: #fadf4b;
+}
+
 .nav-link {
     text-transform: uppercase;
     font-family: 'Russo One';
@@ -107,6 +119,12 @@ body {
     left: 95%;
     bottom: 14%;
     font-size: 24px;
+    border-color: #131418 !important;
+    color: #131418;
+}
+
+.btt-button:hover {
+    color: #852C34;
 }
 
 .btt-link {
@@ -137,7 +155,6 @@ em:focus,
 .social-media-icons:focus {
     color: #852C34;
 }
-
 
 .text-black {
     color: #131418 !important;
