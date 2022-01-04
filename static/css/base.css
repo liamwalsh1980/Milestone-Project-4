@@ -118,7 +118,10 @@ body {
 .book-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
-.btn-black:focus {
+.btn-black:focus,
+.shop-now-cart-button:hover,
+.shop-now-cart-button:active,
+.shop-now-cart-button:focus {
     color: #fadf4b;
     background-color: #757273;
 }
