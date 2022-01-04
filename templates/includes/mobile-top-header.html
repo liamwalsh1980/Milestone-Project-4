@@ -42,7 +42,7 @@
       </div>
   </li>
   <li class="navbar-size list-inline-item">
-      <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="">
+      <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
           <div class="text-center">
               <div><i class="fas fa-shopping-cart fa-lg"></i></div>
               <p class="my-0">

@@ -48,6 +48,7 @@ body {
     text-transform: uppercase;
     font-family: 'Russo One';
     color: #852C34;
+    margin-top: 1rem;
 }
 
 .main-header {
@@ -86,6 +87,17 @@ body {
     font-weight: bold;
     font-size: 18px;
     margin-top: 10%;
+}
+
+.shop-now-cart-button {
+    background: #852C34;
+    color: #D6D0CE;
+    min-width: 260px;
+    border-color: #131418;
+    border-width: thick;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 2%;
 }
 
 .book-now-button {
@@ -176,8 +188,16 @@ em:focus,
 /* Font sizes */
 
 .service-header,
-.product-header {
+.product-heade {
     font-size: 24px;
+}
+
+.cart-empty {
+    font-size: 18px;
+}
+
+.fa-frown {
+    font-size: 28px;
 }
 
 /* Templates */
@@ -338,6 +358,12 @@ a.category-badge > span.badge:hover {
 @media (max-width: 370px) {
     .navbar-size {
         font-size: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sub-header {
+        margin-top: 0;
     }
 }
 
