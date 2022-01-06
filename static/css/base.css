@@ -100,6 +100,16 @@ body {
     margin-top: 2%;
 }
 
+.checkout-cart-button {
+    background: #852C34;
+    color: #D6D0CE;
+    min-width: 260px;
+    border-color: #131418;
+    border-width: thick;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .book-now-button {
     background: #852C34;
     color: #D6D0CE;
@@ -121,7 +131,10 @@ body {
 .btn-black:focus,
 .shop-now-cart-button:hover,
 .shop-now-cart-button:active,
-.shop-now-cart-button:focus {
+.shop-now-cart-button:focus,
+.checkout-cart-button:hover,
+.checkout-cart-button:focus,
+.checkout-cart-button:active {
     color: #fadf4b;
     background-color: #757273;
 }
@@ -347,33 +360,60 @@ a.category-badge > span.badge:hover {
 
 /* Mobile navbar with icons resized */
 
+@media (max-width: 500px) {
+    .navbar-size {
+        font-size: 14px;
+    }
+    button.navbar-toggler {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 475px) {
     .navbar-size {
-        font-size: 13px;
+        font-size: 12px;
+    }
+    button.navbar-toggler {
+        font-size: 12px;
     }
 }
 
 @media (max-width: 425px) {
     .navbar-size {
-        font-size: 12px;
+        font-size: 11px;
+    }
+    button.navbar-toggler {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 410px) {
     .navbar-size {
-        font-size: 11px;
+        font-size: 10px;
+    }
+    button.navbar-toggler {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 400px) {
     .navbar-size {
-        font-size: 9px;
+        font-size: 8px;
+    }
+    button.navbar-toggler {
+        font-size: 14px;
+    }
+    .banner {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 370px) {
     .navbar-size {
-        font-size: 8px;
+        font-size: 7px;
+    }
+    button.navbar-toggler {
+        font-size: 12px;
     }
 }
 
