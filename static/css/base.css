@@ -188,6 +188,19 @@ em:focus,
     color: red;
 }
 
+/* Shopping cart */
+p.total, .fa-shopping-cart {
+    color:#852C34 !important;
+}
+
+p.total:hover {
+    color: #757273 !important;
+}
+
+.fa-shopping-cart:hover {
+    color: #757273 !important;
+}
+
 /* Font sizes */
 
 .service-header,
