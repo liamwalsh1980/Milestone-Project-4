@@ -49,31 +49,28 @@
                             <div class="form-row">
                                 {% with product.has_sizes as s %}
                                 {% if s %}
-                                    <div class="col-12">
-                                        <p class="text-black"><strong>Size:</strong></p>
-                                        <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
-                                            <option value="s">S</option>
-                                            <option value="m" selected>M</option>
-                                            <option value="l">L</option>
-                                        </select>
-                                    </div>
+                                <div class="col-12">
+                                    <p class="text-black"><strong>Size:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                    </select>
+                                </div>
                                 {% endif %}
-                                {% with product.has_colors as c %}
-                                {% if c %}
-                                    <div class="col-12 mt-3">
-                                        <p class="text-black"><strong>Colour:</strong></p>
-                                        <select class="form-control rounded-0 w-50" name="product_color" id='id_product_color'>
-                                            <option value="blue">Blue</option>
-                                            <option value="green">Green</option>
-                                            <option value="red">Red</option>
-                                            <option value="black" selected>Black</option>
-                                            <option value="yellow">Yellow</option>
-                                            <option value="orange">Orange</option>
-                                            <option value="white">White</option>
-                                            <option value="grey">Grey</option>
-                                        </select>
-                                    </div>
-                                {% endif %}
+                                <div class="col-12 mt-3">
+                                    <p class="text-black"><strong>Colour:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="product_color" id='id_product_color'>
+                                        <option value="blue">Blue</option>
+                                        <option value="green">Green</option>
+                                        <option value="red">Red</option>
+                                        <option value="black" selected>Black</option>
+                                        <option value="yellow">Yellow</option>
+                                        <option value="orange">Orange</option>
+                                        <option value="white">White</option>
+                                        <option value="grey">Grey</option>
+                                    </select>
+                                </div>
                                 <div class="col-12">
                                     <p class="mt-3 text-black"><strong>Quantity:</strong></p>
                                     <div class="form-group w-50">
@@ -92,7 +89,6 @@
                                     <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                {% endwith %}
                                 {% endwith %}
                             </div>
                         </form>
