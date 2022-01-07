@@ -28,8 +28,6 @@
                             <th scope="col">Product Image</th>
                             <th scope="col">Product Information</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Size</th>
-                            <th scope="col">Colour</th>
                             <th scope="col">Qty</th>
                             <th scope="col">Subtotal</th>
                         </tr>
@@ -43,12 +41,10 @@
                             <td class="py-3">
                                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                 <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                                <p class="my-0"><strong>Colour: </strong>{% if item.product.has_colors %}{{ item.color|upper }}{% else %}N/A{% endif %}</p>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">£{{ item.product.price }}</p>
-                            </td>
-                            <td class="py-3">
-                                <p class="my-0">{{ item.color }}</p>
                             </td>
                             <td class="py-3 w-25">
                                 <p class="my-0">{{ item.quantity }}</p>
@@ -59,7 +55,7 @@
                         </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="8" class="pt-5 text-right">
+                        <td colspan="5" class="pt-2 text-right">
                             <h6><strong>Subtotal: £{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: Free of Charge</h6>
                             <!-- <h6>Delivery: £{{ delivery|floatformat:2 }}</h6> -->
@@ -72,7 +68,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="8" class="text-right">
+                        <td colspan="5" class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
