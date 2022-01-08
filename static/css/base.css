@@ -171,6 +171,15 @@ em {
     color: #852C34;
 }
 
+.category {
+    color: #A57472;
+}
+
+.category:hover {
+    color: #852C34;
+    text-decoration: none;
+}
+
 em:hover,
 em:active,
 em:focus,
@@ -305,6 +314,10 @@ a.category-badge > span.badge:hover {
 /* footer {
     padding-top: 5%;
 } */
+
+footer {
+    z-index: 2;
+}
 
 /* -------------------------------- Media Queries */
 

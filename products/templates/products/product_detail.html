@@ -32,7 +32,7 @@
                         <p class="lead mb-0 text-left font-weight-bold text-black">£{{ product.price }}</p>
                         {% if product.category %}
                         <p class="small mt-1 mb-0">
-                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                            <a class="category" href="{% url 'products' %}?category={{ product.category.name }}">
                                 <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                             </a>
                         </p>
@@ -71,7 +71,7 @@
                                                 </button>
                                             </div>
                                             <input class="form-control qty_input" type="number"
-                                                name="quantity" value="1" min="1" max="99"
+                                                name="quantity" value="1" min="1" max="20"
                                                 data-item_id="{{ product.id }}"
                                                 id="id_qty_{{ product.id }}">
                                             <div class="input-group-append">
@@ -88,9 +88,9 @@
                                 <div class="col-12">
                                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                         <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
+                                            <i class="far fa-arrow-alt-circle-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        <span class="text-uppercase text-black">start again</span>
                                     </a>
                                     <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
                                 </div>
