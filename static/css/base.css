@@ -155,7 +155,9 @@ body {
     color: #852C34;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -206,6 +208,11 @@ em:focus,
     color: #D6D0CE;
 }
 
+.btn-qty:hover {
+    background-color: #131418;
+    color: #fadf4b;
+}
+
 /* Shopping cart */
 p.total, .fa-shopping-cart {
     color:#852C34 !important;
@@ -217,6 +224,17 @@ p.total:hover {
 
 .fa-shopping-cart:hover {
     color: #757273 !important;
+}
+
+a.update-link,
+a.remove-item {
+    color: #131418;
+    text-transform: uppercase;
+}
+
+a.update-link:hover,
+a.remove-item:hover {
+    color: #852C34;
 }
 
 /* Font sizes */
