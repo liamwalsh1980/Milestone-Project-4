@@ -229,7 +229,6 @@ p.total:hover {
 a.update-link,
 a.remove-item {
     color: #131418;
-    text-transform: uppercase;
 }
 
 a.update-link:hover,

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -39,13 +40,17 @@
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                    <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                                    {% if item.product.has_sizes %}
+                                        <p class="my-0"><strong>Size: </strong>{{ item.size|upper }}</p>
+                                    {% else %}
+                                        <div class="my-0"></div>
+                                    {% endif %}
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">£{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
-                                    <form class="form update-form" method="POST" action="">
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -75,11 +80,11 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link"><small>Update</small></a>
-                                    <a class="remove-item float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                                    <a class="update-link text-uppercase"><small>Update Qty</small></a>
+                                    <a class="remove-item float-right text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove All</small></a>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">£{{ item.product.price }}</p>
+                                    <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -143,9 +148,9 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('size');
-        var url = `/cart/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        var size = $(this).data('product_size');
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 
         $.post(url, data)
          .done(function() {
