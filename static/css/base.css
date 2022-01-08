@@ -201,6 +201,11 @@ em:focus,
     color: red;
 }
 
+.btn-qty {
+    background-color: #852C34;
+    color: #D6D0CE;
+}
+
 /* Shopping cart */
 p.total, .fa-shopping-cart {
     color:#852C34 !important;
