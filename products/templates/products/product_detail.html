@@ -93,11 +93,11 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-3">
+                                    <a href="{% url 'products' %}?category={{ product.category.name }}" class="btn btn-outline-black rounded-0 mt-3">
                                         <span class="icon">
                                             <i class="far fa-arrow-alt-circle-left"></i>
                                         </span>
-                                        <span class="text-uppercase text-black">start again</span>
+                                        <span class="text-uppercase text-black">Go Back</span>
                                     </a>
                                     <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3" value="Add to Cart">
                                 </div>
