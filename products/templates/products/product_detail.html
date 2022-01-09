@@ -11,6 +11,13 @@
 
 {% block content %}
     <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class=><p class="mb-0 font-weight-bold sub-header product-header">{{ product.name }}</p></h2>
+            </div>
+        </div>
+    </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2 offset-md-0">
@@ -86,13 +93,13 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-3">
                                         <span class="icon">
                                             <i class="far fa-arrow-alt-circle-left"></i>
                                         </span>
                                         <span class="text-uppercase text-black">start again</span>
                                     </a>
-                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3" value="Add to Cart">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 {% endwith %}
