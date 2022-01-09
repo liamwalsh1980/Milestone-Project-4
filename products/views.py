@@ -42,7 +42,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter a search criteria!")
                 return redirect(reverse('products'))
 
             # Pipe gives the 'or' statement

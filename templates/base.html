@@ -125,7 +125,7 @@
       <!-- A place to display any messages that could be sent back from Django -->
       {% if messages %}
         <div class="message-container">
-            <!-- Django messages levels used to show 'error', 'warning', 'success' and the default being 'info' -->
+            <!-- Django message levels used to show 'error', 'warning', 'success' and the default being 'info' -->
             {% for message in messages %}
                 {% with message.level as level %}
                     {% if level == 40 %}
