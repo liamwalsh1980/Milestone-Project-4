@@ -349,7 +349,7 @@ a.category-badge > span.badge:hover {
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
-    right: 35px;
+    right: 15%;
 }
 
 /* Convenience classes - colors copied from Bootstrap */
