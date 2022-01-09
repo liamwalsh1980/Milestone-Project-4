@@ -124,7 +124,22 @@
 
       <!-- A place to display any messages that could be sent back from Django -->
       {% if messages %}
-        <div class="message-container"></div>
+        <div class="message-container">
+            <!-- Django messages levels used to show 'error', 'warning', 'success' and the default being 'info' -->
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}   
+        </div>
       {% endif %}
 
       <!-- Can add more to the header on other pages if required -->
@@ -137,6 +152,9 @@
 
       <!-- Can add javascript that can be loaded at the end of the body -->
       {% block postloadjs %}
+      <script type="text/javascript">
+          $('.toast').toast('show');
+      </script>
       {% endblock %}
   </body>
   <!-- Footer added -->
