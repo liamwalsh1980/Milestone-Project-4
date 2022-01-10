@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'products',
     'services',
     'cart',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-# Store message in the session which overrides the default 
+# Store message in the session which overrides the default
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
