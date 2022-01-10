@@ -64,7 +64,7 @@ body {
 /* Margin and Padding */
 
 .padding-bottom {
-    padding-bottom: 10%;
+    padding-bottom: 15%;
 }
 
 .border-1 {
@@ -140,19 +140,17 @@ body {
 }
 
 .btt-button {
-    height: 36px;
-    width: 36px;
-    position: sticky;
-    margin-right: 1.5%;
-    left: 95%;
-    bottom: 14%;
-    font-size: 24px;
-    border-color: #131418 !important;
-    color: #131418;
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    right: 15px;
+    bottom: 100px;
+    background-color: #852C34;
+    color: #D6D0CE;
 }
 
 .btt-button:hover {
-    color: #852C34;
+    background-color: #131418;
 }
 
 .btt-link,
@@ -448,6 +446,10 @@ footer {
     .book-now-button {
         margin-top: 5%;
     }
+
+    .padding-bottom {
+        padding-bottom: 35%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -458,12 +460,22 @@ footer {
     .padding-bottom {
         padding-bottom: 30%;
     }
-}
 
-@media (max-width: 576px) {
     .book-now-button {
         margin-top: 5%;
         margin-bottom: 20%;
+    }
+
+    .btt-button {
+        right: 5px;
+        bottom: 85px;
+    }
+}
+
+@media (max-width: 375px) {
+    .btt-button {
+        right: 2px;
+        bottom: 85px;
     }
 }
 
