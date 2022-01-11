@@ -36,7 +36,7 @@ body {
 }
 
 .logo-font span:hover {
-    color: #fadf4b;
+    color: #852C34;
 }
 
 .nav-link {
@@ -220,6 +220,14 @@ em:focus,
     color: #fadf4b;
 }
 
+.yellow-bike {
+    color: #fadf4b !important;
+}
+
+.yellow-bike:hover {
+    color: #852C34 !important;
+}
+
 /* Shopping cart */
 p.total, .fa-shopping-cart {
     color:#852C34 !important;
@@ -256,6 +264,10 @@ a.remove-item:hover {
 
 .fa-frown {
     font-size: 28px;
+}
+
+.adjust-cart {
+    font-size: 20px;
 }
 
 /* Templates */

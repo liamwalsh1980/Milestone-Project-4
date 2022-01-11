@@ -18,7 +18,7 @@
             <h2 class="sub-header mb-4">Shopping Cart</h2>
         </div>
     </div>
-
+    
     <div class="row">
         <div class="col">
             {% if cart_items %}
@@ -107,9 +107,9 @@
                                     <span class="icon">
                                         <i class="far fa-arrow-alt-circle-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
+                                    <span class="text-uppercase text-black">Keep Shopping</span>
                                 </a>
-                                <a href="" class="checkout-cart-button btn btn-ls rounded-0 text-uppercase py-2">
+                                <a href="{% url 'checkout' %}" class="checkout-cart-button btn btn-ls rounded-0 text-uppercase py-2">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
@@ -119,7 +119,6 @@
                         </tr>
                     </table>
                 </div>
-            <div class="padding-bottom"></div>
             {% else %}
                 <div class="text-center">
                     <i class="far fa-frown text-black mb-2"></i>
@@ -129,6 +128,7 @@
                     <a href="{% url 'products' %}" class="shop-now-cart-button btn btn-ls rounded-0 text-uppercase py-2">Shop Now</a>
                 </div>
             {% endif %}
+            <div class="padding-bottom"></div>
         </div>
     </div>
 </div>
