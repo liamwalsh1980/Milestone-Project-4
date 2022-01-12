@@ -522,9 +522,11 @@ footer {
 @media (max-width: 475px) {
     .navbar-size {
         font-size: 12px;
+        margin-top: 10px;
     }
     button.navbar-toggler {
-        font-size: 12px;
+        font-size: 16px;
+        margin: 0;
     }
 }
 
