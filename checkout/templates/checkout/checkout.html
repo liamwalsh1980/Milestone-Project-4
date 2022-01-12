@@ -25,7 +25,7 @@
 
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-black text-center">Order Summary ({{ product_count }})</p>
+            <p class="text-black text-center">Order Summary - Your Shopping Cart Has ({{ product_count }}) products</p>
             <div class="row">
                 <div class="col-6 offset-3">
                     <p class="mb-1 mt-0 small text-black">Products</p>
@@ -91,7 +91,7 @@
 								<label class="form-check-label text-black" for="id-save-info">Save this delivery information to my profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
-								<label class="form-check-label" for="id-save-info">
+								<label class="form-check-label text-black" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                                     <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
