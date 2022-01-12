@@ -136,7 +136,8 @@ body {
 .checkout-cart-button:focus,
 .checkout-cart-button:active {
     color: #fadf4b;
-    background-color: #757273;
+    background-color: #131418;
+    border-color: #852C34;
 }
 
 .btt-button {
@@ -226,6 +227,14 @@ em:focus,
 
 .yellow-bike:hover {
     color: #852C34 !important;
+}
+
+.red-bike {
+    color: #852C34 !important;
+}
+
+.red-bike:hover {
+    color: #fadf4b !important;
 }
 
 /* Shopping cart */
