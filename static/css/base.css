@@ -333,6 +333,10 @@ a.category-badge > span.badge:hover {
     font-size: 18px
 }
 
+footer {
+    z-index: 2;
+}
+
 /* Toasts */
 
 .message-container {
@@ -418,10 +422,6 @@ a.category-badge > span.badge:hover {
 /* footer {
     padding-top: 5%;
 } */
-
-footer {
-    z-index: 2;
-}
 
 /* -------------------------------- Media Queries */
 
@@ -607,4 +607,3 @@ footer {
         margin-top: 100px
     }
 } */
-
