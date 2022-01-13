@@ -450,7 +450,7 @@ footer {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 150px;
+        padding-top: 130px;
     }
 
     body {
@@ -494,16 +494,24 @@ footer {
         bottom: 85px;
     }
 
-    .footer {
-        padding-top: 10px !important;
+    .header-container {
+        padding-top: 110px;
     }
-    
+
+    /* .footer {
+        padding-top: 2px !important;
+    }
+     */
 }
 
 @media (max-width: 375px) {
     .btt-button {
         right: 2px;
         bottom: 85px;
+    }
+
+    .header-container {
+        padding-top: 80px;
     }
 }
 
