@@ -36,22 +36,29 @@ body {
   }
 
 
+.mens-bg-color {
+    background-color: #387c96;
+}
 
+.womens-bg-color {
+    background-color: #c96ec1;
+}
 
+.urban-bg-color {
+    background-color: #5c5d5a;
+}
 
+.accessories-bg-color {
+    background-color: #cfb00a;
+}
 
-
-
-
-
-
-.icon {
+/* .icon {
     align-items: center;
     display: inline-flex;
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-}
+} */
 
 .logo-font {
     text-transform: uppercase;
@@ -100,8 +107,14 @@ body {
 /* Margin and Padding */
 
 .padding-bottom {
-    padding-bottom: 15%;
+    padding-bottom: 20%;
 }
+
+.padding-bottom-homepage {
+    padding-bottom: 14%;
+}
+
+
 
 .border-1 {
     padding: 20px;
@@ -298,7 +311,7 @@ a.remove-item:hover {
 /* Font sizes */
 
 .service-header,
-.product-heade {
+.product-header {
     font-size: 24px;
 }
 
@@ -348,7 +361,6 @@ a.category-badge > span.badge:hover {
     width: 100%;
     background-color: #D6D0CE;
     color: #131418;
-    border-top: #131418 3px solid;
   }
 
 .social-media-icons {
@@ -500,9 +512,9 @@ footer {
         margin-top: 5%;
     }
 
-    .padding-bottom {
-        padding-bottom: 35%;
-    }
+    /* .padding-bottom {
+        padding-bottom: 20%;
+    } */
 }
 
 @media (max-width: 576px) {
@@ -510,9 +522,9 @@ footer {
         margin-top: 20%;
     } */
 
-    .padding-bottom {
+    /* .padding-bottom {
         padding-bottom: 30%;
-    }
+    } */
 
     .book-now-button {
         margin-top: 5%;
@@ -527,11 +539,6 @@ footer {
     .header-container {
         padding-top: 110px;
     }
-
-    /* .footer {
-        padding-top: 2px !important;
-    }
-     */
 }
 
 @media (max-width: 375px) {
@@ -573,7 +580,7 @@ footer {
         font-size: 11px;
     }
 
-    h4.logo-font.banner.my-2 {
+    h4.logo-font.banner {
         font-size: 22px;
     }
 }
@@ -589,7 +596,7 @@ footer {
         font-size: 14px;
     }
 
-    h4.logo-font.banner.my-2 {
+    h4.logo-font.banner {
         font-size: 20px;
     }
     .navbar-size {
@@ -601,7 +608,7 @@ footer {
     .navbar-size {
         font-size: 8px;
     }
-    h4.logo-font.banner.my-2 {
+    h4.logo-font.banner {
         font-size: 18px;
     }
 }
@@ -610,7 +617,7 @@ footer {
     .navbar-size {
         font-size: 7px;
     }
-    h4.logo-font.banner.my-2 {
+    h4.logo-font.banner {
         font-size: 16px;
     }
 }
@@ -619,7 +626,7 @@ footer {
     .navbar-size {
         font-size: 6px;
     }
-    h4.logo-font.banner.my-2 {
+    h4.logo-font.banner {
         font-size: 16px;
     }
 }
