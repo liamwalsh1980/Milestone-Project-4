@@ -11,34 +11,243 @@
 
 {% block content %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="d-flex flex-row align-items-center justify-content-center justify-content-evenly m-4 flex-column">
-                    <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
-                        Mens's Bikes
-                    </div>
-                    <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
-                        Womens's Bikes
-                    </div>
-                    <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
-                        Urban Bikes
-                    </div>
-                    <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
-                        Accessories
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
-                </div>
-            </div> 
+
+
+<div class="pt-2 row d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row">
+    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+        <img src="/media/hero-image-test.jpeg" class="hero-images" alt=""> 
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
+        <div class="m-4">
+            <h2>Mens Bikes</h2>
+            <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2">Shop Now</a>
+            <h4 class="pt-4">Mens Bikes at The Bike Shop for beginnings to professionals.</h4>
         </div>
-        <div class="pb-8"></div> 
-    </div> 
+    </div>
+</div>
+
+<div class="row d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse">
+    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+        <img src="/media/hero-image-test.jpeg" class="hero-images" alt=""> 
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
+        <div class="m-4">
+            <h2>Women's Bikes</h2>
+            <a href="{% url 'products' %}?category=womens_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2">Shop Now</a>
+            <h4 class="pt-4">Women's Bikes at The Bike Shop for beginnings to professionals.</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row">
+    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+        <img src="/media/hero-image-test.jpeg" class="hero-images" alt=""> 
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
+        <div class="m-4">
+            <h2>Urban Bikes</h2>
+            <a href="{% url 'products' %}?category=urban_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2">Shop Now</a>
+            <h4 class="pt-4">Urbans Bikes at The Bike Shop for beginnings to professionals.</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse">
+    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+        <img src="/media/hero-image-test.jpeg" class="hero-images" alt=""> 
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
+        <div class="m-4">
+            <h2>Accessories</h2>
+            <a href="{% url 'products' %}?category=other_accessories" class="shop-now-button btn btn-ls text-uppercase mt-2">Shop Now</a>
+            <h4 class="pt-4">Bike Accessories at The Bike Shop for beginnings to professionals.</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    
+    <div class="col-12 text-center mt-3">
+        <p class="lead text-black">Book a service and a member of our team will be in touch</p>
+        <h4>
+            <a href="" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book Now</a>
+        </h4>
+    </div>
+</div>
+
+<!-- <div class="pt-2 row my-10 d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse">
+    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+        <img src="/media/hero-image-test.jpeg" class="hero-images" alt="">        
+    </div>
+    <div class="pt-2 col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+        <div class="d-flex justify-content-center flex-column">
+            <h2>Mens Bikes</h2>
+            <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+            <p>Mens Bike at The Bike Shop for beginnings to professionals</p>
+        </div>
+    </div>
+</div>
+
+<div class="row my-10 d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse">
+    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+        <img src="/media/hero-image-test.jpeg" class="hero-images" alt="">        
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+        <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+    </div>
+</div>
+
+<div class="row my-10 d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row">
+    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+        <img src="/media/hero-image-test.jpeg" class="hero-images" alt="">        
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+        <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+    </div>
+</div>
+
+<div class="row my-10 d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse">
+    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+        <img src="/media/hero-image-test.jpeg" class="hero-images" alt="">        
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+        <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+    </div>
+</div> -->
+
+
+
+
+
+
+<!-- <div class="d-flex flex-row align-items-center justify-content-center justify-content-evenly flex-column flex-md-row">
+    <div class="image_mens text-center">
+        IMAGE - urban bikes
+    </div>
+    <div class="button_mens text-center">
+        <button class="">SHOP NOW - urban</button>
+    </div>
+</div>
+
+<div class="d-flex flex-row align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse">
+    <div class="image_mens text-center">
+        IMAGE - accessories
+    </div>
+    <div class="button_mens text-center">
+        <button class="">SHOP NOW - accessories</button>
+    </div>
+</div> -->
+
+<!-- <div class="flex justify-center flex-col md:flex-row-reverse">
+    <div class="bg-blue-300 w-full h-96">
+        <div class="bg-red-300 h-80 m-8 flex justify-center items-center">
+            IMAGE - womens bikes
+        </div>
+    </div>
+    <div class="bg-green-300 w-full h-96 flex justify-center items-center flex-col">
+        <button class="bg-red-300 rounded-full px-8 py-4">SHOP NOW</button>
+        <p class="text-center p-4">Womens bikes from The Bike Shop are the best in the world</p>
+    </div>
+</div> -->
+
+
+
+<div class="padding-bottom"></div>
+
+
  
 {% endblock %}
 
-<h1 class="text-center homepage-content">
-    Welcome to The <em>Bike</em> Shop
-</h1>
+<div class="d-flex flex-row align-items-center justify-content-center justify-content-evenly m-4 flex-column">
+    <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
+        Mens's Bikes
+    </div>
+    <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
+        Womens's Bikes
+    </div>
+    <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
+        Urban Bikes
+    </div>
+    <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
+        Accessories
+    </div>
+</div>
 
+
+
+
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+    <div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+        <img src="/media/hero-image-test.jpeg" class="responsive" alt="">
+    </div>
+    <div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+        <img src="/media/hero-image-test.jpeg" class="responsive" alt="">
+    </div>
+</div>
+
+
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+    <div class="button_mens text-center d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <h2>Mens Bikes</h2>
+            <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+            <h4 class="pt-2">Mens Bike at The Bike Shop for beginnings to professionals.</h4>
+        </div>
+    </div>
+    <div class="button_mens text-center d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <h2>Mens Bikes</h2>
+            <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+            <h4 class="pt-2">Mens Bike at The Bike Shop for beginnings to professionals.</h4>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row-reverse">
+    <div class="image_mens_test"></div>
+    <div class="button_mens text-center d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <a href="{% url 'products' %}" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row">
+    <div class="image_mens_test"></div>
+    <div class="button_mens text-center d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <a href="{% url 'products' %}" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-lg-row-reverse">
+    <div class="image_mens_test"></div>
+    <div class="button_mens text-center d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <a href="{% url 'products' %}" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="mt-2 d-flex flex-row align-items-center justify-content-center justify-content-evenly flex-column flex-sm-row">
+    <div class="image_mens text-center">Image 1</div>
+    <div class="button_mens text-center">Button 1</div>
+</div>
+<div class="d-flex flex-row align-items-center justify-content-center justify-content-evenly flex-column flex-sm-row">
+    <div class="image_mens text-center">Image 2</div>
+    <div class="button_mens text-center">Button 2</div>
+</div>
+<div class="d-flex flex-row align-items-center justify-content-center justify-content-evenly flex-column flex-sm-row">
+    <div class="image_mens text-center">Image 3</div>
+    <div class="button_mens text-center">Button 3</div>
+</div>
+<div class="d-flex flex-row align-items-center justify-content-center justify-content-evenly flex-column flex-sm-row">
+    <div class="image_mens text-center">Image 4</div>
+    <div class="button_mens text-center">Button 4</div>
+</div> -->
+
+<!-- <div class="d-flex align-items-center justify-content-center">
+    <img src="/media/hero-image-test.jpeg" class="responsive" alt="">
+</div> -->
