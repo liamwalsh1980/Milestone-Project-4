@@ -11,8 +11,6 @@
 
 {% block content %}
 
-
-
 <div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row mens-bg-color">
     <div class="px-0">
         <img src="/media/mens-bikes.jpeg" class="hero-images" alt=""> 
@@ -54,16 +52,40 @@
 
 <div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse accessories-bg-color">
     <div class="px-0">
-        <img src="/media/hero-image-test.jpeg" class="hero-images" alt=""> 
+        <img src="/media/accessories.jpeg" class="hero-images" alt=""> 
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
         <div class="m-4">
             <h2>Accessories</h2>
             <a href="{% url 'products' %}?category=other_accessories" class="shop-now-button btn btn-ls text-uppercase mt-2">Shop Now</a>
-            <h4 class="pt-4">Bike Accessories at The Bike Shop for beginnings to professionals.</h4>
+            <h4 class="pt-4 pb-4">Bike Accessories at The Bike Shop for beginnings to professionals.</h4>
         </div>
     </div>
 </div>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex flex-row align-items-center justify-content-center justify-content-evenly m-4 flex-column">
+                <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
+                    Mens's Bikes
+                </div>
+                <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
+                    Womens's Bikes
+                </div>
+                <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
+                    Urban Bikes
+                </div>
+                <div class="text-center homepage-content d-flex align-items-center justify-content-center p-4 rounded-pill">
+                    Accessories
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="{% url 'products' %}" class="shop-now-button btn btn-ls text-uppercase py-2">Shop Now</a>
+            </div>
+        </div> 
+    </div>
+    <div class="pb-8"></div>  -->
 
 <div class="padding-bottom-homepage"></div>
  
