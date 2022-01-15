@@ -520,6 +520,10 @@ footer {
     .header-container {
         padding-top: 95px;
     }
+
+    .homepage-text {
+        padding-bottom: 30px;
+    }
 }
 
 @media (max-width: 375px) {
