@@ -176,5 +176,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-FREE_DELIVERY_THRESHOLD = 6
+# Stripe
+FREE_DELIVERY_THRESHOLD = 0
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'gbp'
+# Public key is not saved on version control for security reasons
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+# Secret key is not saved on version control for security reasons
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
