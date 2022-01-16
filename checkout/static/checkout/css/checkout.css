@@ -36,6 +36,30 @@
     border: 1px solid #131418;
 }
 
+#loading-overlay {
+	  display: none;
+	  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 167, 69, .65);
+    z-index: 9999;
+}
+
+.loading-spinner {
+	  display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+.spinner-color {
+  color: #D6D0CE;
+}
+
+
 @media (max-width: 375px) {
     .order-number-text {
       font-size: 12.8px;
