@@ -38,21 +38,21 @@
             <div class="row">
                 <div class="col">
                     <a href="{% url 'view_cart' %}" class="btn btn-black checkout-cart-button-toast btn-block rounded-0">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span class="text-uppercase">Go To Shopping Cart</span>
                         <span class="icon">
-                            <i class="fas fa-lock"></i>
+                            <!-- <i class="fas fa-lock"></i> -->
                         </span>
                     </a>
                 </div>
             </div>
         {% else %}
             <div class="text-center">
-                <i class="far fa-frown text-black mb-2"></i>
-                <p class="text-black cart-empty">Your cart is empty!</p>
+                <i class="text-black mb-2"></i>
+                <p class="text-black cart-empty">Thank you for your order!</p>
             </div>
-            <div class="text-center">
+            <!-- <div class="text-center">
                 <a href="{% url 'products' %}" class="btn btn-black checkout-cart-button-toast btn-block rounded-0 text-uppercase">Shop Now</a>
-            </div>
+            </div> -->
         {% endif %}      
     </div>
 </div>
