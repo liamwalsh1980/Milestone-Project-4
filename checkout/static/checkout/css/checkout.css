@@ -35,3 +35,10 @@
     color: #131418;
     border: 1px solid #131418;
 }
+
+@media (max-width: 375px) {
+    .order-number-text {
+      font-size: 12.8px;
+    }
+}
+
