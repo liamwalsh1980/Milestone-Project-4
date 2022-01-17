@@ -20,7 +20,8 @@ body {
 
 
 .mens-bg-color {
-    background-color: #387c96;
+    /* background-color: #387c96; */
+    background-color: #4286d2;
 }
 
 .womens-bg-color {
@@ -28,11 +29,13 @@ body {
 }
 
 .urban-bg-color {
-    background-color: #5c5d5a;
+    /* background-color: #5c5d5a; */
+    background-color: #968a7c;
 }
 
 .accessories-bg-color {
-    background-color: #cfb00a;
+    /* background-color: #cfb00a; */
+    background-color: #deb506;
 }
 
 
