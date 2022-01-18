@@ -1,6 +1,6 @@
 # The Bike Shop
 
-## Code Institute - Milestone Project 3
+## Code Institute - Milestone Project 4
 
 ![Image template](readme/images/responsive-homepage.png)
 
@@ -26,6 +26,17 @@
     * [Hero Images](#hero-images)
     * [Colour Scheme](#colour-scheme)
     * [Typography](#typography)
+    * [Imagery](#imagery)
+1. [Products and Services](#products-and-services) 
+    * [Products](#products)
+    * [Services](#services)
+1. [Wireframes](#wireframes)
+1. [Features](#features) 
+    * [Navbar](#navbar)
+        - [Desktop Navbar](#desktop-navbar)
+        - [Mobile Navbar](#mobile-navbar)
+    * [Registration Page](#registration-page ) 
+    * [Footer](#footer)
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -102,7 +113,8 @@ Django Data Structure - MVT architecture (Model Template View)
 
 ## User Stories
 
-Click this link to see all <a href="https://github.com/liamwalsh1980//workspace/Milestone-Project-4/readme/pdf/user-stories.pdf" target="_blank">User Stories</a>
+Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user-stories.pdf" target="_blank">User Stories</a>
+
 
 ## Development Process 
 
@@ -225,3 +237,110 @@ Several other font awesome images were used to show Customer Account, Shopping b
 
 I used the noimage.png image in this project in case there was no available image for any product or service that is added to the site. This simply fills a gap to make sure good UX is maintained.  
 
+## Products and Services 
+
+With around 53 products and service added I wanted to make sure each one was allocated into a category name. I also wanted to make sure that the products had the same format of fields for consistency, giving users the same type of useful information for all products and services.
+
+### Products 
+
+
+### Services 
+
+ 
+## Wireframes 
+
+All Wireframes were designed for laptop/computer, iPad/tablet and mobile display: 
+
+Please click <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/The-Bike-Shop-Wireframes.pdf" target="_blank">PDF Wireframes </a> to see wireframes in pdf format
+
+## Features
+
+### Navbar 
+
+The Navigation menu is displayed across all web pages and across all screen sizes for users to move through the website easily and quickly. It's displayed with a different background colour (Timberwolf grey) to the body of the website. The font styling for text links is the same as the logo (Russo One). 
+
+#### Desktop Navbar 
+
+The Navigation menu on desktop screens has a text logo with a bike icon. This can be found at the top left of the navbar. Users can click this logo and it will take them back to the homepage. The word ‘Bike’ changes colour when a user hovers over it giving them an indication that it’s a clickable logo. Users will find a search bar to use to search for products and the following links positions to the right: - 
+
+- User icon (My Account) 
+- Shopping cart icon (starts with £0.00) 
+
+Below the search bar in a horizontal row users can find the following links to click on: - 
+
+Products 
+-    By Price 
+-    By Rating 
+-    By Category 
+-    All Products 
+
+Bikes 
+-    Mens Bikes 
+-    Womens Bikes 
+-    Urban Bikes 
+-    All Bikes 
+
+Accessories 
+-    Helmets 
+-    Other Accessories 
+-    All Accessories 
+
+Services 
+-    Cleaning 
+-    Repair 
+-    Sell Your Bike 
+-    All Services 
+
+#### Mobile Navbar 
+
+On mobile and tablet screens, the navigation bar is displayed using the hamburger menu icon in the top left replacing the logo. This is done to give better UX when viewing the site on smaller screens. Users can click the hamburger menu which opens up the same link options as desktop users. The ‘User’ icon (My Account) and ‘Shopping Cart’ icon (Starts with £0.00) remains in place however the search bar is replaced with the ‘Search’ icon for users to click on. When users click the ‘Search’ icon the search bar appears below. 
+
+Navigation links on the top right update depending on the user being logged in and whether that user is a regular shopping or administrator.  
+
+![Image template](readme/images/user-access.png)
+
+### Registration Page 
+
+Users are encouraged to register an account but it’s not mandatory and therefore they can still make purchases without an account. Upon making a purchase users will still receive an email confirmation and immediate notification that their order has been received once they click the ‘Complete Order’ button on the Delivery and Payment page. 
+
+The process to register an account is simple. Click the ‘Account’ button at the top of the navigation menu which will open a dropdown menu to either ‘Login’ or ‘Register’ Once the ‘Register’ link is clicked the user will need to provide the following: -  
+
+- Username  
+    - This can be anything as long as it's not been used already 
+    - An error message will appear immediately if the username already exists 
+
+- Email Address  
+    - The user will need to add their email address twice for secure and avoid any typo mistakes made 
+
+- Password  
+    - The user will need to add a password twice for security and to avoid any typo errors made by mistake 
+
+Once this process is complete the user will see notification on the registration page that their account is active and verification is required. At the same time the user will receive an email confirmation to verify their account by clicking a link from within the body of the email. Once verified the user can: -  
+
+- Login using their username and password  
+(A password recovery option is available if required)
+- Access their personal profile page 
+    - Save delivery address and contact information
+    - Update delivery address and contact information 
+    - View order history (if any) 
+
+Admin User will have additional access to the following: 
+
+- Product Management page
+(CRUD – Create, Read, Update Delete achieved) 
+    - View current products and services 
+    - Add a product or service 
+    - Edit a product or service (Edit Page) 
+    - Delete a product or service 
+    - Access the Admin page  
+        - User accounts 
+        - Change user account details and permission level
+        - Delete accounts 
+        - Orders received 
+        - Categories 
+        - Products 
+        - URLs
+
+### Footer 
+
+A footer has been added to the site to show users a nice finish to each page. With good UX in mind users will see that the footer has the same font styling and colouring as the navbar at the top. Users will see social media icons available to click on to take them to a new webpage associated to which ever icon is clicked. All social media icons change colour (Antique Ruby) when hovering over them
