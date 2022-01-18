@@ -5,9 +5,10 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block inner_content %}
-<h2 class="sub-header text-center mb-5">{% trans "Sign Up" %}</h2>
+<h2 class="sub-header text-center">{% trans "Sign Up" %}</h2>
 
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
@@ -15,15 +16,15 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0">
-    <span class="icon">
-      <i class="far fa-arrow-alt-circle-left"></i>
-    </span>
-    <span class="text-uppercase adjust-cart text-black">Home</span>
-  </a>
   <button type="submit" class="btn checkout-cart-button rounded-0">
     <span class="font-weight-bold text-uppercase">{% trans "Sign Up" %} &raquo;</span>
   </button>
 </form>
+<a href="{% url 'home' %}" class="btn btn-outline-black rounded-0">
+  <span class="icon">
+    <i class="far fa-arrow-alt-circle-left"></i>
+  </span>
+  <span class="text-uppercase adjust-cart text-black">Home</span>
+</a>
 
 {% endblock %}

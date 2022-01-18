@@ -7,7 +7,7 @@
 
 {% block inner_content %}
 
-<h2 class="sub-header text-center mb-5">{% trans "Sign In" %}</h2>
+<h2 class="sub-header text-center">{% trans "Sign In" %}</h2>
 
 {% get_providers as socialaccount_providers %}
 
@@ -40,21 +40,21 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
                      
-  <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0">
-    <span class="icon">
-      <i class="far fa-arrow-alt-circle-left"></i>
-    </span>
-    <span class="text-uppercase adjust-cart text-black">Home</span>
-  </a>
   <button type="submit" class="btn checkout-cart-button rounded-0">
     <span class="font-weight-bold text-uppercase">{% trans "Sign In" %}</span>
     <span class="icon">
       <i class="fas fa-sign-in-alt"></i>
     </span>
   </button>
-    <p class="text-danger my-2">
-      <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-    </p>
 </form>
+<a href="{% url 'home' %}" class="btn btn-outline-black rounded-0">
+  <span class="icon">
+    <i class="far fa-arrow-alt-circle-left"></i>
+  </span>
+  <span class="text-uppercase adjust-cart text-black">Home</span>
+</a>
+  <p class="text-danger my-2">
+    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  </p>
 
 {% endblock %}
