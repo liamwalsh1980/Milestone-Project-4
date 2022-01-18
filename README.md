@@ -1,108 +1,227 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Bike Shop
 
-Welcome Liam Walsh,
+## Code Institute - Milestone Project 3
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Image template](readme/images/responsive-homepage.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<a href="https://the-bike-shop-project.herokuapp.com/" target="_blank">Click here to view The Bike Shop live</a>
 
-## Gitpod Reminders
+## Table of contents
+1. [Introduction](#introduction)
+1. [Project Introduction](#project-introduction)
+1. [UX Design](#ux-design)
+    * [User Demographic](#user-demographic)
+    * [Main Aims](#main-aims)
+        - [User Goals](#user-goals)
+        - [Site Owner Goals](#site-owner-goals)
+        - [Developer Aims](#developer-aims)
+1. [User Stories](#user-stories)
+1. [Development Process](#development-process)
+1. [My Strategy](#my-strategy)
+    * [General](#general)
+    * [Unregistered Users](#unregistered-users)
+    * [Registered Users](#registered-users)
+    * [Store Owner/Admin](#store-owner-or-admin)
+1. [My Design](#my-design)
+    * [Hero Images](#hero-images)
+    * [Colour Scheme](#colour-scheme)
+    * [Typography](#typography)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[Back to top ⇧](#the-bike-shop)
 
-`python3 -m http.server`
+## Introduction
+This Milestone project (Full Stack Frontend Development) is the fourth and final project to contribute towards my Full Stack Web Developer Diploma with Code Institute. 
 
-A blue button should appear to click: _Make Public_,
+The main requirements in this project are to design a Full-Stack e-commerce website based around business logic to control a centrally-owned dataset. The site setup includes an authentication mechanism with the option for users to pay for products and services with a further option to register for an account to access orders after a purchase has been made. There also is a site administrator login for the owner of the site to access and give them the option to add new products, edit existing products. delete products and gain access to customer orders and login details giving full management of the site. The main technologies used to achieve this project is HTML, CSS using the Bootstrap5 framework, JavaScript using the jQuery library, Python using the Full framework, Django (Model Template View - MVT architecture), Relational Databases - MySQL and Postgres, and Stripe - payment processing platform. 
 
-Another blue button should appear to click: _Open Browser_.
+Django Data Structure - MVT architecture (Model Template View) 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Model – Represents the data from the database in order for the application to work 
 
-A blue button should appear to click: _Make Public_,
+- Template – Presents the layer and defines how information is displayed to the end user 
 
-Another blue button should appear to click: _Open Browser_.
+ - View – Defines the business logic that links the templates to the models 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+ ## Project Introduction 
 
-To log into the Heroku toolbelt CLI:
+ The Bike Shop is an easy-to-use online shopping experience for cycling lovers to visit and purchase products and services. Products available to purchase are Men's bikes, Woman's bikes, Urban bikes, Cycling Helmets and general accessories. Before purchasing any product, users can get access to more information about that product with the option to pick a size (if applicable). The services available to book on the site is professional bike cleaning, bike repair and a sell your bike scheme. The user will need to select, add and submit relevant information depending on what service they are looking to purchase one of these services.  
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+ Date this project started: 20th December 2021 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+ ## UX Design
 
-------
+ ### User Demographic
 
-## Release History
+- For adult cyclists only  
+- For cycling enthusiasts who want to purchase their first adult bike for enjoyment 
+- For cycling enthusiasts who want to purchase their first adult bike for fitness 
+- For cyclists that want to upgrade their current bike to something more advanced 
+- For cyclists that want to purchase additional accessories for comfort and safety 
+- For anyone wanting to start cycling to work  
+- For cyclists to take up the offer of The Bike Shop services (clean, repair and sell) 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Main Aims
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### User Goals 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- To view all products and services on the site 
+- To search for a product or service quickly by keyword(s) - To find the right type of bike based on my requirements around cycling 
+- To find the right bike accessories for my requirements around cycling 
+- Find the right service for my bike i.e., clean, repair and/or sell 
+- Register an account to view orders and to make it easier to order in the future 
+- To easily login to my account 
+- To view previous orders 
+- To view saved profile details i.e., contact number and address with the option to update details 
+- To add a product(s) of choice to my shopping bag 
+- To view my shopping bag before purchase 
+- To update and/or remove a product from my shopping bag 
+- To complete a purchase using an online card payment system 
+- To receive confirmation of order on the site and via email 
+- To easily logout of my account 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Site Owner Goals 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- ‘Admin’ username and password login 
+- Access to 'Product Management’ 
+- Access to 'Service Management' 
+- Add a new product or service 
+- Edit a current product or service 
+- Delete a current product or service 
+- Admin access to view, update and/or delete products, services and users 
+- **CRUD** conventions realised and achieved 
+(Create, Read, Update and Delete)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Developer Aims 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Create an interesting and easy to use e-commerce website for cycling lovers to visit and make purchases 
+- A platform for Film lovers to use to Create, Read, Update and Delete Film Records 
+- Demonstrate the use of front-end and back-end Web development languages recently learnt with CI. 
+- The use of relational databases to storge product data and user details to easily update, add and delete when required 
+- Successful deployment adding to the developer portfolio
+- To achieve a final grade to contribute towards the Full Stack Web Developer Diploma overall grade 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## User Stories
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Click this link to see all <a href="https://github.com/liamwalsh1980//workspace/Milestone-Project-4/readme/pdf/user-stories.pdf" target="_blank">User Stories</a>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Development Process 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+As this project is focused on full stack development and using a relational database with Stripe Payments, more time was given to the preparation of the site based on UX Design, the data for the site whilst keeping a full focus on the user goals, site owner goals, developer goals and user stories. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## My Strategy 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+After looking back over my previous projects, I decided to breakdown my strategy into sections making the development process easier to delivery. This gave me a better understanding of what I needed to include and what would be more important from the point of view of an end user, store owner and the developer of the application.  
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### General 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- Logo (desktop only) 
+- Search facility 
+- Sort facility 
+- Navbar list for desktop 
+- Burger Navbar for mobile and tablet 
+- Subscribe option 
+- Strong Hero Image on the Homepage 
+- Header 
+- Shop Now button 
+- Shopping cart 
 
-------
+### Unregistered Users
+- Need to be able to: 
+    - Search for products and services 
+    - View products/services 
+    - Use the sort facility  
+    - View details of each product/service
+    - Buy products and services as a guest 
+    - Receive an email confirmation for all purchases made
+    - Register an Account using a username and secure password (optional) 
 
-## FAQ about the uptime script
+### Registered Users 
+- Need to be able to: 
+    - Login with username and password 
+    - Search for products and services 
+    - View products/services 
+    - Use the sort facility
+    - View details of each product/service 
+    - Buy products and services  
+    - Receive an email confirmation for all purchases made 
+    - Access Profile - delivery details 
+    - Access Profile - order history (if applicable)
+    - Logout 
 
-**Why have you added this script?**
+### Store Owner or Admin
+- User needs to be able to: 
+    - Login with username and password
+    - Search for products and services 
+    - View products/services 
+    - Use the sort facility 
+    - View details of each product/service 
+    - Buy products and services  
+    - Receive an email confirmation for all purchases made
+    - Access Profile - delivery details 
+    - Access Profile - order history (if applicable)
+    - Add new Products/Services 
+    - Update Products/Services 
+    - Delete Products/Services 
+    - Logout
+    - Access Django Administration 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+With these goals in mind, I put together diagrams that shows the importance and Viability relevant to each. 
 
-**How will this affect me?**
+![Image template](readme/images/strategy-general.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![Image template](readme/images/strategy-unregistered-users.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+![Image template](readme/images/strategy-registered-users.png) 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Image template](readme/images/strategy-admin-user.png)
 
-**So….?**
+## My Design 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+I wanted this project to have minimum text and therefore it is important to note that I made sure that from the products sold, services sold, images used, nav links applied, my colour scheme, text styling picked and the name of the site, it is clear what this site offers and who the target audience is.  
 
-**Can I opt out?**
+### Hero Images 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+The hero images came from Shutterstock at small cost of £1.90 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes is to use one image with a ‘Shop Now’ button in the middle.  
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![Image template](readme/images/original-homepage.png)
 
-**Anything more?**
+This looked fine; however, I felt the homepage needed more images in sections to represent what the site was about and the what target audience I was aiming for. With this in mind I used 4 different images representing the 4 main product categories. 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The sport of cycling is very colourful with Bikes, Clothing, Helmets and Competition Winning Jerseys all represented with bright colouring. With this in mind the first image users will see contains plenty of colour with a male cyclist as the main focus. I then used 3 more images to represent women's bikes, urban bikes and accessories.  
 
----
+Please see the credits section for information about where the images were sourced from.  
 
-Happy coding!
+### Colour Scheme
+
+I wanted a strong bright colour to represent the shop well. I used the colours from the accessories Hero image on the homepage to use throughout the site starting with Minion Yellow. I then wanted a contrasting colour like black to compliment this Yellow, therefore I used the same shade of black from the accessories hero image which is called Rich Black. The light grey called Timberwolf was also sourced from the background of this hero image. I then used Coolors.co to extract 2 more colours which sits between Minion Yellow and Timberwolf called Flax and between Timberwolf and Rich Black called Sonic Silver.  
+
+The Bike Shop – Colour Pallet from coolors.co
+
+![Image template](readme/images/main-palette.png)
+
+Once I had finished building the homepage, I wanted the logo and ‘Shop Now’ button to standout more. Therefore, I decided to add a new colour to achieve this. The colour chosen is a deep red (Antique Ruby). I Also used the next shade across from this colour for hovering over. This shade I chose is called Cordovan red. This is used for the category links on the products and services pages. Both colours sourced from coolors.co like my main palette. 
+
+![Image template](readme/images/side-palette.png)
+
+### Typography
+
+I used Google fonts to home in on 2 fonts needed for this project.  
+
+For the logo text I chose the font style – <a href="https://fonts.google.com/specimen/Russo+One" target="_blank">Russo One</a> to give the logo a striking and bold look. This I believe would show users that the site is built with personality and style encouraging them to stay on the site and explore the products and services.  
+
+![Image template](readme/images/logo-text-font.png)
+
+For the main content of the site, I used a reliable font called <a href="https://fonts.google.com/specimen/Russo+One" target="_blank">Ubuntu</a>. I tested this font with varies product and service titles and made sure it looked good across all font sizes from 8px upwards. 
+
+![Image template](readme/images/main-text-font.png)
+
+### Imagery
+
+With around 53 products and services, each with an image to show users what they are buying, I felt it best to keep the background of the site plain white. This works well to clearing show all images. However, I decided to break up this background colour by using the Timberwolf grey from my colour palette in the header and footer of the site.  
+
+I looked at using a ‘bike’ image to replace the word Bike from the logo title. Instead, I simply added a font awesome image of a bike to the end of the text logo. 
+
+Several other font awesome images were used to show Customer Account, Shopping bag, services offered and certain fields within all products I.e., Rating star and product tag.  
+
+I used the noimage.png image in this project in case there was no available image for any product or service that is added to the site. This simply fills a gap to make sure good UX is maintained.  
+
