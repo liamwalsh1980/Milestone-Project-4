@@ -102,10 +102,6 @@ body {
     padding-bottom: 20%;
 }
 
-.padding-bottom-homepage {
-    padding-bottom: 12%;
-}
-
 .border-1 {
     padding: 20px;
 }
@@ -514,6 +510,10 @@ footer {
     .container {
       max-width: 80%;
     }
+
+    .padding-bottom-homepage {
+        padding-bottom: 6% !important;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -528,6 +528,10 @@ footer {
 
     .header-container {
         padding-top: 164px;
+    }
+
+    .padding-bottom-homepage {
+        padding-bottom: 8%;
     }
 }
 
@@ -557,6 +561,10 @@ footer {
     /* .padding-bottom {
         padding-bottom: 20%;
     } */
+
+    .padding-bottom-homepage {
+        padding-bottom: 12%;
+    }
 }
 
 @media (max-width: 576px) {
