@@ -113,16 +113,6 @@ body {
     color: #D6D0CE;
 }
 
-.shop-now-button {
-    background: #852C34;
-    color: #D6D0CE;
-    min-width: 260px;
-    border-color: #131418;
-    border-width: thick;
-    font-weight: bold;
-    font-size: 18px;
-}
-
 .shop-now-cart-button {
     background: #852C34;
     color: #D6D0CE;
@@ -134,17 +124,11 @@ body {
     margin-top: 2%;
 }
 
-.checkout-cart-button {
-    background: #852C34;
-    color: #D6D0CE;
-    min-width: 260px;
-    border-color: #131418;
-    border-width: thick;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.book-now-button {
+.shop-now-button,
+.checkout-cart-button, 
+.book-now-button, 
+.profile-update-info,
+.allauth-accounts-button {
     background: #852C34;
     color: #D6D0CE;
     min-width: 260px;
@@ -168,7 +152,10 @@ body {
 .shop-now-cart-button:focus,
 .checkout-cart-button:hover,
 .checkout-cart-button:focus,
-.checkout-cart-button:active {
+.checkout-cart-button:active,
+.profile-update-info:hover,
+.profile-update-info:active,
+.profile-update-info:focus {
     color: #fadf4b;
     background-color: #131418;
     border-color: #852C34;

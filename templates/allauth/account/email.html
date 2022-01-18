@@ -50,7 +50,7 @@
     <form method="post" action="{% url 'account_email' %}" class="add_email">
         {% csrf_token %}
         {{ form|crispy }}
-        <button name="action_add" type="submit" class="btn checkout-cart-button rounded-0">
+        <button name="action_add" type="submit" class="btn allauth-accounts-button rounded-0">
           <span class="font-weight-bold text-uppercase">{% trans "Add E-mail" %}</span>
         </button>
     </form>
