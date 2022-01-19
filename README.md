@@ -35,8 +35,22 @@
     * [Navbar](#navbar)
         - [Desktop Navbar](#desktop-navbar)
         - [Mobile Navbar](#mobile-navbar)
-    * [Registration Page](#registration-page ) 
+    * [Registration Page](#registration-page)
+    * [Homepage](#homepage)
     * [Footer](#footer)
+    * [Products Pages](#products-pages)
+    * [Product Detail Page](#product-detail-page)
+    * [Toasts](#toasts)
+    * [Services Page](#services-pages)
+    * [Service Booking Page](#service-booking-page)
+    * [Login Page](#login-page)
+    * [Profile Page](#profile-page)
+    * [Logout Page](#logout-page)
+    * [Shopping Cart Page](#shopping-cart-page)
+    * [Checkout Page](#checkout-page)
+    * [Order Summary Page](#order-summary-page)
+1. [Stripe](#stripe)
+
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -341,6 +355,250 @@ Admin User will have additional access to the following:
         - Products 
         - URLs
 
+### Homepage
+
+Users will see 4 sections on the homepage with each section split in half. All sections have different background colouring with an image making up one side and a large ‘Shop Now’ button centred which makes up the other side making it easy for users to click through to the products they are interested in. The 4 sections represent products for sales in regards to mens bikes, women's bikes, urban bikes and accessories.  
+
+At the top just above the sections users will see a fixed banner welcome message which stays in place across all web pages. I feel this nicely breaks up the navbar and body of each page. The banner stating the website name ‘The Bike Shop’ is very important to have on smaller screens because the logo has been removed and replaced by the hamburger menu icon for good UX. The banner is also a link back to the homepage and again important to have on smaller screens when the logo is replaced by the hamburger menu icon. 
+
 ### Footer 
 
-A footer has been added to the site to show users a nice finish to each page. With good UX in mind users will see that the footer has the same font styling and colouring as the navbar at the top. Users will see social media icons available to click on to take them to a new webpage associated to which ever icon is clicked. All social media icons change colour (Antique Ruby) when hovering over them
+A footer has been added to the site to show users a nice finish to each page. With good UX in mind users will see that the footer has the same font styling and colouring as the navbar at the top. Users will see social media icons available to click on to take them to a new webpage associated to which ever icon is clicked. All social media icons change colour (Antique Ruby) when hovering over them.
+
+### Products Pages
+
+Within all the products pages users can browse through the products, each giving the following: - 
+
+- Products image 
+- Product name 
+- Price 
+- Category tag 
+- Rating 
+
+All products are boxed individually showing separation from each.  
+
+The Products available upon deploying the site is as follows: - 
+
+- Men's Bikes 
+- Women’s Bikes 
+- Urban Bikes 
+- Helmets 
+- Other Accessories 
+
+Users can also sort by: - 
+
+- Price 
+- Rating 
+- Category 
+
+The ‘Products > By Price’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. This page sorts all products by Price order starting with lowest price products first.  
+
+The ‘Products > By Rating’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. This page sorts all products by Rating order starting with highest rating products first. 
+
+The ‘Products > By Category’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. This page sorts all products by Category order, alphabetically. 
+
+The ‘Products > All Products’ page contains a subheader below the banner along with an indication of how many products are on this page. This page is not sorted in anyway however, like on all Product pages, users will see on the right side near the top a ‘sort’ feature where users can sort by price, rating, name and category either by ascending or descending order. 
+
+The ‘Bikes > Mens Bikes’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. This page shows just Mens Bikes with the option on the right side near the top a ‘sort’ feature where users can sort Mens Bikes by price, rating, name and category by ascending or descending order. 
+
+The ‘Bikes > Womens Bikes’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. This page shows just Womens Bikes with the option on the right side near the top a ‘sort’ feature where users can sort Womens Bikes by price, rating, name and category by ascending or descending order. 
+
+The ‘Bikes > Urban Bikes’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. This page shows just Urban Bikes with the option on the right side near the top a ‘sort’ feature where users can sort Urban Bikes by price, rating, name and category by ascending or descending order. 
+
+The ‘Bikes > All Bikes’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. Below the subheader users will see small badges which are links to other options within this category. This page shows All Bikes with the option on the right side near the top a ‘sort’ feature where users can sort All Bikes by price, rating, name and category by ascending or descending order. 
+
+The ‘Accessories > Helmets’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. This page shows just Helmets with the option on the right side near the top a ‘sort’ feature where users can sort Helmets by price, rating, name and category by ascending or descending order. 
+
+The ‘Accessories > Other Accessories page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. This page shows just Other Accessories with the option on the right side near the top a ‘sort’ feature where users can sort Other Accessories by price, rating, name and category by ascending or descending order. 
+
+The ‘Accessories > All Accessories’ page contains a subheader below the banner along with an indication of how many products are on this page and a small text link to go back to the All Products page if required. Below the subheader users will see small badges which are links to other options within this category. This page shows All Accessories with the option on the right side near the top a ‘sort’ feature where users can sort All Accessories by price, rating, name and category by ascending or descending order. 
+
+Users can add the product to their shopping cart directly on this page by selecting the following: -  
+
+- Size - if applicable, a size must be selected 
+- Quantity - any quantity between 1 and 20 will need to be selected, otherwise the user will see an error message and the item(s) won’t be added to the user's cart until a quantity between 1 and 20 is selected. 
+
+If a user is interested in a product but want more information before purchasing, they can click on that product which takes them to the Product page giving them more details and the option to add to their basket.  
+
+At the right side, bottom of every products page, users can click the ‘back to top’ cursor which is an up arrow in a small round background. Clicking this will bring users to the top of the page the user is on. 
+
+### Product Detail Page
+
+Users can click through to a product detail page for each product showing the user a bigger image to look at and more details about the product chosen. Users will know quickly what product detail page they are on as the product name is displayed as a header at the top above the image. Users can also click the image again which opens up a new web page tab showing just the image with black background. 
+
+Users will see the Product Name, Price, Category (link to go to all products within that category), customer rating out of 5.0 and a product description. 
+
+Users can add the product to their shopping cart by selecting the following: -  
+
+- Size - if applicable, a size must be selected 
+- Quantity - any quantity between 1 and 20 will need to be selected, otherwise the user will see an error message and the item(s) won’t be added to the user's cart until a quantity between 1 and 20 is selected.  
+
+Once a user selects a size (if applicable) and quantity, they can then click the ‘add to cart’ button.  
+
+If a user changes their mind, they can click the ‘Go Back’ link taking them back to the products page within the specific product category.  
+
+### Shopping Cart Page  
+
+Users can access their cart at any point by clicking the ‘cart’ icon at the top right on any page. If a user clicks this when they have no products in the cart, they will be taken to an empty shopping cart page and they will see a message with a ‘sad’ face icon and a ‘Shop Now’ button below to click on. This will take them back to the products page to start shopping.  
+
+If a user has at least 1 product in their shopping cart they will see the following when they click their cart.  
+
+- Product Image 
+- Product Information with size if applicable 
+- Price of the product 
+- Qty (Quantity) which includes a decrease/increase option and text links to ‘Update Qty’ or ‘Remove All’. If the user reduces the quantity to Zero the product will be removed from the shopping cart. Clicking the ‘Update Qty’ link will update the shopping cart, subtotal and the top right value of the shopping cart in the navigation menu. Clicking the ‘Remove All’ link will simply remove the product from the shopping cart and take the user to the empty shopping cart page 
+- Subtotal which is the product price times the quantity selected.  
+- Grand total which will be no different than the Subtotal as they delivery charge is free at The Bike Shop.  
+- ‘Keep Shopping’ text link which takes user back to the products page 
+- ‘Secure Checkout’ button which takes the user to a secure payment page to complete their order.  
+
+### Checkout Page 
+
+When the user lands on the checkout page, they will see 2 sections. On desktop these sections sit horizontally and on mobile they sit vertically. The first section users will see is the ‘Please fill out the form below to complete your order’ section to complete. It’s a simple form for users to complete their order which includes: - 
+
+- Details 
+    - Full Name (Mandatory field) 
+    - Email Address (Mandatory field) 
+ 
+- Delivery 
+    - Phone Number (Mandatory field) 
+    - Country (Mandatory field) 
+    - Postal Code  
+    - Town or City (Mandatory field) 
+    - Street Address 1 (Mandatory field) 
+    - Street Address 2 (Mandatory field) 
+    - County (Mandatory field) 
+    
+If a user is logged in to their account, they have the option to tick/untick the ‘Save this delivery information to my profile’ checkbox. It's checked by default.  
+
+If a user doesn't have an account or isn’t logged in the user will see ‘Create an account or login to save this information’ options to click on.  
+
+- Payment (Stripe Element) 
+    - Card Number / MM/YY CVC (Mandatory field) 
+
+If a user types an incorrect card number they will see an error message - 'Your card number is invalid message'
+
+Below this, users will see a ‘Complete Order’ button to click on to complete their purchase with a clear indication below of how much the user's card will be charged. If the user wants to go back to either adjust their shopping cart or change their mind on buying altogether, they can click the ‘Adjust Cart’ text link which sits to the left of the ‘Complete Order’ button
+
+The next section called ‘Order Summary - Your Shopping Cart Has (?) products’ is for users to view what is in their shopping cart before they place their order.  
+
+On this page users will be notified immediately if they haven’t completed the form properly as most of this page has mandatory fields that need information adding to complete an order. 
+
+Further authentication - Users will notice that when they have completed the order form and clicked the ‘Complete Order’ there is a short delay while their payment goes through. They will see light green background overlay and a loading spinner showing their order is going through the process payment. They are then given the option of completing their purchase or cancelling it. If they cancel the order the user is taken back to the order ‘Checkout’ page where all their details remain in place and a ‘red’ notice warning at the bottom saying ‘We are unable to authenticate your payment method. Please choose a different payment method and try again’. If the user clicks to proceed with their purchase, they will see the light green background overlay and the loading spinner again  
+
+### Order Summary Page  
+
+Once the checkout page with the customer payment is completed the user will be taken to an order summary page. On this page users will see a full breakdown of their order giving them the following: - 
+
+- Order Info (Unique Order Number and Order Date and Time) 
+- Order details (Products ordered with size confirmed if applicable) 
+- Delivering to (Full Name, Address, Phone Number) 
+- Billing info (Order total and Grand total) 
+
+Below, users will see a ‘Shop Again’ button to take them back to the products page to shop again if they choose to.  
+
+Users will be notified that an email confirmation has been sent and a 'Thank you’ as the header at the top of the page.  
+
+Users will also see a popup success toast message confirming their order is successfully processed, what their unique order number is and that they will receive an email. This message closes automatically after 10 seconds like all the toasts on the site do.  
+
+### Toasts 
+
+There are Bootstrap Toasts displayed under the navbar, providing users with real-time feedback on their actions.  
+
+‘Success’ toasts are represented with a green colour border and displayed for users when they do the following: - 
+
+- Add a product to their cart  
+- Update a product quantity 
+- Remove a product from their cart 
+- Login
+- Logout
+- Signup
+- Complete an order
+
+Users will see a toast message pop up confirming the following information: - 
+
+- A relevant message of whether the user has added, updated or removed a product 
+- Confirmation of how many products is in the shopping cart 
+- A list of products including an image, product name, Quantity and Size (if applicable) 
+- A ‘Go to secure checkout’ button or ‘Shop Now’ button if the shopping cart is empty. 
+
+‘Error’ toasts are represented with a red colour border and displayed for users when they do the following: - 
+
+- Attempting to remove a product and an error occurs.  
+
+Other success toasts are also in place.  
+
+- ‘Warning’ represented with a yellow colour border 
+- ‘Info’ represented with an aqua colour border. This toast has the ‘Warning!’ text for reference.  
+
+All toasts include a cross icon in the top right for user to click on to close the toast. Alternatively, after 10 seconds the toast will automatically close.  
+
+### Service Page
+
+### Service Booking Page
+
+### Login Page 
+ 
+### Profile Page 
+ 
+### Logout Page
+
+## Stripe 
+
+Stripe offers software APIs to accept payments, send payments and manage all business transactions online with complete security. I setup an account with Stripe using my own email address to use the accept payments option. The option used is called Stripe Elements to add a prebuilt credit card input to my form on the checkout page.  
+
+I then installed Stripe using the command: - 
+
+- **$ pip3 install stripe**
+
+Exporting the public key in version control using the command: - 
+
+- **$ export STRIPE_PUBLIC_KEY=[*KEY*]**
+
+Exporting the secret key in version control using the command: - 
+
+- **$ export STRIPE_SECRET_KEY=[*KEY*]**
+
+As this won’t permanently export, I added both keys to my gitpod main workspace page by going to settings > variables > new variable. 
+
+I then created a ‘paymentIntent’ using Stripe to test that the cart total is coming through by using the python print function to show the total in the terminal.  
+
+I then added a listener to the payment form submit event and used the code from Stripe Docs to do this and with a few adjustments: -  
+
+- Disable the card element to prevent multiple submissions 
+- Disable the submit button to prevent multiple submissions 
+- Delete the billing details  
+- Change some of the syntax to camelCase for best practice 
+- Provide the card to stripe and then execute this function on the result 
+- Place the error into the card error div 
+- Complete indentation 
+
+Then I tested the form using the default credit card number provided by stripe to make sure the ‘paymentIntent’ is successful.  
+
+After completing some code logic in views.py I then created a checkout success template which mirrors the format of the checkout.html. This template takes the order number and renders a success page letting users know their payment is completed successfully.  
+
+‘If’ statements were added to the checkout success template for the street address2, county and postcode as these fields aren’t mandatory for users to complete and will only be displayed in the order summary if they user completes them.  
+
+The logic is set so that when an order is completed by a user their products in the shopping cart will be deleted.  
+
+I then added some redundancy in case a user closes the browser window after a payment is confirmed but before the form is fully submitted and the payment is taken but the order isn't received by the shop owner. I used Stripe webhooks signals to help prevent this.  
+
+Also exported and added to the gitpod main workspace as a new variable is the STRIPE_WH_SECRET 
+
+- **$ export STRIPE_SECRET_KEY=[*KEY*]**
+
+To ensure orders are entered into the database even in the event of a user error during the checkout process, I made sure that customer information was passed through a Stripe payment intent as metadata. This tested by printing the intent to the terminal.  
+
+![Image template](readme/images/stripe-payment-intent-metadata.png)
+
+I then made some changes to the model by adding a couple of new fields to stop a user from creating identical orders in error. The first is a text field that will contain the original shopping cart that created it. The other is a character field that will contain the stripe payment intent ID which is guaranteed to be unique. Once this is done, I then migrated these changes using the makemigrations (with dry run) and migrate (with plan). I then added these fields to the admin side to finish.  
+
+After finishing up the code I then tested that Stripe payments work by adding an order to the shopping cart and then making a purchase using Stripes test credit card number. Tested was completed after being taken to the ‘Order Summary page’, seeing the success toast, checking Stripe webhooks and going into the admin. 
+
+I also added django-countries to gain access to the pre-built country field containing all the valid country codes i.e., GB using the following command and then used the freeze requirements command to bring it all up to date.  
+
+- **$ pip3 install django-countries**
+- **$ pip3 freeze > requirements.txt**
+
+
+
