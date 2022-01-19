@@ -31,6 +31,8 @@
     * [Products](#products)
     * [Services](#services)
 1. [Wireframes](#wireframes)
+1. [Database Models](#database-models)
+1. [Development Environment](#development-environment)
 1. [Features](#features) 
     * [Navbar](#navbar)
         - [Desktop Navbar](#desktop-navbar)
@@ -49,7 +51,27 @@
     * [Shopping Cart Page](#shopping-cart-page)
     * [Checkout Page](#checkout-page)
     * [Order Summary Page](#order-summary-page)
+1. [Other Features](#other-features)
+1. [Future Features](#future-features)
 1. [Stripe](#stripe)
+1. [Allauth](#allauth)
+1. [Crispy Forms](#crispy-forms)
+1. [Deployment](#deployment)
+1. [Clone Project](#clone-project)
+1. [Forking Project](#forking-project)
+1. [Technologoies Used](#technologoies-used)
+    * [Languages](#languages)
+    * [Frameworks and Libraries](#frameworks-and-libraries)
+    * [Other Technologies](#other-technologies)
+1. [Testing](#testing)
+    * [Bugs](#bugs)
+1.  [Credits](#credits)
+    * [Homepage Images](#homepage-images)
+    * [Content](#content)
+    * [Code](#code)
+1. [Acknowledgements](#acknowledgements)
+1. [Notes](#notes)
+1. [Final Step](#final-step)
 
 
 [Back to top ⇧](#the-bike-shop)
@@ -266,6 +288,64 @@ With around 53 products and service added I wanted to make sure each one was all
 All Wireframes were designed for laptop/computer, iPad/tablet and mobile display: 
 
 Please click <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/The-Bike-Shop-Wireframes.pdf" target="_blank">PDF Wireframes </a> to see wireframes in pdf format
+
+## Database Models 
+
+![Image template](readme/images/the-bike-shop-database.png)
+
+There were some adjustments to the models
+- Products model doesn't include has_colors
+- Order model doesn't include delivery_cost
+- Service and ServiceType models were created and migrated but i decided to go a different direction and use a form and modal instead. 
+
+## Development Environment 
+
+Within Github I opened a ‘new’ repository and included the Code Institute full template. The New repository is called liamwalsh1980/Milestone-Project-4 with a brief description of the new application which can be seen below: - 
+
+*An online shop for cyclists of all levels to purchase a new bike, accessories and services. The site allows users to create an account with a username and password to access and make purchases easily and quickly.*
+
+I then clicked ‘Gitpod’ to open the workspace up. 
+
+![Image template](readme/images/ms4-creating-a-new-repo.png)
+
+![Image template](readme/images/ms4-creating-a-new-repo-close-up.png)
+
+![Image template](readme/images/ms4-repo-created.png)
+
+- I started by installing Django in the command line using the command  
+**$ pip3 install django**
+
+- Then I create the new product called ‘the-bike-shop' using the following command 
+**$ django-admin startproject the_bike_shop .**
+(dot is to make sure it’s added to the current directory) 
+This creates the new project folder with __init__py, asgi.py, settings.py, urls.py, wsgi.py files with the manage.py at project level.  
+
+- Inside the .gitignore file I added *.sqlite3, to ignore the development database file and *.pyc along with __pycache__ to ignore compiled python code not needed in version control. 
+
+Then I added the following new files: - 
+
+- app.py using the command touch app.py (this will be for writing Python code 
+- env.py using the command touch env.py (this will be for hiding sensitive data) 
+- .gitignore should already be created based on the CI template installed when creating the repository. Within the file the env.py file should be added along with the __ pycache __ directory that will be auto-generated shortly. 
+
+At this stage I ran the project to make sure all is working so far by using the command 
+- **$ python3 manage.py runserver**
+
+![Image template](readme/images/site-setup.png)
+
+Back on the workspace I stopped the server and run initial migrates using the command 
+- **$ python3 manage.py migrate**
+
+Then I created a superuser to login as an administrator by using the command 
+- **$ python3 manage.py createsuperuser**
+    - Username: shopowner
+    - Email: lwalsh_1980@hotmail.co.uk
+    - Password: **************
+    
+To finish, I added, committed (initial commit) and pushed the code using the following commands
+- **$ git add .** 
+- **$ git commit –m "Initial commit”** 
+- **$ git push**
 
 ## Features
 
@@ -543,6 +623,18 @@ All toasts include a cross icon in the top right for user to click on to close t
  
 ### Logout Page
 
+## Other Features
+
+Within the head element I added a head icon that is positioned in the tab of the browser when the web page is open. The icon is the same as the ‘bike’ icon to the right of the text logo on the website. The icon was sourced from <a href="https://gauger.io/fonticon/" target="_blank">Gauger - Fonticon</a>.
+
+## Future Features
+
+- Product colours for users to pick alternative colours. In order for this to work I would need to add more images of the products in different colours so that when a colour is picked the image changes to that relevant colour.  
+
+- Multiple images and rotation.  
+
+- Wishlist with heart icon 
+
 ## Stripe 
 
 Stripe offers software APIs to accept payments, send payments and manage all business transactions online with complete security. I setup an account with Stripe using my own email address to use the accept payments option. The option used is called Stripe Elements to add a prebuilt credit card input to my form on the checkout page.  
@@ -599,6 +691,136 @@ I also added django-countries to gain access to the pre-built country field cont
 
 - **$ pip3 install django-countries**
 - **$ pip3 freeze > requirements.txt**
+
+## Allauth 
+
+Allauth setup – this gives the users the ability to login, log out and register for an account. This saves times as the functionalities are already built using Allauth instead of building from scratch. To use Allauth I started by installing it using the command
+
+- **$ pip3 install django-allauth==0.41.0**
+
+Inside settings.py at the top I then imported os using the command   
+
+- **$ import os (set our default environment)**
+
+Then from the django allauth documentation I added AUTHENTICATION_BACKENDS and added to the INSTALLED_APPS 
+
+- django.contrib.sites 
+- allauth 
+- allauth.account 
+- allauth.socialaccount 
+
+Then, underneath the AUTHENTICATION_BACKENDS I added  
+
+- SITE_ID = 1 
+
+In urls.py file I added a new path for the allauth urls to the project using 
+path(‘accounts’, include(‘allauth.urls’)) and imported ‘include’ above 
+This now means the project has all the urls needed for login, logout, password resets etc. 
+
+I then 'run' migrations to update the database as it has new apps now by using the commands 
+
+- **$python3 manage.py migrate**
+
+The run the application and login to the admin user the superuser just created and change the Domain Name and Display Name in the ‘Sites’ area.  
+
+Back in the settings.py file I added EMAIL_BACKEND code below the SITE_ID with a redirect to /success url which isn’t created yet. I then tested it by running the site and adding /accounts/login to the end of the url and then verifying the account by logging into the /admin again and manually ticking verified and primary. When testing again on the /accounts/login url this time the redirect to /success is achieved and at the moment comes up with a 404 error Page not found which is find as /success is created yet.  
+
+At this stage everything is working and there I used the freeze requirements.txt command  
+
+- **$ pip3 freeze > requirements.txt**
+
+(This creates a requirements.txt folder at project level)
+
+To finish Allauth I then setup the templates directory to start front-end code. I used the following commands to complete this. 
+
+- **$ mkdir templates**
+- **$ mkdir templates/allauth**
+
+## Crispy Forms
+
+Django package called crispy-forms is installed to let me format all the forms using bootstrap styling automatically. 
+
+Inside settings.py at project level Crispy Forms is installed as an app and built-ins added for:
+
+- crispy_forms.templatestags.crispy_forms_tags 
+- crispy_forms.templatestags.crispy_forms_field
+
+## Deployment 
+
+Requirements 
+ 
+Heroku and Github
+
+## Clone Project  
+ 
+## Forking Project 
+ 
+## Technologoies Used
+
+### Languages 
+### Frameworks and Libraries
+### Other Technologies
+https://jsonformatter.curiousconcept.com/
+
+## Testing
+- Testing information can be found in a separate 
+[Testing document](TESTING.md)
+
+### Bugs
+
+- Footer overlay with quantity minus and plus buttons. When scrolling up and down these buttons weren’t hiding when underneath the footer as they should do. I resolved this by adding some styling using z-index:2.  
+
+- {bug_product_detail_page1 - png here}	 
+- {bug_product_detail_page2 - png here} 
+- {bug_product_detail_page_fixed1 - png here} 
+- {bug_product_detail_page_fixed2 - png here} 
+- {bug_product_detail_page_fixed3 - png here} 
+
+### Credits 
+
+- Homepage Images
+
+    - The ‘mens bikes’ <a href="https://www.shutterstock.com/image-photo/young-man-putting-on-helmet-group-1957292200" target="_blank">Image</a> by Photographer <a href="https://www.shutterstock.com/g/ljupco" target="_blank">Ljupco Smokovski</a>
+
+    - The 'women's bikes’ <a href="https://www.shutterstock.com/image-photo/young-woman-cycling-555469123" target="_blank">Image</a> by Photographer <a href="https://www.shutterstock.com/g/nullplus" target="_blank">Nullplus</a>
+
+    - The 'urban bikes’ <a href="https://www.shutterstock.com/image-photo/full-length-portrait-handsome-young-afro-443081008 " target="_blank">Image</a> by Photographer <a href="https://www.shutterstock.com/g/georgerudy" target="_blank">George Rudy</a>
+
+    - The 'accessories <a href="https://www.shutterstock.com/image-photo/bicycle-cycling-accessories-1027172386" target="_blank">Image</a> by Photographer <a href="https://www.shutterstock.com/g/I+am+Kulz " target="_blank">I am Kulz</a>
+
+- Content 
+
+Halfords – Products, services and images 
+
+- Code 
+ 
+Boutique Ado mini project along with my notes was a big help throughout this project.  
+
+## Acknowledgements 
+ 
+
+## Notes 
+
+- DEBUG = False 
+- Aria-label
+- Screen readers
+
+## Final Step 
+ 
+**End of README Documentation**
+
+[Back to top ⇧](#the-bike-shop)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
