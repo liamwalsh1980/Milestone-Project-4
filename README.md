@@ -62,15 +62,9 @@
 1. [Clone Project](#clone-project)
 1. [Forking Project](#forking-project)
 1. [Technologoies Used](#technologoies-used)
-    * [Languages](#languages)
-    * [Frameworks and Libraries](#frameworks-and-libraries)
-    * [Other Technologies](#other-technologies)
 1. [Testing](#testing)
     * [Bugs](#bugs)
-1.  [Credits](#credits)
-    * [Homepage Images](#homepage-images)
-    * [Content](#content)
-    * [Code](#code)
+1. [Credits](#credits)
 1. [Acknowledgements](#acknowledgements)
 1. [Notes](#notes)
 1. [Final Step](#final-step)
@@ -783,15 +777,79 @@ Requirements
 Heroku and Github
 
 ## Clone Project  
+
+Click <a href="https://github.com/liamwalsh1980/Milestone-Project-4" target="_blank">here</a> to view the Github Repository
+
+You can clone this repository from GitHub to your local computer to make it easier to fix merge conflicts, add or remove files, and push larger commits. When you clone a repository, you copy the repository from GitHub to your local machine.
+
+Cloning a repository pulls down a full copy of all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. You can push your changes to the remote repository on GitHub, or pull other people's changes from GitHub.
+
+1. On GitHub, navigate to the main page of the repository.
+
+2. Above the list of files, click  Code.
+
+![Image template](static/images/deployment/cloning/screenshot1.png)
+
+3. To clone the repository using HTTPS, under "Clone with HTTPS", click 'clipboard'. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click 'clipboard'. To clone a repository using GitHub CLI, click Use GitHub CLI, then click 'clipboard'.
+
+![Image template](static/images/deployment/cloning/screenshot2.png)
+
+![Image template](static/images/deployment/cloning/screenshot3.png)
+
+4. Open Terminal.
+
+5. Change the current working directory to the location where you want the cloned directory.
+
+6. Type git clone, and then paste the URL you copied earlier.
+
+>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+7. Press Enter to create your local clone.
+
+![Image template](static/images/deployment/cloning/screenshot4.png)
+
  
 ## Forking Project 
  
-## Technologoies Used
+## Technologies Used
 
-### Languages 
-### Frameworks and Libraries
-### Other Technologies
-https://jsonformatter.curiousconcept.com/
+* <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML5</a> 
+* <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS3</a>
+* <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> 
+* <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python3</a> 
+* <a href="https://www.djangoproject.com/" target="_blank">Django</a> 
+    - <a href="https://django-allauth.readthedocs.io/en/latest/index.html" target="_blank">Django AllAuth</a> 
+    - <a href="https://django-crispy-forms.readthedocs.io/en/latest/" target="_blank">Django Crispy Forms</a> 
+    - <a href="https://pillow.readthedocs.io/en/stable/" target="_blank">Pillow</a> 
+    - <a href="https://pypi.org/project/django-countries/" target="_blank">Django Countries</a> 
+* <a href="https://www.heroku.com/" target="_blank">Heroku</a> 
+* <a href="https://www.heroku.com/postgres" target="_blank">Heroku Postgres</a> 
+* <a href="https://www.sqlite.org/index.html" target="_blank">SQLite</a> 
+* <a href="https://en.wikipedia.org/wiki/Amazon_S3" target="_blank">AWS S3</a>
+* <a href="https://stripe.com/gb" target="_blank">Stripe</a>
+* <a href="https://getbootstrap.com/" target="_blank">Bootstrap 4.0</a>
+* <a href="https://en.wikipedia.org/wiki/JQuery" target="_blank">JQuery</a>
+* <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+* <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+* <a href="https://developer.chrome.com/docs/devtools/" target="_blank">Chrome Developer Tools</a>
+* <a href="https://github.com/" target="_blank">Github</a>
+* <a href="https://en.wikipedia.org/wiki/Git" target="_blank">Git</a>
+* <a href="https://gitpod.io/" target="_blank">Gitpod</a>
+* <a href="https://balsamiq.com/" target="_blank">Balsamiq</a>
+* <a href="https://gauger.io/fonticon/" target="_blank">Font Icon</a>
+* <a href="https://jsonformatter.curiousconcept.com/" target="_blank">JSON Formatter</a>
+* <a href="https://slack.com/intl/en-gb/" target="_blank">Slack</a>
+* <a href="https://www.shutterstock.com/" target="_blank">Shutterstock</a>
+* <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a>
+* <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Service</a>
+* <a href="https://jshint.com/" target="_blank">JS Hint</a>
+* <a href="http://pep8online.com/" target="_blank">Python PEP8 Online</a>
+* <a href="https://www.emailjs.com/" target="_blank">Email JS</a>
+* <a href="https://cdnjs.com/" target="_blank">cdnjs</a>
+* <a href="https://randomkeygen.com/" target="_blank">RandomKeygen</a> ?
+* <a href="http://ami.responsivedesign.is/#" target="_blank">Am I Responsive</a> 
+* <a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)" target="_blank">Jinja</a>
+* <a href="https://codeinstitute.net/" target="_blank">Code Institute</a> - I reverted back to the Boutique Ado lessons for assistance with my project. 
 
 ## Testing
 - Testing information can be found in a separate 
@@ -819,16 +877,19 @@ https://jsonformatter.curiousconcept.com/
 
     - The 'accessories <a href="https://www.shutterstock.com/image-photo/bicycle-cycling-accessories-1027172386" target="_blank">Image</a> by Photographer <a href="https://www.shutterstock.com/g/I+am+Kulz " target="_blank">I am Kulz</a>
 
-- Content 
+- Products, Services and content 
 
-Halfords – Products, services and images 
+    - Most of the sites <a href=" https://halfords.com/bikes/" target="_blank">Products</a>,  <a href="https://www.halfords.com/bikes/cyclecare/" target="_blank">Services</a> and <a href=" https://halfords.com/" target="_blank">content</a> was taken from the well known shop Halfords.
 
 - Code 
- 
-Boutique Ado mini project along with my notes was a big help throughout this project.  
+    - Boutique Ado project along with my extensive notes was a big help throughout this project.  
 
 ## Acknowledgements 
- 
+
+- A big 'thank you' to my Mentor - Seun Owonikoko throughout the whole course.- 
+- The Slack community and Tutor Support
+- My family for taking the time to visit my site and give me feedback
+- My wife and Son for supporting me throughout the whole course
 
 ## Notes 
 
