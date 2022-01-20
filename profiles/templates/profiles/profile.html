@@ -52,7 +52,7 @@
                                 <tr>
                                     <td>
                                         <a href="{% url 'order_history' order.order_number %}" 
-                                        title="{{ order.order_number }}">
+                                        title="{{ order.order_number }}" class="icon-red">
                                             {{ order.order_number|truncatechars:6 }}
                                         </a>
                                     </td>
@@ -68,7 +68,7 @@
                                             {% endfor %}
                                         </ul>
                                     </td>
-                                    <td>£{{ order.grand_total }}</td>
+                                    <td class="text-center">£{{ order.grand_total }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>

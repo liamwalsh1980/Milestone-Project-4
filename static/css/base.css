@@ -285,6 +285,10 @@ a.remove-item:hover {
     color: #852C34;
 }
 
+.icon-red {
+    color: #852C34;
+}
+
 /* Font sizes */
 
 .service-header,
