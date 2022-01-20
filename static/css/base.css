@@ -210,7 +210,7 @@ em:focus,
 .fa-biking:hover,
 .fa-biking:active,
 .fa-biking:focus {
-    color: #fadf4b;
+    color: #4286d2;
 }
 
 .social-media-icons:hover,
@@ -243,7 +243,7 @@ em:focus,
 
 .btn-qty:hover {
     background-color: #131418;
-    color: #fadf4b;
+    color: #4286d2;
 }
 
 .yellow-bike {
@@ -251,7 +251,7 @@ em:focus,
 }
 
 .yellow-bike:hover {
-    color: #852C34 !important;
+    color: #4286d2 !important;
 }
 
 .red-bike {
@@ -259,7 +259,7 @@ em:focus,
 }
 
 .red-bike:hover {
-    color: #fadf4b !important;
+    color: #4286d2 !important;
 }
 
 /* Shopping cart */
@@ -268,11 +268,11 @@ p.total, .fa-shopping-cart {
 }
 
 p.total:hover {
-    color: #757273 !important;
+    color: #4286d2 !important;
 }
 
 .fa-shopping-cart:hover {
-    color: #757273 !important;
+    color: #4286d2 !important;
 }
 
 a.update-link,
