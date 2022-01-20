@@ -640,8 +640,9 @@ If an registered user finds themselves on this page they can click the 'Login' l
 
 Users can choose to click the 'Home' button to go back to the homepage instead of signing up to a new profile account.
 
- 
 ### Profile Page 
+
+
  
 ### Logout Page
 
@@ -788,13 +789,13 @@ Cloning a repository pulls down a full copy of all the repository data that GitH
 
 2. Above the list of files, click  Code.
 
-![Image template](static/images/deployment/cloning/screenshot1.png)
+![Image template](readme/images/cloning-screenshot1.png)
 
 3. To clone the repository using HTTPS, under "Clone with HTTPS", click 'clipboard'. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click 'clipboard'. To clone a repository using GitHub CLI, click Use GitHub CLI, then click 'clipboard'.
 
-![Image template](static/images/deployment/cloning/screenshot2.png)
+![Image template](readme/images/cloning-screenshot2.png)
 
-![Image template](static/images/deployment/cloning/screenshot3.png)
+![Image template](readme/images/cloning-screenshot3.png)
 
 4. Open Terminal.
 
@@ -806,10 +807,18 @@ Cloning a repository pulls down a full copy of all the repository data that GitH
 
 7. Press Enter to create your local clone.
 
-![Image template](static/images/deployment/cloning/screenshot4.png)
+![Image template](readme/images/cloning-screenshot4.png)
 
  
 ## Forking Project 
+
+By forking the GitHub Repository, you can make a copy of my original repository on your GitHub account to view and/or make changes without affecting the original repository by doing the following: -
+
+1. Log in to GitHub and locate the GitHub Repository
+1. At the top of the Repository click the settings option on the menu, locate and click the "Fork" Button which is at the top right of the page.
+1. You should now have a copy of the original repository in your GitHub account.
+
+For a more in-depth guide about how to Fork a repo please <a href="https://docs.github.com/en/github/getting-started-with-github/fork-a-repo" target="_blank">click here</a>.
  
 ## Technologies Used
 
