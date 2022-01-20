@@ -237,7 +237,7 @@ This looked fine; however, I felt the homepage needed more images in sections to
 
 The sport of cycling is very colourful with Bikes, Clothing, Helmets and Competition Winning Jerseys all represented with bright colouring. With this in mind the first image users will see contains plenty of colour with a male cyclist as the main focus. I then used 3 more images to represent women's bikes, urban bikes and accessories.  
 
-Please see the credits section for information about where the images were sourced from.  
+Please see the [Credits](#credits) section for information about where the images were sourced from.  
 
 ### Colour Scheme
 
@@ -618,10 +618,15 @@ All toasts include a cross icon in the top right for user to click on to close t
 ### Service Booking Page
 
 ### Login Page 
+
+When user want to login to their profile this is simple to do. Users can click the 'My Account' icon found on the top right of every page where they will have the option to 'Login' or 'Signup' When clicking the login option users will be greeted with a Login page.
  
 ### Profile Page 
  
 ### Logout Page
+
+Users can logout of their account at anytime by clicking 'My Account' and the 'Logout' option at the top right on any page. 
+When users click this option they will be greeted with a Logout page asking them if they are sure they want to logout. The header is 'Sign Out' and the user can then click 'Sign Out' to logout or click 'Keep Shopping' which means they will stay logged in as they continue to shop on the site. 
 
 ## Other Features
 
