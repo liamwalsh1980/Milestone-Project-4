@@ -20,7 +20,6 @@ body {
 
 
 .mens-bg-color {
-    /* background-color: #387c96; */
     background-color: #4286d2;
 }
 
@@ -29,16 +28,12 @@ body {
 }
 
 .urban-bg-color {
-    /* background-color: #5c5d5a; */
     background-color: #968a7c;
 }
 
 .accessories-bg-color {
-    /* background-color: #cfb00a; */
     background-color: #deb506;
 }
-
-
 
 /* body {
     background: url('/media/hero-image-test.jpeg') no-repeat center center fixed;
@@ -263,6 +258,7 @@ em:focus,
 }
 
 /* Shopping cart */
+
 p.total, .fa-shopping-cart {
     color:#852C34 !important;
 }
@@ -333,7 +329,7 @@ a.category-badge > span.badge:hover {
     color: #fadf4b !important;
 }
 
-/*  footer */
+/*  Footer */
 
 .footer {
     position: fixed;
@@ -390,6 +386,7 @@ footer {
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -402,6 +399,7 @@ footer {
 }
 
 /* Convenience classes - colors copied from Bootstrap */
+
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -497,6 +495,7 @@ footer {
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
+
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
@@ -507,7 +506,8 @@ footer {
     }
 }
 
-/* fixed top navbar only on medium and up */
+/* Fixed top navbar only on medium and up */
+
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -526,7 +526,8 @@ footer {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* Pad the top a bit when navbar is collapsed on mobile */
+
 @media (max-width: 991px) {
     .header-container {
         padding-top: 130px;
@@ -537,7 +538,8 @@ footer {
     }
 }
 
-/* margin on top for both buttons to create white space */
+/* Margin on top for both buttons to create white space */
+
 @media (max-width: 992px) {
     .book-now-button {
         margin-top: 10%;
@@ -549,24 +551,12 @@ footer {
         margin-top: 5%;
     }
 
-    /* .padding-bottom {
-        padding-bottom: 20%;
-    } */
-
     .padding-bottom-homepage {
         padding-bottom: 12%;
     }
 }
 
 @media (max-width: 576px) {
-    /* .shop-now-button {
-        margin-top: 20%;
-    } */
-
-    /* .padding-bottom {
-        padding-bottom: 30%;
-    } */
-
     .book-now-button {
         margin-top: 5%;
         margin-bottom: 20%;
@@ -607,8 +597,13 @@ footer {
 
 /* Mobile navbar with icons resized */
 
-@media (max-width: 576px) {
+@media (min-width: 577px) {
+    a.text-black.nav-link.d-block.d-lg-none {
+        margin-top: 20px;
+    }
+}
 
+@media (max-width: 576px) {
     ul {
         margin: 0;
     }
@@ -685,28 +680,4 @@ footer {
     }
 }
 
-/* @media (max-width: 576px) {
-    .sub-header {
-        margin-top: 0;
-    }
-} */
-
-/* Footer mobile padding */
-
-/* @media (max-width: 475px) {
-    footer {
-        margin-top: 100px
-    }
-} */
-
-/* .icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-} */
-
-/* footer {
-    padding-top: 5%;
-} */
+/* END OF CSS */
