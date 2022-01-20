@@ -46,6 +46,8 @@
     * [Services Page](#services-pages)
     * [Service Booking Page](#service-booking-page)
     * [Login Page](#login-page)
+    * [Reset Password Page](#reset-password-page) 
+    * [Sign Up Page](#sign-up-page)
     * [Profile Page](#profile-page)
     * [Logout Page](#logout-page)
     * [Shopping Cart Page](#shopping-cart-page)
@@ -79,7 +81,7 @@
 ## Introduction
 This Milestone project (Full Stack Frontend Development) is the fourth and final project to contribute towards my Full Stack Web Developer Diploma with Code Institute. 
 
-The main requirements in this project are to design a Full-Stack e-commerce website based around business logic to control a centrally-owned dataset. The site setup includes an authentication mechanism with the option for users to pay for products and services with a further option to register for an account to access orders after a purchase has been made. There also is a site administrator login for the owner of the site to access and give them the option to add new products, edit existing products. delete products and gain access to customer orders and login details giving full management of the site. The main technologies used to achieve this project is HTML, CSS using the Bootstrap5 framework, JavaScript using the jQuery library, Python using the Full framework, Django (Model Template View - MVT architecture), Relational Databases - MySQL and Postgres, and Stripe - payment processing platform. 
+The main requirements in this project are to design a Full-Stack e-commerce website based around business logic to control a centrally-owned dataset. The site setup includes an authentication mechanism with the option for users to pay for products and services with a further option to sign up for an account to access orders after a purchase has been made. There also is a site administrator login for the owner of the site to access and give them the option to add new products, edit existing products. delete products and gain access to customer orders and login details giving full management of the site. The main technologies used to achieve this project is HTML, CSS using the Bootstrap5 framework, JavaScript using the jQuery library, Python using the Full framework, Django (Model Template View - MVT architecture), Relational Databases - MySQL and Postgres, and Stripe - payment processing platform. 
 
 Django Data Structure - MVT architecture (Model Template View) 
 
@@ -115,7 +117,7 @@ Django Data Structure - MVT architecture (Model Template View)
 - To search for a product or service quickly by keyword(s) - To find the right type of bike based on my requirements around cycling 
 - To find the right bike accessories for my requirements around cycling 
 - Find the right service for my bike i.e., clean, repair and/or sell 
-- Register an account to view orders and to make it easier to order in the future 
+- Sign up to an account to view orders and to make it easier to order in the future 
 - To easily login to my account 
 - To view previous orders 
 - To view saved profile details i.e., contact number and address with the option to update details 
@@ -395,9 +397,9 @@ Navigation links on the top right update depending on the user being logged in a
 
 ### Registration Page 
 
-Users are encouraged to register an account but it’s not mandatory and therefore they can still make purchases without an account. Upon making a purchase users will still receive an email confirmation and immediate notification that their order has been received once they click the ‘Complete Order’ button on the Delivery and Payment page. 
+Users are encouraged to sign up to an account but it’s not mandatory and therefore they can still make purchases without an account. Upon making a purchase users will still receive an email confirmation and immediate notification that their order has been received once they click the ‘Complete Order’ button on the Delivery and Payment page. 
 
-The process to register an account is simple. Click the ‘Account’ button at the top of the navigation menu which will open a dropdown menu to either ‘Login’ or ‘Register’ Once the ‘Register’ link is clicked the user will need to provide the following: -  
+The process to sign up to an account is simple. Click the ‘Account’ button at the top of the navigation menu which will open a dropdown menu to either ‘Login’ or ‘Sign Up’ Once the ‘Sign Up’ link is clicked the user will need to provide the following: -  
 
 - Username  
     - This can be anything as long as it's not been used already 
@@ -619,7 +621,31 @@ All toasts include a cross icon in the top right for user to click on to close t
 
 ### Login Page 
 
-When user want to login to their profile this is simple to do. Users can click the 'My Account' icon found on the top right of every page where they will have the option to 'Login' or 'Signup' When clicking the login option users will be greeted with a Login page.
+When users want to login to their profile this is simple to do. Users can click the 'My Account' icon found on the top right of every page where they will have the option to 'Login' or 'Signup' When clicking the login option users will be greeted with a Login page. 
+
+- On this page and before logging in users can select the checkbox 'Remember Me' which saves the username making it easier to login next time. 
+- The user can login in using their username or email address of preferred. The password must be correct in line with the password the user chose when they signed up. 
+- If the user gives an incorrect username/email address and/or password they will see an error message - 'The username and/or password you specified are not correct'. This message is vague for security reasons to avoid unauthorised access to a users account. 
+- Users can choose to click the 'Home' button to go back to the homepage instead of logging in to their account or of they can't remember their password they can click the 'Forgot Password' to reset which will take them to another page to complete the reset process.
+- If an unregistered user finds themselves on this page they can click the 'Sign Up' link to take them to the relevant page to open a new profile account.
+
+### Reset Password Page 
+
+Users can reset their password if they have an account by entering their email address that is connected to their profile account. Once this is done users will receive confirmation that an email has been sent to them in order to reset their password on their account securely. If users change their mind they can select the 'Back to Login' option. 
+
+### Sign Up Page 
+
+Users can Sign Up for a free profile account at anytime by selecting the 'Sign Up'. Users will need to provide the following:- 
+- Email address
+- Username
+- Password
+
+If a user attempts to sign up with an email address thats already connected to a profile they will see an error message - "A user with that username already exists."
+
+If an registered user finds themselves on this page they can click the 'Login' link to take them to the relevant page to sign in. 
+
+Users can choose to click the 'Home' button to go back to the homepage instead of signing up to a new profile account.
+
  
 ### Profile Page 
  
@@ -699,7 +725,7 @@ I also added django-countries to gain access to the pre-built country field cont
 
 ## Allauth 
 
-Allauth setup – this gives the users the ability to login, log out and register for an account. This saves times as the functionalities are already built using Allauth instead of building from scratch. To use Allauth I started by installing it using the command
+Allauth setup – this gives the users the ability to login, log out and sign up for an account. This saves times as the functionalities are already built using Allauth instead of building from scratch. To use Allauth I started by installing it using the command
 
 - **$ pip3 install django-allauth==0.41.0**
 
