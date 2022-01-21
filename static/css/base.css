@@ -596,7 +596,7 @@ footer {
 }
 
 @media (min-width: 501px) and (max-width: 991px) {
-    .ipad-bottom {
+    .ipad-mt {
         margin-top: 20px;
     }
 }
