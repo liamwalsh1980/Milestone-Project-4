@@ -23,13 +23,13 @@
     * [Registered Users](#registered-users)
     * [Store Owner/Admin](#store-owner-or-admin)
 1. [My Design](#my-design)
-    * [Hero Images](#hero-images)
+    * [Hero Images](#hero-images) to complete
     * [Colour Scheme](#colour-scheme)
     * [Typography](#typography)
     * [Imagery](#imagery)
 1. [Products and Services](#products-and-services) 
-    * [Products](#products)
-    * [Services](#services)
+    * [Products](#products) to complete
+    * [Services](#services) to complete
 1. [Wireframes](#wireframes)
 1. [Database Models](#database-models)
 1. [Development Environment](#development-environment)
@@ -42,31 +42,31 @@
     * [Footer](#footer)
     * [Products Pages](#products-pages)
     * [Product Detail Page](#product-detail-page)
+    * [Shopping Cart Page](#shopping-cart-page)
+    * [Checkout Page](#checkout-page)
+    * [Order Summary Page](#order-summary-page)
     * [Toasts](#toasts)
-    * [Services Page](#services-pages)
-    * [Service Booking Page](#service-booking-page)
+    * [Services Page](#services-pages) to complete
+    * [Service Booking Page](#service-booking-page) to complete
     * [Login Page](#login-page)
     * [Reset Password Page](#reset-password-page) 
     * [Sign Up Page](#sign-up-page)
     * [Profile Page](#profile-page)
     * [Logout Page](#logout-page)
-    * [Shopping Cart Page](#shopping-cart-page)
-    * [Checkout Page](#checkout-page)
-    * [Order Summary Page](#order-summary-page)
-1. [Other Features](#other-features)
+1. [Other Features](#other-features) to complete
 1. [Future Features](#future-features)
 1. [Stripe](#stripe)
 1. [Allauth](#allauth)
 1. [Crispy Forms](#crispy-forms)
-1. [Deployment](#deployment)
+1. [Deployment](#deployment) to complete
 1. [Clone Project](#clone-project)
 1. [Forking Project](#forking-project)
-1. [Technologoies Used](#technologoies-used)
-1. [Testing](#testing)
-    * [Bugs](#bugs)
-1. [Credits](#credits)
+1. [Technologies Used](#technologies-used)
+1. [Testing](#testing) to start
+    * [Bugs](#bugs) to complete
+1. [Credits](#credits) to check
 1. [Acknowledgements](#acknowledgements)
-1. [Notes](#notes)
+1. [Notes](#notes) to complete
 1. [Final Step](#final-step)
 
 
@@ -147,7 +147,6 @@ Django Data Structure - MVT architecture (Model Template View)
 
 Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user-stories.pdf" target="_blank">User Stories</a>
 
-
 ## Development Process 
 
 As this project is focused on full stack development and using a relational database with Stripe Payments, more time was given to the preparation of the site based on UX Design, the data for the site whilst keeping a full focus on the user goals, site owner goals, developer goals and user stories. 
@@ -225,13 +224,19 @@ I wanted this project to have minimum text and therefore it is important to note
 
 ### Hero Images 
 
-The hero images came from Shutterstock at small cost of £1.90 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes is to use one image with a ‘Shop Now’ button in the middle.  
+The hero images came from Shutterstock at small cost of £1.90 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes is to use one image with a ‘Shop Now’ button in the middle. See image below for reference (destop view)
 
 ![Image template](readme/images/original-homepage.png)
 
 This looked fine; however, I felt the homepage needed more images in sections to represent what the site was about and the what target audience I was aiming for. With this in mind I used 4 different images representing the 4 main product categories. 
 
-The sport of cycling is very colourful with Bikes, Clothing, Helmets and Competition Winning Jerseys all represented with bright colouring. With this in mind the first image users will see contains plenty of colour with a male cyclist as the main focus. I then used 3 more images to represent women's bikes, urban bikes and accessories.  
+The sport of cycling is very colourful with Bikes, Clothing, Helmets and Competition Winning Jerseys all represented with bright colouring. With this in mind the first image users will see contains plenty of colour with a male cyclist as the main focus. I then used 3 more images to represent women's bikes, urban bikes and accessories. See images below for reference (desktop view)
+
+![Image template](newhomepage1)
+
+![Image template](newhomepage2)
+
+![Image template](newhomepage3)
 
 Please see the [Credits](#credits) section for information about where the images were sourced from.  
 
@@ -538,12 +543,12 @@ When the user lands on the checkout page, they will see 2 sections. On desktop t
  
 - Delivery 
     - Phone Number (Mandatory field) 
-    - Country (Mandatory field) 
-    - Postal Code  
-    - Town or City (Mandatory field) 
     - Street Address 1 (Mandatory field) 
-    - Street Address 2 (Mandatory field) 
-    - County (Mandatory field) 
+    - Street Address 2 
+    - Town or City (Mandatory field) 
+    - County 
+    - Postal Code  
+    - Country (Mandatory field) 
     
 If a user is logged in to their account, they have the option to tick/untick the ‘Save this delivery information to my profile’ checkbox. It's checked by default.  
 
@@ -642,7 +647,13 @@ Users can choose to click the 'Home' button to go back to the homepage instead o
 
 ### Profile Page 
 
-
+Users will see 2 sections on this page, 'Default Delivery Information' and 'Order History'.
+- Default Delivery Information is there to show the user what contact details and address information is currently stored on their profile account. Users can update this by completing the form and selecting the 'Update Information' button. Once this is done the new details will be stored on their profile account making it easier to purchase in the future. 
+- Order History will only show information about orders completed. If a user hasn't purchased from the site before this section will be blank. If the user has purchased before they will see details
+    - Order Number, which is shown as a shorted number and when the user hovers over this it will show the full order number for reference. The user can also click this order number to take them to the full order details for that particular order. See [Order Summary Page](#order-summary-page) for details on this as this is the same page just with a different toast to confirm to the user its a past confirmation order.
+    - Date, showing the date and time the order was placed
+    - Items, description and quanity of the product(s) ordered
+    - Order Total, which is the amount total paid for that order
  
 ### Logout Page
 
@@ -809,7 +820,6 @@ Cloning a repository pulls down a full copy of all the repository data that GitH
 
 ![Image template](readme/images/cloning-screenshot4.png)
 
- 
 ## Forking Project 
 
 By forking the GitHub Repository, you can make a copy of my original repository on your GitHub account to view and/or make changes without affecting the original repository by doing the following: -
