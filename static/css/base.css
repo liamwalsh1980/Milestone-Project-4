@@ -595,6 +595,12 @@ footer {
     }
 }
 
+@media (min-width: 501px) and (max-width: 991px) {
+    .ipad-bottom {
+        margin-top: 20px;
+    }
+}
+
 /* Mobile navbar with icons resized */
 
 @media (min-width: 577px) {
