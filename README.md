@@ -53,6 +53,10 @@
     * [Sign Up Page](#sign-up-page)
     * [Profile Page](#profile-page)
     * [Logout Page](#logout-page)
+1. [Shop Owner Features](#shop-owner-features) to complete
+    * [Add Products](#add-products) to complete
+    * [Edit Products](#edit-products) to complete
+    * [Delete Products](#delete-products) to complete
 1. [Other Features](#other-features) to complete
 1. [Future Features](#future-features)
 1. [Stripe](#stripe)
@@ -85,6 +89,8 @@ Django Data Structure - MVT architecture (Model Template View)
 
  - View – Defines the business logic that links the templates to the models 
 
+ [Back to top ⇧](#the-bike-shop)
+
  ## Project Introduction 
 
  The Bike Shop is an easy-to-use online shopping experience for cycling lovers to visit and purchase products and services. Products available to purchase are Men's bikes, Woman's bikes, Urban bikes, Cycling Helmets and general accessories. Before purchasing any product, users can get access to more information about that product with the option to pick a size (if applicable). The services available to book on the site is professional bike cleaning, bike repair and a sell your bike scheme. The user will need to select, add and submit relevant information depending on what service they are looking to purchase one of these services.  
@@ -102,6 +108,8 @@ Django Data Structure - MVT architecture (Model Template View)
 - For cyclists that want to purchase additional accessories for comfort and safety 
 - For anyone wanting to start cycling to work  
 - For cyclists to take up the offer of The Bike Shop services (clean, repair and sell) 
+
+[Back to top ⇧](#the-bike-shop)
 
 ### Main Aims
 
@@ -142,6 +150,8 @@ Django Data Structure - MVT architecture (Model Template View)
 - The use of relational databases to storge product data and user details to easily update, add and delete when required 
 - Successful deployment adding to the developer portfolio
 - To achieve a final grade to contribute towards the Full Stack Web Developer Diploma overall grade 
+
+[Back to top ⇧](#the-bike-shop)
 
 ## User Stories
 
@@ -218,6 +228,8 @@ With these goals in mind, I put together diagrams that shows the importance and 
 
 ![Image template](readme/images/strategy-admin-user.png)
 
+[Back to top ⇧](#the-bike-shop)
+
 ## My Design 
 
 I wanted this project to have minimum text and therefore it is important to note that I made sure that from the products sold, services sold, images used, nav links applied, my colour scheme, text styling picked and the name of the site, it is clear what this site offers and who the target audience is.  
@@ -252,6 +264,8 @@ Once I had finished building the homepage, I wanted the logo and ‘Shop Now’ 
 
 ![Image template](readme/images/side-palette.png)
 
+[Back to top ⇧](#the-bike-shop)
+
 ### Typography
 
 I used Google fonts to home in on 2 fonts needed for this project.  
@@ -274,6 +288,8 @@ Several other font awesome images were used to show Customer Account, Shopping b
 
 I used the noimage.png image in this project in case there was no available image for any product or service that is added to the site. This simply fills a gap to make sure good UX is maintained.  
 
+[Back to top ⇧](#the-bike-shop)
+
 ## Products and Services 
 
 With around 53 products and service added I wanted to make sure each one was allocated into a category name. I also wanted to make sure that the products had the same format of fields for consistency, giving users the same type of useful information for all products and services.
@@ -284,6 +300,8 @@ With around 53 products and service added I wanted to make sure each one was all
 ### Services 
 
  
+[Back to top ⇧](#the-bike-shop)
+
 ## Wireframes 
 
 All Wireframes were designed for laptop/computer, iPad/tablet and mobile display: 
@@ -298,6 +316,8 @@ There were some adjustments to the models
 - Products model doesn't include has_colors
 - Order model doesn't include delivery_cost
 - Service and ServiceType models were created and migrated but i decided to go a different direction and use a form and modal instead. 
+
+[Back to top ⇧](#the-bike-shop)
 
 ## Development Environment 
 
@@ -348,6 +368,8 @@ To finish, I added, committed (initial commit) and pushed the code using the fol
 - **$ git commit –m "Initial commit”** 
 - **$ git push**
 
+[Back to top ⇧](#the-bike-shop)
+
 ## Features
 
 ### Navbar 
@@ -385,6 +407,8 @@ Services
 -    Repair 
 -    Sell Your Bike 
 -    All Services 
+
+[Back to top ⇧](#the-bike-shop)
 
 #### Mobile Navbar 
 
@@ -436,6 +460,8 @@ Admin User will have additional access to the following:
         - Products 
         - URLs
 
+[Back to top ⇧](#the-bike-shop)
+
 ### Homepage
 
 Users will see 4 sections on the homepage with each section split in half. All sections have different background colouring with an image making up one side and a large ‘Shop Now’ button centred which makes up the other side making it easy for users to click through to the products they are interested in. The 4 sections represent products for sales in regards to mens bikes, women's bikes, urban bikes and accessories.  
@@ -445,6 +471,8 @@ At the top just above the sections users will see a fixed banner welcome message
 ### Footer 
 
 A footer has been added to the site to show users a nice finish to each page. With good UX in mind users will see that the footer has the same font styling and colouring as the navbar at the top. Users will see social media icons available to click on to take them to a new webpage associated to which ever icon is clicked. All social media icons change colour (Antique Ruby) when hovering over them.
+
+[Back to top ⇧](#the-bike-shop)
 
 ### Products Pages
 
@@ -503,6 +531,8 @@ If a user is interested in a product but want more information before purchasing
 
 At the right side, bottom of every products page, users can click the ‘back to top’ cursor which is an up arrow in a small round background. Clicking this will bring users to the top of the page the user is on. 
 
+[Back to top ⇧](#the-bike-shop)
+
 ### Product Detail Page
 
 Users can click through to a product detail page for each product showing the user a bigger image to look at and more details about the product chosen. Users will know quickly what product detail page they are on as the product name is displayed as a header at the top above the image. Users can also click the image again which opens up a new web page tab showing just the image with black background. 
@@ -532,6 +562,8 @@ If a user has at least 1 product in their shopping cart they will see the follow
 - Grand total which will be no different than the Subtotal as they delivery charge is free at The Bike Shop.  
 - ‘Keep Shopping’ text link which takes user back to the products page 
 - ‘Secure Checkout’ button which takes the user to a secure payment page to complete their order.  
+
+[Back to top ⇧](#the-bike-shop)
 
 ### Checkout Page 
 
@@ -566,6 +598,8 @@ The next section called ‘Order Summary - Your Shopping Cart Has (?) products�
 On this page users will be notified immediately if they haven’t completed the form properly as most of this page has mandatory fields that need information adding to complete an order. 
 
 Further authentication - Users will notice that when they have completed the order form and clicked the ‘Complete Order’ there is a short delay while their payment goes through. They will see light green background overlay and a loading spinner showing their order is going through the process payment. They are then given the option of completing their purchase or cancelling it. If they cancel the order the user is taken back to the order ‘Checkout’ page where all their details remain in place and a ‘red’ notice warning at the bottom saying ‘We are unable to authenticate your payment method. Please choose a different payment method and try again’. If the user clicks to proceed with their purchase, they will see the light green background overlay and the loading spinner again  
+
+[Back to top ⇧](#the-bike-shop)
 
 ### Order Summary Page  
 
@@ -614,9 +648,13 @@ Other success toasts are also in place.
 
 All toasts include a cross icon in the top right for user to click on to close the toast. Alternatively, after 10 seconds the toast will automatically close.  
 
+[Back to top ⇧](#the-bike-shop)
+
 ### Service Page
 
 ### Service Booking Page
+
+[Back to top ⇧](#the-bike-shop)
 
 ### Login Page 
 
@@ -645,6 +683,8 @@ If an registered user finds themselves on this page they can click the 'Login' l
 
 Users can choose to click the 'Home' button to go back to the homepage instead of signing up to a new profile account.
 
+[Back to top ⇧](#the-bike-shop)
+
 ### Profile Page 
 
 Users will see 2 sections on this page, 'Default Delivery Information' and 'Order History'.
@@ -660,6 +700,18 @@ Users will see 2 sections on this page, 'Default Delivery Information' and 'Orde
 Users can logout of their account at anytime by clicking 'My Account' and the 'Logout' option at the top right on any page. 
 When users click this option they will be greeted with a Logout page asking them if they are sure they want to logout. The header is 'Sign Out' and the user can then click 'Sign Out' to logout or click 'Keep Shopping' which means they will stay logged in as they continue to shop on the site. 
 
+[Back to top ⇧](#the-bike-shop)
+
+## Shop Owner Features
+
+### Add Products
+
+### Edit Products
+
+### Delete Products
+
+[Back to top ⇧](#the-bike-shop)
+
 ## Other Features
 
 Within the head element I added a head icon that is positioned in the tab of the browser when the web page is open. The icon is the same as the ‘bike’ icon to the right of the text logo on the website. The icon was sourced from <a href="https://gauger.io/fonticon/" target="_blank">Gauger - Fonticon</a>.
@@ -673,6 +725,8 @@ Within the head element I added a head icon that is positioned in the tab of the
 - Wishlist with heart icon 
 
 - Creating more services for customers to pick
+
+[Back to top ⇧](#the-bike-shop)
 
 ## Stripe 
 
@@ -731,6 +785,8 @@ I also added django-countries to gain access to the pre-built country field cont
 - **$ pip3 install django-countries**
 - **$ pip3 freeze > requirements.txt**
 
+[Back to top ⇧](#the-bike-shop)
+
 ## Allauth 
 
 Allauth setup – this gives the users the ability to login, log out and sign up for an account. This saves times as the functionalities are already built using Allauth instead of building from scratch. To use Allauth I started by installing it using the command
@@ -775,6 +831,8 @@ To finish Allauth I then setup the templates directory to start front-end code. 
 - **$ mkdir templates**
 - **$ mkdir templates/allauth**
 
+[Back to top ⇧](#the-bike-shop)
+
 ## Crispy Forms
 
 Django package called crispy-forms is installed to let me format all the forms using bootstrap styling automatically. 
@@ -789,6 +847,8 @@ Inside settings.py at project level Crispy Forms is installed as an app and buil
 Requirements 
  
 Heroku and Github
+
+[Back to top ⇧](#the-bike-shop)
 
 ## Clone Project  
 
@@ -821,6 +881,8 @@ Cloning a repository pulls down a full copy of all the repository data that GitH
 7. Press Enter to create your local clone.
 
 ![Image template](readme/images/cloning-screenshot4.png)
+
+[Back to top ⇧](#the-bike-shop)
 
 ## Forking Project 
 
@@ -872,6 +934,8 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 * <a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)" target="_blank">Jinja</a>
 * <a href="https://codeinstitute.net/" target="_blank">Code Institute</a> - I reverted back to the Boutique Ado lessons for assistance with my project. 
 
+[Back to top ⇧](#the-bike-shop)
+
 ## Testing
 - Testing information can be found in a separate 
 [Testing document](TESTING.md)
@@ -880,11 +944,21 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 
 - Footer overlay with quantity minus and plus buttons. When scrolling up and down these buttons weren’t hiding when underneath the footer as they should do. I resolved this by adding some styling using z-index:2.  
 
-- {bug_product_detail_page1 - png here}	 
-- {bug_product_detail_page2 - png here} 
-- {bug_product_detail_page_fixed1 - png here} 
-- {bug_product_detail_page_fixed2 - png here} 
-- {bug_product_detail_page_fixed3 - png here} 
+#### Footer Bug
+
+![Image template](readme/images/bugs/bug-product-detail-page1.png)
+
+![Image template](readme/images/bugs/bug-product-detail-page2.png)
+
+#### Footer Bug Fixed
+
+![Image template](readme/images/bugs/bug-product-detail-page-fixed1.png)
+
+![Image template](readme/images/bugs/bug-product-detail-page-fixed2.png)
+
+![Image template](readme/images/bugs/bug-product-detail-page-fixed3.png)
+
+[Back to top ⇧](#the-bike-shop)
 
 ### Credits 
 
@@ -907,6 +981,8 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 
 - Code 
     - Boutique Ado project along with my extensive notes was a big help throughout this project.  
+
+[Back to top ⇧](#the-bike-shop)
 
 ## Acknowledgements 
 
