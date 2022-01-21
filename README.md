@@ -900,7 +900,10 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 
 - Products, Services and content 
 
-    - Most of the sites <a href=" https://halfords.com/bikes/" target="_blank">Products</a>,  <a href="https://www.halfords.com/bikes/cyclecare/" target="_blank">Services</a> and <a href=" https://halfords.com/" target="_blank">content</a> was taken from the well known shop Halfords.
+    - Most of the sites products images, services image and content came from the popular retailer, Halfords. 
+        - <a href=" https://halfords.com/bikes/" target="_blank">Products</a>
+        - <a href="https://www.halfords.com/bikes/cyclecare/" target="_blank">Services</a> 
+        - <a href=" https://halfords.com/" target="_blank">Content</a> 
 
 - Code 
     - Boutique Ado project along with my extensive notes was a big help throughout this project.  
