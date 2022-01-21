@@ -668,9 +668,11 @@ Within the head element I added a head icon that is positioned in the tab of the
 
 - Product colours for users to pick alternative colours. In order for this to work I would need to add more images of the products in different colours so that when a colour is picked the image changes to that relevant colour.  
 
-- Multiple images and rotation.  
+- Multiple product images in a gallery.  
 
 - Wishlist with heart icon 
+
+- Creating more services for customers to pick
 
 ## Stripe 
 
