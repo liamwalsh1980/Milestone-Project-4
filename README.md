@@ -704,7 +704,32 @@ When users click this option they will be greeted with a Logout page asking them
 
 ## Shop Owner Features
 
+Shop owners/administrators with superuser access can login to the admin backend and also access the ‘Product Management’ page at the frontend of the site. Backend admin is available via the URL (URLADDRESS/admin) with the right level of access once logged in. Users will be able to view, edit, delete and add the following: -
+- Products
+- Product categories
+- Orders
+- User accounts 
+- Email address 
+- Sites
+ 
+These users can access the product management at the frontend by clicking ‘My Account’ from the top right of any page they are on. 
+
 ### Add Products
+
+Clicking the 'Product Management' option will be take users to the ‘Add a Product’ page to give them the option to add a new product by adding/selecting the following: - 
+
+Category from a dropdown list (mandatory) 
+Name (mandatory) 
+Description (mandatory) 
+Size (yes/no/unknown) 
+Colour (yes/no/unknown) ? 
+Price (mandatory) 
+Rating 
+Image URL or Upload an image 
+ 
+If the form is completed without the mandatory information added or with incorrect information i.e., the wrong price format for example, the user will see an error popup (Failed to add product. Please ensure the form is valid) and a specific error based on what the user did wrong. i.e., for the pricing it would be (Ensure that there are no more than 6 digits in total.) 
+
+If the informaton is completed correctly the user will see a success message popup confirming the product has been added and then taken to the product detail page of that product just added to show its available on the site. If the user adds a new product without an image, the default ‘noimage’ will be added to cover the space.  
 
 ### Edit Products
 
