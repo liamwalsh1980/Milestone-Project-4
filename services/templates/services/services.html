@@ -11,7 +11,7 @@
 
 {% block content %}
     <div class="overlay"></div>
-        <div class="container-fluid">
+        <div class="container-fluid mt-3">
             <div class="row ipad-mt">
                 <div class="col text-center mt-3">
                     <h2 class="sub-header">Our Services</h2>
@@ -32,7 +32,7 @@
                     <div class="row">
                         {% for service in services %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="card h-100 border-1">
+                                <div class="card h-100 border-1 rounded-0 border-dark">
                                     {% if service.image %}
                                     <a href="{% url 'service_detail' service.id %}">
                                         <img class="card-img-top img-fluid" src="{{ service.image.url }}" alt="{{ service.name }}">
