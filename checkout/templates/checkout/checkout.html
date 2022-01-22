@@ -16,8 +16,8 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
-    <div class="row">
+<div class="container mb-2 mt-3">
+    <div class="row ipad-mt">
         <div class="col text-center mt-3">
             <h2 class="sub-header mb-4">Checkout</h2>
         </div>
@@ -41,7 +41,7 @@
                             {% if item.product.image %}
                                 <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                             {% else %}
-                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
                             {% endif %}
                         </a>
                     </div>
