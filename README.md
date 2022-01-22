@@ -175,7 +175,7 @@ After looking back over my previous projects, I decided to breakdown my strategy
 - Subscribe option 
 - Strong Hero Image on the Homepage 
 - Header 
-- Shop Now button 
+- Enter the Shop button with 'enter' icon
 - Shopping cart 
 
 ### Unregistered Users
@@ -236,7 +236,7 @@ I wanted this project to have minimum text and therefore it is important to note
 
 ### Hero Images 
 
-The hero images came from Shutterstock at small cost of £1.90 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes is to use one image with a ‘Shop Now’ button in the middle. See image below for reference (destop view)
+The hero images came from Shutterstock at small cost of £1.90 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes is to use one image with an ’Enter the Shop' button in the middle with enter icon. See image below for reference (destop view)
 
 ![Image template](readme/images/original-homepage.png)
 
@@ -260,7 +260,7 @@ The Bike Shop – Colour Pallet from coolors.co
 
 ![Image template](readme/images/main-palette.png)
 
-Once I had finished building the homepage, I wanted the logo and ‘Shop Now’ button to standout more. Therefore, I decided to add a new colour to achieve this. The colour chosen is a deep red (Antique Ruby). I Also used the next shade across from this colour for hovering over. This shade I chose is called Cordovan red. This is used for the category links on the products and services pages. Both colours sourced from coolors.co like my main palette. 
+Once I had finished building the homepage, I wanted the logo and ‘Enter the Shop’ button to standout more. Therefore, I decided to add a new colour to achieve this. The colour chosen is a deep red (Antique Ruby). I Also used the next shade across from this colour for hovering over. This shade I chose is called Cordovan red. This is used for the category links on the products and services pages. Both colours sourced from coolors.co like my main palette. 
 
 ![Image template](readme/images/side-palette.png)
 
@@ -464,7 +464,7 @@ Admin User will have additional access to the following:
 
 ### Homepage
 
-Users will see 4 sections on the homepage with each section split in half. All sections have different background colouring with an image making up one side and a large ‘Shop Now’ button centred which makes up the other side making it easy for users to click through to the products they are interested in. The 4 sections represent products for sales in regards to mens bikes, women's bikes, urban bikes and accessories.  
+Users will see 4 sections on the homepage with each section split in half. All sections have different background colouring with an image making up one side and a large ‘Enter the Shop’ button with 'enter' icon centred which makes up the other side making it easy for users to click through to the products they are interested in. The 4 sections represent products for sales in regards to mens bikes, women's bikes, urban bikes and accessories.  
 
 At the top just above the sections users will see a fixed banner welcome message which stays in place across all web pages. I feel this nicely breaks up the navbar and body of each page. The banner stating the website name ‘The Bike Shop’ is very important to have on smaller screens because the logo has been removed and replaced by the hamburger menu icon for good UX. The banner is also a link back to the homepage and again important to have on smaller screens when the logo is replaced by the hamburger menu icon. 
 
