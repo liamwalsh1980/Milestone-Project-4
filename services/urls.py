@@ -4,5 +4,5 @@ from .import views
 urlpatterns = [
     # Route URL
     path('', views.all_services, name='services'),
-    path('<service_id>', views.service_detail, name='service_detail'),
+    path('<service_id>/', views.service_detail, name='service_detail'),
 ]
