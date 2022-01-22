@@ -34,9 +34,12 @@
                         {{ field }}
                     {% endif %}
                 {% endfor %}
-                <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                <div class="text-right mt-4 mb-5">
+                    <a class="btn btn-outline-black rounded-0 text-uppercase" href="{% url 'products' %}">
+                    <span class="icon icon-red">
+                        <i class="far fa-arrow-alt-circle-left"></i>
+                    </span>Cancel</a>
+                    <button class="btn btn-black rounded-0" type="submit">Add</button>
                 </div>
             </form>
         </div> 
