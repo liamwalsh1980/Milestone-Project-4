@@ -18,77 +18,90 @@
                 </div>
             </div>
             <div class="row">
-                <div class="product-container col-12 col-lg-6 offset-lg-3">
-                    <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
+                <div class="product-container col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                    <form method="POST" action="" class="form my-4 text-black border border-dark p-4" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Full Name" minlength="1" maxlength="100" pattern="^[a-zA-Z]{1,100}$" required>
+                        <div class="form-row">
+                            <div class="form-group col mb-3">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control text-black" id="name" placeholder="Full Name" minlength="1" maxlength="100" pattern="^[a-zA-Z]{1,100}$" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="number">Contact Number</label>
-                            <input type="tel" class="form-control" id="number" placeholder="Contact Number" minlength="10" maxlength="11" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                        <div class="form-row">
+                            <div class="form-group col mb-3">
+                                <label for="number">Contact Number</label>
+                                <input type="tel" class="form-control text-black" id="number" placeholder="Contact Number" minlength="10" maxlength="11" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="name@example.com" minlength="1" maxlength="100" required>
+                        <div class="form-row">
+                            <div class="form-group col mb-3">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control text-black" id="email" placeholder="name@example.com" minlength="1" maxlength="100" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="quantity">How many bikes</label>
-                            <select class="form-control" id="quantity" required>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>8</option>
-                              <option>9</option>
-                              <option>10</option>
-                            </select>
-                          </div>
-                          
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label pr-5" for="defaultCheck1">
-                             Cleaning Service
-                            </label>
-                          </div>
-                          <div class="form-check">  
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label pr-5" for="defaultCheck1">
-                             Maintenance
-                            </label>
-                          </div>
-                          <div class="form-check">  
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label pr-5" for="defaultCheck1">
-                             Sell Your Bike
-                            </label>
-                          </div>
-
-                          <hr>
-
-                          <div class="form-group">
-                            <label for="exampleFormControlFile1">Example file input</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                          </div>
-                    
-                          <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                          </div>
-
-
-                      
-                        <div class="text-center mt-4 mb-5">
+                        <div class="form-row">
+                            <div class="form-group col-sm-6 col-lg-6 mb-3">
+                                <label for="quantity">Quantity and Services</label>
+                                <select class="form-control custom-select" id="quantity" required>
+                                    <option class="text-muted" disabled selected>Choose...</option>
+                                    <option>1 Bike</option>
+                                    <option>2 Bikes</option>
+                                    <option>3 Bikes</option>
+                                    <option>4 Bikes</option>
+                                    <option>5 Bikes</option>
+                                    <option>6 Bikes</option>
+                                    <option>7 Bikes</option>
+                                    <option>8 Bikes</option>
+                                    <option>9 Bikes</option>
+                                    <option>10 Bikes</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6 col-lg-6 mb-3 pl-sm-2 pl-md-3 pl-lg-3 pl-xl-5">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label pr-5" for="defaultCheck1">Cleaning Service</label>
+                                </div>
+                                <div class="form-check">  
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label pr-5" for="defaultCheck1">Maintenance</label>
+                                </div>
+                                <div class="form-check">  
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label pr-5" for="defaultCheck1">Sell Your Bike</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col mb-3">
+                                <label for="image">Add an Image</label>
+                                <input type="file" class="form-control-file" id="image">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col mb-3">
+                                <label for="exampleFormControlTextarea1">Pick a date</label>
+                                <input class="datepicker" data-date-format="mm/dd/yyyy">
+                                
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col mb-3">
+                                <label for="infoBox">Add Information</label>
+                                <textarea class="form-control" id="infoBox" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center my-4">
                             <a class="btn btn-outline-black rounded-0 text-uppercase" href="">
                             <span class="icon icon-red">
                                 <i class="far fa-arrow-alt-circle-left"></i>
                             </span>Cancel</a>
-                            <button class="btn btn-black rounded-0" type="submit">Book</button>
+                            <button class="book-now-button btn btn-ls rounded-0 text-uppercase" type="submit">Book Service</button>
                         </div>
+
+
+
+                        
+                       
                     </form>
                 </div> 
             </div>
@@ -100,3 +113,62 @@
             <div class="padding-bottom"></div>
         </div>
 {% endblock %}
+
+<div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" class="form-control text-black" id="name" placeholder="Full Name" minlength="1" maxlength="100" pattern="^[a-zA-Z]{1,100}$" required>
+</div>
+<div class="form-group">
+    <label for="number">Contact Number</label>
+    <input type="tel" class="form-control text-black" id="number" placeholder="Contact Number" minlength="10" maxlength="11" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+</div>
+<div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control text-black" id="email" placeholder="name@example.com" minlength="1" maxlength="100" required>
+</div>
+<div class="form-group">
+    <label for="quantity">How many bikes</label>
+    <select class="form-control text-black" id="quantity" required>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label pr-5" for="defaultCheck1">Cleaning Service</label>
+</div>
+<div class="form-check">  
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label pr-5" for="defaultCheck1">Maintenance</label>
+</div>
+<div class="form-check">  
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label pr-5" for="defaultCheck1">Sell Your Bike</label>
+</div>
+
+<hr>
+
+<div class="form-group">
+    <label for="image">Add an Image</label>
+    <input type="file" class="form-control-file" id="image">
+</div>
+
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+</div>
+<div class="text-center mt-4 mb-5">
+    <a class="btn btn-outline-black rounded-0 text-uppercase" href="">
+    <span class="icon icon-red">
+        <i class="far fa-arrow-alt-circle-left"></i>
+    </span>Cancel</a>
+    <button class="btn btn-black rounded-0" type="submit">Book</button>
+</div>
