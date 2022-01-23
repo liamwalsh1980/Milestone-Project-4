@@ -51,3 +51,9 @@ def service_detail(request, service_id):
     }
 
     return render(request, 'services/service_detail.html', context)
+
+
+def service_booking(request):
+    """ A view book a service """
+
+    return render(request, 'services/service_booking.html')

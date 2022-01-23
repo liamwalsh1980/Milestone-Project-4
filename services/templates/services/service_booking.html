@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container-fluid mt-3">
+            <div class="row ipad-mt">
+                <div class="col text-center mt-3">
+                    <h2 class="sub-header">Book a Service</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="product-container col-12 col-lg-6 offset-lg-3">
+                    <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Full Name" minlength="1" maxlength="100" pattern="^[a-zA-Z]{1,100}$" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Contact Number</label>
+                            <input type="tel" class="form-control" id="number" placeholder="Contact Number" minlength="10" maxlength="11" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" minlength="1" maxlength="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">How many bikes</label>
+                            <select class="form-control" id="quantity" required>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                            </select>
+                          </div>
+                          
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label pr-5" for="defaultCheck1">
+                             Cleaning Service
+                            </label>
+                          </div>
+                          <div class="form-check">  
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label pr-5" for="defaultCheck1">
+                             Maintenance
+                            </label>
+                          </div>
+                          <div class="form-check">  
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label pr-5" for="defaultCheck1">
+                             Sell Your Bike
+                            </label>
+                          </div>
+
+                          <hr>
+
+                          <div class="form-group">
+                            <label for="exampleFormControlFile1">Example file input</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                          </div>
+                    
+                          <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+
+
+                      
+                        <div class="text-center mt-4 mb-5">
+                            <a class="btn btn-outline-black rounded-0 text-uppercase" href="">
+                            <span class="icon icon-red">
+                                <i class="far fa-arrow-alt-circle-left"></i>
+                            </span>Cancel</a>
+                            <button class="btn btn-black rounded-0" type="submit">Book</button>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="product-container col-10 offset-1">
+                    <form></form>
+                </div>
+            </div>
+            <div class="padding-bottom"></div>
+        </div>
+{% endblock %}
