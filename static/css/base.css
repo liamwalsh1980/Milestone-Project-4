@@ -122,6 +122,7 @@ body {
 .shop-now-button,
 .checkout-cart-button, 
 .book-now-button, 
+.book-button,
 .profile-update-info,
 .allauth-accounts-button {
     background: #852C34;
@@ -139,6 +140,9 @@ body {
 .book-now-button:hover,
 .book-now-button:active,
 .book-now-button:focus,
+.book-button:hover,
+.book-button:active,
+.book-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus,
