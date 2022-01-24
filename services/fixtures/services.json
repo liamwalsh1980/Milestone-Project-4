@@ -1,6 +1,6 @@
 [
     {
-        "sk": 1,
+        "pk": 1,
         "model": "services.service",
         "fields": {
             "name": "Professional cleaning service",
@@ -12,7 +12,7 @@
         }
     },
     {
-        "sk": 2,
+        "pk": 2,
         "model": "services.service",
         "fields": {
             "name": "Annual maintenance service",
@@ -24,7 +24,7 @@
         }
     },
     {
-        "sk": 3,
+        "pk": 3,
         "model": "services.service",
         "fields": {
             "name": "Sell your bike service",

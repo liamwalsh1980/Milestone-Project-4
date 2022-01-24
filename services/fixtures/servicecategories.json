@@ -1,6 +1,6 @@
 [
     { 
-        "sk": 1, 
+        "pk": 1, 
         "model": "services.servicecategory", 
         "fields": { 
             "name": "bike_services", 

@@ -14,7 +14,7 @@
         <div class="container-fluid mt-3">
             <div class="row ipad-mt">
                 <div class="col text-center mt-3">
-                    <h2 class="sub-header">Our Services</h2>
+                    <h2 class="sub-header">Services</h2>
                 </div>
             </div>
             <div class="row">
@@ -22,16 +22,13 @@
                     <div class="row mt-1 mb-2">
                         <div class="col-12 col-md-6 order-md-first">
                             <p class="text-muted mt-3 text-center text-md-left">
-                                {% if search_term or current_servicecategories != 'None_None' %}
-                                    <span class="small"><a href="{% url 'services' %}">All Services</a> | </span>
-                                {% endif %}
-                                {{ services|length }} Services{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                                <span class="small"><a href="{% url 'services' %}">All Services</a> | </span>
                             </p>
                         </div>
                     </div>
                     <div class="row">
                         {% for service in services %}
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="col-sm-6 col-md-6 col-lg-4">
                                 <div class="card h-100 border-1 rounded-0 border-dark">
                                     {% if service.image %}
                                     <a href="{% url 'service_detail' service.id %}">
@@ -43,7 +40,7 @@
                                     </a>
                                     {% endif %}
                                     <div class="card-body pb-0">
-                                        <p class="mb-0 font-weight-bold text-black text-left service-header">{{ service.name }}</p>
+                                        <p class="mb-0 font-weight-bold text-black text-center service-header">{{ service.name }}</p>
                                     </div>
                                     <div class="card-footer bg-white pt-0 border-0 text-left">
                                         <div class="row">
@@ -62,6 +59,11 @@
                                                     <small class="text-muted">No Rating</small>
                                                 {% endif %}
                                             </div>
+                                            <!-- <div class="col-12 text-center mt-3">
+                                                <h4>
+                                                    <a href="{% url 'service_detail' service.id %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book Now</a>
+                                                </h4>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -84,14 +86,6 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center mt-3">
-                    <p class="lead text-black">How it works? Book a service and a member of our team will be in touch</p>
-                    <h4>
-                        <a href="{% url 'services' %}book" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book Now</a>
-                    </h4>
                 </div>
             </div>
             <div class="padding-bottom"></div>

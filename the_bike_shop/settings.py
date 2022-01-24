@@ -44,9 +44,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'products',
-    'services',
     'cart',
     'checkout',
+    'services',
+    'book',
     'profiles',
 
     # Other
@@ -86,6 +87,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
+                'book.contexts.book_contents',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -179,7 +181,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 0
-STANDARD_DELIVERY_PERCENTAGE = 10
+STANDARD_DELIVERY_PERCENTAGE = 0
 STRIPE_CURRENCY = 'gbp'
 # Public key is not saved on version control for security reasons
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')

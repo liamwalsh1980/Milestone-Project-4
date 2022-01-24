@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container-fluid mt-3">
+            <div class="row ipad-mt">
+                <div class="col text-center mt-3">
+                    <h2 class="sub-header">Your Booking</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {% if book_service %}
+                        <div class="table-responsive rounded">
+                            {{ book_service }}
+                        </div>
+                        
+                    {% else %}
+                        <div class="text-center">
+                            <i class="far fa-frown text-black mb-2"></i>
+                            <p class="text-black cart-empty">No service has been booked</p>
+                        </div>
+                        <div class="text-center">
+                            <a href="{% url 'services' %}" class="shop-now-cart-button btn btn-ls rounded-0 text-uppercase py-2">Book a Service</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+           
+            <div class="padding-bottom"></div>
+        </div>
+{% endblock %}
+
+
+
+

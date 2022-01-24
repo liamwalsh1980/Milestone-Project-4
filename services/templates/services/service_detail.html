@@ -55,16 +55,168 @@
                         {% endif %}
                         <p class="mt-3 text-black">{{ service.description }}</p>
                         <hr class="w-75 mb-1">
-                        <p class="pt-3 text-black">How it works?</p>
+                    
+
+                        
+
+                        <!-- <p class="pt-3 text-black">How it works?</p>
                         <p class="text-black">Book a service and a member of our team will be in touch</p>
                         <h4 class="text-center">
-                            <a href="{% url 'services' %}book" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book Now</a>
-                        </h4>
+                            <a href="{% url 'services' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book Now</a>
+                        </h4> -->
                     </div>
+                    <div class="row">
+                        <div class="product-container col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+                            <form class="form" action="{% url 'add_to_booking' service.id %}" method="POST">
+                                <!-- Django cross-site fraud protection which is required for the form to be submitted -->
+                                {% csrf_token %}
+                                        <div class="form-row">
+                                            <div class="form-group col mb-3">
+                                                <label for="name">Full Name</label>
+                                                <input type="text" name="name" class="form-control text-black" id="name" placeholder="Full Name" minlength="1" maxlength="100">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col mb-3">
+                                                <label for="number">Contact Number</label>
+                                                <input type="tel" name="number" class="form-control text-black" id="number" placeholder="Contact Number" minlength="10" maxlength="11">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col mb-3">
+                                                <label for="email">Email address</label>
+                                                <input type="email" name="email" class="form-control text-black" id="email" placeholder="name@example.com" minlength="1" maxlength="100">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <label for="infobox">Add Information</label>
+                                                <textarea class="form-control" name="infobox" id="infobox" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    <div class="col-12 text-center">
+                                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3" value="Add to Booking">
+                                    </div>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
+                                    <div class="col-12 text-center mt-3">
+                                        <h4>
+                                            <a href="{% url 'service_booking' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Bookings</a>
+                                        </h4>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <a href="{% url 'services' %}" class="btn rounded-0">
+                                            <span class="icon icon-red">
+                                                <i class="far fa-arrow-alt-circle-left"></i>
+                                            </span>
+                                            <span class="text-uppercase text-black">Go Back</span>
+                                        </a>
+                                    </div>
+                            </form>
+                            <div class="padding-bottom"></div>
+                        </div>
+                    </div>
+        
                 </div>
-            </div>
-            <div class="row">
             </div>
             <div class="padding-bottom"></div>
         </div>
 {% endblock %}
+
+<form class="form" action="{% url 'add_to_booking' service.id %}" method="POST">
+    <!-- Django cross-site fraud protection which is required for the form to be submitted -->
+    {% csrf_token %}
+    <div class="form-row">
+        {% with product.has_sizes as s %}
+        {% if s %}
+        <div class="col-12">
+            <p class="text-black"><strong>Size:</strong></p>
+            <select class="form-control rounded-0 w-25" name="product_size" id='id_product_size'>
+                <option value="s">S</option>
+                <option value="m" selected>M</option>
+                <option value="l">L</option>
+            </select>
+        </div>
+        {% endif %}
+        <div class="col-12">
+            <p class="mt-3 text-black"><strong>Quantity:</strong></p>
+            <div class="form-group w-50">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button class="decrement-qty btn btn-qty rounded-0" 
+                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                            <span class="icon">
+                                <i class="fas fa-minus"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <input class="form-control qty_input" type="number"
+                        name="quantity" value="1" min="1" max="20"
+                        data-item_id="{{ product.id }}"
+                        id="id_qty_{{ product.id }}">
+                    <div class="input-group-append">
+                        <button class="increment-qty btn btn-qty rounded-0"
+                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <a href="{% url 'products' %}?category={{ product.category.name }}" class="btn btn-outline-black rounded-0 mt-3">
+                <span class="icon icon-red">
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                </span>
+                <span class="text-uppercase text-black">Go Back</span>
+            </a>
+            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3" value="Add to Cart">
+        </div>
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        {% endwith %}
+    </div>
+</form>
+
+<form class="form" action="{% url 'add_to_booking' service.id %}" method="POST">
+    <!-- Django cross-site fraud protection which is required for the form to be submitted -->
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col mb-3">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" class="form-control text-black" id="name" placeholder="Full Name" minlength="1" maxlength="100">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col mb-3">
+            <label for="number">Contact Number</label>
+            <input type="tel" name="number" class="form-control text-black" id="number" placeholder="Contact Number" minlength="10" maxlength="11">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col mb-3">
+            <label for="email">Email address</label>
+            <input type="email" name="email" class="form-control text-black" id="email" placeholder="name@example.com" minlength="1" maxlength="100">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col mb-3">
+            <label for="infobox">Add Information</label>
+            <textarea class="form-control" name="infobox" id="infobox" rows="5"></textarea>
+        </div>
+    </div>
+    <div class="col-12">
+        <a href="{% url 'services' %}" class="btn rounded-0 mt-3">
+            <span class="icon icon-red">
+                <i class="far fa-arrow-alt-circle-left"></i>
+            </span>
+            <span class="text-uppercase text-black">Go Back</span>
+        </a>
+            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3" value="Add to Booking">
+    </div>
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+    </div>
+</form>
+
+
