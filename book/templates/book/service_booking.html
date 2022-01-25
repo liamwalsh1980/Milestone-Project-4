@@ -24,7 +24,19 @@
                         <div class="table-responsive rounded text-center">
                             {{ book_service }}
                         </div>
-                        
+                        <div class="col-12 col-md-6 col-lg-4 offset-lg-4 offset-md-3">
+                            <div class="image-container my-5">
+                                {% if book_service.image %}
+                                <a href="{{ book_service.image.url }}" target="_blank">
+                                    <img class="card-img-top img-fluid" src="{{ book_service.image.url }}" alt="{{ service.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ service.name }}">
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
                     {% else %}
                         <div class="text-center">
                             <i class="far fa-frown text-black mb-2"></i>
