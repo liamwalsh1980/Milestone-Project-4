@@ -9,8 +9,9 @@ def service_booking(request):
     """ A view that renders the booking page """
 
     book = request.session.get('book', [])
-
-    service = get_object_or_404(Service, id=book[0])
+    service = None
+    if book:
+        service = get_object_or_404(Service, id=book[0])
     print(service)
 
     context = {"book_service": service}
@@ -23,8 +24,7 @@ def add_to_booking(request, item_id):
 
     service = get_object_or_404(Service, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
-    book = request.session.get('book', [])
-    
+
     # print('Book =', book)
     request.session['book'] = [service.id]
     print(service.id)

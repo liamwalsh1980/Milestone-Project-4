@@ -21,7 +21,7 @@ def book_contents(request):
         'book_service': book_service,
         'total': total,
         'product_count': product_count,
-        
+
     }
 
     return context
