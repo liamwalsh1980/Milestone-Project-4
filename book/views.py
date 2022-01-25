@@ -6,9 +6,16 @@ from services.models import Service
 
 
 def service_booking(request):
-    """ A view that renders the the booking page """
+    """ A view that renders the booking page """
 
-    return render(request, 'book/service_booking.html')
+    book = request.session.get('book', [])
+
+    service = get_object_or_404(Service, id=book[0])
+    print(service)
+
+    context = {"book_service": service}
+
+    return render(request, 'book/service_booking.html', context)
 
 
 def add_to_booking(request, item_id):
@@ -16,9 +23,10 @@ def add_to_booking(request, item_id):
 
     service = get_object_or_404(Service, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
-    book = request.session.get('book', {})
-
-    print('Book =', book)
-    request.session['book'] = book
+    book = request.session.get('book', [])
+    
+    # print('Book =', book)
+    request.session['book'] = [service.id]
+    print(service.id)
 
     return redirect(redirect_url)

@@ -5,13 +5,12 @@ from services.models import Service
 def book_contents(request):
 
     book_service = []
-    name = []
-    number = []
-    email = []
-    infobox = []
-    book = request.session.get('book', {})
+    total = 0
+    product_count = 0
 
-    for item_id, service in book.items():
+    book = request.session.get('book', [])
+
+    for item_id in book:
         service = get_object_or_404(Service, pk=item_id)
         book_service.append({
             'item_id': item_id,
@@ -20,10 +19,9 @@ def book_contents(request):
 
     context = {
         'book_service': book_service,
-        'name': name,
-        'number': number,
-        'email': email,
-        'infobox': infobox,
+        'total': total,
+        'product_count': product_count,
+        
     }
 
     return context
