@@ -47,7 +47,9 @@
     * [Order Summary Page](#order-summary-page)
     * [Toasts](#toasts)
     * [Services Page](#services-pages) to complete
+    * [Service Detail Page](#service-detail-page) to complete
     * [Service Booking Page](#service-booking-page) to complete
+    * [Service Booking Confirmation Page](#service-booking-confirmation-page) to complete
     * [Login Page](#login-page)
     * [Reset Password Page](#reset-password-page) 
     * [Sign Up Page](#sign-up-page)
@@ -57,6 +59,7 @@
     * [Add Products](#add-products) to complete
     * [Edit Products](#edit-products) to complete
     * [Delete Products](#delete-products) to complete
+    * [Admin Access Only](#Admin-access-only)
 1. [Other Features](#other-features) to complete
 1. [Future Features](#future-features)
 1. [Stripe](#stripe)
@@ -650,9 +653,13 @@ All toasts include a cross icon in the top right for user to click on to close t
 
 [Back to top ⇧](#the-bike-shop)
 
-### Service Page
+### Services Page
+
+### Service Detail Page
 
 ### Service Booking Page
+
+### Service Booking Confirmation Page
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -716,7 +723,7 @@ These users can access the product management at the frontend by clicking ‘My 
 
 ### Add Products
 
-Clicking the 'Product Management' option will be take users to the ‘Add a Product’ page to give them the option to add a new product by adding/selecting the following: - 
+Clicking the 'Product Management' option will take users to the ‘Add a Product’ page to give them the option to add a new product by adding/selecting the following: - 
 
 Category from a dropdown list (mandatory) 
 Name (mandatory) 
@@ -729,11 +736,19 @@ Image URL or Upload an image
  
 If the form is completed without the mandatory information added or with incorrect information i.e., the wrong price format for example, the user will see an error popup (Failed to add product. Please ensure the form is valid) and a specific error based on what the user did wrong. i.e., for the pricing it would be (Ensure that there are no more than 6 digits in total.) 
 
-If the informaton is completed correctly the user will see a success message popup confirming the product has been added and then taken to the product detail page of that product just added to show its available on the site. If the user adds a new product without an image, the default ‘noimage’ will be added to cover the space.  
+If the information is completed correctly the user will see a success message popup confirming the product has been added and then taken to the product detail page of that product just added to show its available on the site. If the user adds a new product without an image, the default ‘noimage’ will be added to cover the space.  
 
 ### Edit Products
 
+With every product there is the option to edit (blue text) and delete (red text) that product. By clicking the edit link the user will be taken to a page where the current information is shown. This information can be updated by overriding the current information and clicking update. If the user changes their mind they can click the cancel button at the bottom next to the update button returning them to the product page. A popup alert is also generated when the user first lands on this page and a success message popup when the product has been successfully updated taking the user back to the product page to see the updated information. 
+
 ### Delete Products
+
+Shop owners/administrators with superuser access can delete any product by clicking the 'delete' which can be found next to 'edit' for every product. This is instant though and with warning to the user. Once the delete option is clicked the product is removed from the site and the database. 
+
+### Admin Access Only
+
+I have put some security on these functions within the add_product, edit_product and delete_product views in views.py found within the product app. I used a @login_required decorator to wrap around all three of these views to check the user before executing and also added if statements to check that only superusers can access these sections of the site and if any other user attempts to access via the URL they will be informed via a popup error message that only store owners have access. 
 
 [Back to top ⇧](#the-bike-shop)
 
