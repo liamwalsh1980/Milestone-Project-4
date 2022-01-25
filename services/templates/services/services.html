@@ -21,8 +21,8 @@
                 <div class="product-container col-10 offset-1">
                     <div class="row mt-1 mb-2">
                         <div class="col-12 col-md-6 order-md-first">
-                            <p class="text-muted mt-3 text-center text-md-left">
-                                <span class="small"><a href="{% url 'services' %}">All Services</a> | </span>
+                            <p class="text-muted mt-3 text-md-left">
+                                <!-- <span class="small"><a href="{% url 'services' %}">All Services</a></span> -->
                             </p>
                         </div>
                     </div>
@@ -44,8 +44,8 @@
                                     </div>
                                     <div class="card-footer bg-white pt-0 border-0 text-left">
                                         <div class="row">
-                                            <div class="col">
-                                                <p class="mb-0 text-left text-black">{{ service.description }}</p>
+                                            <div class="col text-center">
+                                                <!-- <p class="mb-0 text-left text-black">{{ service.description }}</p> -->
                                                 {% if service.category %}
                                                 <p class="small mt-1 mb-0">
                                                     <a class="category" href="{% url 'services' %}?category={{ service.category.name }}">
@@ -54,16 +54,17 @@
                                                 </p>
                                                 {% endif %}
                                                 {% if service.rating %}
-                                                    <small class="text-left text-muted"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5.0</small>    
+                                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ service.rating }} / 5.0</small>    
                                                 {% else %}
                                                     <small class="text-muted">No Rating</small>
                                                 {% endif %}
                                             </div>
-                                            <!-- <div class="col-12 text-center mt-3">
+            
+                                            <div class="col-12 text-center mt-3">
                                                 <h4>
-                                                    <a href="{% url 'service_detail' service.id %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book Now</a>
+                                                    <a href="{% url 'service_detail' service.id %}" class="btn btn-black rounded-0 text-uppercase mt-3">More Info</a>
                                                 </h4>
-                                            </div> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -87,6 +88,11 @@
                         {% endfor %}
                     </div>
                 </div>
+            </div>
+            <div class="col-12 text-center mt-4">
+                <h4>
+                    <a href="{% url 'service_booking' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Go to Booking</a>
+                </h4>
             </div>
             <div class="padding-bottom"></div>
         </div>
