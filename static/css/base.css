@@ -65,6 +65,17 @@ body {
     font-family: 'Russo One';
 }
 
+/* .navbar-light .navbar-toggler {
+    border-color: #D6D0CE;
+} */
+
+i.fas.fa-times {
+    font-size: 25px;
+    width: 30px;
+    min-height: 30px;
+    padding-top: 3px;
+}
+
 .sub-header {
     text-transform: uppercase;
     font-family: 'Russo One';
