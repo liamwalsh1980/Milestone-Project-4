@@ -5,8 +5,6 @@ from services.models import Service
 def book_contents(request):
 
     book_service = []
-    total = 0
-    product_count = 0
 
     book = request.session.get('book', [])
 
@@ -19,9 +17,6 @@ def book_contents(request):
 
     context = {
         'book_service': book_service,
-        'total': total,
-        'product_count': product_count,
-
     }
 
     return context
