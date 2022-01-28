@@ -63,19 +63,22 @@
                                             </span>
                                             <span class="text-uppercase text-black">Go Back</span>
                                         </a>
+                                        
                                         <!-- <input type="submit" class="btn btn-black rounded-0 text-uppercase my-3" value="Add to Booking"> -->
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        
-                                        <p class="pt-2">Change | Delete</p>
+                                       
+                                            
+                                            <!-- <p>item_id = {{ book_service.id }}</p>
+                                            <a id="remove_{{ book_service.id }}" class="remove-item pt-2"><p>Remove</p></a> -->
                                         
                                         <h4>
-                                           
                                             <a href="" class="book-now-button btn btn-ls rounded-0 text-uppercase" data-toggle="modal" data-target="#exampleModal">Complete booking</a>
                                         </h4>
+                                    
                                     </div>
                                 
                                 </div>
-                                <!-- Modal -->
+                                <!-- Modal for checking outs -->
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -114,13 +117,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
-                                                        <a href="" class="btn rounded-0 mt-3">
+                                                        <!-- <a href="" class="btn rounded-0 mt-3">
                                                             <span class="icon icon-red">
                                                                 <i class="far fa-arrow-alt-circle-left"></i>
                                                             </span>
                                                             <span class="text-uppercase text-black">Go Back</span>
-                                                        </a>
-                                                            <input type="submit" class="book-now-button btn btn-ls rounded-0 text-uppercase" value="Complete Booking">
+                                                        </a> -->
+                                                            <input type="submit" class="book-now-button btn btn-ls rounded-0 text-uppercase" value="Book">
                                                     </div>
                                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                                     </div>
@@ -151,186 +154,26 @@
     </div>
 {% endblock %}
 
-<!-- <div class="row">
-    <div class="col">
-        {% if book_service %}
-            <div class="table-responsive rounded text-center">
-                {{ book_service }}
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-4 offset-md-3">
-                <div class="image-container my-5">
-                    {% if book_service.image %}
-                    <a href="{{ book_service.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ book_service.image.url }}" alt="{{ service.name }}">
-                    </a>
-                    {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ service.name }}">
-                    </a>
-                    {% endif %}
-                </div>
-            </div>
-        {% else %}
-            <div class="text-center">
-                <i class="far fa-frown text-black mb-2"></i>
-                <p class="text-black cart-empty">No service has been booked</p>
-            </div>
-            <div class="text-center">
-                <a href="{% url 'services' %}" class="shop-now-cart-button btn btn-ls rounded-0 text-uppercase py-2">Book a Service</a>
-            </div>
-        {% endif %}
-    </div>
-</div> -->
-
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
-    <!-- Jquery used for the back to top link to work  -->
     <script type="text/javascript">
+        // Modal
 		$('#myModal').on('shown.bs.modal', function () {
             $('#myInput').trigger('focus')
         })
+    // Remove item and reload on click
+        // $('.remove-item').click(function(e) {
+        //     var csrfToken = "{{ csrf_token }}";
+        //     var itemId = $(this).attr('id').split('remove_')[1];
+        //     var url = `/book/remove/${itemId}/`;
+        //     var data = {'csrfmiddlewaretoken': csrfToken};
 
+        //     $.post(url, data)
+        //     .done(function() {
+        //         location.reload();
+        //     });
+        // })
 	</script>
 {% endblock %}
 
-<div class="row">
-    <div class="col">
-        {% if book_service %}
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 offset-md-0">
-                <div class="image-container my-5">
-                    <div class="image-container my-5">
-                        {% if book_service.image %}
-                        <a href="{{ book_service.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ book_service.image.url }}" alt="{{ service.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ service.name }}">
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>            
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4 text-center">
-                <div class="product-details-container mb-5 mt-md-5 pt-5">
-                    <p class="mb-0 font-weight-bold text-black service-header">{{ book_service }}</p>
-                    {% if book_service.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="category" href="{% url 'services' %}?category={{ service.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ book_service.category.friendly_name }}
-                        </a>
-                    </p>
-                    {% endif %}
-                    {% if book_service.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ book_service.rating }} / 5.0</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
-                    <!-- <p class="mt-3 text-black">{{ book_service.description }}</p> -->
-                </div>
-
-                <div class="row">
-                    <div class="product-container col">
-                        <form class="form" action="" method="POST">
-                            <!-- Django cross-site fraud protection which is required for the form to be submitted -->
-                            {% csrf_token %}
-                            <div class="row">
-                                <div class="col">
-                                    <a href="{% url 'services' %}" class="btn rounded-0">
-                                        <span class="icon icon-red">
-                                            <i class="far fa-arrow-alt-circle-left"></i>
-                                        </span>
-                                        <span class="text-uppercase text-black">Go Back</span>
-                                    </a>
-                                    <!-- <input type="submit" class="btn btn-black rounded-0 text-uppercase my-3" value="Add to Booking"> -->
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                    
-                                    <p class="pt-2">Change | Delete</p>
-                                    
-                                    <h4>
-                                       
-                                        <a href="" class="book-now-button btn btn-ls rounded-0 text-uppercase" data-toggle="modal" data-target="#exampleModal">Complete booking</a>
-                                    </h4>
-                                </div>
-                            
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">{{ book_service }} booking</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form class="form" action="" method="POST">
-                                                <!-- Django cross-site fraud protection which is required for the form to be submitted -->
-                                                {% csrf_token %}
-                                                <div class="form-row">
-                                                    <div class="form-group col mb-3">
-                                                        <!-- <label for="name">Full Name</label> -->
-                                                        <input type="text" name="name" class="form-control text-black" id="name" placeholder="Full Name" minlength="1" maxlength="100">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col mb-3">
-                                                        <!-- <label for="number">Contact Number</label> -->
-                                                        <input type="tel" name="number" class="form-control text-black" id="number" placeholder="Contact Number" minlength="10" maxlength="11">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col mb-3">
-                                                        <!-- <label for="email">Email address</label> -->
-                                                        <input type="email" name="email" class="form-control text-black" id="email" placeholder="name@example.com" minlength="1" maxlength="100">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col mb-3">
-                                                        <!-- <label for="infobox">Add Information</label> -->
-                                                        <textarea class="form-control" name="infobox" id="infobox" rows="5" placeholder="Add more information"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <a href="" class="btn rounded-0 mt-3">
-                                                        <span class="icon icon-red">
-                                                            <i class="far fa-arrow-alt-circle-left"></i>
-                                                        </span>
-                                                        <span class="text-uppercase text-black">Go Back</span>
-                                                    </a>
-                                                        <input type="submit" class="book-now-button btn btn-ls rounded-0 text-uppercase" value="Complete Booking">
-                                                </div>
-                                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <!-- <button type="button" class="book-now-button btn btn-ls rounded-0 text-uppercase" data-dismiss="modal">Book</button> -->
-                                                    <!-- <button type="button" class="btn btn-primary">Cancel</button>
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% else %}
-        <div class="text-center">
-            <i class="far fa-frown text-black mb-2"></i>
-            <p class="text-black cart-empty">No service has been booked</p>
-        </div>
-        <div class="text-center">
-            <a href="{% url 'services' %}" class="shop-now-cart-button btn btn-ls rounded-0 text-uppercase py-2">Book a Service</a>
-        </div>
-        {% endif %}
-    </div>
-</div>
-<div class="padding-bottom"></div>
-</div>
