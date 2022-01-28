@@ -71,6 +71,7 @@
 1. [Technologies Used](#technologies-used)
 1. [Testing](#testing) to start
     * [Bugs](#bugs) to complete
+    * [Bugs Outstanding](#bugs-outstanding) to complete
 1. [Credits](#credits) to check
 1. [Acknowledgements](#acknowledgements)
 1. [Notes](#notes) to complete
@@ -997,6 +998,12 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 ![Image template](readme/images/bugs/bug-product-detail-page-fixed2.png)
 
 ![Image template](readme/images/bugs/bug-product-detail-page-fixed3.png)
+
+### Bugs Outstanding
+
+- Toast issue when users decided to remove all products from the shopping cart, they see the right message but below there is a the 'GO TO BOOKING' button related to the services section. 
+
+![Image template]()
 
 [Back to top ⇧](#the-bike-shop)
 
