@@ -601,7 +601,7 @@ footer {
 @media (max-width: 576px) {
     .book-now-button {
         margin-top: 5%;
-        margin-bottom: 20%;
+        margin-bottom: 5%;
     }
 
     .btt-button {
