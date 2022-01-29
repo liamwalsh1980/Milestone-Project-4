@@ -14,7 +14,7 @@ class Booking(models.Model):
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
-    more_information = models.CharField(max_length=50, null=True, blank=True)
+    more_information = models.CharField(max_length=2000, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
 
     def _generate_booking_number(self):
