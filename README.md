@@ -46,7 +46,7 @@
     * [Checkout Page](#checkout-page)
     * [Order Summary Page](#order-summary-page)
     * [Toasts](#toasts)
-    * [Services Page](#services-pages) to complete
+    * [Services Page](#services-page) to complete
     * [Service Detail Page](#service-detail-page) to complete
     * [Service Booking Page](#service-booking-page) to complete
     * [Service Booking Confirmation Page](#service-booking-confirmation-page) to complete
