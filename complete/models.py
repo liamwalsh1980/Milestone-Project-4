@@ -37,6 +37,7 @@ class Booking(models.Model):
 
 
 class BookingLineItem(models.Model):
+    # booking = models.ForeignKey(Booking, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     booking = models.ForeignKey(Booking, null=False, blank=False, on_delete=models.CASCADE)
     service = models.ForeignKey(Service, null=False, blank=False, on_delete=models.CASCADE)
 

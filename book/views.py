@@ -3,9 +3,6 @@ from django.contrib import messages
 from services.models import Service
 
 
-# Create your views here.
-
-
 def service_booking(request):
     """ A view that renders the booking page """
 
@@ -26,7 +23,6 @@ def add_to_booking(request, item_id):
     service = get_object_or_404(Service, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
 
-    # print('Book =', book)
     request.session['book'] = [service.id]
     messages.success(request, f'"{service}" added')
 

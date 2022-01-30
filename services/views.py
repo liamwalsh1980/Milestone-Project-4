@@ -1,8 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Service
 
-# Create your views here.
-
 
 def all_services(request):
     """ A view to show all services, including sorting and search queries """
@@ -28,9 +26,3 @@ def service_detail(request, service_id):
     }
 
     return render(request, 'services/service_detail.html', context)
-
-
-# def service_booking(request):
-#     """ A view book a service """
-
-#     return render(request, 'services/service_booking.html')

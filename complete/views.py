@@ -1,13 +1,15 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 # from django.conf import settings
 
 from .forms import BookingForm
+from services.models import Service
+from .models import Booking, BookingLineItem
 # from book.contexts import book_contents
 
 
 def complete(request):
-
+    """  """
     # Checking if a form was posted
     if request.method == 'POST':
         book = request.session.get('book', [])
@@ -34,11 +36,12 @@ def complete(request):
 
         # Checking if the form is valid
         if completedForm.is_valid():
-            completedForm.save()
+            booking = completedForm.save()
             del request.session['book']
 
             # Return user to a successful page
-            return redirect(reverse('services'))
+            # return redirect(reverse('services'))
+            return redirect(reverse('booking_success', args=[booking.booking_number]))
         # current_book = book_contents(request)
 
     else:
@@ -50,3 +53,21 @@ def complete(request):
         }
 
         return render(request, template, context)
+
+
+def booking_success(request, booking_number):
+    """ Handle Successful Bookings """
+    booking = get_object_or_404(Booking, booking_number=booking_number)
+    messages.success(request, f'Booking successfully processed! \
+        Your booking number is {booking_number}. A confirmation \
+        email will be sent to {booking.email}.')
+
+    if 'book' in request.session:
+        del request.session['book']
+
+    template = 'complete/booking_success.html'
+    context = {
+        'booking': booking,
+    }
+
+    return render(request, template, context)
