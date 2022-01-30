@@ -29,7 +29,7 @@
                     <!-- Django cross-site fraud protection which is required for the form to be submitted -->
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-1">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Complete Booking - {{ service.service.name }}</legend>
+                        <legend class="fieldset-label small text-black px-2 w-auto h4 pb-3">Complete Booking - {{ service.service.name }}</legend>
                         {% for field in booking_form %}
                             {{ field | as_crispy_field }}
                         {% endfor %}
