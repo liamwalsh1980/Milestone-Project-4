@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -21,18 +25,17 @@
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2 text-center">
                 {% for service in book_service %}
-                <form class="form" action="{% url 'complete' %}" method="POST">
+                <form class="form" action="{% url 'complete' %}" method="POST" id="booking-form">
                     <!-- Django cross-site fraud protection which is required for the form to be submitted -->
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-1">
                         <legend class="fieldset-label small text-black px-2 w-auto">Complete Booking - {{ service.service.name }}</legend>
-                        {{ booking_form.full_name | as_crispy_field }}
-                        {{ booking_form.email | as_crispy_field }}
-                        {{ booking_form.phone_number | as_crispy_field }}
-                        {{ booking_form.more_information | as_crispy_field }}
+                        {% for field in booking_form %}
+                            {{ field | as_crispy_field }}
+                        {% endfor %}
                     </fieldset>
                     <div class="pb-sm-4">
-                        <button id="submit-booking" type="button" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book</button>
+                        <button id="submit-booking" type="submit" class="book-now-button btn btn-ls rounded-0 text-uppercase">Book</button>
                     </div>
     
                     <div class="form-check form-check-inline">
@@ -53,5 +56,9 @@
         </div>
     </div>
 {% endblock %}
+
+
+
+
 
 

@@ -1,5 +1,6 @@
 .StripeElement,
-.stripe-style-input {
+.stripe-style-input,
+.booking-form-style-input {
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
@@ -13,7 +14,9 @@
 
 .StripeElement--focus,
 .stripe-style-input:focus,
-.stripe-style-input:active {
+.stripe-style-input:active,
+.booking-form-style-input:focus,
+.booking-form-style-input:active {
   box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
@@ -21,7 +24,8 @@
   background-color: #fefde5 !important;
 }
 
-.stripe-style-input::placeholder {
+.stripe-style-input::placeholder, 
+.booking-form-style-input::placeholder {
     color: #aab7c4;
 }
 
@@ -32,6 +36,11 @@
 
 #payment-form .form-control,
 #card-element {
+    color: #131418;
+    border: 1px solid #131418;
+}
+
+#booking-form .form-control {
     color: #131418;
     border: 1px solid #131418;
 }
@@ -67,6 +76,10 @@ select option {
 
 .spinner-color {
   color: #D6D0CE;
+}
+
+.h4 {
+  font-size: 16px;
 }
 
 
