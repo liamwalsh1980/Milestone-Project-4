@@ -18,10 +18,8 @@ def complete(request):
             messages.error(request, "There's no service pending to book")
             return redirect(reverse('services'))
 
-        # Assigning the posted data to a form variable
         form = BookingForm(request.POST)
 
-        # you can assign all the values you recieved on the form to the data base Ive done one
         if form.is_valid():
             form_data = {
                 'full_name': form.cleaned_data['full_name'],
@@ -40,7 +38,6 @@ def complete(request):
             del request.session['book']
 
             # Return user to a successful page
-            # return redirect(reverse('services'))
             return redirect(reverse('booking_success', args=[booking.booking_number]))
         # current_book = book_contents(request)
 
