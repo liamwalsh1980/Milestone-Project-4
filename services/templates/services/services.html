@@ -31,12 +31,12 @@
                             <div class="col-sm-6 col-md-6 col-lg-4">
                                 <div class="card h-100 border-1 rounded-0 border-dark">
                                     {% if service.image %}
-                                    <a href="{% url 'service_detail' service.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ service.image.url }}" alt="{{ service.name }}">
+                                    <a href="{% url 'service_detail' service.id %}" class="text-center">
+                                        <img class="card-img-top img-fluid w-50" src="{{ service.image.url }}" alt="{{ service.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="{% url 'service_detail' service.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ service.name }}">
+                                    <a href="{% url 'service_detail' service.id %}" class="text-center">
+                                        <img class="card-img-top img-fluid w-50" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ service.name }}">
                                     </a>
                                     {% endif %}
                                     <div class="card-body pb-0">
