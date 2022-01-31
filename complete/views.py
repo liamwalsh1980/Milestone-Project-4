@@ -34,11 +34,16 @@ def complete(request):
 
         # Checking if the form is valid
         if completedForm.is_valid():
+            service = Service.objects.get(id=book[0])
             booking = completedForm.save()
             del request.session['book']
-
+            booking_line_item = BookingLineItem(
+                booking=booking,
+                service=service,
+            )
+            booking_line_item.save()
             # Return user to a successful page
-            return redirect(reverse('booking_success', args=[booking.booking_number]))
+        return redirect(reverse('booking_success', args=[booking.booking_number]))
         # current_book = book_contents(request)
 
     else:
