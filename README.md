@@ -83,7 +83,7 @@
 ## Introduction
 This Milestone project (Full Stack Frontend Development) is the fourth and final project to contribute towards my Full Stack Web Developer Diploma with Code Institute. 
 
-The main requirements in this project are to design a Full-Stack e-commerce website based around business logic to control a centrally-owned dataset. The site setup includes an authentication mechanism with the option for users to pay for products and services with a further option to sign up for an account to access orders after a purchase has been made. There also is a site administrator login for the owner of the site to access and give them the option to add new products, edit existing products. delete products and gain access to customer orders and login details giving full management of the site. The main technologies used to achieve this project is HTML, CSS using the Bootstrap5 framework, JavaScript using the jQuery library, Python using the Full framework, Django (Model Template View - MVT architecture), Relational Databases - MySQL and Postgres, and Stripe - payment processing platform. 
+The main requirements in this project are to design a Full-Stack e-commerce website based around business logic to control a centrally-owned dataset. The site setup includes an authentication mechanism with the option for users to pay for products and book services with a further option to sign up for an account to access orders after a purchase has been made. There also is a site administrator login for the owner of the site to access and give them the option to add new products, edit existing products. delete products and gain access to customer product orders and service bookings with login details giving full management of the site. The main technologies used to achieve complete project is HTML, CSS using the Bootstrap5 framework, JavaScript using the jQuery library, Python using the Full framework, Django (Model Template View - MVT architecture), Relational Databases - MySQL and Postgres, Stripe - payment processing platform and Heroku with Git for deployemnt. 
 
 Django Data Structure - MVT architecture (Model Template View) 
 
@@ -97,7 +97,7 @@ Django Data Structure - MVT architecture (Model Template View)
 
  ## Project Introduction 
 
- The Bike Shop is an easy-to-use online shopping experience for cycling lovers to visit and purchase products and services. Products available to purchase are Men's bikes, Woman's bikes, Urban bikes, Cycling Helmets and general accessories. Before purchasing any product, users can get access to more information about that product with the option to pick a size (if applicable). The services available to book on the site is professional bike cleaning, bike repair and a sell your bike scheme. The user will need to select, add and submit relevant information depending on what service they are looking to purchase one of these services.  
+ The Bike Shop is an easy-to-use online shopping experience for cycling lovers to visit and purchase products and book services. Products available to purchase are Men's bikes, Woman's bikes, Urban bikes, Cycling Helmets and general accessories. Before purchasing any product, users can get access to more information about that product with the option to pick a size (if applicable). The services available to book on the site is professional bike cleaning, bike repair and a sell your bike scheme. The user will need to pick a service to book and submit some information for a member of The Bike Shop team to then make contact.  
 
  Date this project started: 20th December 2021 
 
@@ -111,7 +111,7 @@ Django Data Structure - MVT architecture (Model Template View)
 - For cyclists that want to upgrade their current bike to something more advanced 
 - For cyclists that want to purchase additional accessories for comfort and safety 
 - For anyone wanting to start cycling to work  
-- For cyclists to take up the offer of The Bike Shop services (clean, repair and sell) 
+- For cyclists that need a service like a bike cleanup, repair or the option to sell their bike for whatever reason.  
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -120,16 +120,16 @@ Django Data Structure - MVT architecture (Model Template View)
 #### User Goals 
 
 - To view all products and services on the site 
-- To search for a product or service quickly by keyword(s) - To find the right type of bike based on my requirements around cycling 
+- To search for a product quickly by keyword(s) - To find the right type of bike based on my requirements around cycling 
 - To find the right bike accessories for my requirements around cycling 
 - Find the right service for my bike i.e., clean, repair and/or sell 
 - Sign up to an account to view orders and to make it easier to order in the future 
 - To easily login to my account 
 - To view previous orders 
 - To view saved profile details i.e., contact number and address with the option to update details 
-- To add a product(s) of choice to my shopping bag 
-- To view my shopping bag before purchase 
-- To update and/or remove a product from my shopping bag 
+- To add a product(s) of choice to my shopping cart 
+- To view my shopping cart before purchase 
+- To update and/or remove a product from my shopping cart 
 - To complete a purchase using an online card payment system 
 - To receive confirmation of order on the site and via email 
 - To easily logout of my account 
@@ -137,11 +137,11 @@ Django Data Structure - MVT architecture (Model Template View)
 ### Site Owner Goals 
 
 - ‘Admin’ username and password login 
-- Access to 'Product Management’ 
-- Access to 'Service Management' 
-- Add a new product or service 
-- Edit a current product or service 
-- Delete a current product or service 
+- Access to 'Product Management’ i.e. orders
+- Access to 'Service Management' i.e. bookings
+- Add a new product  
+- Edit a current product 
+- Delete a current product 
 - Admin access to view, update and/or delete products, services and users 
 - **CRUD** conventions realised and achieved 
 (Create, Read, Update and Delete)
@@ -149,9 +149,8 @@ Django Data Structure - MVT architecture (Model Template View)
 ### Developer Aims 
 
 - Create an interesting and easy to use e-commerce website for cycling lovers to visit and make purchases 
-- A platform for Film lovers to use to Create, Read, Update and Delete Film Records 
 - Demonstrate the use of front-end and back-end Web development languages recently learnt with CI. 
-- The use of relational databases to storge product data and user details to easily update, add and delete when required 
+- The use of relational databases to store product data and user details to easily update, add and delete when required 
 - Successful deployment adding to the developer portfolio
 - To achieve a final grade to contribute towards the Full Stack Web Developer Diploma overall grade 
 
@@ -180,27 +179,31 @@ After looking back over my previous projects, I decided to breakdown my strategy
 - Strong Hero Image on the Homepage 
 - Header 
 - Enter the Shop button with 'enter' icon
-- Shopping cart 
+- Shopping bag 
 
 ### Unregistered Users
 - Need to be able to: 
-    - Search for products and services 
+    - Search for products 
     - View products/services 
     - Use the sort facility  
     - View details of each product/service
-    - Buy products and services as a guest 
-    - Receive an email confirmation for all purchases made
+    - Buy products as a guest 
+    - Book a service as a guest
+    - Receive an email confirmation for all purchases made 
+    - Receive an email confirmation for a service booked ?
     - Register an Account using a username and secure password (optional) 
 
 ### Registered Users 
 - Need to be able to: 
     - Login with username and password 
-    - Search for products and services 
+    - Search for products 
     - View products/services 
     - Use the sort facility
     - View details of each product/service 
-    - Buy products and services  
+    - Buy products as a guest 
+    - Book a service as a guest 
     - Receive an email confirmation for all purchases made 
+    - Receive an email confirmation for a service booked ?
     - Access Profile - delivery details 
     - Access Profile - order history (if applicable)
     - Logout 
@@ -208,19 +211,21 @@ After looking back over my previous projects, I decided to breakdown my strategy
 ### Store Owner or Admin
 - User needs to be able to: 
     - Login with username and password
-    - Search for products and services 
+    - Search for products 
     - View products/services 
     - Use the sort facility 
     - View details of each product/service 
-    - Buy products and services  
-    - Receive an email confirmation for all purchases made
+    - Buy products as a guest 
+    - Book a service as a guest 
+    - Receive an email confirmation for all purchases made 
+    - Receive an email confirmation for a service booked ?
     - Access Profile - delivery details 
     - Access Profile - order history (if applicable)
-    - Add new Products/Services 
-    - Update Products/Services 
-    - Delete Products/Services 
+    - Add new Products 
+    - Update Products 
+    - Delete Products 
     - Logout
-    - Access Django Administration 
+    - Access Django Administration panel
 
 With these goals in mind, I put together diagrams that shows the importance and Viability relevant to each. 
 
@@ -236,11 +241,11 @@ With these goals in mind, I put together diagrams that shows the importance and 
 
 ## My Design 
 
-I wanted this project to have minimum text and therefore it is important to note that I made sure that from the products sold, services sold, images used, nav links applied, my colour scheme, text styling picked and the name of the site, it is clear what this site offers and who the target audience is.  
+I wanted this project to have minimum text and therefore it is important to note that I made sure that from the products for sale, services offered, images used, nav links applied, my colour scheme, text styling picked and the name of the site, it is clear what this site offers and who the target audience is.  
 
 ### Hero Images 
 
-The hero images came from Shutterstock at small cost of £1.90 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes is to use one image with an ’Enter the Shop' button in the middle with enter icon. See image below for reference (destop view)
+The hero images came from Shutterstock at a cost of £5.80 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes is to use one image with an ’Enter the Shop' button in the middle with enter icon. See image below for reference (destop view)
 
 ![Image template](readme/images/original-homepage.png)
 
