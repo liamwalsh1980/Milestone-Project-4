@@ -19,3 +19,8 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.username {
+    color: #852C34;
+    font-weight: 500;
+}

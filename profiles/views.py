@@ -28,7 +28,8 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_profile_page': True,
+        'profile': profile
     }
 
     return render(request, template, context)
