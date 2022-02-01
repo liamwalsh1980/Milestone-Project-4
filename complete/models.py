@@ -1,16 +1,13 @@
 import uuid
 
 from django.db import models
-from django.conf import settings
 
 from services.models import Service
-from profiles.models import UserProfile
 
 
 class Booking(models.Model):
-    booking_number = models.CharField(max_length=32, null=False, editable=False)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                                     null=True, blank=True, related_name='booking')
+    booking_number = models.CharField(max_length=32, null=False,
+                                      editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -37,9 +34,11 @@ class Booking(models.Model):
 
 
 class BookingLineItem(models.Model):
-    booking = models.ForeignKey(Booking, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    # booking = models.ForeignKey(Booking, null=False, blank=False, on_delete=models.CASCADE)
-    service = models.ForeignKey(Service, null=False, blank=False, on_delete=models.CASCADE)
+    booking = models.ForeignKey(Booking, null=False, blank=False,
+                                on_delete=models.CASCADE,
+                                related_name='lineitems')
+    service = models.ForeignKey(Service, null=False, blank=False,
+                                on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
         """
