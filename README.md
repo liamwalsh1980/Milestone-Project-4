@@ -23,7 +23,7 @@
     * [Registered Users](#registered-users)
     * [Store Owner/Admin](#store-owner-or-admin)
 1. [My Design](#my-design)
-    * [Hero Images](#hero-images) to complete
+    * [Hero Images](#hero-images)
     * [Colour Scheme](#colour-scheme)
     * [Typography](#typography)
     * [Imagery](#imagery)
@@ -224,6 +224,7 @@ After looking back over my previous projects, I decided to breakdown my strategy
     - Add new Products 
     - Update Products 
     - Delete Products 
+    - Add/edit/delete services from the backend of the site in Django Admin
     - Logout
     - Access Django Administration panel
 
@@ -304,12 +305,23 @@ I used the noimage.png image in this project in case there was no available imag
 
 ## Products and Services 
 
-With around 53 products and service added I wanted to make sure each one was allocated into a category name. I also wanted to make sure that the products had the same format of fields for consistency, giving users the same type of useful information for all products and services.
+With 50 products and 3 service added I wanted to make sure each one was allocated into a relevant category name. I also wanted to make sure that the products had the same format fields for consistency, giving users the same type of useful information for all products. JSON files inside the fixtures folders hold all data for products and services.
 
 ### Products 
 
+#### Products data (example)
+![Image template](readme/images/product-data-example.png)
+
+#### Products categories 
+![Image template](readme/images/product-categories.png)
 
 ### Services 
+
+#### Services data (example)
+![Image template](readme/images/service-data.png)
+
+#### Services category
+![Image template](readme/images/service-category.png)
 
  
 [Back to top ⇧](#the-bike-shop)
@@ -322,7 +334,11 @@ Please click <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/
 
 ## Database Models 
 
+### Original
 ![Image template](readme/images/the-bike-shop-database.png)
+
+### Updated
+![Image template](readme/images/the-bike-shop-database-new.png)
 
 There were some adjustments to the models
 - Products model doesn't include has_colors
