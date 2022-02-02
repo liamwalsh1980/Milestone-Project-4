@@ -24,7 +24,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-6 offset-lg-3">
+        <div class="col-12 col-lg-8 offset-lg-2">
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
