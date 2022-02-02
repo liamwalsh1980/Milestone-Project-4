@@ -2,7 +2,7 @@
 
 ## Code Institute - Milestone Project 4
 
-![Image template](readme/images/responsive-homepage.png)
+![Image template](readme/images/responsive-homepage-new.png)
 
 <a href="https://the-bike-shop-project.herokuapp.com/" target="_blank">Click here to view The Bike Shop live</a>
 
