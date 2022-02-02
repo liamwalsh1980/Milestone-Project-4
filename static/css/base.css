@@ -537,6 +537,13 @@ footer {
 
 /* -------------------------------- Media Queries */
 
+@media (min-width: 768px) and (max-width: 809px) {
+    .hero-images {
+        height: 283px;
+      }
+}
+
+
 /* Slightly larger container on xl screens */
 
 @media (min-width: 1200px) {

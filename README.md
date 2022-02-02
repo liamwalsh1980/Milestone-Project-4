@@ -253,11 +253,14 @@ This looked fine; however, I felt the homepage needed more images in sections to
 
 The sport of cycling is very colourful with Bikes, Clothing, Helmets and Competition Winning Jerseys all represented with bright colouring. With this in mind the first image users will see contains plenty of colour with a male cyclist as the main focus. I then used 3 more images to represent women's bikes, urban bikes and accessories. See images below for reference (desktop view)
 
-![Image template](newhomepage1)
 
-![Image template](newhomepage2)
+![Image template](readme/images/newhomepage1.png)
 
-![Image template](newhomepage3)
+![Image template](readme/images/newhomepage2.png)
+
+![Image template](readme/images/newhomepage3.png)
+
+![Image template](readme/images/newhomepage4.png)
 
 Please see the [Credits](#credits) section for information about where the images were sourced from.  
 
