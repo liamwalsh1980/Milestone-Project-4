@@ -158,7 +158,9 @@ Django Data Structure - MVT architecture (Model Template View)
 
 ## User Stories
 
-Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user-stories.pdf" target="_blank">User Stories</a>
+Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user-stories-before.pdf" target="_blank">User Stories</a>
+
+
 
 ## Development Process 
 
