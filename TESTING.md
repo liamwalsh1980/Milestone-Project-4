@@ -83,4 +83,4 @@ Return to my [README Doc](README.md)
 
 ## User Stories Complete
 
-Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user-stories-complete.pdf" target="_blank">User Stories</a> completed. 
+Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_complete.pdf" target="_blank">User Stories</a> completed. 
