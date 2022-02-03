@@ -28,8 +28,8 @@
     * [Typography](#typography)
     * [Imagery](#imagery)
 1. [Products and Services](#products-and-services) 
-    * [Products](#products) to complete
-    * [Services](#services) to complete
+    * [Products](#products) 
+    * [Services](#services) 
 1. [Wireframes](#wireframes)
 1. [Database Models](#database-models)
 1. [Development Environment](#development-environment)
@@ -55,12 +55,12 @@
     * [Sign Up Page](#sign-up-page)
     * [Profile Page](#profile-page)
     * [Logout Page](#logout-page)
-1. [Shop Owner Features](#shop-owner-features) to complete
-    * [Add Products](#add-products) to complete
-    * [Edit Products](#edit-products) to complete
-    * [Delete Products](#delete-products) to complete
+1. [Shop Owner Features](#shop-owner-features)
+    * [Add Products](#add-products)
+    * [Edit Products](#edit-products)
+    * [Delete Products](#delete-products)
     * [Admin Access Only](#Admin-access-only)
-1. [Other Features](#other-features) to complete
+1. [Other Features](#other-features)
 1. [Future Features](#future-features)
 1. [Stripe](#stripe)
 1. [Allauth](#allauth)
@@ -307,7 +307,7 @@ I used the noimage.png image in this project in case there was no available imag
 
 ## Products and Services 
 
-With 50 products and 3 service added I wanted to make sure each one was allocated into a relevant category name. I also wanted to make sure that the products had the same format fields for consistency, giving users the same type of useful information for all products. JSON files inside the fixtures folders hold all data for products and services.
+With 50 products and 3 service added I wanted to make sure each one was allocated into a relevant category name. I also wanted to make sure that the products had the same format fields for consistency, giving users the same type of useful information for all products. JSON files inside the fixtures folders hold all data for products and services. Al product details, images and URLs were sourced manually using the Halfords website - see [Credits](#credits) for more information. 
 
 ### Products 
 
@@ -744,15 +744,18 @@ When users click this option they will be greeted with a Logout page asking them
 
 ## Shop Owner Features
 
-Shop owners/administrators with superuser access can login to the admin backend and also access the ‘Product Management’ page at the frontend of the site. Backend admin is available via the URL (URLADDRESS/admin) with the right level of access once logged in. Users will be able to view, edit, delete and add the following: -
+Shop owners/administrators with superuser access can login to the admin backend and also access the ‘Product Management’ page at the frontend of the site. Once logged in and with the right level of access, the backend admin is available via the URL (URLADDRESS/admin) or more conveniently by clicking the 'Admin Panel' link found within the 'My Account' at the top right. Users will be able to view, edit, delete and add the following: -
 - Products
 - Product categories
 - Orders
+- Services
+- Service categories
+- Bookngs
 - User accounts 
 - Email address 
 - Sites
  
-These users can access the product management at the frontend by clicking ‘My Account’ from the top right of any page they are on. 
+These users can access the product management at the frontend by clicking ‘My Account’ from the top right of any page they are on. Users will be able to view, edit, delete and add Products.
 
 ### Add Products
 
@@ -762,7 +765,6 @@ Category from a dropdown list (mandatory)
 Name (mandatory) 
 Description (mandatory) 
 Size (yes/no/unknown) 
-Colour (yes/no/unknown) ? 
 Price (mandatory) 
 Rating 
 Image URL or Upload an image 
@@ -1065,7 +1067,8 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 
 ## Acknowledgements 
 
-- The Slack community and Tutor Support
+- The Slack Community
+- Tutor Support
 - My family for taking the time to visit my site and give me feedback
 - My wife and Son for supporting me throughout the whole course
 
