@@ -317,7 +317,7 @@ With 50 products and 3 service added I wanted to make sure each one was allocate
 
 ### Services 
 
-#### Services data (example)
+#### Services data
 ![Image template](readme/images/service-data.png)
 
 #### Services category
@@ -341,9 +341,9 @@ Please click <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/
 ![Image template](readme/images/the-bike-shop-database-new.png)
 
 There were some adjustments to the models
-- Products model doesn't include has_colors
-- Order model doesn't include delivery_cost
-- Service and ServiceType models were created and migrated but i decided to go a different direction and use a form and modal instead. 
+- Products model doesn't include has_colors which is a feature i would look to introduct in the future
+- Order model doesn't include delivery_cost as i decided to keep all deliveries at zero.
+- Services model changed from the original plan to show a full working model. 
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -411,6 +411,11 @@ The Navigation menu on desktop screens has a text logo with a bike icon. This ca
 - User icon (My Account) 
 - Shopping cart icon (starts with £0.00) 
 
+Shopowners/Admin users will see additional links when logged in: -
+
+- Product Management (For adding new products)
+- Admin Panel (for easy access to the backend Django panel to view, amend and delete orders, bookings and user profiles)
+
 Below the search bar in a horizontal row users can find the following links to click on: - 
 
 Products 
@@ -435,6 +440,7 @@ Services
 -    Repair 
 -    Sell Your Bike 
 -    All Services 
+-    Go To Booking
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -1057,7 +1063,6 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 
 ## Acknowledgements 
 
-- A big 'thank you' to my Mentor - Seun Owonikoko throughout the whole course.- 
 - The Slack community and Tutor Support
 - My family for taking the time to visit my site and give me feedback
 - My wife and Son for supporting me throughout the whole course
