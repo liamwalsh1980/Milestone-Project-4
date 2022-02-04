@@ -31,8 +31,10 @@
     * [Products](#products) 
     * [Services](#services) 
 1. [Wireframes](#wireframes)
-1. [Database Models](#database-models)
 1. [Development Environment](#development-environment)
+1. [Database Models](#database-models)
+    * [Original Database](#original)
+    * [Updated Database](#updated)
 1. [Features](#features) 
     * [Navbar](#navbar)
         - [Desktop Navbar](#desktop-navbar)
@@ -135,7 +137,7 @@ Django Data Structure - MVT architecture (Model Template View)
 - To receive confirmation of order on the site and via email 
 - To easily logout of my account 
 
-### Site Owner Goals 
+#### Site Owner Goals 
 
 - ‘Admin’ username and password login 
 - Access to 'Product Management’ i.e. orders
@@ -147,7 +149,7 @@ Django Data Structure - MVT architecture (Model Template View)
 - **CRUD** conventions realised and achieved 
 (Create, Read, Update and Delete)
 
-### Developer Aims 
+#### Developer Aims 
 
 - Create an interesting and easy to use e-commerce website for cycling lovers to visit and make purchases 
 - Demonstrate the use of front-end and back-end Web development languages recently learnt with CI. 
@@ -296,7 +298,7 @@ For the main content of the site, I used a reliable font called <a href="https:/
 
 ### Imagery
 
-With around 53 products and services, each with an image to show users what they are buying, I felt it best to keep the background of the site plain white. This works well to clearing show all images. However, I decided to break up this background colour by using the Timberwolf grey from my colour palette in the header and footer of the site.  
+All products and services have an image to show users what they are buying, I felt it best to keep the background of the site plain white. This works well to clearing show all images. However, I decided to break up this background colour by using the Timberwolf grey from my colour palette in the header and footer of the site.  
 
 I looked at using a ‘bike’ image to replace the word Bike from the logo title. Instead, I simply added a font awesome image of a bike to the end of the text logo. 
 
@@ -308,24 +310,31 @@ I used the noimage.png image in this project in case there was no available imag
 
 ## Products and Services 
 
-With 50 products and 3 service added I wanted to make sure each one was allocated into a relevant category name. I also wanted to make sure that the products had the same format fields for consistency, giving users the same type of useful information for all products. JSON files inside the fixtures folders hold all data for products and services. Al product details, images and URLs were sourced manually using the Halfords website - see [Credits](#credits) for more information. 
+With 50 products and 3 service added I wanted to make sure each one was allocated into a relevant category name. I also wanted to make sure that the products had the same format fields for consistency, giving users the same type of useful information for all products. JSON files inside the fixtures folders hold all data for products and services. All product details, images and URLs were sourced manually using the Halfords website - see [Credits](#credits) for more information. 
 
 ### Products 
 
 #### Products data (example)
 ![Image template](readme/images/product-data-example.png)
 
+For more information please click this <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/fixtures/products.json" target="_blank">JSON </a>link to see full data used
+
 #### Products categories 
 ![Image template](readme/images/product-categories.png)
+
+For more information please click this <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/fixtures/categories.json" target="_blank">JSON </a>link to see full data used
 
 ### Services 
 
 #### Services data
 ![Image template](readme/images/service-data.png)
 
+For more information please click this <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/services/fixtures/services.json" target="_blank">JSON </a>link to see full data used
+
 #### Services category
 ![Image template](readme/images/service-category.png)
 
+For more information please click this <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/services/fixtures/servicecategories.json" target="_blank">JSON </a>link to see full data used
  
 [Back to top ⇧](#the-bike-shop)
 
@@ -334,19 +343,6 @@ With 50 products and 3 service added I wanted to make sure each one was allocate
 All Wireframes were designed for laptop/computer, iPad/tablet and mobile display: 
 
 Please click <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/The-Bike-Shop-Wireframes.pdf" target="_blank">PDF Wireframes </a> to see wireframes in pdf format
-
-## Database Models 
-
-### Original
-![Image template](readme/images/the-bike-shop-database.png)
-
-### Updated
-![Image template](readme/images/the-bike-shop-database-new.png)
-
-There were some adjustments to the models
-- Products model doesn't include has_colors which is a feature i would look to introduct in the future
-- Order model doesn't include delivery_cost as i decided to keep all deliveries at zero.
-- Services model changed from the original plan to show a full working model. 
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -400,6 +396,19 @@ To finish, I added, committed (initial commit) and pushed the code using the fol
 - **$ git push**
 
 [Back to top ⇧](#the-bike-shop)
+
+## Database Models 
+
+### Original
+![Image template](readme/images/the-bike-shop-database.png)
+
+### Updated
+![Image template](readme/images/the-bike-shop-database-new.png)
+
+There were some adjustments to the models
+- Products model doesn't include has_colors which is a feature i would look to introduct in the future
+- Order model doesn't include delivery_cost as i decided to keep all deliveries at zero.
+- Services model changed from the original plan to show a full working model. 
 
 ## Features
 
@@ -961,7 +970,9 @@ Inside settings.py at project level Crispy Forms is installed as an app and buil
 
 Requirements 
  
-Heroku and Github
+- Github 
+- Heroku
+- AWS (Amazon Web Services)
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -1123,17 +1134,3 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 **End of README Documentation**
 
 [Back to top ⇧](#the-bike-shop)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
