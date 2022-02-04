@@ -61,6 +61,13 @@
 
 Return to my [README Doc](README.md) 
 
+
+## Automated Testing
+Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django.
+
+### Django Testing
+
+
 ## Screen sizes
 
 ### Mobile screens
