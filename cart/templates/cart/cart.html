@@ -18,7 +18,6 @@
             <h2 class="sub-header mb-4">Shopping Cart</h2>
         </div>
     </div>
-    
     <div class="row">
         <div class="col">
             {% if cart_items %}
@@ -55,6 +54,7 @@
                                 </td>
                                 <td class="py-3 w-25">
                                     <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                        <!-- Django cross-site fraud protection which is required for the form to be submitted -->
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -96,7 +96,6 @@
                             <td colspan="5" class="pt-2 text-right">
                                 <h6><strong>Subtotal: £{{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: Free of Charge</h6>
-                                <!-- <h6>Delivery: £{{ delivery|floatformat:2 }}</h6> -->
                                 <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
                                     <p class="mb-1 text-danger">

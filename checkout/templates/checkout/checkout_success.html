@@ -22,7 +22,6 @@
             <p class="text-black">Your order summary is below and a confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
         </div>
     </div>
-
     <div class="row mb-2 mb-md-3 mb-lg-4">
         <div class="col-12 col-lg-10 offset-lg-1">
             <div class="order-confirmation-wrapper p-2 border">
@@ -190,9 +189,6 @@
                 </a>
             {% else %}
                 <a href="{% url 'products' %}" class="shop-now-button btn btn-ls text-uppercase my-2">
-                    <!-- <span class="icon mr-2">
-                        <i class="fas fa-gifts"></i>
-                    </span> -->
                     <span class="text-uppercase">Shop Again</span>
                 </a>
             {% endif %}
@@ -202,4 +198,3 @@
     <div class="pb-5 pb-md-0"></div>
 </div>
 {% endblock %}
-
