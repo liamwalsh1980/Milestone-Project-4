@@ -34,10 +34,12 @@
         - [Hamburger navigation bar](#hamburger-navigation-bar)
         - [Full screen navigation bar](#full-screen-navigation-bar)
     * [User Stories Complete](#user-stories-complete)
-    * W3C Markup Validation Service
+    * [W3C Markup Validation Service](#w3c-markup-validation-service)
         - HTML templates
-    * W3C CSS Validation Service
-        - TBC
+    * [W3C CSS Validation Service](#w3c-css-calidation-service)
+        - [Base](#base)
+        - [Checkout](#checkout)
+        - [Profile](#profile)
     * JS Hint Javascript code validator
         - TBC
     * PEP8 online validator
@@ -91,3 +93,20 @@ Automated Unit Testing was done using Django’s testing tools by importing the 
 ## User Stories Complete
 
 Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_complete.pdf" target="_blank">User Stories</a> completed. 
+
+## W3C Markup Validation Service
+
+I used 
+
+## W3C CSS Validation Service
+
+I used W3C jigsaw validator to check the 3 CSS files used for this project. Results below show that there are no erros. 
+
+### Base
+![Image template](readme/testing/base.css-checked.png)
+
+### Checkout
+![Image template](readme/testing/checkout.css-checked.png)
+
+### Profile
+![Image template](readme/testing/profile.css-checked.png)
