@@ -18,7 +18,6 @@ body {
     height: auto;
   }
 
-
 .mens-bg-color {
     background-color: #4286d2;
 }
@@ -73,6 +72,12 @@ i.fas.fa-times {
 
 .main-logo-link {
     width: fit-content;
+}
+
+.text-hover:hover,
+.text-hover:focus,
+.text-hover:active {
+    color: #4286d2 !important;
 }
 
 /* Margin and Padding */
@@ -250,9 +255,9 @@ p.total, .fa-shopping-cart {
     color:#852C34 !important;
 }
 
-p.total:hover {
+/* p.total:hover {
     color: #4286d2 !important;
-}
+} */
 
 .fa-shopping-cart:hover {
     color: #4286d2 !important;

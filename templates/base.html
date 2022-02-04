@@ -77,7 +77,7 @@
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center">
+                                <div class="text-center text-hover">
                                     <div><i class="far fa-user fa-lg"></i></div>
                                         <p class="my-0">My Account</p>
                                 </div>
@@ -99,8 +99,8 @@
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                                 <div class="text-center">
-                                    <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                                    <p class="my-0 total">
+                                    <div><i class="fas fa-shopping-cart fa-lg text-hover"></i></div>
+                                    <p class="my-0 total text-hover">
                                         {% if grand_total %}
                                             £{{ grand_total|floatformat:2 }}
                                         {% else %}
