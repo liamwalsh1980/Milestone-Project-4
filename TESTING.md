@@ -35,7 +35,7 @@
         - [Full screen navigation bar](#full-screen-navigation-bar)
     * [User Stories Complete](#user-stories-complete)
     * [W3C Markup Validation Service](#w3c-markup-validation-service)
-        - HTML templates
+        - [HTML templates](#html-templates)
     * [W3C CSS Validation Service](#w3c-css-calidation-service)
         - [Base](#base)
         - [Checkout](#checkout)
@@ -96,7 +96,19 @@ Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-P
 
 ## W3C Markup Validation Service
 
-I used 
+I used W3 validator to check the html templates for this project. All Errors found were based on rendering added and the base template holding the boilerplate. 
+
+Errors found: -
+- Non-space characters found without seeing a doctype first. Expected DOCTYPE html.
+- Element head is missing a required instance of child element title.
+- Stray doctype. Stray start tag html
+- Cannot recover after last error. Any further errors will be ignored.
+- Consider adding a lang attribute to the html start tag to declare the language of this document.
+- Bad value {% url [URL NAME] %} for attribute action on element form: Illegal character in path segment: { is not allowed.
+- Bad value {% url [URL NAME] %} for attribute href on element a: Illegal character in path segment: { is not allowed.
+- Bad value {{ MEDIA_URL }}noimage.jpg for attribute src on element img: Illegal character in path segment: { is not allowed.
+- Misplaced non-space characters inside a table. {% for order in orders %}
+- Misplaced non-space characters inside a table. {% for item in cart_items %}
 
 ## W3C CSS Validation Service
 
