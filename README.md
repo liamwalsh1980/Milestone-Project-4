@@ -45,10 +45,11 @@
     * [Shopping Cart Page](#shopping-cart-page)
     * [Checkout Page](#checkout-page)
     * [Order Summary Page](#order-summary-page)
-    * [Services Page](#services-page) to complete
-    * [Service Detail Page](#service-detail-page) to complete
-    * [Service Booking Page](#service-booking-page) to complete
-    * [Service Booking Confirmation Page](#service-booking-confirmation-page) to complete
+    * [Services Page](#services-page)
+    * [Service Detail Page](#service-detail-page)
+    * [Service Booking Summary](#service-booking-summary)
+    * [Service Booking Page](#service-booking-page)
+    * [Service Booking Confirmation Page](#service-booking-confirmation-page)
     * [Toasts](#toasts)
     * [Login Page](#login-page)
     * [Reset Password Page](#reset-password-page) 
@@ -633,7 +634,7 @@ The next section called ‘Order Summary - Your Shopping Cart Has (?) products�
 
 On this page users will be notified immediately if they haven’t completed the form properly as most of this page has mandatory fields that need information adding to complete an order. 
 
-Further authentication - Users will notice that when they have completed the order form and clicked the ‘Complete Order’ there is a short delay while their payment goes through. They will see light green background overlay and a loading spinner showing their order is going through the process payment. They are then given the option of completing their purchase or cancelling it. If they cancel the order the user is taken back to the order ‘Checkout’ page where all their details remain in place and a ‘red’ notice warning at the bottom saying ‘We are unable to authenticate your payment method. Please choose a different payment method and try again’. If the user clicks to proceed with their purchase, they will see the light green background overlay and the loading spinner again  
+Further authentication - Users will notice that when they have completed the order form and clicked the ‘Complete Order’ there is a short delay while their payment goes through. They will see light green background overlay and a loading spinner showing their order is going through the process payment. They are then given the option of completing their purchase or cancelling it. If they cancel the order the user is taken back to the order ‘Checkout’ page where all their details remain in place and a ‘red’ notice warning at the bottom saying ‘We are unable to authenticate your payment method. Please choose a different payment method and try again’. If the user clicks to proceed with their purchase, they will see the light green background overlay and the loading spinner again. 
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -652,9 +653,11 @@ Users will be notified that an email confirmation has been sent and a 'Thank you
 
 Users will also see a popup success toast message confirming their order is successfully processed, what their unique order number is and that they will receive an email. This message closes automatically after 10 seconds like all the toasts on the site do.  
 
+Once an order is complete the shop owner can access the details of the order by logging into Django admin panel at the backend of the site under 'Orders'.
+
 ### Services Page
 
-The final option on the main navigation bar is the 'Services' option. selecting this will show the user a dropdown menu to pick from: -
+The final option on the main navigation bar is the 'Services' option. Selecting this will show the user a dropdown menu to pick from: -
 
 - Cleaning
 - Repair
@@ -662,15 +665,38 @@ The final option on the main navigation bar is the 'Services' option. selecting 
 - All Services
 - Go To Booking
 
-Users can browse across 'All Services' The Bike Shop offers in this page. At this moment in time users will see 3 different services available with a clear image and name of what those services are. They all have the category tag and a rating with the option to click 'More Info' which takes users to the Service Detail Page relevant to the service selected. By clicking the image this will also take users to the Service Detail page as well. If a user already has a service pending to book, they can click the 'GO TO BOOKING' button to progress their booking. 
-
-No connection between logging in and the Services section of the site.
+Users can browse across 'All Services' The Bike Shop offers in this page. This page has a sub-header clearing stating what page it is. At this moment in time users will see 3 different services available with a clear image and name of what those services are. They all have the category tag and a rating with the option to click 'More Info' which takes users to the Service Detail Page relevant to the service selected. By clicking the image of that service, this will also take users to the Service Detail page. If a user already has a service pending to book, they can click the 'GO TO BOOKING' button to progress their booking. If they click this button without a service pending the user will see a short message confirming that no service has been booked and a 'BOOK A SERVICE' button to click on. All services are boxed individually showing clear separation from each other for better UX. 
 
 ### Service Detail Page
 
+Once a user clicks a service they will be taken to that service detail page where the sub-header changes to the relevant service name showing the user what page they are on. This page offers the following: -
+
+- Large image of the service
+- Service name
+- Tag category
+- Rating
+- Description
+- 'GO BACK' button if the user changes their mind
+- 'ADD TO BOOKING' button to add service as a pending booking (When clicking this button a toast popup message displays to confirm the service has been added successfully)
+- 'GO TO BOOKING' button to progress order of the booking added
+
+### Service Booking Summary
+
+When the user clicks the 'GO TO BOOKING' they are taken a booking summary page to confirm what service they have pending to book. This page then gives the user the option to click the 'COMPLETE BOOKING' button taking them to the booking form page to complete the booking. 
+
 ### Service Booking Page
 
-### Service Booking Confirmation Page
+On this page users will need to provide their full name, email address and phone number to complete the booking process. They also have the option to complete the 'More Information' text box if they want to highlight anything about the booking. Once they click the 'BOOK' button below the booking is generated with a random and unique booking number. 
+
+### Service Booking Success 
+
+Once the booking is completed the user will be taken to a booking success page with a sub-header saying 'THANK YOU'. Underneath the user will see the booking number and confirmation that this has been sent to their email address and a message to say that a member of The Bike Shop will be in contact. To finish the user can click the 'ENTER THE SHOP' button encouraging them to have a look at the products available in the shop. 
+
+Booking a service is a little different to buying a product. Booking a service doesn't cost anything and therefore the process for users is straight forward. Click the service you want, review it,  complete a contact form, receive a booking order number and await contact from The Bike Shop. 
+
+One feature added is that users can only select one service at a time to make it clear what they are booking. If a user has a service pending to book and changes their mind and pick another service, this would mean that the original service will be removed and replaced with the latest service selected. 
+
+All the users information with the booking number will be available for the shop owner to see in the admin panel at the backend of the site under 'Bookings'
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -1049,7 +1075,7 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 
 ### Bugs Outstanding
 
-- Toast issue when users decided to remove all products from the shopping cart, they see the right message but below there is a the 'GO TO BOOKING' button related to the services section. 
+- Toast issue when users decided to remove all products from the shopping cart, they see the right message but below there is a the 'GO TO SERVICES' button related to the services section. 
 
 ![Image template]()
 
