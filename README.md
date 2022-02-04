@@ -45,11 +45,11 @@
     * [Shopping Cart Page](#shopping-cart-page)
     * [Checkout Page](#checkout-page)
     * [Order Summary Page](#order-summary-page)
-    * [Toasts](#toasts)
     * [Services Page](#services-page) to complete
     * [Service Detail Page](#service-detail-page) to complete
     * [Service Booking Page](#service-booking-page) to complete
     * [Service Booking Confirmation Page](#service-booking-confirmation-page) to complete
+    * [Toasts](#toasts)
     * [Login Page](#login-page)
     * [Reset Password Page](#reset-password-page) 
     * [Sign Up Page](#sign-up-page)
@@ -69,7 +69,7 @@
 1. [Clone Project](#clone-project)
 1. [Forking Project](#forking-project)
 1. [Technologies Used](#technologies-used)
-1. [Testing](#testing) to start
+1. [Testing](#testing) to complete
     * [Bugs](#bugs) to complete
     * [Bugs Outstanding](#bugs-outstanding) to complete
 1. [Credits](#credits) to check
@@ -652,6 +652,28 @@ Users will be notified that an email confirmation has been sent and a 'Thank you
 
 Users will also see a popup success toast message confirming their order is successfully processed, what their unique order number is and that they will receive an email. This message closes automatically after 10 seconds like all the toasts on the site do.  
 
+### Services Page
+
+The final option on the main navigation bar is the 'Services' option. selecting this will show the user a dropdown menu to pick from: -
+
+- Cleaning
+- Repair
+- Sell Your Bike
+- All Services
+- Go To Booking
+
+Users can browse across 'All Services' The Bike Shop offers in this page. At this moment in time users will see 3 different services available with a clear image and name of what those services are. They all have the category tag and a rating with the option to click 'More Info' which takes users to the Service Detail Page relevant to the service selected. By clicking the image this will also take users to the Service Detail page as well. If a user already has a service pending to book, they can click the 'GO TO BOOKING' button to progress their booking. 
+
+No connection between logging in and the Services section of the site.
+
+### Service Detail Page
+
+### Service Booking Page
+
+### Service Booking Confirmation Page
+
+[Back to top ⇧](#the-bike-shop)
+
 ### Toasts 
 
 There are Bootstrap Toasts displayed under the navbar, providing users with real-time feedback on their actions.  
@@ -682,17 +704,9 @@ Other success toasts are also in place.
 - ‘Warning’ represented with a yellow colour border 
 - ‘Info’ represented with an aqua colour border. This toast has the ‘Warning!’ text for reference.  
 
-All toasts include a cross icon in the top right for user to click on to close the toast. Alternatively, after 10 seconds the toast will automatically close.  
+All toasts include a cross icon in the top right for user to click on to close the toast. Alternatively, after 10 seconds the toast will automatically close. 
 
-[Back to top ⇧](#the-bike-shop)
-
-### Services Page
-
-### Service Detail Page
-
-### Service Booking Page
-
-### Service Booking Confirmation Page
+When users select a service to book a success toast will popup confirming which service has been selected with the option to confirm the booking in the form a button saying 'GO TO SERVICES'. Users will also see this button when they first sign in and logout encouraging them to go to the Services section to make a booking. I did this as a form of promoting 'Services' as most of the website is based on the Products section. 
 
 [Back to top ⇧](#the-bike-shop)
 
