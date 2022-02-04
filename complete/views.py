@@ -60,9 +60,6 @@ def complete(request):
 def booking_success(request, booking_number):
     """ Handle Successful Bookings """
     booking = get_object_or_404(Booking, booking_number=booking_number)
-    messages.success(request, f'Booking successfully processed! \
-        Your booking number is {booking_number}. A confirmation \
-        email will be sent to {booking.email}.')
 
     if 'book' in request.session:
         del request.session['book']
