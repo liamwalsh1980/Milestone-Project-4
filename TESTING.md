@@ -43,8 +43,17 @@
     * [JS Hint Javascript code validator](#js-hint-javascript-code-validator) 
         - [JS Files](#js-files)
         - [Scripts](#scripts)
-    * PEP8 online validator
-        - TBC
+    * [PEP8 online validator](#pep8-online-validator)
+        - [Book App](#book-app)
+        - [Cart App](#cart-app)
+        - [Checkout App](#checkout-app)
+        - [Complete App](#complete-app)
+        - [Home App](#home-app)
+        - [Products App](#products-app)
+        - [Profiles App](#profiles-app)
+        - [Services App](#services-app)
+        - [The Bike Shop App](#The-bike-shop-app)
+        - [Project Level](#project-level)
     * Web Browsers
         - Google Chrome
         - Apple Safari
@@ -97,7 +106,7 @@ Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-P
 
 ## W3C Markup Validation Service
 
-I used W3 validator to check the html templates for this project. All Errors found were based on rendering added and the base template holding the boilerplate. 
+I used <a href="https://validator.w3.org/" target="_blank"> W3 validator</a> to check the html templates for this project. All Errors found were based on rendering added and the base template holding the boilerplate. 
 
 Errors found: -
 - Non-space characters found without seeing a doctype first. Expected DOCTYPE html.
@@ -113,7 +122,7 @@ Errors found: -
 
 ## W3C CSS Validation Service
 
-I used W3C jigsaw validator to check the 3 CSS files used for this project. Results below show that there are no erros. 
+I used <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C jigsaw validator</a> to check the 3 CSS files used for this project. Results below show that there are no erros. 
 
 ### Base
 ![Image template](readme/testing/base.css-checked.png)
@@ -128,7 +137,8 @@ I used W3C jigsaw validator to check the 3 CSS files used for this project. Resu
 
 ### JS files
 
-I used JS Hint to check the Javascript files in this project. The following files were checked with no errors founds: -
+
+I used <a href="https://jshint.com/" target="_blank">JS Hint</a> to check the Javascript files in this project. The following files were checked with no errors founds: -
 
 - checkout app - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/checkout/static/checkout/js/stripe_elements.js" target="_blank">stripe.element.js</a>
 
@@ -150,16 +160,19 @@ Scripts added within HTML files
 
 I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> validator to check all python files. The following files were checked and confirm 'All right' except for one error found in most files (line to long). All files below with a ** has this error. 
 
+### Book App
 - book app - app.py
 - book app - contexts.py
 - book app - urls.py
 - book app - views.py
 
+### Cart App
 - cart app - apps.py
 - cart app - contexts.py
 - cart app - urls.py
 - cart app - views.py **
 
+### Checkout App
 - checkout app - admin.py
 - checkout app - apps.py
 - checkout app - forms.py
@@ -171,6 +184,7 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - checkout app - webhook_handler.py **
 - checkout app - webhooks.py **
 
+### Complete App
 - complete app - admin.py
 - complete app - apps.py
 - complete app - emails.py
@@ -180,10 +194,12 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - complete app - urls.py
 - complete app - views.py
 
+### Home App
 - home app - apps.py
 - home app - urls.py
 - home app - views.py
 
+### Products App
 - products app - admin.py
 - products app - apps.py
 - products app - forms.py
@@ -192,23 +208,27 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - products app - views.py **
 - products app - widgets.py **
 
+### Profiles App
 - profiles app - apps.py
 - profiles app - forms.py **
 - profiles app - models.py **
 - profiles app - urls.py
 - profiles app - views.py
 
+### Services App
 - services app - admin.py
 - services app - apps.py
 - services app - models.py **
 - services app - urls.py
 - services app - views.py
 
+### The Bike Shop App
 - the_bike_shop app - asgi.py
 - the_bike_shop app - settings.py **
 - the_bike_shop app - urls.py
 - the_bike_shop app - wsgi.py
 
+### Project Level
 - project level - manage.py
 
 
