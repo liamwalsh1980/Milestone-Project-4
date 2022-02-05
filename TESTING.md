@@ -40,8 +40,9 @@
         - [Base](#base)
         - [Checkout](#checkout)
         - [Profile](#profile)
-    * JS Hint Javascript code validator
-        - TBC
+    * [JS Hint Javascript code validator](#js-hint-javascript-code-validator) 
+        - [JS Files](#js-files)
+        - [Scripts](#scripts)
     * PEP8 online validator
         - TBC
     * Web Browsers
@@ -122,3 +123,32 @@ I used W3C jigsaw validator to check the 3 CSS files used for this project. Resu
 
 ### Profile
 ![Image template](readme/testing/profile.css-checked.png)
+
+## JS Hint Javascript code validator
+
+### JS files
+
+I used JS Hint to check the Javascript files in this project. The following files were checked with no errors founds: -
+
+- checkout app - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/checkout/static/checkout/js/stripe_elements.js" target="_blank">stripe.element.js</a>
+
+- profile app - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/profiles/static/profiles/js/countryfield.js" target="_blank">countryfield.js</a>
+
+### Scripts
+
+Scripts added within HTML files
+
+- cart app > cart.html - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/cart/templates/cart/cart.html" target="_blank">script</a>
+
+- products app > add_product.html - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/add_product.html" target="_blank">script</a>
+
+- products app > edit_product.html - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/edit_product.html" target="_blank">script</a>
+
+- products app > products.html - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/products.html" target="_blank">script</a>
+
+
+
+
+
+
+
