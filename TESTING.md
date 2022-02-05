@@ -146,7 +146,70 @@ Scripts added within HTML files
 
 - products app > products.html - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/products.html" target="_blank">script</a>
 
+## PEP8 online validator
 
+I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> validator to check all python files. The following files were checked and confirm 'All right' except for one error found in most files (line to long). All files below with a ** has this error. 
+
+- book app - app.py
+- book app - contexts.py
+- book app - urls.py
+- book app - views.py
+
+- cart app - apps.py
+- cart app - contexts.py
+- cart app - urls.py
+- cart app - views.py **
+
+- checkout app - admin.py
+- checkout app - apps.py
+- checkout app - forms.py
+- checkout app - models.py **
+- checkout app - signals.py
+- checkout app - test_forms.py
+- checkout app - urls.py
+- checkout app - views.py **
+- checkout app - webhook_handler.py **
+- checkout app - webhooks.py **
+
+- complete app - admin.py
+- complete app - apps.py
+- complete app - emails.py
+- complete app - forms.py **
+- complete app - models.py
+- complete app - test_forms.py
+- complete app - urls.py
+- complete app - views.py
+
+- home app - apps.py
+- home app - urls.py
+- home app - views.py
+
+- products app - admin.py
+- products app - apps.py
+- products app - forms.py
+- products app - models.py
+- products app - urls.py
+- products app - views.py **
+- products app - widgets.py **
+
+- profiles app - apps.py
+- profiles app - forms.py **
+- profiles app - models.py **
+- profiles app - urls.py
+- profiles app - views.py
+
+- services app - admin.py
+- services app - apps.py
+- services app - models.py **
+- services app - urls.py
+- services app - views.py
+
+- the_bike_shop app - asgi.py
+- the_bike_shop app - settings.py **
+- the_bike_shop app - urls.py
+- the_bike_shop app - wsgi.py
+
+- project level - manage.py
 
 
 
