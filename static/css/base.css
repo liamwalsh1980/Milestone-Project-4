@@ -627,11 +627,11 @@ footer {
     }
 }
 
-@media (min-width: 501px) and (max-width: 991px) {
+/* @media (min-width: 501px) and (max-width: 991px) {
     .ipad-mt {
         margin-top: 20px;
     }
-}
+} */
 
 /* Mobile navbar with icons resized */
 
@@ -645,62 +645,43 @@ footer {
     ul {
         margin: 0;
     }
-}
-
-@media (max-width: 500px) {
+    .nav-link {
+        padding: 4px;
+        margin-top: 4px;
+    }
     .navbar-size {
-        font-size: 12px;
+        font-size: 0.6rem
+    }
+    .dropdown-menu.border-0.background-navbar.prods {
+        font-size: 10px;
     }
 }
 
 @media (max-width: 425px) {
-    .navbar-size {
-        font-size: 11px;
-    }
-
     h4.logo-font.banner {
         font-size: 22px;
     }
 }
 
-@media (max-width: 410px) {
-    .navbar-size {
-        font-size: 10px;
-    }
-}
-
 @media (max-width: 400px) {
-
     h4.logo-font.banner {
         font-size: 20px;
-    }
-    .navbar-size {
-        font-size: 9px;
     }
 }
 
 @media (max-width: 370px) {
-    .navbar-size {
-        font-size: 8px;
-    }
     h4.logo-font.banner {
         font-size: 18px;
     }
 }
 
 @media (max-width: 350px) {
-    .navbar-size {
-        font-size: 7px;
-    }
     h4.logo-font.banner {
         font-size: 16px;
     }
 }
 
 @media (max-width: 330px) {
-    .navbar-size {
-        font-size: 6px;
-    }
     h4.logo-font.banner {
         font-size: 16px;
     }
@@ -708,10 +689,22 @@ footer {
 
 @media (max-width: 320px) {
     .navbar-size {
-        font-size: 5px;
+        font-size: 0.6rem
     }
     h4.logo-font.banner {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 304px) {
+    .navbar-size {
+        font-size: 0.4rem
+    }
+    h4.logo-font.banner {
+        font-size: 12px;
+    }
+    .dropdown-menu.border-0.background-navbar.prods {
+        font-size: 7px;
     }
 }
 

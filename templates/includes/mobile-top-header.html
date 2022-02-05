@@ -28,7 +28,7 @@
               <p class="my-0">My Account</p>
           </div>
       </a>
-      <div class="dropdown-menu border-0 background-navbar " aria-labelledby="user-options">
+      <div class="dropdown-menu border-0 background-navbar prods" aria-labelledby="user-options">
           {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
