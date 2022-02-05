@@ -68,6 +68,7 @@
 1. [Stripe](#stripe)
 1. [Allauth](#allauth)
 1. [Crispy Forms](#crispy-forms)
+1. [Sending Emails](#sending-emails)
 1. [Deployment](#deployment) to complete
 1. [Clone Project](#clone-project)
 1. [Forking Project](#forking-project)
@@ -965,6 +966,36 @@ Inside settings.py at project level Crispy Forms is installed as an app and buil
 
 - crispy_forms.templatestags.crispy_forms_tags 
 - crispy_forms.templatestags.crispy_forms_field
+
+## Sending Emails
+
+In order to setup real email sending i used my googlemail account as it offers a free SMTP server (Simple Mail Transfer Protocal). The steps taken to set this up is as follows: -
+
+- Login to Gmail account
+- Go to 'settings' (top right)
+- Select 'Accounts and Import'
+- Select 'Other Google Account Settings' (This opens up 'my account')
+
+Next steps in this process is as follows: -
+
+- Select 'Security' (left side)
+- Turn on the '2-step verification' found below password
+- Select 'Get Started'
+- Re-enter password
+- Verify via text message 
+- Enter code received from text message
+- Select 'Turn On'
+
+Next steps in this process is as follows: -
+
+- Go back a page using the left arrow at the top
+- Select 'App Passwords'
+- Re-enter password
+
+On the App Password screen the process is as follows: -
+- Select 'Mail' for the app
+- Select 'Other' for device type and type Django
+- Click 'GENERATE' to get a 16 digit password to use
 
 ## Deployment 
 
