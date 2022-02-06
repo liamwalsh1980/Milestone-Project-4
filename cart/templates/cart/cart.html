@@ -21,7 +21,105 @@
     <div class="row">
         <div class="col">
             {% if cart_items %}
-                <div class="table-responsive rounded">
+                <div class="d-block d-md-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <tr>
+                                {% for item in cart_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <p class="my-0 pb-4 text-center"><strong>{{ item.product.name }}</strong></p>
+                                        {% if item.product.image %}
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        {% else %}
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.product.name }}">
+                                        {% endif %}
+                                    </td>
+                                    <td class="py-3">
+                                        {% if item.product.has_sizes %}
+                                            <p class="my-0"><strong>Size: </strong>{{ item.size|upper }}</p>
+                                        {% else %}
+                                            <div class="my-0"></div>
+                                        {% endif %}
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 pb-2"><strong>Product price:</strong> £{{ item.product.price }}</p>
+                                    </td>
+                                    <td class="py-3 w-25">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                            <!-- Django cross-site fraud protection which is required for the form to be submitted -->
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty btn btn-sm btn-qty rounded-0" 
+                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm qty_input" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="0" max="99"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty btn btn-sm btn-qty rounded-0"
+                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    {% if item.product.has_sizes %}
+                                                        <input type="hidden" name="product_size" value="{{ item.size }}">
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="update-qty update-link text-uppercase"><small>Update Qty</small></a>
+                                        <a class="remove-item float-right text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-2"><strong>Product Subtotal:</strong> £{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    </td>
+                                    <div class="row"><div class="col"><hr></div></div>
+                                </tr>
+                            {% endfor %}
+                            </tr>
+                        </div>
+                        <div class="col-12">
+                            <tr>
+                                <h6><strong>Subtotal: £{{ total|floatformat:2 }}</strong></h6>
+                                <h6>Delivery: Free of Charge</h6>
+                                <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                {% if free_delivery_delta > 0 %}
+                                    <p class="mb-1 text-danger">
+                                        You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
+                                    </p>
+                                {% endif %}
+                            </tr>
+                        </div>
+                        <div class="col-12">
+                            <tr>
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <span class="icon icon-red">
+                                        <i class="far fa-arrow-alt-circle-left"></i>
+                                    </span>
+                                    <span class="text-uppercase text-black">Keep Shopping</span>
+                                </a>
+                                <a href="{% url 'checkout' %}" class="checkout-cart-button btn btn-ls rounded-0 text-uppercase py-2">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="padding-bottom"></div>
+                </div>
+                <div class="table-responsive rounded d-none d-md-block">
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
                             <tr>
@@ -84,8 +182,8 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link text-uppercase"><small>Update Qty</small></a>
-                                    <a class="remove-item float-right text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove All</small></a>
+                                    <a class="update-qty update-link text-uppercase"><small>Update Qty</small></a>
+                                    <a class="remove-item float-right text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>

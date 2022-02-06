@@ -164,7 +164,8 @@ i.fas.fa-times {
 }
 
 .btt-link,
-.remove-item {
+.remove-item,
+.update-qty {
     cursor: pointer;
 }
 
