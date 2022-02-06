@@ -54,25 +54,19 @@
         - [Services App](#services-app)
         - [The Bike Shop App](#The-bike-shop-app)
         - [Project Level](#project-level)
-    * Web Browsers
-        - Google Chrome
-        - Apple Safari
-        - Microsoft Edge
-        - Mozilla Firefox
-    * Testing responsiveness
-        - Mobile screenshots
-        - Tablet screenshots
-        - Desktop screenshots
-    * Lighthouse testing
-        - Desktop results
-        - Mobile results
-    * Issues fixed
-        - TBC
-    * Further testing
-        - 
-
+    * [Web Browsers](#web-browsers)
+        - [Google Chrome](#google-chrome)
+        - [Apple Safari](#apple-safari)
+        - [Microsoft Edge](#microsoft-edge)
+        - [Mozilla Firefox](#mozilla-firefox)
+    * [Responsiveness](#responsiveness)
+        - [Mobile](#mobile)
+        - [Tablet](#tablet)
+        - [Desktop](#desktop)
+    * [Bugs](#bugs) to complete
+    * [Bugs Outstanding](#bugs-outstanding) to complete
+    
 Return to my [README Doc](README.md) 
-
 
 ## Automated Testing
 Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django.
@@ -231,7 +225,66 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 ### Project Level
 - project level - manage.py
 
+## Web Browsers
 
+I tested the website across four different web browsers making sure that links worked and pages loaded properly. I made sure I access the following browsers regularly to make sure the site continued to look good across them all. The browsers I chose to use were Google Chrome, Apple Safari, MS Edge and Mozilla Firefox. The site was developed using Chrome and therefore testing was being done daily on this browser.
 
+### Google Chrome
+![Image template](readme/testing/chrome.png)
 
+### Apple Safari
+![Image template](readme/testing/safari.png)
+
+### Microsoft Edge
+![Image template](readme/testing/edge.png)
+
+### Mozilla Firefox
+![Image template](readme/testing/firefox.png)
+
+## Responsiveness
+
+I tested the site using Chrome development tools on three different screen sizes to make sure that all features, functions, links, buttons and general user experience worked across all screen sizes.
+        
+### Mobile
+![Image template](readme/testing/mobile.png)
+
+### Tablet
+![Image template](readme/testing/tablet.png)
+
+### Desktop
+![Image template](readme/testing/desktop.png)
+
+## Bugs
+
+**Footer Bug**
+
+- Footer overlay with quantity minus and plus buttons. When scrolling up and down these buttons weren’t hiding when underneath the footer as they should do. I resolved this by adding some styling using z-index:2.  
+
+![Image template](readme/images/bugs/bug-product-detail-page1.png)
+
+![Image template](readme/images/bugs/bug-product-detail-page2.png)
+
+**Footer Bug Fixed**
+
+![Image template](readme/images/bugs/bug-product-detail-page-fixed1.png)
+
+![Image template](readme/images/bugs/bug-product-detail-page-fixed2.png)
+
+![Image template](readme/images/bugs/bug-product-detail-page-fixed3.png)
+
+## Bugs Outstanding
+
+**Toast**
+
+- Toast issue when users decided to remove all products from the shopping cart, they see the right message but below there is a the 'GO TO SERVICES' button related to the services section. 
+
+![Image template](readme/testing/toast.png)
+
+**Quantity Decrement**
+
+- The quantity decrement in shopping cart on desktop should stop at zero but users would be able to keep reducing the quantity into minus numbers. If the user updated the quantity with a minus figure the item would just be removed from the cart. As this wasn't a big issue and with limited time left on this project I decided to leave this bug outstanding. 
+
+![Image template](readme/testing/decrement.png)
+
+![Image template](readme/testing/decrement-closeup.png)
 

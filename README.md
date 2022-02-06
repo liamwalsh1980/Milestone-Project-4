@@ -74,8 +74,6 @@
 1. [Forking Project](#forking-project)
 1. [Technologies Used](#technologies-used)
 1. [Testing](#testing) to complete
-    * [Bugs](#bugs) to complete
-    * [Bugs Outstanding](#bugs-outstanding) to complete
 1. [Credits](#credits) to check
 1. [Acknowledgements](#acknowledgements)
 1. [Notes](#notes) to complete
@@ -610,6 +608,8 @@ If a user has at least 1 product in their shopping cart they will see the follow
 - ‘Keep Shopping’ text link which takes user back to the products page 
 - ‘Secure Checkout’ button which takes the user to a secure payment page to complete their order.  
 
+I decided to added a mobile and desktop version of this page. On mobile the layout is veritcally aligned and on desktop the layout is horizontal. This provided better UX for customers when they are reviewing their shopping cart. The only issue that on desktop the decrement button doesn't stop as it should when it goes to zero. It keeps going into minus numbers which is a bug which i attempted to fix. Further information can be found on the testing section of this readme. 
+
 [Back to top ⇧](#the-bike-shop)
 
 ### Checkout Page 
@@ -1096,32 +1096,6 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 ## Testing
 - Testing information can be found in a separate 
 [Testing document](TESTING.md)
-
-### Bugs
-
-- Footer overlay with quantity minus and plus buttons. When scrolling up and down these buttons weren’t hiding when underneath the footer as they should do. I resolved this by adding some styling using z-index:2.  
-
-#### Footer Bug
-
-![Image template](readme/images/bugs/bug-product-detail-page1.png)
-
-![Image template](readme/images/bugs/bug-product-detail-page2.png)
-
-#### Footer Bug Fixed
-
-![Image template](readme/images/bugs/bug-product-detail-page-fixed1.png)
-
-![Image template](readme/images/bugs/bug-product-detail-page-fixed2.png)
-
-![Image template](readme/images/bugs/bug-product-detail-page-fixed3.png)
-
-### Bugs Outstanding
-
-- Toast issue when users decided to remove all products from the shopping cart, they see the right message but below there is a the 'GO TO SERVICES' button related to the services section. 
-
-![Image template]()
-
-[Back to top ⇧](#the-bike-shop)
 
 ### Credits 
 
