@@ -37,16 +37,16 @@
                                     </td>
                                     <td class="py-3">
                                         {% if item.product.has_sizes %}
-                                            <p class="my-0"><strong>Size: </strong>{{ item.size|upper }}</p>
+                                            <p class="my-0 text-center"><strong>Size: </strong>{{ item.size|upper }}</p>
                                         {% else %}
-                                            <div class="my-0"></div>
+                                            <div class="my-0 text-center"></div>
                                         {% endif %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0 pb-2"><strong>Product price:</strong> £{{ item.product.price }}</p>
+                                        <p class="my-0 pb-2 text-center"><strong>Product price:</strong> £{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                        <form class="form update-form px-5" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                                             <!-- Django cross-site fraud protection which is required for the form to be submitted -->
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -77,11 +77,13 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-qty update-link text-uppercase"><small>Update Qty</small></a>
-                                        <a class="remove-item float-right text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                        <div class="text-center d-flex justify-content-between px-5">
+                                            <a class="update-qty update-link text-uppercase"><small>Update Qty</small></a>
+                                            <a class="remove-item text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                        </div>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-2"><strong>Product Subtotal:</strong> £{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-2 text-center"><strong>Product Subtotal:</strong> £{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                     <div class="row"><div class="col"><hr></div></div>
                                 </tr>
@@ -118,6 +120,11 @@
                         </div>
                     </div>
                     <div class="padding-bottom"></div>
+                    <div class="btt-button rounded-circle border mb-2">
+                        <a class="btt-link d-flex h-100">
+                            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+                        </a>	
+                    </div>
                 </div>
                 <div class="table-responsive rounded d-none d-md-block">
                     <table class="table table-sm table-borderless">
@@ -236,27 +243,33 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script_cart.html' %}
-<script type="text/javascript">
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script_cart.html' %}
+    <!-- Jquery used for the back to top link to work  -->
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    <script type="text/javascript">
+        // Update quantity on click
+        $('.update-link').click(function(e) {
+            var form = $(this).prev('.update-form');
+            form.submit();
+        })
 
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/cart/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+        // Remove item and reload on click
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var size = $(this).data('product_size');
+            var url = `/cart/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
-</script>
+            $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+        })
+    </script>
 {% endblock %}
