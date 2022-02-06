@@ -10,10 +10,10 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0 background-navbar" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-hover">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item text-hover">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-hover">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item text-hover">All Products</a>
             </div>
         </li>
 
@@ -22,10 +22,10 @@
                 All Bikes
             </a>
             <div class="dropdown-menu border-0 background-navbar" aria-labelledby="bikes-link">
-                <a href="{% url 'products' %}?category=mens_bikes" class="dropdown-item">Mens Bikes</a>
-                <a href="{% url 'products' %}?category=womens_bikes" class="dropdown-item">Womens Bikes</a>
-                <a href="{% url 'products' %}?category=urban_bikes" class="dropdown-item">Urban Bikes</a>
-                <a href="{% url 'products' %}?category=mens_bikes,womens_bikes,urban_bikes" class="dropdown-item">All Bikes</a>
+                <a href="{% url 'products' %}?category=mens_bikes" class="dropdown-item text-hover">Mens Bikes</a>
+                <a href="{% url 'products' %}?category=womens_bikes" class="dropdown-item text-hover">Womens Bikes</a>
+                <a href="{% url 'products' %}?category=urban_bikes" class="dropdown-item text-hover">Urban Bikes</a>
+                <a href="{% url 'products' %}?category=mens_bikes,womens_bikes,urban_bikes" class="dropdown-item text-hover">All Bikes</a>
             </div>
         </li>
 
@@ -34,9 +34,9 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0 background-navbar" aria-labelledby="accessories-link">
-                <a href="{% url 'products' %}?category=helmets" class="dropdown-item">Helmets</a>
-                <a href="{% url 'products' %}?category=other_accessories" class="dropdown-item">Other Accessories</a>
-                <a href="{% url 'products' %}?category=helmets,other_accessories" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'products' %}?category=helmets" class="dropdown-item text-hover">Helmets</a>
+                <a href="{% url 'products' %}?category=other_accessories" class="dropdown-item text-hover">Other Accessories</a>
+                <a href="{% url 'products' %}?category=helmets,other_accessories" class="dropdown-item text-hover">All Accessories</a>
             </div>
         </li>
 
@@ -45,11 +45,11 @@
                 Services
             </a>
             <div class="dropdown-menu border-0 background-navbar" aria-labelledby="all-services-link">
-                <a href="{% url 'services' %}4" class="dropdown-item">Cleaning</a>
-                <a href="{% url 'services' %}5" class="dropdown-item">Repair</a>
-                <a href="{% url 'services' %}6" class="dropdown-item">Sell Your Bike</a>
-                <a href="{% url 'services' %}" class="dropdown-item">All Services</a>
-                <a href="{% url 'service_booking' %}" class="dropdown-item">Go To Booking</a>
+                <a href="{% url 'services' %}4" class="dropdown-item text-hover">Cleaning</a>
+                <a href="{% url 'services' %}5" class="dropdown-item text-hover">Repair</a>
+                <a href="{% url 'services' %}6" class="dropdown-item text-hover">Sell Your Bike</a>
+                <a href="{% url 'services' %}" class="dropdown-item text-hover">All Services</a>
+                <a href="{% url 'service_booking' %}" class="dropdown-item text-hover">Go To Booking</a>
             </div>
         </li>
     </ul>

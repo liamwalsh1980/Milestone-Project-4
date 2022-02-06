@@ -77,7 +77,7 @@ i.fas.fa-times {
 .text-hover:hover,
 .text-hover:focus,
 .text-hover:active {
-    color: #4286d2 !important;
+    color: #852C34 !important;
 }
 
 /* Margin and Padding */
@@ -253,14 +253,6 @@ em:focus,
 
 p.total, .fa-shopping-cart {
     color:#852C34 !important;
-}
-
-/* p.total:hover {
-    color: #4286d2 !important;
-} */
-
-.fa-shopping-cart:hover {
-    color: #4286d2 !important;
 }
 
 a.update-link,
