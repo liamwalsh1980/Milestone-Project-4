@@ -198,6 +198,7 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - products app - apps.py
 - products app - forms.py
 - products app - models.py
+- products app - test_forms.py
 - products app - urls.py
 - products app - views.py **
 - products app - widgets.py **
@@ -206,6 +207,7 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - profiles app - apps.py
 - profiles app - forms.py **
 - profiles app - models.py **
+- profiles app - test_forms.py 
 - profiles app - urls.py
 - profiles app - views.py
 
