@@ -51,22 +51,24 @@
                                             <!-- Django cross-site fraud protection which is required for the form to be submitted -->
                                             {% csrf_token %}
                                             <div class="form-group">
-                                                <div class="input-group">
+                                                <div class="input-group input-group-{{ item.item_id }}">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm btn-qty rounded-0" 
-                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        <button class="decrement-qty btn btn-sm btn-qty rounded-0 decrement-qty_{{ item.item_id }} 
+                                                            {% if item.size %}decrement-size_{{ item.item_id }}_{{ item.size }}{% endif %}" 
+                                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm"></i>
                                                             </span>
                                                         </button>
                                                     </div>
-                                                    <input class="form-control form-control-sm qty_input" type="number"
-                                                        name="quantity" value="{{ item.quantity }}" min="0" max="99"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
+                                                    <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} 
+                                                        {% if item.size %}size_{{ item.item_id }}_{{ item.size }}{% endif %}" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                        data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm btn-qty rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <button class="increment-qty btn btn-sm btn-qty rounded-0 increment-qty_{{ item.item_id }} 
+                                                            {% if item.size %}increment-size_{{ item.item_id }}_{{ item.size }}{% endif %}"
+                                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm"></i>
                                                             </span>
@@ -78,10 +80,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="text-center d-flex justify-content-between px-5">
-                                            <a class="update-qty update-link text-uppercase"><small>Update Qty</small></a>
-                                            <a class="remove-item text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
-                                        </div>
+                                            <a class="update-qty update-link text-uppercase pl-5"><small>Update Qty</small></a>
+                                            <a class="remove-item float-right text-uppercase pr-5" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-2 text-center"><strong>Product Subtotal:</strong> £{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -164,22 +164,24 @@
                                         <!-- Django cross-site fraud protection which is required for the form to be submitted -->
                                         {% csrf_token %}
                                         <div class="form-group">
-                                            <div class="input-group">
+                                            <div class="input-group input-group-{{ item.item_id }}">
                                                 <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn btn-sm btn-qty rounded-0" 
-                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                    <button class="decrement-qty btn btn-sm btn-qty rounded-0 decrement-qty_{{ item.item_id }} 
+                                                        {% if item.size %}decrement-size_{{ item.item_id }}_{{ item.size }}{% endif %}" 
+                                                        data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
                                                     </button>
                                                 </div>
-                                                <input class="form-control form-control-sm qty_input" type="number"
-                                                    name="quantity" value="{{ item.quantity }}" min="0" max="99"
-                                                    data-item_id="{{ item.item_id }}"
-                                                    id="id_qty_{{ item.item_id }}">
+                                                <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} 
+                                                    {% if item.size %}size_{{ item.item_id }}_{{ item.size }}{% endif %}" type="number"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                    data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
                                                 <div class="input-group-append">
-                                                    <button class="increment-qty btn btn-sm btn-qty rounded-0"
-                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                    <button class="increment-qty btn btn-sm btn-qty rounded-0 increment-qty_{{ item.item_id }} 
+                                                        {% if item.size %}increment-size_{{ item.item_id }}_{{ item.size }}{% endif %}"
+                                                        data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>

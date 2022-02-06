@@ -274,6 +274,20 @@ I tested the site using Chrome development tools on three different screen sizes
 
 ![Image template](readme/images/bugs/bug-product-detail-page-fixed3.png)
 
+**Quantity Decrement**
+
+- The quantity decrement in shopping cart on desktop should stop at zero but users would be able to keep reducing the quantity into minus numbers. If the user updated the quantity with a minus figure the item would just be removed from the cart. As this wasn't a big issue and with limited time left on this project I decided to leave this bug outstanding. 
+
+![Image template](readme/testing/decrement.png)
+
+![Image template](readme/testing/decrement-closeup.png)
+
+**Quantity Decrement Fixed**
+
+I was able to fix this issue with some assistance from Code Institute tutors. 
+
+Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ado_v1/commit/de7ad2067ac1b5de37a4cd8b9f4ddf572a4bf6c7" target="_blank">code</a> for reference. 
+
 ## Bugs Outstanding
 
 **Toast**
@@ -282,11 +296,4 @@ I tested the site using Chrome development tools on three different screen sizes
 
 ![Image template](readme/testing/toast.png)
 
-**Quantity Decrement**
-
-- The quantity decrement in shopping cart on desktop should stop at zero but users would be able to keep reducing the quantity into minus numbers. If the user updated the quantity with a minus figure the item would just be removed from the cart. As this wasn't a big issue and with limited time left on this project I decided to leave this bug outstanding. 
-
-![Image template](readme/testing/decrement.png)
-
-![Image template](readme/testing/decrement-closeup.png)
 
