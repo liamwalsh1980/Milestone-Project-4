@@ -602,7 +602,7 @@ If a user has at least 1 product in their shopping cart they will see the follow
 - Product Image 
 - Product Information with size if applicable 
 - Price of the product 
-- Qty (Quantity) which includes a decrease/increase option and text links to ‘Update Qty’ or ‘Remove All’. If the user reduces the quantity to Zero the product will be removed from the shopping cart. Clicking the ‘Update Qty’ link will update the shopping cart, subtotal and the top right value of the shopping cart in the navigation menu. Clicking the ‘Remove All’ link will simply remove the product from the shopping cart and take the user to the empty shopping cart page 
+- Qty (Quantity) which includes a decrease/increase option and text links to ‘Update Qty’ or ‘Remove All’. Clicking the ‘Update Qty’ link will update the shopping cart, subtotal and the top right value of the shopping cart in the navigation menu. Clicking the ‘Remove All’ link will simply remove the product from the shopping cart and take the user to the empty shopping cart page 
 - Subtotal which is the product price times the quantity selected.  
 - Grand total which will be no different than the Subtotal as they delivery charge is free at The Bike Shop.  
 - ‘Keep Shopping’ text link which takes user back to the products page 
