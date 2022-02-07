@@ -27,7 +27,7 @@ class TestCartViews(TestCase):
 
         self.quantity = 1
 
-        self.bag_with_products = [{
+        self.cart_with_products = [{
             'product': str(self.product1.id),
             'quantity': int(self.quantity),
             'total': 123
