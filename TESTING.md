@@ -43,6 +43,7 @@
     * [JS Hint Javascript code validator](#js-hint-javascript-code-validator) 
         - [JS Files](#js-files)
         - [Scripts](#scripts)
+        - [Other Scripts](#other-scripts)
     * [PEP8 online validator](#pep8-online-validator)
         - [Book App](#book-app)
         - [Cart App](#cart-app)
@@ -149,6 +150,14 @@ Scripts added within HTML files
 - products app > edit_product.html - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/edit_product.html" target="_blank">script</a>
 
 - products app > products.html - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/products.html" target="_blank">script</a>
+
+### Other Scripts
+
+- products app > quantity input script - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/includes/quantity_input_script.html" target="_blank">script</a>
+
+- products app > quantity input script cart - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/includes/quantity_input_script_cart.html" target="_blank">script</a>
+
+quantity_input_script_cart.html
 
 ## PEP8 online validator
 
