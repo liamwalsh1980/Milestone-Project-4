@@ -9,31 +9,15 @@
 ## Table of contents
 
 1. [Automated Testing](#automated-testing)
-    * Book App
-        - TBC
-    * Cart App
-        - TBC
-    * Checkout App
-        - TBC
-    * Complete App
-        - TBC
-    * Home App
-        - TBC
-    * Products App
-        - TBC
-    * Profiles App
-        - TBC
-    * Services App
-        - TBC
-1. [Manual Testing](#manual-testing)
-    * [Screen sizes](#screen-sizes)
-        - [Mobile screens](#mobile-screens)
-        - [Tablet screens](#tablet-screens)
-        - [Desktop screens](#desktop-screens)
-    * [Navigation bar menu](#navigation-bar-menu)
-        - [Hamburger navigation bar](#hamburger-navigation-bar)
-        - [Full screen navigation bar](#full-screen-navigation-bar)
-    * [User Stories Complete](#user-stories-complete)
+    * [Django Testing](#django-testing)
+        - Book App
+        - Cart App
+        - Checkout App
+        - Complete App
+        - Home App
+        - Products App
+        - Profiles App
+        - Services App
     * [W3C Markup Validation Service](#w3c-markup-validation-service)
         - [HTML templates](#html-templates)
     * [W3C CSS Validation Service](#w3c-css-calidation-service)
@@ -55,6 +39,15 @@
         - [Services App](#services-app)
         - [The Bike Shop App](#The-bike-shop-app)
         - [Project Level](#project-level)
+1. [Manual Testing](#manual-testing)
+    * [Screen sizes](#screen-sizes)
+        - [Mobile screens](#mobile-screens)
+        - [Tablet screens](#tablet-screens)
+        - [Desktop screens](#desktop-screens)
+    * [Navigation bar menu](#navigation-bar-menu)
+        - [Hamburger navigation bar](#hamburger-navigation-bar)
+        - [Full screen navigation bar](#full-screen-navigation-bar)
+    * [User Stories Complete](#user-stories-complete)
     * [Web Browsers](#web-browsers)
         - [Google Chrome](#google-chrome)
         - [Apple Safari](#apple-safari)
@@ -64,42 +57,64 @@
         - [Mobile](#mobile)
         - [Tablet](#tablet)
         - [Desktop](#desktop)
+    * [User Functions](#user-functions) 
+        - Purchasing a product
+        - Booking a service
+        - Signup
+        - Login
+        - Logout
+        - Access profile
+            - Update information
+            - View previous orders
+    * [Admin Functions](#admin-functions)
+        - Add a product
+        - Edit a product
+        - Delete a product
+        - Admin Panel
+            - View orders
+            - View bookings
+            - View profiles
+            - Update orders
+            - Update bookings
+            - Delete orders
+            - Delete bookings
+            - Delete users
     * [Bugs](#bugs) to complete
     * [Bugs Outstanding](#bugs-outstanding) to complete
     
 Return to my [README Doc](README.md) 
 
 ## Automated Testing
-Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django.
 
 ### Django Testing
 
+Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django.
 
-## Screen sizes
+#### **Book App**
+![Image template]()
 
-### Mobile screens
-![Image template](readme/testing/mobile-screens.png)
+#### **Cart App**
+![Image template]()
 
-### Tablet screens
-![Image template](readme/testing/tablet-screens.png)
+#### **Checkout App**
+![Image template]()
 
-### Deskop screens
-![Image template](readme/testing/desktop-screens.png)
+#### **Complete App**
+![Image template]()
 
+#### **Home App**
+![Image template]()
 
-## Navigation bar menu
+#### **Products App**
+![Image template]()
 
-### Hamburger navigation bar
-![Image template](readme/testing/hamburger-menu.png)
-### Full screen navigation bar
-![Image template](readme/testing/desktop-menu.png)
+#### **Profiles App**
+![Image template]()
 
+#### **Services App** 
+![Image template]()
 
-## User Stories Complete
-
-Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_complete.pdf" target="_blank">User Stories</a> completed. 
-
-## W3C Markup Validation Service
+### W3C Markup Validation Service
 
 I used <a href="https://validator.w3.org/" target="_blank"> W3 validator</a> to check the html templates for this project. All Errors found were based on rendering added and the base template holding the boilerplate. 
 
@@ -115,23 +130,22 @@ Errors found: -
 - Misplaced non-space characters inside a table. {% for order in orders %}
 - Misplaced non-space characters inside a table. {% for item in cart_items %}
 
-## W3C CSS Validation Service
+### W3C CSS Validation Service
 
 I used <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C jigsaw validator</a> to check the 3 CSS files used for this project. Results below show that there are no erros. 
 
-### Base
+#### **Base**
 ![Image template](readme/testing/base.css-checked.png)
 
-### Checkout
+#### **Checkout**
 ![Image template](readme/testing/checkout.css-checked.png)
 
-### Profile
+#### **Profile**
 ![Image template](readme/testing/profile.css-checked.png)
 
-## JS Hint Javascript code validator
+### JS Hint Javascript code validator
 
-### JS files
-
+#### **JS files**
 
 I used <a href="https://jshint.com/" target="_blank">JS Hint</a> to check the Javascript files in this project. The following files were checked with no errors founds: -
 
@@ -139,7 +153,7 @@ I used <a href="https://jshint.com/" target="_blank">JS Hint</a> to check the Ja
 
 - profile app - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/profiles/static/profiles/js/countryfield.js" target="_blank">countryfield.js</a>
 
-### Scripts
+#### **Scripts**
 
 Scripts added within HTML files
 
@@ -151,31 +165,29 @@ Scripts added within HTML files
 
 - products app > products.html - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/products.html" target="_blank">script</a>
 
-### Other Scripts
+#### **Other Scripts**
 
 - products app > quantity input script - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/includes/quantity_input_script.html" target="_blank">script</a>
 
 - products app > quantity input script cart - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/includes/quantity_input_script_cart.html" target="_blank">script</a>
 
-quantity_input_script_cart.html
-
-## PEP8 online validator
+### PEP8 online validator
 
 I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> validator to check all python files. The following files were checked and confirm 'All right' except for one error found in most files (line to long). All files below with a ** has this error. 
 
-### Book App
+#### **Book App**
 - book app - app.py
 - book app - contexts.py
 - book app - urls.py
 - book app - views.py
 
-### Cart App
+#### **Cart App**
 - cart app - apps.py
 - cart app - contexts.py
 - cart app - urls.py
 - cart app - views.py **
 
-### Checkout App
+#### **Checkout App**
 - checkout app - admin.py
 - checkout app - apps.py
 - checkout app - forms.py
@@ -187,7 +199,7 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - checkout app - webhook_handler.py **
 - checkout app - webhooks.py **
 
-### Complete App
+#### **Complete App**
 - complete app - admin.py
 - complete app - apps.py
 - complete app - emails.py
@@ -197,12 +209,12 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - complete app - urls.py
 - complete app - views.py
 
-### Home App
+#### **Home App**
 - home app - apps.py
 - home app - urls.py
 - home app - views.py
 
-### Products App
+#### **Products App**
 - products app - admin.py
 - products app - apps.py
 - products app - forms.py
@@ -212,7 +224,7 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - products app - views.py **
 - products app - widgets.py **
 
-### Profiles App
+#### **Profiles App**
 - profiles app - apps.py
 - profiles app - forms.py **
 - profiles app - models.py **
@@ -220,52 +232,80 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - profiles app - urls.py
 - profiles app - views.py
 
-### Services App
+#### **Services App**
 - services app - admin.py
 - services app - apps.py
 - services app - models.py **
 - services app - urls.py
 - services app - views.py
 
-### The Bike Shop App
+#### **The Bike Shop App**
 - the_bike_shop app - asgi.py
 - the_bike_shop app - settings.py **
 - the_bike_shop app - urls.py
 - the_bike_shop app - wsgi.py
 
-### Project Level
+#### **Project Level**
 - project level - manage.py
 
-## Web Browsers
+## Manual Testing
+
+I conducted manual testing across mobile, tablet and desktop screensizes, making sure that the site worked and had good overall UX. 
+
+### Screen sizes
+
+#### **Mobile screens**
+![Image template](readme/testing/mobile-screens.png)
+
+#### **Tablet screens**
+![Image template](readme/testing/tablet-screens.png)
+
+#### **Deskop screens**
+![Image template](readme/testing/desktop-screens.png)
+
+
+### Navigation bar menu
+
+#### **Hamburger navigation bar**
+![Image template](readme/testing/hamburger-menu.png)
+#### **Full screen navigation bar**
+![Image template](readme/testing/desktop-menu.png)
+
+
+### User Stories Complete
+
+Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_complete.pdf" target="_blank">User Stories</a> completed. 
+
+### Web Browsers
 
 I tested the website across four different web browsers making sure that links worked and pages loaded properly. I made sure I access the following browsers regularly to make sure the site continued to look good across them all. The browsers I chose to use were Google Chrome, Apple Safari, MS Edge and Mozilla Firefox. The site was developed using Chrome and therefore testing was being done daily on this browser.
 
-### Google Chrome
+#### **Google Chrome**
 ![Image template](readme/testing/chrome.png)
 
-### Apple Safari
+#### **Apple Safari**
 ![Image template](readme/testing/safari.png)
 
-### Microsoft Edge
+#### **Microsoft Edge**
 ![Image template](readme/testing/edge.png)
 
-### Mozilla Firefox
+#### **Mozilla Firefox**
 ![Image template](readme/testing/firefox.png)
 
-## Responsiveness
+### Responsiveness
 
 I tested the site using Chrome development tools on three different screen sizes to make sure that all features, functions, links, buttons and general user experience worked across all screen sizes.
         
-### Mobile
+#### **Mobile**
 ![Image template](readme/testing/mobile.png)
 
-### Tablet
+#### **Tablet**
 ![Image template](readme/testing/tablet.png)
 
-### Desktop
+#### **Desktop**
 ![Image template](readme/testing/desktop.png)
 
-## Bugs
+### Bugs
 
 **Footer Bug**
 
@@ -297,7 +337,7 @@ I was able to fix this issue with some assistance from Code Institute tutors.
 
 Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ado_v1/commit/de7ad2067ac1b5de37a4cd8b9f4ddf572a4bf6c7" target="_blank">code</a> for reference. 
 
-## Bugs Outstanding
+### Bugs Outstanding
 
 **Toast**
 
