@@ -2,12 +2,12 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block head_title %}{% trans "Logout" %}{% endblock %}
 
 {% block inner_content %}
-<h2 class="sub-header text-center">{% trans "Sign Out" %}</h2>
+<h2 class="sub-header text-center">{% trans "Logout" %}</h2>
 
-<p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
+<p class="text-center">{% trans 'Are you sure you want to logout?' %}</p>
 
 <form method="post" action="{% url 'account_logout' %}" class="text-center">
   {% csrf_token %}
@@ -15,7 +15,7 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
   <button type="submit" class="btn allauth-accounts-button rounded-0">
-    <span class="font-weight-bold text-uppercase">{% trans "Sign Out" %}</span>
+    <span class="font-weight-bold text-uppercase">{% trans "Logout" %}</span>
     <span class="icon">
       <i class="fas fa-sign-out-alt"></i>
     </span>
