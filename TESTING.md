@@ -346,6 +346,31 @@ I tested the site using Chrome development tools on three different screen sizes
 
 #### **Booking a service**
 
+- From the homepage go to services
+![Image template](readme/testing/booking_service/booking_a_service1.png)
+
+- Select a service
+![Image template](readme/testing/booking_service/booking_a_service2.png)
+
+- Select ' Add to booking'
+![Image template](readme/testing/booking_service/booking_a_service3.png)
+
+- Select 'Go to booking'
+![Image template](readme/testing/booking_service/booking_a_service4.png)
+
+- Select 'Complete Booking'
+![Image template](readme/testing/booking_service/booking_a_service5.png)
+
+- Complete booking form and select 'Book'
+![Image template](readme/testing/booking_service/booking_a_service6.png)
+
+- See 'Thank you' page with order details
+![Image template](readme/testing/booking_service/booking_a_service7.png)
+
+- Booking in Django Admin
+![Image template](readme/testing/booking_service/booking_a_service8.png)
+
+
 #### **Signup**
 
 #### **Login**
