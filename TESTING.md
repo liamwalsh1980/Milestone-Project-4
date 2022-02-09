@@ -375,7 +375,25 @@ I tested the site using Chrome development tools on three different screen sizes
 
 #### **Login**
 
+- Select 'Logou' from the top right of any page
+![Image template](readme/testing/login/login1.png)
+
+- Enter username and password and select 'Login'
+![Image template](readme/testing/login/login2.png)
+
+- See success message confirming login
+![Image template](readme/testing/login/login3.png)
+
 #### **Logout**
+
+- Select 'Logout' from the top right of any page
+![Image template](readme/testing/logout/logout1.png)
+
+- Confirm logout/sign out 
+![Image template](readme/testing/logout/logout2.png)
+
+- See success message confirming signed out
+![Image template](readme/testing/logout/logout3.png)
 
 #### **Access profile** 
     
