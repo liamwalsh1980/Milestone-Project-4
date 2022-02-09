@@ -80,6 +80,44 @@ i.fas.fa-times {
     color: #852C34 !important;
 }
 
+/* Carousel */
+
+.carousel-bg-color {
+    background-color: white;
+}
+
+.homepage-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.products-color, .services-color {
+    color: #852C34;
+}
+
+.products-color:hover, .services-color:hover {
+    color: #A57472;
+}
+
+/* .mens-color:hover {
+    color: #4286d2;
+}
+
+.womens-color:hover {
+    color: #c96ec1;
+}
+
+.urban-color:hover {
+    color: #968a7c;
+}
+
+.accessories-color:hover {
+    color: #fadf4b;
+} */
+
+
 /* Margin and Padding */
 
 .padding-bottom {
