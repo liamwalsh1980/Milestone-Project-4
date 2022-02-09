@@ -305,6 +305,59 @@ I tested the site using Chrome development tools on three different screen sizes
 #### **Desktop**
 ![Image template](readme/testing/desktop.png)
 
+### User Functions
+    
+#### Purchasing a product
+- From the homepage go to products or a product
+![Image template](readme/testing/add_product/adding_a_product1.png)
+
+
+- Add a product to the shopping cart
+![Image template](readme/testing/add_product/adding_a_product2.png)
+
+
+- Go to shopping cart and select 'Secure Checkout'
+![Image template](readme/testing/add_product/adding_a_product3.png)
+
+
+- Complete checkout page and select 'Complete Order'
+![Image template](readme/testing/add_product/adding_a_product4.png)
+![Image template](readme/testing/add_product/adding_a_product5.png)
+
+- Order processing
+![Image template](readme/testing/add_product/adding_a_product6.png)
+
+
+- See 'Thank you' page with order details
+![Image template](readme/testing/add_product/adding_a_product7.png)
+
+- Order in the terminal
+![Image template](readme/testing/add_product/adding_a_product8.png)
+
+
+- Order in Django Admin
+![Image template](readme/testing/add_product/adding_a_product9.png)
+![Image template](readme/testing/add_product/adding_a_product10.png)
+
+
+- Order payment in Stripe
+![Image template](readme/testing/add_product/adding_a_product11.png)
+
+
+#### **Booking a service**
+
+#### **Signup**
+
+#### **Login**
+
+#### **Logout**
+
+#### **Access profile** 
+    
+##### *Update information**
+
+View previous orders
+
 ### Bugs
 
 **Footer Bug**
