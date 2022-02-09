@@ -58,17 +58,17 @@
         - [Tablet](#tablet)
         - [Desktop](#desktop)
     * [User Functions](#user-functions) 
-        - Purchasing a product
-        - Booking a service
-        - Signup
-        - Login
-        - Logout
+        - [Purchasing a product](#purchasing-a-product)
+        - [Booking a service](#booking-a-service)
+        - [Signup](#signup)
+        - [Login](#login)
+        - [Logout](#logout)
         - Access profile
             - Update information
             - View previous orders
     * [Admin Functions](#admin-functions)
-        - Add a product
-        - Edit a product
+        - [Add a product](#add-a-product)
+        - [Edit a product](#edit-a-product)
         - Delete a product
         - Admin Panel
             - View orders
@@ -389,11 +389,12 @@ I tested the site using Chrome development tools on three different screen sizes
 - Select 'Logout' from the top right of any page
 ![Image template](readme/testing/logout/logout1.png)
 
-- Confirm logout/sign out 
+- Confirm logout 
 ![Image template](readme/testing/logout/logout2.png)
 
-- See success message confirming signed out
+- See success message confirming logout
 ![Image template](readme/testing/logout/logout3.png)
+
 
 #### **Access profile** 
     
