@@ -63,9 +63,9 @@
         - [Signup](#signup)
         - [Login](#login)
         - [Logout](#logout)
-        - Access profile
-            - Update information
-            - View previous orders
+        - [Access profile](#access-profile)
+            - [Update Information](#update-information)
+            - [View Previous Orders](#view-previous-orders)
     * [Admin Functions](#admin-functions)
         - [Add a product](#add-a-product)
         - [Edit a product](#edit-a-product)
@@ -375,7 +375,7 @@ I tested the site using Chrome development tools on three different screen sizes
 
 #### **Login**
 
-- Select 'Logou' from the top right of any page
+- Select 'Logout' from the top right of any page
 ![Image template](readme/testing/login/login1.png)
 
 - Enter username and password and select 'Login'
@@ -397,10 +397,27 @@ I tested the site using Chrome development tools on three different screen sizes
 
 
 #### **Access profile** 
-    
-##### *Update information**
 
-View previous orders
+- Once logged in select 'Profile' from the top right of any page
+![Image template](readme/testing/access_profile/profile1.png)
+- See profile page 
+![Image template](readme/testing/access_profile/profile2.png)
+
+**Update Information**
+
+- Add/edit user profile contact number and address
+![Image template](readme/testing/access_profile/profile3.png)
+
+- Success message to confirm update
+![Image template](readme/testing/access_profile/profile4.png)
+
+**View Previous Orders**
+
+- Within profile view previous orders
+![Image template](readme/testing/access_profile/view_previous_order1.png)
+
+- Click order number for details
+![Image template](readme/testing/access_profile/view_previous_order2.png)
 
 ### Bugs
 
