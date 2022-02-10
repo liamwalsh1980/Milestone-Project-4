@@ -582,4 +582,10 @@ Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ad
 
 ![Image template](readme/testing/toast.png)
 
+**Auto Test**
+
+- One of the automatic tests i added didn't pass and kept coming back failed. After a little research and speaking with other students and a tutor i still couldn't get this test passed. For reference the test is in the test_views.py file within the profiles app. 
+
+![Image template](readme/testing/auto_test1.png)
+![Image template](readme/testing/auto_test2.png)
 
