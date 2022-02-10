@@ -36,12 +36,12 @@
     </div>
 </div>
 
-<div>
+<!-- <div>
     <h4 class="text-center mt-3 pb-2">What The Bike Shop offers</h4>
-</div>
+</div> -->
 
-<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row carousel-bg-color">
-    <div class="col-lg-4 col-md-4 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row ">
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row carousel-bg-color py-4">
+    <div class="col-lg-4 col-md-4 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
         <div class="m-2">
             <h2 class="text-black">Products</h2>
             <ul class="homepage-list">
@@ -49,27 +49,25 @@
                 <li class="py-2"><a href="{% url 'products' %}?category=womens_bikes" class="text-uppercase remove-underline products-color womens-color">Womens Bikes</a></li>
                 <li class="py-2"><a href="{% url 'products' %}?category=urban_bikes" class="text-uppercase remove-underline products-color urban-color">Urban Bikes</a></li>
                 <li class="py-2"><a href="{% url 'products' %}?category=accessories" class="text-uppercase remove-underline products-color accessories-color">Accessories</a></li>
-                
-
             </ul>
         </div>
     </div>
-    <div class="px-0">
+    <div class="px-0 my-4 top-content">
         <div id="carouselExampleIndicators" class="carousel slide hero-images" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li> -->
             </ol>
             <div class="carousel-inner">
                 <a class="carousel-item active" href="">
-                    <img src="/media/1.jpg" class="d-block w-100 hero-images px-2 px-md-0 py-4" alt="First slide">
+                    <img src="/media/1.jpg" class="d-block w-100 hero-images px-2" alt="First slide">
                 </a>
                 <div class="carousel-item">
-                    <img src="/media/49.jpg" class="d-block w-100 hero-images px-2 px-md-0 py-4" alt="Second slide">
+                    <img src="/media/49.jpg" class="d-block w-100 hero-images" alt="Second slide">
                 </div>
                 <div class="carousel-item">
                     <img src="/media/41.jpg" class="d-block w-100 hero-images px-2 px-md-0 py-4" alt="Third slide">
