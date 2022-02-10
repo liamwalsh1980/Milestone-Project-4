@@ -341,7 +341,7 @@ I tested the site using Chrome development tools on three different screen sizes
 
 
 - Order payment in Stripe
-![Image template](readme/testing/add_product/adding_a_product11.png)
+![Image template](readme/testing/add_product/adding_a_product12.png)
 
 
 #### **Booking a service**
@@ -395,7 +395,6 @@ I tested the site using Chrome development tools on three different screen sizes
 - See success message confirming logout
 ![Image template](readme/testing/logout/logout3.png)
 
-
 #### **Access profile** 
 
 - Once logged in select 'Profile' from the top right of any page
@@ -403,7 +402,7 @@ I tested the site using Chrome development tools on three different screen sizes
 - See profile page 
 ![Image template](readme/testing/access_profile/profile2.png)
 
-**Update Information**
+##### **Update Information**
 
 - Add/edit user profile contact number and address
 ![Image template](readme/testing/access_profile/profile3.png)
@@ -411,13 +410,80 @@ I tested the site using Chrome development tools on three different screen sizes
 - Success message to confirm update
 ![Image template](readme/testing/access_profile/profile4.png)
 
-**View Previous Orders**
+##### **View Previous Orders**
 
 - Within profile view previous orders
 ![Image template](readme/testing/access_profile/view_previous_order1.png)
 
 - Click order number for details
 ![Image template](readme/testing/access_profile/view_previous_order2.png)
+
+### Admin Functions
+
+#### Add A Product
+
+**No Image**
+
+- Once admin is logged in go to 'Product Management'
+![Image template](readme/testing/admin_add_product/Add_product_no_image1.png)
+
+- Add product details and select 'Add'
+![Image template](readme/testing/admin_add_product/Add_product_no_image2.png)
+![Image template](readme/testing/admin_add_product/Add_product_no_image3.png)
+
+- Success message with product added without image
+![Image template](readme/testing/admin_add_product/Add_product_no_image4.png)
+
+- Search for product
+![Image template](readme/testing/admin_add_product/Add_product_no_image5.png)
+
+- View product in Django Admin panel
+![Image template](readme/testing/admin_add_product/Add_product_no_image6.png)
+![Image template](readme/testing/admin_add_product/Add_product_no_image7.png)
+
+
+**With Image**
+
+- Once admin is logged in go to 'Product Management'
+![Image template](readme/testing/admin_add_product/Add_product_image1.png)
+
+- Add product details and select 'Add'
+![Image template](readme/testing/admin_add_product/Add_product_image2.png)
+![Image template](readme/testing/admin_add_product/Add_product_image3.png)
+
+- Success message with product added with image
+![Image template](readme/testing/admin_add_product/Add_product_image4.png)
+
+- Search for product
+![Image template](readme/testing/admin_add_product/Add_product_image5.png)
+
+- View product in Django Admin panel
+![Image template](readme/testing/admin_add_product/Add_product_image6.png)
+![Image template](readme/testing/admin_add_product/Add_product_image7.png)
+
+#### Edit A Product
+
+#### Delete A Product
+
+#### Admin Panel
+
+
+##### **View Orders**
+        
+##### **View Bookings**
+
+##### **View Profiles**
+
+##### **Update Orders**
+
+##### **Update Bookings**
+
+##### **Delete Orders**
+
+##### **Delete Bookings**
+            
+##### **Delete Users**
+
 
 ### Bugs
 
