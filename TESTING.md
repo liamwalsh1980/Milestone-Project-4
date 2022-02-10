@@ -70,15 +70,15 @@
         - [Add a product](#add-a-product)
         - [Edit a product](#edit-a-product)
         - [Delete a product](#delete-a-product)
-        - Admin Panel
-            - View orders
-            - View bookings
-            - View profiles
-            - Update orders
-            - Update bookings
-            - Delete orders
-            - Delete bookings
-            - Delete users
+        - [Admin Panel](#admin-panel)
+            - [View Orders](#view-orders)
+            - [View Bookings](#view-bookings)
+            - [View Profiles](#view-profiles)
+            - [Update Orders](#update-orders)
+            - [Update Bookings](#update-bookings)
+            - [Delete Orders](#delete-orders)
+            - [Delete Bookings](#delete-bookings)
+            - [Delete Users](#delete-users) to complete
     * [Bugs](#bugs) to complete
     * [Bugs Outstanding](#bugs-outstanding) to complete
     
@@ -497,22 +497,49 @@ I tested the site using Chrome development tools on three different screen sizes
 
 #### Admin Panel
 
+- Access admin panel either by clicking the 'Admin Panel' at the top right or by adding /admin to the end of the url.
+![Image template](readme/testing/admin_panel/access_admin_panel1.png)
+![Image template](readme/testing/admin_panel/access_admin_panel2.png)
 
 ##### **View Orders**
+- Once logged into the Admin panel view orders
+![Image template](readme/testing/admin_panel/view_orders1.png)
+![Image template](readme/testing/admin_panel/view_orders2.png)
         
 ##### **View Bookings**
+- Once logged into the Admin panel view bookings
+![Image template](readme/testing/admin_panel/view_bookings1.png)
+![Image template](readme/testing/admin_panel/view_bookings2.png)
 
 ##### **View Profiles**
+- Once logged into the Admin panel view user profiles
+![Image template](readme/testing/admin_panel/view_users1.png)
+![Image template](readme/testing/admin_panel/view_users2.png)
 
 ##### **Update Orders**
+- Once logged into the Admin panel update an order 
+![Image template](readme/testing/admin_panel/update_order1.png)
+![Image template](readme/testing/admin_panel/update_order2.png)
 
 ##### **Update Bookings**
+- Once logged into the Admin panel update a booking
+![Image template](readme/testing/admin_panel/update_booking1.png)
+![Image template](readme/testing/admin_panel/update_booking2.png)
 
 ##### **Delete Orders**
+- Once logged into the Admin panel delete an order 
+![Image template](readme/testing/admin_panel/delete_order1.png)
+![Image template](readme/testing/admin_panel/delete_order2.png)
+![Image template](readme/testing/admin_panel/delete_order3.png)
 
 ##### **Delete Bookings**
+- Once logged into the Admin panel delete a booking 
+![Image template](readme/testing/admin_panel/delete_booking1.png)
+![Image template](readme/testing/admin_panel/delete_booking2.png)
+![Image template](readme/testing/admin_panel/delete_booking3.png)
             
 ##### **Delete Users**
+- Once logged into the Admin panel delete a user 
 
 
 ### Bugs
