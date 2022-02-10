@@ -60,7 +60,7 @@
     * [User Functions](#user-functions) 
         - [Purchasing a product](#purchasing-a-product)
         - [Booking a service](#booking-a-service)
-        - [Signup](#signup)
+        - [Signup](#signup) to complete
         - [Login](#login)
         - [Logout](#logout)
         - [Access profile](#access-profile)
@@ -69,7 +69,7 @@
     * [Admin Functions](#admin-functions)
         - [Add a product](#add-a-product)
         - [Edit a product](#edit-a-product)
-        - Delete a product
+        - [Delete a product](#delete-a-product)
         - Admin Panel
             - View orders
             - View bookings
@@ -370,7 +370,6 @@ I tested the site using Chrome development tools on three different screen sizes
 - Booking in Django Admin
 ![Image template](readme/testing/booking_service/booking_a_service8.png)
 
-
 #### **Signup**
 
 #### **Login**
@@ -441,7 +440,6 @@ I tested the site using Chrome development tools on three different screen sizes
 ![Image template](readme/testing/admin_add_product/Add_product_no_image6.png)
 ![Image template](readme/testing/admin_add_product/Add_product_no_image7.png)
 
-
 **With Image**
 
 - Once admin is logged in go to 'Product Management'
@@ -479,8 +477,23 @@ I tested the site using Chrome development tools on three different screen sizes
 - View updated product in Django Admin panel
 ![Image template](readme/testing/edit/edit8.png)
 
-
 #### Delete A Product
+
+- Once admin is logged in go to the product that needs deleting and select the red delete text button
+![Image template](readme/testing/delete/delete1.png)
+![Image template](readme/testing/delete/delete2.png)
+
+- Success message will appear to say the product has been deleted
+![Image template](readme/testing/delete/delete3.png)
+
+- A quick search of the product to see its no longer there
+![Image template](readme/testing/delete/delete4.png)
+
+- Check that the product is no longer in the database by going to the Django Admin panel
+![Image template](readme/testing/delete/delete5.png) 
+
+- Make sure to delete the image from the workspace
+![Image template](readme/testing/delete/delete6.png)
 
 #### Admin Panel
 
