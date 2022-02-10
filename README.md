@@ -79,7 +79,6 @@
 1. [Notes](#notes) to complete
 1. [Final Step](#final-step)
 
-
 [Back to top ⇧](#the-bike-shop)
 
 ## Introduction

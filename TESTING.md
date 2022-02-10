@@ -1,4 +1,4 @@
-# The Bike Shop
+# The Bike Shop Testing
 
 ## Code Institute - Milestone Project 4 (Testing)
 
@@ -84,6 +84,8 @@
     
 Return to my [README Doc](README.md) 
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ## Automated Testing
 
 ### Django Testing
@@ -114,6 +116,8 @@ Automated Unit Testing was done using Django’s testing tools by importing the 
 #### **Services App** 
 ![Image template]()
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ### W3C Markup Validation Service
 
 I used <a href="https://validator.w3.org/" target="_blank"> W3 validator</a> to check the html templates for this project. All Errors found were based on rendering added and the base template holding the boilerplate. 
@@ -143,6 +147,8 @@ I used <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C jigsaw
 #### **Profile**
 ![Image template](readme/testing/profile.css-checked.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ### JS Hint Javascript code validator
 
 #### **JS files**
@@ -170,6 +176,8 @@ Scripts added within HTML files
 - products app > quantity input script - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/includes/quantity_input_script.html" target="_blank">script</a>
 
 - products app > quantity input script cart - <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/products/templates/products/includes/quantity_input_script_cart.html" target="_blank">script</a>
+
+[Back to top ⇧](#the-bike-shop-testing)
 
 ### PEP8 online validator
 
@@ -248,6 +256,8 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 #### **Project Level**
 - project level - manage.py
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ## Manual Testing
 
 I conducted manual testing across mobile, tablet and desktop screensizes, making sure that the site worked and had good overall UX. 
@@ -276,6 +286,8 @@ I conducted manual testing across mobile, tablet and desktop screensizes, making
 
 Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_complete.pdf" target="_blank">User Stories</a> completed. 
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ### Web Browsers
 
 I tested the website across four different web browsers making sure that links worked and pages loaded properly. I made sure I access the following browsers regularly to make sure the site continued to look good across them all. The browsers I chose to use were Google Chrome, Apple Safari, MS Edge and Mozilla Firefox. The site was developed using Chrome and therefore testing was being done daily on this browser.
@@ -292,6 +304,8 @@ I tested the website across four different web browsers making sure that links w
 #### **Mozilla Firefox**
 ![Image template](readme/testing/firefox.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ### Responsiveness
 
 I tested the site using Chrome development tools on three different screen sizes to make sure that all features, functions, links, buttons and general user experience worked across all screen sizes.
@@ -304,6 +318,8 @@ I tested the site using Chrome development tools on three different screen sizes
 
 #### **Desktop**
 ![Image template](readme/testing/desktop.png)
+
+[Back to top ⇧](#the-bike-shop-testing)
 
 ### User Functions
     
@@ -343,6 +359,7 @@ I tested the site using Chrome development tools on three different screen sizes
 - Order payment in Stripe
 ![Image template](readme/testing/add_product/adding_a_product12.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
 
 #### **Booking a service**
 
@@ -370,7 +387,11 @@ I tested the site using Chrome development tools on three different screen sizes
 - Booking in Django Admin
 ![Image template](readme/testing/booking_service/booking_a_service8.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 #### **Signup**
+
+[Back to top ⇧](#the-bike-shop-testing)
 
 #### **Login**
 
@@ -383,6 +404,8 @@ I tested the site using Chrome development tools on three different screen sizes
 - See success message confirming login
 ![Image template](readme/testing/login/login3.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 #### **Logout**
 
 - Select 'Logout' from the top right of any page
@@ -393,6 +416,8 @@ I tested the site using Chrome development tools on three different screen sizes
 
 - See success message confirming logout
 ![Image template](readme/testing/logout/logout3.png)
+
+[Back to top ⇧](#the-bike-shop-testing)
 
 #### **Access profile** 
 
@@ -417,6 +442,8 @@ I tested the site using Chrome development tools on three different screen sizes
 - Click order number for details
 ![Image template](readme/testing/access_profile/view_previous_order2.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ### Admin Functions
 
 #### Add A Product
@@ -440,6 +467,8 @@ I tested the site using Chrome development tools on three different screen sizes
 ![Image template](readme/testing/admin_add_product/Add_product_no_image6.png)
 ![Image template](readme/testing/admin_add_product/Add_product_no_image7.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 **With Image**
 
 - Once admin is logged in go to 'Product Management'
@@ -459,6 +488,8 @@ I tested the site using Chrome development tools on three different screen sizes
 ![Image template](readme/testing/admin_add_product/Add_product_image6.png)
 ![Image template](readme/testing/admin_add_product/Add_product_image7.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 #### Edit A Product
 
 - Once admin is logged in go to a product and select the edit text link either from the products page or the product detail page
@@ -476,6 +507,8 @@ I tested the site using Chrome development tools on three different screen sizes
 
 - View updated product in Django Admin panel
 ![Image template](readme/testing/edit/edit8.png)
+
+[Back to top ⇧](#the-bike-shop-testing)
 
 #### Delete A Product
 
@@ -495,11 +528,15 @@ I tested the site using Chrome development tools on three different screen sizes
 - Make sure to delete the image from the workspace
 ![Image template](readme/testing/delete/delete6.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 #### Admin Panel
 
 - Access admin panel either by clicking the 'Admin Panel' at the top right or by adding /admin to the end of the url.
 ![Image template](readme/testing/admin_panel/access_admin_panel1.png)
 ![Image template](readme/testing/admin_panel/access_admin_panel2.png)
+
+[Back to top ⇧](#the-bike-shop-testing)
 
 ##### **View Orders**
 - Once logged into the Admin panel view orders
@@ -521,6 +558,8 @@ I tested the site using Chrome development tools on three different screen sizes
 ![Image template](readme/testing/admin_panel/update_order1.png)
 ![Image template](readme/testing/admin_panel/update_order2.png)
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ##### **Update Bookings**
 - Once logged into the Admin panel update a booking
 ![Image template](readme/testing/admin_panel/update_booking1.png)
@@ -537,6 +576,8 @@ I tested the site using Chrome development tools on three different screen sizes
 ![Image template](readme/testing/admin_panel/delete_booking1.png)
 ![Image template](readme/testing/admin_panel/delete_booking2.png)
 ![Image template](readme/testing/admin_panel/delete_booking3.png)
+
+[Back to top ⇧](#the-bike-shop-testing)
             
 ##### **Delete Users**
 - Once logged into the Admin panel delete a user 
@@ -574,6 +615,8 @@ I was able to fix this issue with some assistance from Code Institute tutors.
 
 Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ado_v1/commit/de7ad2067ac1b5de37a4cd8b9f4ddf572a4bf6c7" target="_blank">code</a> for reference. 
 
+[Back to top ⇧](#the-bike-shop-testing)
+
 ### Bugs Outstanding
 
 **Toast**
@@ -588,4 +631,8 @@ Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ad
 
 ![Image template](readme/testing/auto_test1.png)
 ![Image template](readme/testing/auto_test2.png)
+
+**End of TESTING Documentation**
+
+[Back to top ⇧](#the-bike-shop-testing)
 
