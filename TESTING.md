@@ -463,6 +463,23 @@ I tested the site using Chrome development tools on three different screen sizes
 
 #### Edit A Product
 
+- Once admin is logged in go to a product and select the edit text link either from the products page or the product detail page
+![Image template](readme/testing/edit/edit1.png)
+![Image template](readme/testing/edit/edit2.png)
+
+- Edit the product and select the 'Update' button
+![Image template](readme/testing/edit/edit3.png)
+![Image template](readme/testing/edit/edit4.png)
+![Image template](readme/testing/edit/edit5.png)
+
+- A success message will appear with the product updated
+![Image template](readme/testing/edit/edit6.png)
+![Image template](readme/testing/edit/edit7.png)
+
+- View updated product in Django Admin panel
+![Image template](readme/testing/edit/edit8.png)
+
+
 #### Delete A Product
 
 #### Admin Panel
