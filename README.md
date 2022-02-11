@@ -68,13 +68,16 @@
 1. [Stripe](#stripe)
 1. [Allauth](#allauth)
 1. [Crispy Forms](#crispy-forms)
-1. [Sending Emails](#sending-emails)
+1. [Sending Emails](#sending-emails) to complete
 1. [Deployment](#deployment) to complete
+    - [Github](#github) to complete
+    - [Heroku](#heroku) to complete
+    - [AWS](#aws) to complete
 1. [Clone Project](#clone-project)
 1. [Forking Project](#forking-project)
 1. [Technologies Used](#technologies-used)
 1. [Testing](#testing) to complete
-1. [Credits](#credits) to check
+1. [Credits](#credits)
 1. [Acknowledgements](#acknowledgements)
 1. [Notes](#notes) to complete
 1. [Final Step](#final-step)
@@ -101,6 +104,7 @@ Django Data Structure - MVT architecture (Model Template View)
  The Bike Shop is an easy-to-use online shopping experience for cycling lovers to visit and purchase products and book services. Products available to purchase are Men's bikes, Woman's bikes, Urban bikes, Cycling Helmets and general accessories. Before purchasing any product, users can get access to more information about that product with the option to pick a size (if applicable). The services available to book on the site is professional bike cleaning, bike repair and a sell your bike scheme. The user will need to pick a service to book and submit some information for a member of The Bike Shop team to then make contact.  
 
  Date this project started: 20th December 2021 
+ Date this project was deployed: TBC
 
  ## UX Design
 
@@ -139,7 +143,7 @@ Django Data Structure - MVT architecture (Model Template View)
 
 - ‘Admin’ username and password login 
 - Access to 'Product Management’ i.e. orders
-- Access to 'Service Management' i.e. bookings
+- Access to 'Admin Panel' i.e. bookings
 - Add a new product  
 - Edit a current product 
 - Delete a current product 
@@ -150,7 +154,7 @@ Django Data Structure - MVT architecture (Model Template View)
 #### Developer Aims 
 
 - Create an interesting and easy to use e-commerce website for cycling lovers to visit and make purchases 
-- Demonstrate the use of front-end and back-end Web development languages recently learnt with CI. 
+- Demonstrate the use of front-end and back-end Web development languages recently learnt with Code Institute. 
 - The use of relational databases to store product data and user details to easily update, add and delete when required 
 - Successful deployment adding to the developer portfolio
 - To achieve a final grade to contribute towards the Full Stack Web Developer Diploma overall grade 
@@ -177,12 +181,12 @@ After looking back over my previous projects, I decided to breakdown my strategy
 - Search facility 
 - Sort facility 
 - Navbar list for desktop 
-- Burger Navbar for mobile and tablet 
+- Hamburger Menu Navbar for mobile and tablet 
 - Subscribe option 
 - Strong Hero Image on the Homepage 
 - Header 
 - Enter the Shop button with 'enter' icon
-- Shopping bag 
+- Shopping cart 
 
 ### Unregistered Users
 - Need to be able to: 
@@ -193,7 +197,7 @@ After looking back over my previous projects, I decided to breakdown my strategy
     - Buy products as a guest 
     - Book a service as a guest
     - Receive an email confirmation for all purchases made 
-    - Receive an email confirmation for a service booked ?
+    - Obtain an order number or booking number straight away once a product is purchased or a service is booked
     - Register an Account using a username and secure password (optional) 
 
 ### Registered Users 
@@ -203,11 +207,11 @@ After looking back over my previous projects, I decided to breakdown my strategy
     - View products/services 
     - Use the sort facility
     - View details of each product/service 
-    - Buy products as a guest 
-    - Book a service as a guest 
+    - Buy products 
+    - Book a service 
     - Receive an email confirmation for all purchases made 
-    - Receive an email confirmation for a service booked ?
-    - Access Profile - delivery details 
+    - Obtain an order number or booking number straight away once a product is purchased or a service is booked
+    - Access Profile - delivery and contact details 
     - Access Profile - order history (if applicable)
     - Logout 
 
@@ -218,10 +222,10 @@ After looking back over my previous projects, I decided to breakdown my strategy
     - View products/services 
     - Use the sort facility 
     - View details of each product/service 
-    - Buy products as a guest 
-    - Book a service as a guest 
-    - Receive an email confirmation for all purchases made 
-    - Receive an email confirmation for a service booked ?
+    - Buy products for testing
+    - Book a service for testing
+    - Receive an email confirmation for all test purchases made 
+    - Obtain an order number or booking number straight away once a product is purchased or a service is booked for testing
     - Access Profile - delivery details 
     - Access Profile - order history (if applicable)
     - Add new Products 
@@ -249,11 +253,11 @@ I wanted this project to have minimum text and therefore it is important to note
 
 ### Hero Images 
 
-The hero images came from Shutterstock at a cost of £5.80 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes is to use one image with an ’Enter the Shop' button in the middle with enter icon. See image below for reference (destop view)
+The hero images came from Shutterstock at a cost of £5.80 per image. I found a few good images that I believe would work well for the homepage. The originally idea which can be seen in my wireframes and below is to use one image with an ’Shop Now' button in the middle. See image below for reference (destop view)
 
 ![Image template](readme/images/original-homepage.png)
 
-This looked fine; however, I felt the homepage needed more images in sections to represent what the site was about and the what target audience I was aiming for. With this in mind I used 4 different images representing the 4 main product categories. 
+This looked fine; however, I felt the homepage needed more images in sections to represent what the site was about and what target audience I was aiming for. With this in mind I used 4 different images representing the 4 main product categories. 
 
 The sport of cycling is very colourful with Bikes, Clothing, Helmets and Competition Winning Jerseys all represented with bright colouring. With this in mind the first image users will see contains plenty of colour with a male cyclist as the main focus. I then used 3 more images to represent women's bikes, urban bikes and accessories. See images below for reference (desktop view)
 
@@ -276,7 +280,7 @@ The Bike Shop – Colour Pallet from coolors.co
 
 ![Image template](readme/images/main-palette.png)
 
-Once I had finished building the homepage, I wanted the logo and ‘Enter the Shop’ button to standout more. Therefore, I decided to add a new colour to achieve this. The colour chosen is a deep red (Antique Ruby). I Also used the next shade across from this colour for hovering over. This shade I chose is called Cordovan red. This is used for the category links on the products and services pages. Both colours sourced from coolors.co like my main palette. 
+Once I had finished building the homepage, I wanted the logo and ‘Enter the Shop’ buttons to standout more. Therefore, I decided to add a new colour to achieve this. The colour chosen is a deep red (Antique Ruby). I Also used the next shade across from this colour for hovering over. This shade I chose is called Cordovan red. This is used for the category links on the products and services pages. Both colours sourced from coolors.co like my main palette. 
 
 ![Image template](readme/images/side-palette.png)
 
@@ -300,7 +304,7 @@ All products and services have an image to show users what they are buying, I fe
 
 I looked at using a ‘bike’ image to replace the word Bike from the logo title. Instead, I simply added a font awesome image of a bike to the end of the text logo. 
 
-Several other font awesome images were used to show Customer Account, Shopping bag, services offered and certain fields within all products I.e., Rating star and product tag.  
+Several other font awesome images were used to show Customer Account, Shopping cart, services offered and certain fields within all products I.e., Rating star and product tag.  
 
 I used the noimage.png image in this project in case there was no available image for any product or service that is added to the site. This simply fills a gap to make sure good UX is maintained.  
 
@@ -414,9 +418,11 @@ There were some adjustments to the models
 
 The Navigation menu is displayed across all web pages and across all screen sizes for users to move through the website easily and quickly. It's displayed with a different background colour (Timberwolf grey) to the body of the website. The font styling for text links is the same as the logo (Russo One). 
 
+Just below the navbar menu, users will see a fixed banner welcome message which stays in place across all web pages. I feel this nicely breaks up the navbar and body of each page. The banner stating the website name ‘The Bike Shop’ and is very important to have on smaller screens because the logo has been removed and replaced by the hamburger menu icon for good UX. The banner is also a link back to the homepage and again important to have on smaller screens when the logo is replaced by the hamburger menu icon.
+
 #### Desktop Navbar 
 
-The Navigation menu on desktop screens has a text logo with a bike icon. This can be found at the top left of the navbar. Users can click this logo and it will take them back to the homepage. The word ‘Bike’ changes colour when a user hovers over it giving them an indication that it’s a clickable logo. Users will find a search bar to use to search for products and the following links positions to the right: - 
+The Navigation menu on desktop screens has a text logo with a bike icon. This can be found at the top left of the navbar. Users can click this logo and it will take them back to the homepage. The word ‘Bike’ and the bike icon changes colour when a user hovers over it giving them an indication that it’s a clickable logo. Users will find a search bar to use to search for products and the following links positions to the right: - 
 
 - User icon (My Account) 
 - Shopping cart icon (starts with £0.00) 
@@ -458,6 +464,8 @@ Services
 
 On mobile and tablet screens, the navigation bar is displayed using the hamburger menu icon in the top left replacing the logo. This is done to give better UX when viewing the site on smaller screens. Users can click the hamburger menu which opens up the same link options as desktop users. The ‘User’ icon (My Account) and ‘Shopping Cart’ icon (Starts with £0.00) remains in place however the search bar is replaced with the ‘Search’ icon for users to click on. When users click the ‘Search’ icon the search bar appears below. 
 
+When users click the hamburger menu icon this changes to a cross which indicates to the user that the menu is open and can be closed by clicking the cross at any point. I decided to use AlpineJS as a tool to achieve this. 
+
 Navigation links on the top right update depending on the user being logged in and whether that user is a regular shopping or administrator.  
 
 ![Image template](readme/images/user-access.png)
@@ -466,14 +474,14 @@ Navigation links on the top right update depending on the user being logged in a
 
 Users are encouraged to sign up to an account but it’s not mandatory and therefore they can still make purchases without an account. Upon making a purchase users will still receive an email confirmation and immediate notification that their order has been received once they click the ‘Complete Order’ button on the Delivery and Payment page. 
 
-The process to sign up to an account is simple. Click the ‘Account’ button at the top of the navigation menu which will open a dropdown menu to either ‘Login’ or ‘Sign Up’ Once the ‘Sign Up’ link is clicked the user will need to provide the following: -  
+The process to sign up to an account is simple. Click the ‘My Account’ button at the top of the navigation menu which will open a dropdown menu to either ‘Login’ or ‘Sign Up’ Once the ‘Sign Up’ link is clicked the user will need to provide the following: -  
 
 - Username  
     - This can be anything as long as it's not been used already 
     - An error message will appear immediately if the username already exists 
 
 - Email Address  
-    - The user will need to add their email address twice for secure and avoid any typo mistakes made 
+    - The user will need to add their email address twice for security and avoid any typo mistakes made by mistake
 
 - Password  
     - The user will need to add a password twice for security and to avoid any typo errors made by mistake 
@@ -492,25 +500,34 @@ Admin User will have additional access to the following:
 - Product Management page
 (CRUD – Create, Read, Update Delete achieved) 
     - View current products and services 
-    - Add a product or service 
-    - Edit a product or service (Edit Page) 
-    - Delete a product or service 
-    - Access the Admin page  
+    - Add a product 
+    - Edit a product 
+    - Delete a product
+    - Access the Admin Panel page  
         - User accounts 
         - Change user account details and permission level
         - Delete accounts 
-        - Orders received 
-        - Categories 
-        - Products 
+        - Edit Accounts
+        - Orders received (products)
+        - Edit orders
+        - Delete orders
+        - Bookings received (services)
+        - Edit bookings
+        - Delete bookings
+        - Categories (products)
+        - Service categories
+        - Add categories
+        - Edit categories
+        - Delete categories
         - URLs
 
 [Back to top ⇧](#the-bike-shop)
 
 ### Homepage
 
-Users will see 4 sections on the homepage with each section split in half. All sections have different background colouring with an image making up one side and a large ‘Enter the Shop’ button with 'enter' icon centred which makes up the other side making it easy for users to click through to the products they are interested in. The 4 sections represent products for sales in regards to mens bikes, women's bikes, urban bikes and accessories.  
+Users will see 4 sections on the homepage with each section split in half. All sections have different background colouring with an image making up one side and a large ‘Enter the Shop’ button with 'enter' icon centred which makes up the other side making it easy for users to click through to the products they are interested in. The 4 sections represent products for sales in regards to mens bikes, women's bikes, urban bikes and accessories.   
 
-At the top just above the sections users will see a fixed banner welcome message which stays in place across all web pages. I feel this nicely breaks up the navbar and body of each page. The banner stating the website name ‘The Bike Shop’ is very important to have on smaller screens because the logo has been removed and replaced by the hamburger menu icon for good UX. The banner is also a link back to the homepage and again important to have on smaller screens when the logo is replaced by the hamburger menu icon. 
+One of the last features added before submitting this project was the homepage carousel to perform a slideshow of selected products linking each one to the relevant products section category. I wanted to add a carousel to my MS3 project, however, i didn't get the chance based on the timescales I was working to. The carousel is positioned half way down the homepage with 9 products rotating. Users have the option to speed up the carousel by clicking the right and left chevron. Indicators are positioned at the bottom of the carousel for users to be aware of the product count for good overall UX.
 
 ### Footer 
 
@@ -528,7 +545,7 @@ Within all the products pages users can browse through the products, each giving
 - Category tag 
 - Rating 
 
-All products are boxed individually showing separation from each.  
+All products have a border around them showing separation from each other.  
 
 The Products available upon deploying the site is as follows: - 
 
@@ -607,7 +624,7 @@ If a user has at least 1 product in their shopping cart they will see the follow
 - ‘Keep Shopping’ text link which takes user back to the products page 
 - ‘Secure Checkout’ button which takes the user to a secure payment page to complete their order.  
 
-I decided to added a mobile and desktop version of this page. On mobile the layout is veritcally aligned and on desktop the layout is horizontal. This provided better UX for customers when they are reviewing their shopping cart. The only issue that on desktop the decrement button doesn't stop as it should when it goes to zero. It keeps going into minus numbers which is a bug which i attempted to fix. Further information can be found on the testing section of this readme. 
+I decided to added a mobile and desktop version of this page. On mobile the layout is veritcally aligned and on desktop the layout is horizontal. This provided better UX for customers when they are reviewing their shopping cart. 
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -703,7 +720,7 @@ Once the booking is completed the user will be taken to a booking success page w
 
 Booking a service is a little different to buying a product. Booking a service doesn't cost anything and therefore the process for users is straight forward. Click the service you want, review it,  complete a contact form, receive a booking order number and await contact from The Bike Shop. 
 
-One feature added is that users can only select one service at a time to make it clear what they are booking. If a user has a service pending to book and changes their mind and pick another service, this would mean that the original service will be removed and replaced with the latest service selected. 
+One feature added is that users can only select one service at a time to make it clear what they are booking. If a user has a service pending to book and changes their mind and picks another service, this would mean that the original service will be removed and replaced with the latest service selected. 
 
 All the users information with the booking number will be available for the shop owner to see in the admin panel at the backend of the site under 'Bookings'
 
@@ -722,6 +739,7 @@ There are Bootstrap Toasts displayed under the navbar, providing users with real
 - Logout
 - Signup
 - Complete an order
+- Service added
 
 Users will see a toast message pop up confirming the following information: - 
 
@@ -732,7 +750,7 @@ Users will see a toast message pop up confirming the following information: -
 
 ‘Error’ toasts are represented with a red colour border and displayed for users when they do the following: - 
 
-- Attempting to remove a product and an error occurs.  
+- Attempting to delete a product from the sit, an error will occur.  
 
 Other success toasts are also in place.  
 
@@ -832,7 +850,7 @@ Shop owners/administrators with superuser access can delete any product by click
 
 ### Admin Access Only
 
-I have put some security on these functions within the add_product, edit_product and delete_product views in views.py found within the product app. I used a @login_required decorator to wrap around all three of these views to check the user before executing and also added if statements to check that only superusers can access these sections of the site and if any other user attempts to access via the URL they will be informed via a popup error message that only store owners have access. 
+I have put some security together on these functions within the add_product, edit_product and delete_product views in views.py found within the product app. I used a @login_required decorator to wrap around all three of these views to check the user before executing and also added if statements to check that only superusers can access these sections of the site and if any other user attempts to access via the URL they will be informed via a popup error message that only store owners have access. 
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -844,11 +862,13 @@ Within the head element I added a head icon that is positioned in the tab of the
 
 - Product colours for users to pick alternative colours. In order for this to work I would need to add more images of the products in different colours so that when a colour is picked the image changes to that relevant colour.  
 
-- Multiple product images in a gallery.  
-
 - Wishlist with heart icon 
 
 - Creating more services for customers to pick
+
+- The option for customers to book a service with a date/time to book which would be connected to the shop owners diary
+
+- The option for customers to book a service and purchase a product at he same time as one transaction. 
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -1000,9 +1020,11 @@ On the App Password screen the process is as follows: -
 
 Requirements 
  
-- Github 
-- Heroku
-- AWS (Amazon Web Services)
+### Github 
+### Heroku
+### AWS 
+
+AWS (Amazon Web Services)
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -1085,10 +1107,9 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 * <a href="http://pep8online.com/" target="_blank">Python PEP8 Online</a>
 * <a href="https://www.emailjs.com/" target="_blank">Email JS</a>
 * <a href="https://cdnjs.com/" target="_blank">cdnjs</a>
-* <a href="https://randomkeygen.com/" target="_blank">RandomKeygen</a> ?
 * <a href="http://ami.responsivedesign.is/#" target="_blank">Am I Responsive</a> 
 * <a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)" target="_blank">Jinja</a>
-* <a href="https://codeinstitute.net/" target="_blank">Code Institute</a> - I reverted back to the Boutique Ado lessons for assistance with my project. 
+* <a href="https://codeinstitute.net/" target="_blank">Code Institute</a>
 
 [Back to top ⇧](#the-bike-shop)
 
