@@ -408,8 +408,8 @@ To finish, I added, committed (initial commit) and pushed the code using the fol
 ![Image template](readme/images/the-bike-shop-database-new.png)
 
 There were some adjustments to the models
-- Products model doesn't include has_colors which is a feature i would look to introduct in the future
-- Order model doesn't include delivery_cost as i decided to keep all deliveries at zero.
+- Products model doesn't include has_colors which is a feature I would look to introduct in the future
+- Order model doesn't include delivery_cost as I decided to keep all deliveries at zero.
 - Services model changed from the original plan to show a full working model. 
 
 ## Features
@@ -464,7 +464,7 @@ Services
 
 On mobile and tablet screens, the navigation bar is displayed using the hamburger menu icon in the top left replacing the logo. This is done to give better UX when viewing the site on smaller screens. Users can click the hamburger menu which opens up the same link options as desktop users. The ‘User’ icon (My Account) and ‘Shopping Cart’ icon (Starts with £0.00) remains in place however the search bar is replaced with the ‘Search’ icon for users to click on. When users click the ‘Search’ icon the search bar appears below. 
 
-When users click the hamburger menu icon this changes to a cross which indicates to the user that the menu is open and can be closed by clicking the cross at any point. I decided to use AlpineJS as a tool to achieve this. 
+When users click the hamburger menu icon this changes to a cross which indicates to the user that the menu is open and can be closed by clicking the cross at any point. I decided to use AlpineJS as a tool to achieve this. At this point I also decided to remove the border around the hamburger menu. 
 
 Navigation links on the top right update depending on the user being logged in and whether that user is a regular shopping or administrator.  
 
@@ -527,7 +527,7 @@ Admin User will have additional access to the following:
 
 Users will see 4 sections on the homepage with each section split in half. All sections have different background colouring with an image making up one side and a large ‘Enter the Shop’ button with 'enter' icon centred which makes up the other side making it easy for users to click through to the products they are interested in. The 4 sections represent products for sales in regards to mens bikes, women's bikes, urban bikes and accessories.   
 
-One of the last features added before submitting this project was the homepage carousel to perform a slideshow of selected products linking each one to the relevant products section category. I wanted to add a carousel to my MS3 project, however, i didn't get the chance based on the timescales I was working to. The carousel is positioned half way down the homepage with 9 products rotating. Users have the option to speed up the carousel by clicking the right and left chevron. Indicators are positioned at the bottom of the carousel for users to be aware of the product count for good overall UX.
+One of the last features added before submitting this project was the homepage carousel to perform a slideshow of selected products linking each one to the relevant products section category. I wanted to add a carousel to my MS3 project, however, I didn't get the chance based on the timescales I was working to. The carousel is positioned half way down the homepage with 9 products rotating. Users have the option to speed up the carousel by clicking the right and left chevron. Indicators are positioned at the bottom of the carousel for users to be aware of the product count for good overall UX.
 
 ### Footer 
 
@@ -988,7 +988,7 @@ Inside settings.py at project level Crispy Forms is installed as an app and buil
 
 ## Sending Emails
 
-In order to setup real email sending i used my googlemail account as it offers a free SMTP server (Simple Mail Transfer Protocal). The steps taken to set this up is as follows: -
+In order to setup real email sending I used my googlemail account as it offers a free SMTP server (Simple Mail Transfer Protocal). The steps taken to set this up is as follows: -
 
 - Login to Gmail account
 - Go to 'settings' (top right)
