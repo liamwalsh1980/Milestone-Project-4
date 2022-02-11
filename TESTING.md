@@ -10,14 +10,14 @@
 
 1. [Automated Testing](#automated-testing)
     * [Django Testing](#django-testing)
-        - Book App
-        - Cart App
-        - Checkout App
-        - Complete App
-        - Home App
-        - Products App
-        - Profiles App
-        - Services App
+        - [Book App Testing](#book-app-testing)
+        - [Cart App Testing](#cart-app-testing)
+        - [Checkout App Testing](#checkout-app-testing)
+        - [Complete App Testing](#complete-app-testing)
+        - [Home App Testing](#home-app-testing)
+        - [Products App Testing](#products-app-testing)
+        - [Profiles App Testing](#profiles-app-testing)
+        - [Services App Testing](#services-app-testing)
     * [W3C Markup Validation Service](#w3c-markup-validation-service)
         - [HTML templates](#html-templates)
     * [W3C CSS Validation Service](#w3c-css-calidation-service)
@@ -90,31 +90,44 @@ Return to my [README Doc](README.md)
 
 ### Django Testing
 
-Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django.
+Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django. Below is an overview report for testing forms, views and models for each app. The reports are generated when i installed coverage in the terminal using the commands: -
 
-#### **Book App**
-![Image template]()
+    - pip3 install coverage
+    - coverage run --source=[APP NAME] manage.py test
 
-#### **Cart App**
-![Image template]()
+View Reports in browser
 
-#### **Checkout App**
-![Image template]()
+    - coverage report
+    - coverage html
+    - python3 -m http.server
 
-#### **Complete App**
-![Image template]()
+#### **Book App Testing**
+![Image template](readme/testing/auto_testing/auto_test_book.png)
 
-#### **Home App**
-![Image template]()
+#### **Cart App Testing**
+![Image template](readme/testing/auto_testing/auto_test_cart.png)
 
-#### **Products App**
-![Image template]()
+#### **Checkout App Testing**
+![Image template](readme/testing/auto_testing/auto_test_checkout.png)
 
-#### **Profiles App**
-![Image template]()
+#### **Complete App Testing**
+![Image template](readme/testing/auto_testing/auto_test_complete.png)
 
-#### **Services App** 
-![Image template]()
+[Back to top ⇧](#the-bike-shop-testing)
+
+#### **Home App Testing**
+![Image template](readme/testing/auto_testing/auto_test_home.png)
+
+#### **Products App Testing**
+![Image template](readme/testing/auto_testing/auto_test_products.png)
+
+#### **Profiles App Testing**
+![Image template](readme/testing/auto_testing/auto_test_profiles.png)
+
+#### **Services App Testing** 
+![Image template](readme/testing/auto_testing/auto_test_services.png)
+
+With more time available, I would continue with auto testingto improve on these scores and look to get all apps as close to 100% as possible.
 
 [Back to top ⇧](#the-bike-shop-testing)
 
