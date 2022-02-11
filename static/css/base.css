@@ -121,23 +121,6 @@ i.fas.fa-times {
     background-color: #852C34; 
 }
 
-/* .mens-color:hover {
-    color: #4286d2;
-}
-
-.womens-color:hover {
-    color: #c96ec1;
-}
-
-.urban-color:hover {
-    color: #968a7c;
-}
-
-.accessories-color:hover {
-    color: #fadf4b;
-} */
-
-
 /* Margin and Padding */
 
 .padding-bottom {
@@ -636,7 +619,6 @@ footer {
 @media (max-width: 576px) {
     .book-now-button {
         margin-top: 5%;
-        margin-bottom: 5%;
     }
 
     .btt-button {
