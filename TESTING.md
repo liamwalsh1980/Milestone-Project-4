@@ -19,8 +19,7 @@
         - [Profiles App Testing](#profiles-app-testing)
         - [Services App Testing](#services-app-testing)
     * [W3C Markup Validation Service](#w3c-markup-validation-service)
-        - [HTML templates](#html-templates)
-    * [W3C CSS Validation Service](#w3c-css-calidation-service)
+    * [W3C CSS Validation Service](#w3c-css-validation-service)
         - [Base](#base)
         - [Checkout](#checkout)
         - [Profile](#profile)
@@ -90,7 +89,7 @@ Return to my [README Doc](README.md)
 
 ### Django Testing
 
-Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django. Below is an overview report for testing forms, views and models for each app. The reports are generated when i installed coverage in the terminal using the commands: -
+Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django. Below is an overview report for testing forms, views and models for each app. The reports are generated when I installed coverage in the terminal using the commands: -
 
     - pip3 install coverage
     - coverage run --source=[APP NAME] manage.py test
@@ -283,7 +282,7 @@ I conducted manual testing across mobile, tablet and desktop screensizes, making
 #### **Tablet screens**
 ![Image template](readme/testing/tablet-screens.png)
 
-#### **Deskop screens**
+#### **Desktop screens**
 ![Image template](readme/testing/desktop-screens.png)
 
 
@@ -404,11 +403,31 @@ I tested the site using Chrome development tools on three different screen sizes
 
 #### **Signup**
 
+- Select 'Signup' from the top right of any page found within 'My Account'
+
+![Image template]()
+
+- Enter an email address (twice for security)
+
+![Image template]()
+
+- Enter a unique username 
+
+![Image template]()
+
+- Enter a password (twice for security)
+
+![Image template]()
+
+- Go to your email account and verify the account
+
+![Image template]()
+
 [Back to top ⇧](#the-bike-shop-testing)
 
 #### **Login**
 
-- Select 'Logout' from the top right of any page
+- Select 'Logout' from the top right of any page found within 'My Account'
 ![Image template](readme/testing/login/login1.png)
 
 - Enter username and password and select 'Login'
@@ -421,7 +440,7 @@ I tested the site using Chrome development tools on three different screen sizes
 
 #### **Logout**
 
-- Select 'Logout' from the top right of any page
+- Select 'Logout' from the top right of any page found within 'My Account'
 ![Image template](readme/testing/logout/logout1.png)
 
 - Confirm logout 
@@ -593,8 +612,21 @@ I tested the site using Chrome development tools on three different screen sizes
 [Back to top ⇧](#the-bike-shop-testing)
             
 ##### **Delete Users**
-- Once logged into the Admin panel delete a user 
+- Once logged into the Admin panel go to 'Users'
 
+![Image template]()
+
+- Select a user and scroll to the bottom
+
+![Image template]()
+
+- Select 'Delete' in red
+
+![Image template]()
+
+- Alternatively, select the user that needs deleting and select 'Delete selected users' above
+
+![Image template]()
 
 ### Bugs
 
@@ -634,13 +666,13 @@ Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ad
 
 **Toast**
 
-- Toast issue when users decided to remove all products from the shopping cart, they see the right message but below there is a the 'GO TO SERVICES' button related to the services section. 
+- Toast success issue: - when users decided to remove all products from their shopping cart, signin or signout they see the right message but below the message there is a 'GO TO SERVICES' button related to the services section. With more time I would look to change the success toasts to correct this. However, with this not fixed I would look at this as a positive and for users to be encouraged to go to the services section to look at booking a service.
 
 ![Image template](readme/testing/toast.png)
 
 **Auto Test**
 
-- One of the automatic tests i added didn't pass and kept coming back failed. After a little research and speaking with other students and a tutor i still couldn't get this test passed. For reference the test is in the test_views.py file within the profiles app. 
+- One of the automatic tests I added didn't pass and kept coming back failed. After a little research and speaking with other students and a tutor i still couldn't get this test passed. For reference the test is in the test_views.py file within the profiles app. 
 
 ![Image template](readme/testing/auto_test1.png)
 ![Image template](readme/testing/auto_test2.png)
@@ -648,4 +680,3 @@ Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ad
 **End of TESTING Documentation**
 
 [Back to top ⇧](#the-bike-shop-testing)
-
