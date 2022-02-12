@@ -1096,12 +1096,32 @@ Then import all service data
 > $ python3 manage.py loaddata services
 
 Then add the superuser account using the same username and password
-> $python3 manage.py createsuperuser
+> $ python3 manage.py createsuperuser
 
 - Username: shopowner
 - Email: lwalsh_1980@hotmail.co.uk
 - Password: ************
 
+Back in settings.py I then added an if/else statement so that when the App is running in Heroku where the database URL environment variable will be defined, POSTGRES is connected otherwise SQLite is connected. If database URL is in os.environ we'll get its value using dj_database_url.parse and use that as the database setting, otherwise the default configuration is used. 
+
+Back in the terminal I installed the following to make sure that deployment would work first time around. 
+
+> $ pip3 install gunicorn
+
+- Freeze requirements
+> $pip3 freeze > requirements.txt
+
+I then added a Procfile to the project level and added the following to run gunicorn and serve the Django App. 
+
+> web: gunicorn the_bike_shop.wsgi:application
+
+Then I logged into Heroku via the terminal using the following command
+> heroku login -i
+
+Then used the following command to make sure that Heroku won't try to collect static files when the project is deployed.
+> $ heroku config:set DISABLE_COLLECTSTATIC=1 --app thebikeshop-project
+
+In settings.py add the hostname of the Heroku app to ALLOWED_HOSTS and add localhost in here as well so that Gitpod will still work. 
 
 
 [Back to top ⇧](#the-bike-shop)
