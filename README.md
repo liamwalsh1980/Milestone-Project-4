@@ -1039,13 +1039,70 @@ On the App Password screen the process is as follows: -
 
 ## Deployment 
 
-Requirements 
+**Requirements**
  
-### Github 
-### Heroku
-### AWS 
+- An IDE, i.e.GitPod
+- Git, for version control
+- GitHub account
+- Python3
+- pip, for Python package installation
+- Heroku account
+- AWS (Amazon Web Services) S3 (simple storage service) account
+- Stripe account
+- Email account
 
-AWS (Amazon Web Services)
+**Heroku**
+- Login to my Heroku
+- Select 'New' and 'Create New App'
+- Project name chosen is 'thebikeshop-project'
+- Select relevant region (Europe)
+
+Now the app is created do the following: -
+
+- Go to Resources
+- In Add-ons search for Heroku Postgres
+- Use the free plan or the project
+
+**Gitpod**
+
+- Install 
+> $ pip3 install dj_database_url
+
+- Install
+> $ pip3 install psycopg2-binary
+
+- Freeze requirements
+> $pip3 freeze > requirements.txt
+
+Go to settings.py to setup the new stores database under import os
+> import dj_database_url
+
+Stating in settings.py go down to databases and add the dj_database_url with the value from Heroku > settings
+
+As the project is now connected to Postgres I ran all migrations again by first seeing what needed migrating by using the following command: -
+> $ python3 manage.py showmigrations
+
+Then migrate all using the command: -
+> $ python3 manage.py migrate
+
+Then import all product data
+> $ python3 manage.py loaddata categories
+
+> $ python3 manage.py loaddata products
+
+Then import all service data
+> $ python3 manage.py loaddata servicecategories
+
+> $ python3 manage.py loaddata services
+
+Then add the superuser account using the same username and password
+> $python3 manage.py createsuperuser
+
+- Username: shopowner
+- Email: lwalsh_1980@hotmail.co.uk
+- Password: ************
+
+
 
 [Back to top ⇧](#the-bike-shop)
 
