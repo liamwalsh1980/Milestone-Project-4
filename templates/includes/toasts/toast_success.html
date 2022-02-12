@@ -41,7 +41,7 @@
             <hr>
             <div class="row">
                 <div class="col">
-                    <a href="{% url 'view_cart' %}" class="btn btn-black checkout-cart-button-toast btn-block rounded-0">
+                    <a href="{% url 'view_cart' %}" class="btn btn-black checkout-cart-button-toast btn-block rounded-0" aria-label="Go to shopping cart">
                         <span class="text-uppercase">Go To Shopping Cart</span>
                         <span class="icon">
                             <!-- <i class="fas fa-lock"></i> -->
@@ -51,7 +51,7 @@
             </div>
         {% else %}
             <h4 class="text-center">
-                <a href="{% url 'service_booking' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Go to Services</a>
+                <a href="{% url 'service_booking' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase" aria-label="Go to services">Go to Services</a>
             </h4>
         {% endif %}      
     </div>

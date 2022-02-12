@@ -24,11 +24,11 @@
                     <div class="col-12 col-md-6 col-lg-4 offset-lg-2 offset-md-0">
                         <div class="image-container my-5">
                             {% if book_service.image %}
-                            <a href="{{ book_service.image.url }}" target="_blank">
+                            <a href="{{ book_service.image.url }}" target="_blank" aria-label="Service Image">
                                 <img class="card-img-top img-fluid" src="{{ book_service.image.url }}" alt="{{ service.name }}">
                             </a>
                             {% else %}
-                            <a href="{{ book_service.image.url }}">
+                            <a href="{{ book_service.image.url } }" aria-label="No Service Image">
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ service.name }}">
                             </a>
                             {% endif %}
@@ -39,7 +39,7 @@
                             <p class="mb-0 font-weight-bold text-black service-header">{{ book_service }}</p>
                             {% if book_service.category %}
                             <p class="small mt-1 mb-0">
-                                <a class="category" href="{% url 'services' %}?category={{ service.category.name }}">
+                                <a class="category" href="{% url 'services' %}?category={{ service.category.name }}" aria-label="Service category">
                                     <i class="fas fa-tag mr-1"></i>{{ book_service.category.friendly_name }}
                                 </a>
                             </p>
@@ -54,7 +54,7 @@
                             <div class="product-container col">
                                 <div class="row">
                                     <div class="col">
-                                        <a href="{% url 'services' %}" class="btn rounded-0">
+                                        <a href="{% url 'services' %}" class="btn rounded-0" aria-label="Go Back">
                                             <span class="icon icon-red">
                                                 <i class="far fa-arrow-alt-circle-left"></i>
                                             </span>
@@ -62,7 +62,7 @@
                                         </a>
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">                            
                                         <h4 class="pb-4">
-                                            <a href="{% url 'complete' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Complete booking</a>
+                                            <a href="{% url 'complete' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase" aria-label="Complete booking">Complete booking</a>
                                         </h4>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
                         <p class="text-black cart-empty">No service has been booked</p>
                     </div>
                     <div class="text-center">
-                        <a href="{% url 'services' %}" class="shop-now-cart-button btn btn-ls rounded-0 text-uppercase py-2">Book a Service</a>
+                        <a href="{% url 'services' %}" class="shop-now-cart-button btn btn-ls rounded-0 text-uppercase py-2" aria-label="Book a service">Book a Service</a>
                     </div>
                 {% endif %}
                 </div>

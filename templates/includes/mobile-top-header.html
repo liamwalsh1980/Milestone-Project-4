@@ -1,6 +1,6 @@
 <ul>
     <li class="navbar-size list-inline-item">
-      <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="search">
           <div class="text-center">
               <div><i class="fas fa-search fa-lg"></i></div>
               <p class="my-0">Search</p>
@@ -11,7 +11,7 @@
               <div class="input-group w-100">
                   <input class="form-control border border-black rounded-0 text-black" type="text" name="q" placeholder="Search">
                   <div class="input-group-append">
-                      <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                      <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit" aria-label="Search products">
                           <span class="icon">
                               <i class="fas fa-search"></i>
                           </span>
@@ -22,7 +22,7 @@
       </div>
   </li>
   <li class="navbar-size list-inline-item dropdown">
-      <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="My account">
           <div class="text-center">
               <div><i class="fas fa-user fa-lg"></i></div>
               <p class="my-0">My Account</p>
@@ -31,19 +31,19 @@
       <div class="dropdown-menu border-0 background-navbar prods" aria-labelledby="user-options">
           {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-                  <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                  <a href="{% url 'admin' %}" class="dropdown-item">Admin Panel</a>
+                  <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Add product">Product Management</a>
+                  <a href="{% url 'admin' %}" class="dropdown-item" aria-label="Admin">Admin Panel</a>
               {% endif %}
-              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My profile">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Logout">Logout</a>
           {% else %}
-              <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
-              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Sign up">Sign Up</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login">Login</a>
           {% endif %}
       </div>
   </li>
   <li class="navbar-size list-inline-item">
-      <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
+      <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}" aria-label="Shopping basket">
           <div class="text-center">
               <div><i class="fas fa-shopping-cart fa-lg"></i></div>
               <p class="my-0 total">

@@ -36,7 +36,7 @@
             {% for item in cart_items %}
                 <div class="row">
                     <div class="col-3 mb-1">
-                        <a class="" href="{% url 'product_detail' item.product.id %}">
+                        <a class="" href="{% url 'product_detail' item.product.id %}" aria-label="Product image">
                             {% if item.product.image %}
                                 <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                             {% else %}
@@ -91,8 +91,8 @@
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label text-black" for="id-save-info">
-                                    <a class="red-text" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="red-text" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="red-text" href="{% url 'account_signup' %}" aria-label="Signup">Create an account</a> or 
+                                    <a class="red-text" href="{% url 'account_login' %}" aria-label="Login">login</a> to save this information
                                 </label>
 							{% endif %}
 						</div>
@@ -104,13 +104,13 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="submit-button text-right my-2 mx-3">                    
-                    <a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
+                    <a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0" aria-label="View cart">
                         <span class="icon">
                             <i class="adjust-cart far fa-arrow-alt-circle-left icon-red"></i>
                         </span>
                         <span class="text-uppercase adjust-cart text-black">Adjust Cart</span>
                     </a>
-                    <button id="submit-button" class="btn checkout-cart-button rounded-0">
+                    <button id="submit-button" class="btn checkout-cart-button rounded-0" aria-label="Complete order">
                         <span class="font-weight-bold text-uppercase">Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>

@@ -29,11 +29,11 @@
                             <div class="col-sm-6 col-md-6 col-lg-4">
                                 <div class="card h-100 border-1 rounded-0 border-dark">
                                     {% if service.image %}
-                                    <a href="{% url 'service_detail' service.id %}" class="text-center">
+                                    <a href="{% url 'service_detail' service.id %}" class="text-center" aria-label="Service image">
                                         <img class="card-img-top img-fluid w-50" src="{{ service.image.url }}" alt="{{ service.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="{% url 'service_detail' service.id %}" class="text-center">
+                                    <a href="" class="text-center">
                                         <img class="card-img-top img-fluid w-50" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ service.name }}">
                                     </a>
                                     {% endif %}
@@ -59,7 +59,7 @@
             
                                             <div class="col-12 text-center mt-3">
                                                 <h4>
-                                                    <a href="{% url 'service_detail' service.id %}" class="btn btn-black rounded-0 text-uppercase mt-3">More Info</a>
+                                                    <a href="{% url 'service_detail' service.id %}" class="btn btn-black rounded-0 text-uppercase mt-3" aria-label="More info">More Info</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -88,7 +88,7 @@
             </div>
             <div class="col-12 text-center mt-4 pb-4">
                 <h4>
-                    <a href="{% url 'service_booking' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Go to Booking</a>
+                    <a href="{% url 'service_booking' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase" aria-label="Go to booking">Go to Booking</a>
                 </h4>
             </div>
             <div class="padding-bottom"></div>

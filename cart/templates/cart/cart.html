@@ -55,7 +55,7 @@
                                                     <div class="input-group-prepend">
                                                         <button class="decrement-qty btn btn-sm btn-qty rounded-0 decrement-qty_{{ item.item_id }} 
                                                             {% if item.size %}decrement-size_{{ item.item_id }}_{{ item.size }}{% endif %}" 
-                                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
+                                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}" aria-label="Decrement quantity">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm"></i>
                                                             </span>
@@ -68,7 +68,7 @@
                                                     <div class="input-group-append">
                                                         <button class="increment-qty btn btn-sm btn-qty rounded-0 increment-qty_{{ item.item_id }} 
                                                             {% if item.size %}increment-size_{{ item.item_id }}_{{ item.size }}{% endif %}"
-                                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
+                                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}" aria-label="Increment quantity">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm"></i>
                                                             </span>
@@ -80,8 +80,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                            <a class="update-qty update-link text-uppercase pl-5"><small>Update Qty</small></a>
-                                            <a class="remove-item float-right text-uppercase pr-5" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                            <a class="update-qty update-link text-uppercase pl-5" aria-label="Update quantity"><small>Update Qty</small></a>
+                                            <a class="remove-item float-right text-uppercase pr-5" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}" aria-label="Remove item"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-2 text-center"><strong>Product Subtotal:</strong> £{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -105,13 +105,13 @@
                         </div>
                         <div class="col-12">
                             <tr>
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg" aria-label="Keep shopping">
                                     <span class="icon icon-red">
                                         <i class="far fa-arrow-alt-circle-left"></i>
                                     </span>
                                     <span class="text-uppercase text-black">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'checkout' %}" class="checkout-cart-button btn btn-ls rounded-0 text-uppercase py-2">
+                                <a href="{% url 'checkout' %}" class="checkout-cart-button btn btn-ls rounded-0 text-uppercase py-2" aria-label="Go to secure checkout">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
@@ -122,7 +122,7 @@
                     </div>
                     <div class="padding-bottom"></div>
                     <div class="btt-button rounded-circle border mb-2">
-                        <a class="btt-link d-flex h-100">
+                        <a class="btt-link d-flex h-100" aria-label="Go to the top">
                             <i class="fas fa-arrow-up mx-auto my-auto"></i>
                         </a>	
                     </div>
@@ -168,7 +168,7 @@
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-qty rounded-0 decrement-qty_{{ item.item_id }} 
                                                         {% if item.size %}decrement-size_{{ item.item_id }}_{{ item.size }}{% endif %}" 
-                                                        data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
+                                                        data-item_id="{{ item.item_id }}" data-size="{{ item.size }}" aria-label="Decrement quantity">
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -181,7 +181,7 @@
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-qty rounded-0 increment-qty_{{ item.item_id }} 
                                                         {% if item.size %}increment-size_{{ item.item_id }}_{{ item.size }}{% endif %}"
-                                                        data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
+                                                        data-item_id="{{ item.item_id }}" data-size="{{ item.size }}" aria-label="Increment quantity">
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>
@@ -193,8 +193,8 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-qty update-link text-uppercase"><small>Update Qty</small></a>
-                                    <a class="remove-item float-right text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                    <a class="update-qty update-link text-uppercase" aria-label="Update quantity"><small>Update Qty</small></a>
+                                    <a class="remove-item float-right text-uppercase" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}" aria-label="Remove item"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -215,13 +215,13 @@
                         </tr>
                         <tr>
                             <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg" aria-label="Keep shopping">
                                     <span class="icon icon-red">
                                         <i class="far fa-arrow-alt-circle-left"></i>
                                     </span>
                                     <span class="text-uppercase text-black">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'checkout' %}" class="checkout-cart-button btn btn-ls rounded-0 text-uppercase py-2">
+                                <a href="{% url 'checkout' %}" class="checkout-cart-button btn btn-ls rounded-0 text-uppercase py-2" aria-label="Go to secure checkout">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
@@ -237,7 +237,7 @@
                     <p class="text-black cart-empty">Your cart is empty!</p>
                 </div>
                 <div class="text-center">
-                    <a href="{% url 'products' %}" class="shop-now-cart-button btn btn-ls rounded-0 text-uppercase py-2">Shop Now</a>
+                    <a href="{% url 'products' %}" class="shop-now-cart-button btn btn-ls rounded-0 text-uppercase py-2" aria-label="Shop now">Shop Now</a>
                 </div>
             {% endif %}
             <div class="padding-bottom"></div>

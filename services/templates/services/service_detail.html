@@ -18,7 +18,7 @@
                         <h2 class="mb-0 font-weight-bold sub-header product-header">{{ service.name }}</h2>
                     </div>
                     <p class="text-muted mt-3 text-center">
-                        <a class="category-badge text-decoration-none" href="{% url 'services' %}">
+                        <a class="category-badge text-decoration-none" href="{% url 'services' %}" aria-label="All services">
                             <span class="p-2 badge text-black rounded-0 border border-dark">All Services</span>
                         </a>
                     </p>
@@ -28,7 +28,7 @@
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2 offset-md-0">
                     <div class="image-container my-5">
                         {% if service.image %}
-                        <a href="{{ service.image.url }}" target="_blank">
+                        <a href="{{ service.image.url }}" target="_blank" aria-label="Service image">
                             <img class="card-img-top img-fluid" src="{{ service.image.url }}" alt="{{ service.name }}">
                         </a>
                         {% else %}
@@ -43,7 +43,7 @@
                         <p class="mb-0 font-weight-bold text-black service-header">{{ service.name }}</p>
                         {% if service.category %}
                         <p class="small mt-1 mb-0">
-                            <a class="category" href="{% url 'services' %}?category={{ service.category.name }}">
+                            <a class="category" href="{% url 'services' %}?category={{ service.category.name }}" aria-label="Service category">
                                 <i class="fas fa-tag mr-1"></i>{{ service.category.friendly_name }}
                             </a>
                         </p>
@@ -64,7 +64,7 @@
                                 {% csrf_token %}
                                 <div class="row">
                                     <div class="col">
-                                        <a href="{% url 'services' %}" class="btn rounded-0">
+                                        <a href="{% url 'services' %}" class="btn rounded-0" aria-label="Go back">
                                             <span class="icon icon-red">
                                                 <i class="far fa-arrow-alt-circle-left"></i>
                                             </span>
@@ -73,7 +73,7 @@
                                         <input type="submit" class="btn btn-black rounded-0 text-uppercase my-3" value="Add to Booking">
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                         <h4 class="pb-4">
-                                            <a href="{% url 'service_booking' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase">Go to booking</a>
+                                            <a href="{% url 'service_booking' %}" class="book-now-button btn btn-ls rounded-0 text-uppercase" aria-label="Go to booking">Go to booking</a>
                                         </h4>
                                     </div>
                                 </div>

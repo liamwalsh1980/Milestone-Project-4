@@ -11,39 +11,39 @@
 
 {% block content %}
 
-<div class="ipad-mt d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row mens-bg-color">
+<div class="ipad-mt d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row mens-bg-color" aria-labelledby="mens-bikes">
     <div class="px-0">
         <img src="/media/mens-bikes.jpg" class="hero-images" alt="Mens Bikes"> 
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row ">
         <div class="m-4">
             <h2>Mens Bikes</h2>
-            <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2">Enter the shop <i class="fas fa-sign-in-alt"></i></a>
+            <a href="{% url 'products' %}?category=mens_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2" aria-label="Mens bikes">Enter the shop <i class="fas fa-sign-in-alt"></i></a>
             <h5 class="pt-4 text-capitalize">whether you're a cycling newbie or enthusiast, the bike shop will have a bike for you!</h5>
         </div>
     </div>
 </div>
-<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse womens-bg-color">
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse womens-bg-color" aria-labelledby="womens-bikes">
     <div class="px-0">
         <img src="/media/womens-bikes.jpg" class="hero-images" alt="Womens Bikes"> 
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
         <div class="m-4">
             <h2>Women's Bikes</h2>
-            <a href="{% url 'products' %}?category=womens_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2">Enter the shop <i class="fas fa-sign-in-alt"></i></a>
+            <a href="{% url 'products' %}?category=womens_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2" aria-label="Womens bikes">Enter the shop <i class="fas fa-sign-in-alt"></i></a>
             <h5 class="pt-4 text-capitalize">struggling to find a ladies bike that meets your expectations? Look no further than the current range at The Bike Shop!</h5>
         </div>
     </div>
 </div>
-<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row carousel-bg-color py-4">
-    <div class="col-lg-4 col-md-4 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row carousel-bg-color py-4" aria-labelledby="carousel">
+    <div class="col-lg-4 col-md-4 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-labelledby="products">
         <div class="m-2">
             <h2 class="text-black">Products</h2>
             <ul class="homepage-list">
-                <li class="py-2"><a href="{% url 'products' %}?category=mens_bikes" class="text-uppercase remove-underline products-color mens-color">Mens Bikes</a></li>
-                <li class="py-2"><a href="{% url 'products' %}?category=womens_bikes" class="text-uppercase remove-underline products-color womens-color">Womens Bikes</a></li>
-                <li class="py-2"><a href="{% url 'products' %}?category=urban_bikes" class="text-uppercase remove-underline products-color urban-color">Urban Bikes</a></li>
-                <li class="py-2"><a href="{% url 'products' %}?category=helmets,other_accessories" class="text-uppercase remove-underline products-color accessories-color">Accessories</a></li>
+                <li class="py-2"><a href="{% url 'products' %}?category=mens_bikes" class="text-uppercase remove-underline products-color mens-color" aria-label="Mens bikes">Mens Bikes</a></li>
+                <li class="py-2"><a href="{% url 'products' %}?category=womens_bikes" class="text-uppercase remove-underline products-color womens-color" aria-label="Womens bikes">Womens Bikes</a></li>
+                <li class="py-2"><a href="{% url 'products' %}?category=urban_bikes" class="text-uppercase remove-underline products-color urban-color" aria-label="Urban bikes">Urban Bikes</a></li>
+                <li class="py-2"><a href="{% url 'products' %}?category=helmets,other_accessories" class="text-uppercase remove-underline products-color accessories-color" aria-label="Accessories">Accessories</a></li>
             </ul>
         </div>
     </div>
@@ -61,103 +61,103 @@
                 <li data-target="#carouselIndicators" data-slide-to="8"></li>
             </ol>
             <div class="carousel-inner">
-                <a class="carousel-item active" href="{% url 'products' %}?category=mens_bikes">
+                <a class="carousel-item active" href="{% url 'products' %}?category=mens_bikes" aria-label="Mens bikes">
                     <img src="/media/34.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="First slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black border rounded mens-header">Mens Bikes</h5>
+                        <h5 class="text-black border border-light rounded mens-header">Mens Bikes</h5>
                     </div>
                 </a>
-                <a class="carousel-item" href="{% url 'products' %}?category=other_accessories">
+                <a class="carousel-item" href="{% url 'products' %}?category=other_accessories" aria-label="Accessories">
                     <img src="/media/49.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Second slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black text-black border rounded accessories-header">Accessories</h5>
+                        <h5 class="text-black text-black border border-light rounded accessories-header">Accessories</h5>
                     </div>
                 </a>
-                <a class="carousel-item" href="{% url 'products' %}?category=helmets"> 
+                <a class="carousel-item" href="{% url 'products' %}?category=helmets" aria-label="Helmets"> 
                     <img src="/media/41.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Third slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black text-black border rounded accessories-header">Helmets</h5>
+                        <h5 class="text-black text-black border border-light rounded accessories-header">Helmets</h5>
                     </div>
                 </a>
-                <a class="carousel-item" href="{% url 'products' %}?category=urban_bikes">
+                <a class="carousel-item" href="{% url 'products' %}?category=urban_bikes" aria-label="Urban bikes">
                     <img src="/media/16.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Fourth slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black text-black border rounded urban-header">Urban Bikes</h5>
+                        <h5 class="text-black text-black border border-light rounded urban-header">Urban Bikes</h5>
                     </div>
                 </a>
-                <a class="carousel-item" href="{% url 'products' %}?category=other_accessories">
+                <a class="carousel-item" href="{% url 'products' %}?category=other_accessories" aria-label="Accessories">
                     <img src="/media/50.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Fifth slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black text-black border rounded accessories-header">Accessories</h5>
+                        <h5 class="text-black text-black border border-light rounded accessories-header" aria-label="Accessories">Accessories</h5>
                     </div>
                 </a>
-                <a class="carousel-item" href="{% url 'products' %}?category=womens_bikes">
+                <a class="carousel-item" href="{% url 'products' %}?category=womens_bikes" aria-label="Womens bikes">
                     <img src="/media/10.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Sixth slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black text-black border rounded womens-header">Womens Bikes</h5>
+                        <h5 class="text-black text-black border border-light rounded womens-header">Womens Bikes</h5>
                     </div>
                 </a>
-                <a class="carousel-item" href="{% url 'products' %}?category=mens_bikes">
+                <a class="carousel-item" href="{% url 'products' %}?category=mens_bikes" aria-label="Mens bikes">
                     <img src="/media/11.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Seventh slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black text-black border rounded mens-header">Mens Bikes</h5>
+                        <h5 class="text-black text-black border border-light rounded mens-header">Mens Bikes</h5>
                     </div>
                 </a>
-                <a class="carousel-item" href="{% url 'products' %}?category=helmets">
+                <a class="carousel-item" href="{% url 'products' %}?category=helmets" aria-label="Helmets">
                     <img src="/media/39.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Eigth slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black text-black border rounded accessories-header">Helmets</h5>
+                        <h5 class="text-black text-black border border-light rounded accessories-header">Helmets</h5>
                     </div>
                 </a>
-                <a class="carousel-item" href="{% url 'products' %}?category=mens_bikes">
+                <a class="carousel-item" href="{% url 'products' %}?category=mens_bikes" aria-label="Mens bikes">
                     <img src="/media/35.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Ninth slide">
                     <div class="carousel-caption">
-                        <h5 class="text-black text-black border rounded mens-header">Mens Bikes</h5>
+                        <h5 class="text-black text-black border border-light rounded mens-header">Mens Bikes</h5>
                     </div>
                 </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev" aria-label="Previous slide">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next" aria-label="Next slide">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row ">
+    <div class="col-lg-4 col-md-4 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-labelledby="services">
         <div class="m-2">
             <h2 class="text-black">Services</h2>
             <ul class="homepage-list">
-                <li class="py-2"><a href="{% url 'services' %}4" class="text-uppercase remove-underline services-color">Cleaning Service</a></li>
-                <li class="py-2"><a href="{% url 'services' %}5" class="text-uppercase remove-underline services-color">Maintenace</a></li>
-                <li class="py-2"><a href="{% url 'services' %}6" class="text-uppercase remove-underline services-color">Sell Your Bike</a></li>
-                <li class="py-2"><a href="{% url 'services' %}" class="text-uppercase remove-underline services-color">All Services</a></li>
+                <li class="py-2"><a href="{% url 'services' %}4" class="text-uppercase remove-underline services-color" aria-label="Cleaning service">Cleaning Service</a></li>
+                <li class="py-2"><a href="{% url 'services' %}5" class="text-uppercase remove-underline services-color" aria-label="Maintenace">Maintenace</a></li>
+                <li class="py-2"><a href="{% url 'services' %}6" class="text-uppercase remove-underline services-color" aria-label="Sell your bike">Sell Your Bike</a></li>
+                <li class="py-2"><a href="{% url 'services' %}" class="text-uppercase remove-underline services-color" aria-label="All services">All Services</a></li>
             </ul>
         </div>
     </div>
 </div>
-<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row urban-bg-color">
+<div class="d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row urban-bg-color" aria-labelledby="urban-bikes">
     <div class="px-0">
         <img src="/media/urban-bikes.jpg" class="hero-images" alt="Urban Bikes"> 
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row ">
         <div class="m-4">
             <h2>Urban Bikes</h2>
-            <a href="{% url 'products' %}?category=urban_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2">Enter the shop <i class="fas fa-sign-in-alt"></i></a>
+            <a href="{% url 'products' %}?category=urban_bikes" class="shop-now-button btn btn-ls text-uppercase mt-2" aria-label="Urban bikes">Enter the shop <i class="fas fa-sign-in-alt"></i></a>
             <h5 class="pt-4 text-capitalize">take back the city with the bike shops range of the best mens and womens urban bikes!</h5>
         </div>
     </div>
 </div>
-<div class="pb-1 pb-md-0 d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse accessories-bg-color">
+<div class="pb-1 pb-md-0 d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse accessories-bg-color" aria-labelledby="accessories">
     <div class="px-0">
         <img src="/media/accessories.jpg" class="hero-images" alt="Biking Accessories"> 
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
         <div class="m-4">
             <h2>Accessories</h2>
-            <a href="{% url 'products' %}?category=other_accessories" class="shop-now-button btn btn-ls text-uppercase mt-2">Enter the shop <i class="fas fa-sign-in-alt"></i></a>
+            <a href="{% url 'products' %}?category=other_accessories" class="shop-now-button btn btn-ls text-uppercase mt-2" aria-label="Accessories">Enter the shop <i class="fas fa-sign-in-alt"></i></a>
             <h5 class="pt-4 homepage-text text-capitalize">all the bike accessories you need are available online and in-store from the bike shop!</h5>
         </div>
     </div>
