@@ -1123,6 +1123,25 @@ Then used the following command to make sure that Heroku won't try to collect st
 
 In settings.py add the hostname of the Heroku app to ALLOWED_HOSTS and add localhost in here as well so that Gitpod will still work. 
 
+With this done I then commited the changes and pushed the code to Github.
+
+I then used the commands in this order as the app was created on the Heroku website
+> $ heroku git:remote -a thebikeshop-project
+> $ git push heroku main
+
+Once completed I received the following url (without static files at this stage)
+
+> https://thebikeshop-project.herokuapp.com/
+
+I then went to my Heroku account and setup automatic deployment when I push to github.
+
+In Heroku I went to Deploy and search for the relevant repository and connect. 
+**liamwalsh1980/Milestone-Project-4**
+
+I then selected 'Enable Automatic Deploys' below and now my code will automatically be deployed to Heroku everytime I push to Github. 
+
+To test this I changed the secret key value and changed Debug value in settings.py. 
+
 
 [Back to top ⇧](#the-bike-shop)
 
