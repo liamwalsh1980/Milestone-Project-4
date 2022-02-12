@@ -20,18 +20,22 @@ body {
 
 .mens-bg-color {
     background-color: #4286d2;
+    border-bottom: solid 2px #852C34;
 }
 
 .womens-bg-color {
     background-color: #c96ec1;
+    border-bottom: solid 2px #852C34;
 }
 
 .urban-bg-color {
     background-color: #968a7c;
+    border-top: solid 2px #852C34;
 }
 
 .accessories-bg-color {
     background-color: #fadf4b;
+    border-top: solid 2px #852C34;
 }
 
 .logo-font {
