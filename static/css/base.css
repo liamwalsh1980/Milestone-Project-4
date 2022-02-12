@@ -5,7 +5,7 @@ html {
     height: 100%;
 }
 
- /* Homepage */
+ /* -------------------------------- Homepage */
 
 body {
     background-color: #D6D0CE;
@@ -16,7 +16,7 @@ body {
 .hero-images {
     width: 100%;
     height: auto;
-  }
+}
 
 .mens-bg-color {
     background-color: #4286d2;
@@ -80,7 +80,7 @@ i.fas.fa-times {
     color: #852C34 !important;
 }
 
-/* Carousel */
+/* -------------------------------- Carousel */
 
 .carousel-bg-color {
     background-color: white;
@@ -121,7 +121,23 @@ i.fas.fa-times {
     background-color: #852C34; 
 }
 
-/* Margin and Padding */
+.mens-header {
+    background-color: rgba(66,134,210,0.8);
+}
+
+.womens-header {
+    background-color: rgba(201,110,193,0.8);
+}
+
+.urban-header {
+    background-color: rgba(150,138,124,0.8);
+}
+
+.accessories-header {
+    background-color: rgba(250,223,75,0.8); 
+}
+
+/* -------------------------------- Margin and Padding */
 
 .padding-bottom {
     padding-bottom: 20%;
@@ -131,7 +147,7 @@ i.fas.fa-times {
     padding: 20px;
 }
 
-/* Buttons */
+/* -------------------------------- Buttons */
 
 .btn-black {
     background: #131418;
@@ -214,7 +230,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* Colours */
+/* -------------------------------- Colours */
 
 .background-navbar {
     background-color: #D6D0CE;
@@ -291,7 +307,7 @@ em:focus,
     color: #4286d2 !important;
 }
 
-/* Shopping cart */
+/* -------------------------------- Shopping cart */
 
 p.total, .fa-shopping-cart {
     color:#852C34 !important;
@@ -311,7 +327,7 @@ a.remove-item:hover {
     color: #852C34;
 }
 
-/* Font sizes */
+/* -------------------------------- Font sizes */
 
 .service-header,
 .product-header {
@@ -330,7 +346,7 @@ a.remove-item:hover {
     font-size: 20px;
 }
 
-/* Templates */
+/* -------------------------------- Templates */
 
 .overlay {
 	height: 100%;
@@ -355,7 +371,7 @@ a.category-badge > span.badge:hover {
     color: #fadf4b !important;
 }
 
-/*  Footer */
+/* -------------------------------- Footer */
 
 .footer {
     position: fixed;
@@ -379,10 +395,10 @@ a.category-badge > span.badge:hover {
 }
 
 footer {
-    z-index: 2;
+    z-index: 99;
 }
 
-/* Toasts */
+/* -------------------------------- Toasts */
 
 .message-container {
     position: fixed;
@@ -411,52 +427,8 @@ footer {
     border-width: medium;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* -------------------------------- Convenience classes - colors copied from Bootstrap */
 
-/* .arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 15%;
-} */
-
-/* Convenience classes - colors copied from Bootstrap */
-
-/* .arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-} */
 
 .cart-notification-wrapper {
     height: 150px;
@@ -464,11 +436,11 @@ footer {
     overflow-y: auto;
 }
 
-/* Allauth form formatting */
+/* -------------------------------- Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #757273; /* text-secondary */
+    margin-top: 1.5rem;
+    color: #757273; 
 }
 
 .allauth-form-inner-content input {
@@ -486,7 +458,6 @@ footer {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
 	display: inline-block;
     font-weight: 400;
     color: #D6D0CE;
@@ -503,7 +474,7 @@ footer {
     line-height: 1.5;
     border-radius: 0;
 
-    /* standard bootstrap btn transitions */
+/* -------------------------------- standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
@@ -515,10 +486,10 @@ footer {
 }
 
 .allauth-form-inner-content a {
-	color: #852C34; /* text-info */
+	color: #852C34;
 }
 
-/* Product Form */
+/* -------------------------------- Product Form */
 
 .btn-file {
     position: relative;
@@ -659,12 +630,6 @@ footer {
         margin-top: 30px !important;
     }
 }
-
-/* @media (min-width: 501px) and (max-width: 991px) {
-    .ipad-mt {
-        margin-top: 20px;
-    }
-} */
 
 /* Mobile navbar with icons resized */
 

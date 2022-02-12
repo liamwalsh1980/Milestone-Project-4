@@ -669,6 +669,8 @@ I tested the site using Chrome development tools on three different screen sizes
 
 ![Image template](readme/images/bugs/bug-product-detail-page-fixed3.png)
 
+After adding the carousel to the homepage, I had the same issue with the title headers and carousel indicator. I therefore increased the z index to z-index:99 to make sure this fixed the issue. 
+
 **Quantity Decrement**
 
 - The quantity decrement in shopping cart on desktop should stop at zero but users would be able to keep reducing the quantity into minus numbers. If the user updated the quantity with a minus figure the item would just be removed from the cart. As this wasn't a big issue and with limited time left on this project I decided to leave this bug outstanding. 
