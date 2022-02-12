@@ -78,6 +78,7 @@
             - [Delete Orders](#delete-orders)
             - [Delete Bookings](#delete-bookings)
             - [Delete Users](#delete-users) to complete
+    * [Links](#links)
     * [Bugs](#bugs) to complete
     * [Bugs Outstanding](#bugs-outstanding) to complete
     
@@ -650,6 +651,12 @@ I tested the site using Chrome development tools on three different screen sizes
 - Alternatively, select the user that needs deleting and select 'Delete selected users' above
 
 ![Image template]()
+
+### Links
+
+I tested all internal links across the site making sure that users would be taken to the right page they click on. This included products, services, superusers logged in, standard users logged and guests. 
+
+I test all external links found in the footer of the site. This included the 5 social media icons to Facebook, Instagram, Twitter, Spotify and Youtube. 
 
 ### Bugs
 
