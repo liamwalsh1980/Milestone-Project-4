@@ -163,9 +163,30 @@ Django Data Structure - MVT architecture (Model Template View)
 
 ## User Stories
 
-Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user-stories-before.pdf" target="_blank">User Stories</a>
+| **User Story Id** | **User Story Statement - Overall** | **Testing** |
+| --- | --- | --- |
+| 1 | Regular shopping - I want to be able to view products and services so that I can select and purchase a product or book a service | See [Testing document](TESTING.md) |
+| 2 | Regular shopping - I want to be able to view a product or service in detail so that I can be sure that it’s the right product or service I'm looking for | See [Testing document](TESTING.md) |
+| 3 | Regular shopping - I want to be able to view what I have placed in my shopping cart so that I can make sure that I spend within my budget set for this product | See [Testing document](TESTING.md) |
+| 4 | Regular shopping - I want to be able to search for a specific product without scrolling through all the products so that I can then select an item and make a purchase quicker | See [Testing document](TESTING.md) |
+| 5 | Regular shopping - I want to be able to sort products into price order so that I can select the best product for my money and within budget | See [Testing document](TESTING.md) |
+| 6 | Regular shopping - I want to be able to sort a specific product based on other users purchasing the product so that I can be confident that I will enjoy the product knowing it's been well received by others | See [Testing document](TESTING.md) |
+| 7 | Regular shopping - I want to be able to register an account with a username and password so that I can access my account to make quick purchases whenever I need to | See [Testing document](TESTING.md) |
+| 8 | Registered shopping - I want to be able to login and logout of the site by computer or smartphone so that I can access my account with my personal details at any time and know that my details are safe when logging out | See [Testing document](TESTING.md) |
+| 9 | Registered shopping - I want to be able to have the option to change my password to my account so that I can continue to gain access if and when I forget my password | See [Testing document](TESTING.md) |
+| 10 | Regular shopping - I want to be able to select the right product based on size so that I can get maximum enjoyment from my purchase with the right size for comfort | See [Testing document](TESTING.md) |
+| 11 | Registered shopping - I want to be able to Look back at placed orders so that I can check that I have purchased the right product | See [Testing document](TESTING.md) |
+| 12 | Regular shopping - I want to be able to access my shopping cart before purchasing so that I can so I can potentially adjust, remove and/or add an item before committing to a purchase | See [Testing document](TESTING.md) |
+| 13 | Shop owner - I want to be able to check a user's profile so that I check whether there's any orders outstanding to complete | See [Testing document](TESTING.md) |
+| 14 | Shop owner - I want to be able to add a new product so that I can increase my store product range and potentially increase sales | See [Testing document](TESTING.md) |
+| 15 | Shop owner - I want to be able to update a product so that I can inform my customers of the most up to date information to maximise sales | See [Testing document](TESTING.md) |
+| 16 | Shop owner - I want to be able to delete a product so that I can successfully remove an item that is no longer in stock or for sale | See [Testing document](TESTING.md) |
+| 17 | Shop owner - I want to be able to add a new service so that I can increase the service range to increase my customer base | See [Testing document](TESTING.md) |
+| 18 | Shop owner - I want to be able to update a service so that I can inform customers of the most up to date information relevant to the service | See [Testing document](TESTING.md) |
+| 19 | Shop owner - I want to be able to delete a service so that I can successfully remove a service that is no longer available | See [Testing document](TESTING.md) |
+| 20 | Shop owner - I want to be able to access products, services, orders, bookings and user profiles so that I can make it easy to view the store products, services, current orders, bookings and user profiles active | See [Testing document](TESTING.md) |
 
-
+Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user-stories-before.pdf" target="_blank">User Stories</a> on pdf. 
 
 ## Development Process 
 

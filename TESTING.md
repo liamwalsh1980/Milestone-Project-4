@@ -296,13 +296,30 @@ I conducted manual testing across mobile, tablet and desktop screensizes, making
 
 ### User Stories Complete
 
-Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_complete.pdf" target="_blank">User Stories</a> completed. 
+| **User Story Id** | **User Story Statement - Overall** | **Testing** |
+| --- | --- | --- |
+| 1 | Regular shopping - I want to be able to view products and services so that I can select and purchase a product or book a service | To do this, go to the Homepage > all products/all services |
+| 2 | Regular shopping - I want to be able to view a product or service in detail so that I can be sure that it’s the right product or service I'm looking for | To do this, go to Products/services > select one |
+| 3 | Regular shopping - I want to be able to view what I have placed in my shopping cart so that I can make sure that I spend within my budget set for this product | To do this, go to the shopping cart (top right) |
+| 4 | Regular shopping - I want to be able to search for a specific product without scrolling through all the products so that I can then select an item and make a purchase quicker | To do this, go to the Homepage > use search facility at the top centre |
+| 5 | Regular shopping - I want to be able to sort products into price order so that I can select the best product for my money and within budget | To do this, go to the Homepage > all products > By price |
+| 6 | Regular shopping - I want to be able to sort a specific product based on other users purchasing the product so that I can be confident that I will enjoy the product knowing it's been well received by others | To do this, go to the Homepage > select product type > Rating (high to low) |
+| 7 | Regular shopping - I want to be able to register an account with a username and password so that I can access my account to make quick purchases whenever I need to | To do this, go to My Account (top right) > Signup |
+| 8 | Registered shopping - I want to be able to login and logout of the site by computer or smartphone so that I can access my account with my personal details at any time and know that my details are safe when logging out | To do this, go to My Account (top right) > Login/Logout |
+| 9 | Registered shopping - I want to be able to have the option to change my password to my account so that I can continue to gain access if and when I forget my password | To do this, go to My Account (top right) > Login > select 'forgot password' link) |
+| 10 | Regular shopping - I want to be able to select the right product based on size so that I can get maximum enjoyment from my purchase with the right size for comfort | To do this, go to a product and pick the right size (mandatory) |
+| 11 | Registered shopping - I want to be able to Look back at placed orders so that I can check that I have purchased the right product | To do this, go to Login > My Account > My Profile > View order history |
+| 12 | Regular shopping - I want to be able to access my shopping cart before purchasing so that I can so I can potentially adjust, remove and/or add an item before committing to a purchase | To do this, go to The shopping cart > view products pending to order |
+| 13 | Shop owner - I want to be able to check a user's profile so that I check whether there's any orders outstanding to complete | To do this, go to My Account (top right) > Admin Panel > Django Adminstriation > Orders (for products) Bookings (for services) |
+| 14 | Shop owner - I want to be able to add a new product so that I can increase my store product range and potentially increase sales | To do this, go to My Account (top right) > Product Management > Add Product |
+| 15 | Shop owner - I want to be able to update a product so that I can inform my customers of the most up to date information to maximise sales | To do this, go to Select a product > click the blue 'edit' text button and complete update |
+| 16 | Shop owner - I want to be able to delete a product so that I can successfully remove an item that is no longer in stock or for sale | To do this, go to Select a product > click  red 'delete' text button to remove product |
+| 17 | Shop owner - I want to be able to add a new service so that I can increase the service range to increase my customer base | To do this, go to My Account (top right) > Admin Panel > Django Adminstriation > Services > Add Service |
+| 18 | Shop owner - I want to be able to update a service so that I can inform customers of the most up to date information relevant to the service | To do this, go to My Account (top right) > Admin Panel > Django Adminstriation > Services > Select a Service to edit > complete edit |
+| 19 | Shop owner - I want to be able to delete a service so that I can successfully remove a service that is no longer available | To do this, go to My Account (top right) > Admin Panel > Django Adminstriation > Services > Select a service > select 'Delete Selected Services' |
+| 20 | Shop owner - I want to be able to access products, services, orders, bookings and user profiles so that I can make it easy to view the store products, services, current orders, bookings and user profiles active | To do this, go to My Account (top right) > Admin Panel > Django Adminstriation > Home |
 
-Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_completed.pdf" target="_blank">User Stories</a> completed. 
-
-Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_finished.pdf" target="_blank">User Stories</a> finished.
-
-![Image template](readme/testing/user_stories_completed.png.png)
+Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_completed.pdf" target="_blank">User Stories</a> completed on pdf.
 
 [Back to top ⇧](#the-bike-shop-testing)
 
