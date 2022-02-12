@@ -298,6 +298,12 @@ I conducted manual testing across mobile, tablet and desktop screensizes, making
 
 Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_complete.pdf" target="_blank">User Stories</a> completed. 
 
+Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_completed.pdf" target="_blank">User Stories</a> completed. 
+
+Click this link to see all <a href="https://github.com/liamwalsh1980/Milestone-Project-4/blob/main/readme/pdf/user_stories_finished.pdf" target="_blank">User Stories</a> finished.
+
+![Image template](readme/testing/user_stories_completed.png.png)
+
 [Back to top ⇧](#the-bike-shop-testing)
 
 ### Web Browsers
