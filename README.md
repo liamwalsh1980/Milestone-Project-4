@@ -4,7 +4,8 @@
 
 ![Image template](readme/images/responsive-homepage-new.png)
 
-<a href="https://the-bike-shop-project.herokuapp.com/" target="_blank">Click here to view The Bike Shop live</a>
+<a href="https://thebikeshop-project.herokuapp.com/" 
+target="_blank">Click here to view The Bike Shop live</a>
 
 ## Table of contents
 1. [Introduction](#introduction)
@@ -68,11 +69,11 @@
 1. [Stripe](#stripe)
 1. [Allauth](#allauth)
 1. [Crispy Forms](#crispy-forms)
+1. [Deployment](#deployment)
+    - [Initial Deployment](#initial-deployment) 
+    - [AWS](#aws)
+    - [Final Deployment Steps](#final-deployment-steps)
 1. [Sending Emails](#sending-emails) to complete
-1. [Deployment](#deployment) to complete
-    - [Github](#github) to complete
-    - [Heroku](#heroku) to complete
-    - [AWS](#aws) to complete
 1. [Clone Project](#clone-project)
 1. [Forking Project](#forking-project)
 1. [Technologies Used](#technologies-used)
@@ -105,6 +106,9 @@ Django Data Structure - MVT architecture (Model Template View)
 
  Date this project started: 20th December 2021 
  Date this project was deployed: TBC
+
+ <a href="https://thebikeshop-project.herokuapp.com/" 
+target="_blank">Click here to view The Bike Shop live</a>
 
  ## UX Design
 
@@ -1007,6 +1011,287 @@ Inside settings.py at project level Crispy Forms is installed as an app and buil
 - crispy_forms.templatestags.crispy_forms_tags 
 - crispy_forms.templatestags.crispy_forms_field
 
+## Deployment 
+
+**Requirements**
+ 
+- An IDE, i.e.GitPod
+- Git, for version control
+- GitHub account
+- Python3
+- pip, for Python package installation
+- Heroku account
+- AWS (Amazon Web Services) 
+    - S3 (Simple Storage Service) account
+    - IAM (Identity and Access Management)
+- Stripe account
+- Email account
+
+### Initial Deployment
+
+This site was deployed to Heroku by following these steps:
+
+**Heroku**
+- Login/Signup to Heroku Account
+- Select 'New' and 'Create New App'
+- Project name chosen
+    - > thebikeshop-project
+- Select relevant region (Europe)
+- Go to Resources
+- In 'Add-ons' search for 'Heroku Postgres'
+- Use the Postgres free plan for the project
+
+**Gitpod**
+
+- To use Postgres the following needs to be installed. 
+    - > $ pip3 install dj_database_url
+    - > $ pip3 install psycopg2-binary
+
+- Freeze requirements
+    - > $pip3 freeze > requirements.txt
+
+- Go to settings.py to setup the new stores database under import os
+    - > import dj_database_url
+
+- Then go down to databases and add the dj_database_url with the value found in Heroku Account > settings
+    - >DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('VALUE HERE'))}
+
+- Make sure the original database default config is commented out.
+
+- Save file
+
+- As the project is now connected to Postgres run all migrations again by first seeing what needs migrating by using the following command: -
+    - > $ python3 manage.py showmigrations
+- Then migrate all using the command: -
+    - > $ python3 manage.py migrate
+
+- Then import all product data in this order
+    - > $ python3 manage.py loaddata categories
+    - > $ python3 manage.py loaddata products
+
+- Then import all service data in this order
+    - > $ python3 manage.py loaddata servicecategories
+    - > $ python3 manage.py loaddata services
+
+- Then add the superuser account using the same username and password
+    - > $ python3 manage.py createsuperuser
+        - Username: shopowner
+        - Email: lwalsh_1980@hotmail.co.uk
+        - Password: ************
+
+- Remove the Heroku database config and uncomment the original one so the database URL doesn't end up in version control.
+
+- Still in settings.py add an if/else statement so that when the App is running in Heroku where the database URL environment variable will be defined, POSTGRES is connected, otherwise SQLite is connected. This means that if the database URL is in os.environ I'll get its value using dj_database_url.parse and use that as the database setting, otherwise the default configuration is used. 
+
+- In workspace terminal install the following to make sure that deployment would work first time around. First install 'gunicorn' to act as the web server.
+    - > $ pip3 install gunicorn
+
+- Freeze requirements
+    - > $pip3 freeze > requirements.txt
+
+- Add a Procfile to the project level and add the following to tell Heroku to create a web dyno which will run 'gunicorn' and serve the Django App. 
+    - > web: gunicorn the_bike_shop.wsgi:application
+
+- Log into Heroku via the terminal using the following command
+    - > heroku login -i
+
+- Use the following command to make sure that Heroku won't try to collect static files when the project is deployed.
+    - > $ heroku config:set DISABLE_COLLECTSTATIC=1 --app thebikeshop-project
+
+- Still in settings.py add the hostname of the Heroku app to 'ALLOWED_HOSTS' and add 'localhost' as well so that Gitpod will still work. 
+    - > ALLOWED_HOSTS = ['thebikeshop-project.herokuapp.com', 'localhost']
+
+- Then attempt to deploy the app by adding, committing the changes and pushing the code to Github in the terminal.
+
+- Use the following commands in this order as the app was created on the Heroku website
+- > $ heroku git:remote -a thebikeshop-project
+- > $ git push heroku main
+
+- Recieve the following url to view (without static files deployed at this stage)
+    - > **https://thebikeshop-project.herokuapp.com/**
+
+[Back to top ⇧](#the-bike-shop)
+
+**Heroku**
+
+Go to my Heroku account and setup automatic deployment for when I push to github.
+
+- In Heroku go to Deploy and search for the relevant repository
+    - > liamwalsh1980/Milestone-Project-4
+- Select 'Connect'.
+
+- Select 'Enable Automatic Deploys' below and code will automatically deploy to Heroku everytime I push to Github. 
+
+**Gitpod**
+
+To test this change the secret key value and change the Debug value in settings.py. 
+- Use a Django key generator to get a secure key value.
+- Add it to the config variables in Heroku
+- In settings.py replace the secret key with a call to get from the environment and use an empty string as a default value
+    - > SECRET_KEY = os.environ.get('SECRET_KEY', '')
+- Below this, replace 'debug = True' with 
+- > DEBUG = 'DEVELOPMENT' in os.environ
+
+### AWS 
+
+AWS is used to store static files and media images. 
+
+**S3**
+
+AWS S3 - A cloud-based storage service
+
+- Log into my AWS account
+- Go to AWS Management Console
+- Search and Select S3
+- Create a new Bucket and name it the same as the Heroku name
+    - > thebikeshop-project
+- Select region
+    - > eu-west-2
+- Un-check 'Block all public access' and acknowledge this below to continue
+- Then create the Bucket
+- In the new Bucket go to 'Properties'
+    - Select 'Use Bucket to host a website"
+    - Enter default values in the index and error documents as these won't be used for this project anyway
+        - > index.html
+        - > error.html
+- Then save
+- Inside 'Permissions' make the following changes
+    - Paste in a CORS configuration to setup the required access between the Heroku app and the S3 Bucket just created. 
+    - In the Bucket policy select 'Policy generator' and with the following settings
+        - > S3 Bucket Policy
+        - > Allow all principles by using a * (star)
+        - > Select the action 'Get Object'
+    - Back in the Bucket policy select and copy the ARN
+        - > arn:aws:s3:::thebikeshop-project (Bucket Policy)
+    - Then paste it into the Amazon Resource Name (ARN) box back in the policy generator
+    - Click 'Add Statement'
+    - Click 'Generate Policy'
+    - Copy the policy code and paste it into the Bucket policy editor
+    - Before saving this add /* at the end of the resource key
+    - Click save
+    - In Access Control List (ACL) set the list objects permission for everyone under the 'Public Access section' 
+    (To access this go to Object Ownership and enable ACLs above ACL)
+
+[Back to top ⇧](#the-bike-shop)
+
+**IAM**
+
+In IAM create a group for a user to live in, then create an access policy giving the new group access to the S3 Bucket and then assign the user to the group using the policy to access all the files. This is done with the following steps.
+
+- Select 'User Groups' from the left hand side
+- Select 'Create New Group' and give it a relevant name 
+    - > manage-thebikeshop
+- Click 'Create'
+- Select 'Policies' from the left hand side
+- Select 'Create New Policy'
+- Go to the JSON tab
+- Select 'Import Managed Policy'
+- Import 'AmazonS3FullAccess'
+- From S3 permissions get the Policy ARN and paste it into the Policy Resources in JSON as a list, making sure to remove "*" first. The first of the list is the Bucket itself and the second adds another rule for everything else in the Bucket. 
+    - > "Resource": [
+                "arn:aws:s3:::thebikeshop-project",
+                "arn:aws:s3:::thebikeshop-project/*"]
+- Select 'Review Policy'
+- Name given
+    - > thebikeshop-project-policy
+- Description given
+    - > Access to S3 Bucket for The Bike Shop static files
+- Select 'Create Policy'
+- Go to 'Groups' and select the relevant group (manage-thebikeshop)
+- Select 'Attach Policy'
+- Search and Select the policy just created (thebikeshop-project-policy)
+- Click 'Attach Policy'
+- Select 'Users' from the left hand side
+- Select 'Add Users'
+- Create a user name 
+    - > thebikeshop-staticfiles-user
+- Give the user 'Programatic Access' by ticking the 'Access key - Programmatic access' box
+- Select 'Next:Permissions'
+- Select the group just created (manage-thebikeshop)
+- Click through to the end 
+- Select 'Create User'
+- Download the CSV file and keep the information safe as it holds the Users Access Key and Secret Access key for authentication later on. 
+
+[Back to top ⇧](#the-bike-shop)
+
+### Final Deployment Steps
+
+This is the stage where Django connects with S3.
+
+**Gitpod**
+
+- In the terminal install two more packages
+    - > $ pip3 install boto3
+    - > $ pip3 install django-storages
+
+- Freeze requirements
+    - > $pip3 freeze > requirements.txt
+
+- In settings.py add 'storages' to INSTALLED APPS
+- In settings.py add an if statement only for Heroku to tell it what Bucket to communicate with. This includes Bucket Name, Region, Access Key ID, and Secret Access Key where the values can be found in the CSV file creditials downloaded earlier. 
+
+**Heroku**
+
+- Go to settings
+- Config vars and add the following to the environment variables
+    - > AWS_ACCESS_KEY_ID = [VALUE]
+    - > AWS_SECRET_ACCESS_KEY = [VALUE]
+    - > USE_AWS = True
+- Remove the DISABLE_COLLECTSTATIC variable from the environment variables
+
+**Gitpod**
+
+- Go to settings.py 
+- Add the following to tell Django where the static files are coming from in production
+    - > AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+- Create a file called 'customer_storages.py' and include code to tell it to store static files in a location from the settings.
+- In settings.py add a static and media files section to tell Django this is to be used for storing all these files and the locations are in folders called 'static' and 'media'.
+- Also add a Override static and media URLs in production section to override and explicitly set the URLs for statis and media files
+- From now on when deploying to Heroku, AWS will retrieve the static files and store them.
+
+**S3**
+
+- A static folder in the Bucket will be there with all the static files in it. 
+- Create a 'media' folder in the S3 Bucket
+- Click 'Upload'
+- Add files
+- Select all files that need uploading (63 for this project)
+- Under 'Manage Public Permissions', select 'Grant Public Read Access'.
+- Then click through until you can click 'Upload'.
+
+**Live Site**
+
+- Access the live site using the new URL
+    - > https://thebikeshop-project.herokuapp.com/
+- Login in with the superuser login details 
+- Go to 'Admin Panel' from the top menu in 'My Account'
+- Go to 'Email Addresses'
+- Select the email address for the superuser account
+- Select 'Primary' and 'Verfied' on the superuser email address
+- Click 'Save'
+
+**Stripe**
+
+Obtain the stripe keys to add to the Heroku config variables and update the webhook handler. 
+
+- Login to Stripe
+- On the Dashboard source the 'Publishable Key' and 'Secret Key'
+- Add both to the Heroku config variables
+    - > STRIPE_PUBLIC_KEY = [VALUE]
+    - > STRIPE_SECRET_KEY = [VALUE]
+- Back in Stripe update the webhook endpoint from
+    - > https://8000-cyan-ant-rcoumsr2.ws-eu31.gitpod.io/checkout/wh/
+- with the new live URL
+    - > https://thebikeshop-project.herokuapp.com/checkout/wh/
+- Reveal the webhooks signing secret
+- Add this to the Heroku config variables
+    - > STRIPE_WH_SECRET = [VALUE]
+
+**Deployment Completed**
+
+[Back to top ⇧](#the-bike-shop)
+
 ## Sending Emails
 
 In order to setup real email sending I used my googlemail account as it offers a free SMTP server (Simple Mail Transfer Protocal). The steps taken to set this up is as follows: -
@@ -1037,130 +1322,26 @@ On the App Password screen the process is as follows: -
 - Select 'Other' for device type and type Django
 - Click 'GENERATE' to get a 16 digit password to use
 
-## Deployment 
+Go to the Heroku App and add the following to the config variables: -
+- > EMAIL_HOST_PASS = [VALUE]
+- > EMAIL_HOST_USER = [VALUE]
 
-**Requirements**
- 
-- An IDE, i.e.GitPod
-- Git, for version control
-- GitHub account
-- Python3
-- pip, for Python package installation
-- Heroku account
-- AWS (Amazon Web Services) 
-    - S3 (simple storage service) account
-    - IAM (Identity and Access Management)
-- Stripe account
-- Email account
-
-**Heroku**
-- Login to my Heroku
-- Select 'New' and 'Create New App'
-- Project name chosen is 'thebikeshop-project'
-- Select relevant region (Europe)
-
-Now the app is created do the following: -
-
-- Go to Resources
-- In Add-ons search for Heroku Postgres
-- Use the free plan or the project
-
-**Gitpod**
-
-- Install 
-> $ pip3 install dj_database_url
-
-- Install
-> $ pip3 install psycopg2-binary
-
-- Freeze requirements
-> $pip3 freeze > requirements.txt
-
-Go to settings.py to setup the new stores database under import os
-> import dj_database_url
-
-Stating in settings.py go down to databases and add the dj_database_url with the value from Heroku > settings
-
-As the project is now connected to Postgres I ran all migrations again by first seeing what needed migrating by using the following command: -
-> $ python3 manage.py showmigrations
-
-Then migrate all using the command: -
-> $ python3 manage.py migrate
-
-Then import all product data
-> $ python3 manage.py loaddata categories
-
-> $ python3 manage.py loaddata products
-
-Then import all service data
-> $ python3 manage.py loaddata servicecategories
-
-> $ python3 manage.py loaddata services
-
-Then add the superuser account using the same username and password
-> $ python3 manage.py createsuperuser
-
-- Username: shopowner
-- Email: lwalsh_1980@hotmail.co.uk
-- Password: ************
-
-Back in settings.py I then added an if/else statement so that when the App is running in Heroku where the database URL environment variable will be defined, POSTGRES is connected otherwise SQLite is connected. If database URL is in os.environ we'll get its value using dj_database_url.parse and use that as the database setting, otherwise the default configuration is used. 
-
-Back in the terminal I installed the following to make sure that deployment would work first time around. 
-
-> $ pip3 install gunicorn
-
-- Freeze requirements
-> $pip3 freeze > requirements.txt
-
-I then added a Procfile to the project level and added the following to run gunicorn and serve the Django App. 
-
-> web: gunicorn the_bike_shop.wsgi:application
-
-Then I logged into Heroku via the terminal using the following command
-> heroku login -i
-
-Then I used the following command to make sure that Heroku won't try to collect static files when the project is deployed.
-> $ heroku config:set DISABLE_COLLECTSTATIC=1 --app thebikeshop-project
-
-In settings.py I added the hostname of the Heroku app to ALLOWED_HOSTS and add localhost as well so that Gitpod will still work. 
-
-With this done I then commited the changes and pushed the code to Github.
-
-I then used the commands in this order as the app was created on the Heroku website
-> $ heroku git:remote -a thebikeshop-project
-> $ git push heroku main
-
-Once completed I received the following url (without static files at this stage)
-
-> https://thebikeshop-project.herokuapp.com/
-
-I then went to my Heroku account and setup automatic deployment when I push to github.
-
-In Heroku I went to Deploy and search for the relevant repository and connect. 
-**liamwalsh1980/Milestone-Project-4**
-
-I then selected 'Enable Automatic Deploys' below and now my code will automatically be deployed to Heroku everytime I push to Github. 
-
-To test this I changed the secret key value and changed Debug value in settings.py. 
-
-### S3
-Bucket policy: arn:aws:s3:::thebikeshop-project
+Go to settings.py
+- Remove EMAIL_BACKEND
+- Add an if else statement including the following if
+    - EMAIL_BACKEND = [VALUE]
+    - DEFAULT_FROM_EMAIL = [VALUE]
+- Else
+    - EMAIL_BACKEND = [VALUE]
+    - EMAIL_USE_TLS = [VALUE]
+    - EMAIL_PORT = [VALUE]
+    - EMAIL_HOST = [VALUE]
+    - EMAIL_HOST_USER = [VALUE] - config variables from Heroku
+    - EMAIL_HOST_PASSWORD = [VALUE] - config variables from Heroku
+    - DEFAULT_FROM_EMAIL = [VALUE] - config variables from Heroku
+    - config variables from Heroku
 
 
-### IAM
-group name: manage-thebikeshop
-policy: 
-resource - arn:aws:s3:::thebikeshop-project/*
-name - thebikeshop-project-policy
-user - thebikeshop-staticfiles-user
-Downloaded CSV file with Access Key ID, Secret Access key and console login link
-
-> $ pip3 install boto3
-> $ pip3 install django-storages
-
-- Freeze requirements
-> $pip3 freeze > requirements.txt
 
 
 [Back to top ⇧](#the-bike-shop)
@@ -1247,6 +1428,8 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 * <a href="http://ami.responsivedesign.is/#" target="_blank">Am I Responsive</a> 
 * <a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)" target="_blank">Jinja</a>
 * <a href="https://codeinstitute.net/" target="_blank">Code Institute</a>
+* <a href="https://miniwebtool.com/django-secret-key-generator/" target="_blank">Django Secret Key Generator</a>
+
 
 [Back to top ⇧](#the-bike-shop)
 
