@@ -47,7 +47,7 @@
     {% block other %}
          <!-- Font Awesome and Head tab icon using https://gauger.io/fonticon/ -->
         <script src="https://kit.fontawesome.com/2776f2d29b.js" crossorigin="anonymous"></script>
-        <link rel="icon" type="image/ico" href="/media/favicon.ico" />
+        <link rel="icon" type="image/ico" href="{{ MEDIA_URL }}favicon.ico" /> 
     {% endblock %}
 
     <title>The Bike Shop {% block extra_title %}{% endblock %}</title>
