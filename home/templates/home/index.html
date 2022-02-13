@@ -62,55 +62,55 @@
             </ol>
             <div class="carousel-inner">
                 <a class="carousel-item active" href="{% url 'products' %}?category=mens_bikes" aria-label="Mens bikes">
-                    <img src="/media/34.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="First slide">
+                    <img src="{{ MEDIA_URL }}34.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="text-black border border-light rounded mens-header">Mens Bikes</h5>
                     </div>
                 </a>
                 <a class="carousel-item" href="{% url 'products' %}?category=other_accessories" aria-label="Accessories">
-                    <img src="/media/49.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Second slide">
+                    <img src="{{ MEDIA_URL }}49.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Second slide">
                     <div class="carousel-caption">
                         <h5 class="text-black text-black border border-light rounded accessories-header">Accessories</h5>
                     </div>
                 </a>
                 <a class="carousel-item" href="{% url 'products' %}?category=helmets" aria-label="Helmets"> 
-                    <img src="/media/41.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Third slide">
+                    <img src="{{ MEDIA_URL }}41.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Third slide">
                     <div class="carousel-caption">
                         <h5 class="text-black text-black border border-light rounded accessories-header">Helmets</h5>
                     </div>
                 </a>
                 <a class="carousel-item" href="{% url 'products' %}?category=urban_bikes" aria-label="Urban bikes">
-                    <img src="/media/16.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Fourth slide">
+                    <img src="{{ MEDIA_URL }}16.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Fourth slide">
                     <div class="carousel-caption">
                         <h5 class="text-black text-black border border-light rounded urban-header">Urban Bikes</h5>
                     </div>
                 </a>
                 <a class="carousel-item" href="{% url 'products' %}?category=other_accessories" aria-label="Accessories">
-                    <img src="/media/50.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Fifth slide">
+                    <img src="{{ MEDIA_URL }}50.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Fifth slide">
                     <div class="carousel-caption">
                         <h5 class="text-black text-black border border-light rounded accessories-header" aria-label="Accessories">Accessories</h5>
                     </div>
                 </a>
                 <a class="carousel-item" href="{% url 'products' %}?category=womens_bikes" aria-label="Womens bikes">
-                    <img src="/media/10.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Sixth slide">
+                    <img src="{{ MEDIA_URL }}10.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Sixth slide">
                     <div class="carousel-caption">
                         <h5 class="text-black text-black border border-light rounded womens-header">Womens Bikes</h5>
                     </div>
                 </a>
                 <a class="carousel-item" href="{% url 'products' %}?category=mens_bikes" aria-label="Mens bikes">
-                    <img src="/media/11.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Seventh slide">
+                    <img src="{{ MEDIA_URL }}11.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Seventh slide">
                     <div class="carousel-caption">
                         <h5 class="text-black text-black border border-light rounded mens-header">Mens Bikes</h5>
                     </div>
                 </a>
                 <a class="carousel-item" href="{% url 'products' %}?category=helmets" aria-label="Helmets">
-                    <img src="/media/39.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Eigth slide">
+                    <img src="{{ MEDIA_URL }}39.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Eigth slide">
                     <div class="carousel-caption">
                         <h5 class="text-black text-black border border-light rounded accessories-header">Helmets</h5>
                     </div>
                 </a>
                 <a class="carousel-item" href="{% url 'products' %}?category=mens_bikes" aria-label="Mens bikes">
-                    <img src="/media/35.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Ninth slide">
+                    <img src="{{ MEDIA_URL }}35.jpg" class="d-block w-100 hero-images px-2 px-lg-0 py-4 py-md-5 py-lg-4" alt="Ninth slide">
                     <div class="carousel-caption">
                         <h5 class="text-black text-black border border-light rounded mens-header">Mens Bikes</h5>
                     </div>
@@ -152,7 +152,7 @@
 </div>
 <div class="pb-1 pb-md-0 d-flex align-items-center justify-content-center justify-content-evenly flex-column flex-md-row-reverse accessories-bg-color" aria-labelledby="accessories">
     <div class="px-0">
-        <img src="{{ MEDIA_URL }}accessories-bikes.jpg" class="hero-images" alt="Biking Accessories"> 
+        <img src="{{ MEDIA_URL }}accessories.jpg" class="hero-images" alt="Biking Accessories"> 
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center flex-column flex-lg-row">
         <div class="m-4">
