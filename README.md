@@ -1047,7 +1047,9 @@ On the App Password screen the process is as follows: -
 - Python3
 - pip, for Python package installation
 - Heroku account
-- AWS (Amazon Web Services) S3 (simple storage service) account
+- AWS (Amazon Web Services) 
+    - S3 (simple storage service) account
+    - IAM (Identity and Access Management)
 - Stripe account
 - Email account
 
@@ -1118,10 +1120,10 @@ I then added a Procfile to the project level and added the following to run guni
 Then I logged into Heroku via the terminal using the following command
 > heroku login -i
 
-Then used the following command to make sure that Heroku won't try to collect static files when the project is deployed.
+Then I used the following command to make sure that Heroku won't try to collect static files when the project is deployed.
 > $ heroku config:set DISABLE_COLLECTSTATIC=1 --app thebikeshop-project
 
-In settings.py add the hostname of the Heroku app to ALLOWED_HOSTS and add localhost in here as well so that Gitpod will still work. 
+In settings.py I added the hostname of the Heroku app to ALLOWED_HOSTS and add localhost as well so that Gitpod will still work. 
 
 With this done I then commited the changes and pushed the code to Github.
 
@@ -1141,6 +1143,24 @@ In Heroku I went to Deploy and search for the relevant repository and connect.
 I then selected 'Enable Automatic Deploys' below and now my code will automatically be deployed to Heroku everytime I push to Github. 
 
 To test this I changed the secret key value and changed Debug value in settings.py. 
+
+### S3
+Bucket policy: arn:aws:s3:::thebikeshop-project
+
+
+### IAM
+group name: manage-thebikeshop
+policy: 
+resource - arn:aws:s3:::thebikeshop-project/*
+name - thebikeshop-project-policy
+user - thebikeshop-staticfiles-user
+Downloaded CSV file with Access Key ID, Secret Access key and console login link
+
+> $ pip3 install boto3
+> $ pip3 install django-storages
+
+- Freeze requirements
+> $pip3 freeze > requirements.txt
 
 
 [Back to top ⇧](#the-bike-shop)
