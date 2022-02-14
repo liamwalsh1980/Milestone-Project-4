@@ -4,7 +4,7 @@
 
 ![Image template](readme/testing/responsive-homepage-testing.png)
 
-<a href="https://the-bike-shop-project.herokuapp.com/" target="_blank">Click here to view The Bike Shop live</a>
+<a href="https://thebikeshop-project.herokuapp.com/" target="_blank">Click here to view The Bike Shop live</a>
 
 ## Table of contents
 
@@ -59,7 +59,7 @@
     * [User Functions](#user-functions) 
         - [Purchasing a product](#purchasing-a-product)
         - [Booking a service](#booking-a-service)
-        - [Signup](#signup) to complete
+        - [Signup](#signup)
         - [Login](#login)
         - [Logout](#logout)
         - [Access profile](#access-profile)
@@ -77,10 +77,10 @@
             - [Update Bookings](#update-bookings)
             - [Delete Orders](#delete-orders)
             - [Delete Bookings](#delete-bookings)
-            - [Delete Users](#delete-users) to complete
+            - [Delete Users](#delete-users)
     * [Links](#links)
-    * [Bugs](#bugs) to complete
-    * [Bugs Outstanding](#bugs-outstanding) to complete
+    * [Bugs](#bugs)
+    * [Bugs Outstanding](#bugs-outstanding)
     
 Return to [README Doc](README.md) 
 
@@ -428,24 +428,20 @@ I tested the site using Chrome development tools on three different screen sizes
 #### **Signup**
 
 - Select 'Signup' from the top right of any page found within 'My Account'
-
-![Image template]()
+![Image template](readme/testing/signup/signup1.png)
 
 - Enter an email address (twice for security)
-
-![Image template]()
-
 - Enter a unique username 
-
-![Image template]()
-
 - Enter a password (twice for security)
+![Image template](readme/testing/signup/signup2.png)
+![Image template](readme/testing/signup/signup3.png)
 
-![Image template]()
+- Go to your email account and verify the account by clicking the link
+![Image template](readme/testing/signup/signup4.png)
+![Image template](readme/testing/signup/signup5.png)
 
-- Go to your email account and verify the account
-
-![Image template]()
+- Login
+![Image template](readme/testing/signup/signup6.png)
 
 [Back to top ⇧](#the-bike-shop-testing)
 
@@ -636,21 +632,25 @@ I tested the site using Chrome development tools on three different screen sizes
 [Back to top ⇧](#the-bike-shop-testing)
             
 ##### **Delete Users**
+
+- Login in the Admin panel
+![Image template](readme/testing/delete_user/deleteuser1.png)
+
 - Once logged into the Admin panel go to 'Users'
-
-![Image template]()
-
 - Select a user and scroll to the bottom
-
-![Image template]()
+![Image template](readme/testing/delete_user/deleteuser2.png)
 
 - Select 'Delete' in red
-
-![Image template]()
+![Image template](readme/testing/delete_user/deleteuser3.png)
 
 - Alternatively, select the user that needs deleting and select 'Delete selected users' above
+![Image template](readme/testing/delete_user/deleteuser4.png)
 
-![Image template]()
+- User deleted
+![Image template](readme/testing/delete_user/deleteuser5.png)
+![Image template](readme/testing/delete_user/deleteuser6.png)
+
+[Back to top ⇧](#the-bike-shop-testing)
 
 ### Links
 

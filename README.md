@@ -77,11 +77,10 @@ target="_blank">Click here to view The Bike Shop live</a>
 1. [Clone Project](#clone-project)
 1. [Forking Project](#forking-project)
 1. [Technologies Used](#technologies-used)
-1. [Testing](#testing) to complete
+1. [Testing](#testing)
 1. [Credits](#credits)
 1. [Acknowledgements](#acknowledgements)
 1. [Notes](#notes)
-1. [Final Step](#final-step)
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -1473,8 +1472,6 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 - Unfortunately, my mentor changed Jobs during my MS4 project which meant that she was only available either 7.30am or 8.30am, Monday to Thursday. As I work full time and start at 8.30am Monday to Friday I wasn’t able to have a very productive 2nd mentor session on this project due to the fact it was rushed. I therefore, communicated with Code Institute Student Care about this and spoke on email with Miklos (mentor lead) who gave me the option to change mentors in order to have a more productive 3rd mentor session before submitting my final project. We agreed that it wouldn’t be worthwhile doing this as It would require for me to start all over with someone new. I therefore, note that I didn’t have a 3rd mentor session on this project and worked as hard as I could in the timeframe to tick all the boxes. 
 
 - On a more positive note, I don’t need the final mentor session in reference to careers as I have successfully found employment as a Front End Developer where I started in the role in early January. This is thanks to Code Institute as the one to one I had last summer with Yasmine Larkin really helped with structuring my CV and LinkedIn account along with preparing me for the world of software development. 
-
-## Final Step 
  
 **End of README Documentation**
 
