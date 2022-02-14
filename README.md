@@ -1323,8 +1323,8 @@ On the App Password screen the process is as follows: -
 - Click 'GENERATE' to get a 16 digit password to use
 
 Go to the Heroku App and add the following to the config variables: -
-- > EMAIL_HOST_PASS = [VALUE]
-- > EMAIL_HOST_USER = [VALUE]
+- > EMAIL_HOST_PASS = [VALUE] - 16 Digit Password from Googlemail
+- > EMAIL_HOST_USER = [VALUE] - gmail account email address
 
 Go to settings.py
 - Remove EMAIL_BACKEND
@@ -1336,13 +1336,13 @@ Go to settings.py
     - EMAIL_USE_TLS = [VALUE]
     - EMAIL_PORT = [VALUE]
     - EMAIL_HOST = [VALUE]
-    - EMAIL_HOST_USER = [VALUE] - config variables from Heroku
-    - EMAIL_HOST_PASSWORD = [VALUE] - config variables from Heroku
+    - EMAIL_HOST_USER = [EMAIL_HOST_USER] - config variables from Heroku
+    - EMAIL_HOST_PASSWORD = [EMAIL_HOST_PASS] - config variables from Heroku
     - DEFAULT_FROM_EMAIL = [VALUE] - config variables from Heroku
-    - config variables from Heroku
 
+- The test this is working by going to the site and signing up with a new username, email address and password
 
-
+See [Testing document](TESTING.md) to see this tested and working. 
 
 [Back to top ⇧](#the-bike-shop)
 
