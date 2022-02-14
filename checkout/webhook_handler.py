@@ -39,7 +39,7 @@ class StripeWH_Handler:
         Handle a generic/unknown/unexpected webhook event
         """
         return HttpResponse(
-            content=f'Unhandled Webhook received: {event["type"]}',
+            content=f'Unhandled webhook received: {event["type"]}',
             status=200)
 
     def handle_payment_intent_succeeded(self, event):
@@ -60,7 +60,6 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
-        # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
@@ -130,8 +129,7 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data[
-                             'items_by_size'].items():
+                        for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
