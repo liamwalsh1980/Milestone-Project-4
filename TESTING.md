@@ -82,7 +82,7 @@
     * [Bugs](#bugs) to complete
     * [Bugs Outstanding](#bugs-outstanding) to complete
     
-Return to my [README Doc](README.md) 
+Return to [README Doc](README.md) 
 
 [Back to top ⇧](#the-bike-shop-testing)
 
@@ -712,3 +712,5 @@ Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ad
 **End of TESTING Documentation**
 
 [Back to top ⇧](#the-bike-shop-testing)
+
+Return to [README Doc](README.md) 
