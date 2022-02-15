@@ -13,7 +13,6 @@ def complete(request):
     # Checking if a form was posted
     if request.method == 'POST':
         book = request.session.get('book', [])
-        print(book)
         if not book:
             messages.error(request, "There's no service pending to book")
             return redirect(reverse('services'))
@@ -29,8 +28,6 @@ def complete(request):
             }
 
         completedForm = BookingForm(form_data)
-        print(completedForm['full_name'])
-        print('form-data')
 
         # Checking if the form is valid
         if completedForm.is_valid():

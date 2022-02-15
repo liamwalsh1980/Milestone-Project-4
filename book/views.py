@@ -10,7 +10,6 @@ def service_booking(request):
     service = None
     if book:
         service = get_object_or_404(Service, id=book[0])
-    print(book)
 
     context = {"book_service": service}
 
@@ -26,8 +25,6 @@ def add_to_booking(request, item_id):
     request.session['book'] = [service.id]
     messages.success(request, f'"{service}" added')
 
-    print(service.id)
-
     return redirect(redirect_url)
 
 
@@ -38,8 +35,6 @@ def remove_from_booking(request, item_id):
         service = get_object_or_404(Service, pk=item_id)
 
         book = request.session.get('book', {})
-        print(book)
-        print(service.name)
 
         book.pop(item_id)
         messages.success(request, f'{service} removed')
