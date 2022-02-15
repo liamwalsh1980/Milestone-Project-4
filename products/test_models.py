@@ -28,7 +28,9 @@ class TestProductModels(TestCase):
         """
         product = Product.objects.get(pk=1)
         self.assertEqual(
-            product.description, "Shimano Claris 2x8 (16 speed), Mechanical Disc Brakes with Alloy blades and Hi-tensile steel steerer"
+            product.description, (
+                "Shimano Claris 2x8 (16 speed), Mechanical Disc Brakes \
+                    with Alloy blades and Hi-tensile steel steerer")
         )
         self.assertNotEqual(product.description, 'test description incorrect')
 
