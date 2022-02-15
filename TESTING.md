@@ -38,6 +38,7 @@
         - [Services App](#services-app)
         - [The Bike Shop App](#The-bike-shop-app)
         - [Project Level](#project-level)
+    * [Flake8 linting](#flake8-linting)
 1. [Manual Testing](#manual-testing)
     * [Screen sizes](#screen-sizes)
         - [Mobile screens](#mobile-screens)
@@ -270,6 +271,18 @@ I used the <a href="http://pep8online.com/" target="_blank">PEP8 online</a> vali
 - project level - manage.py
 
 [Back to top ⇧](#the-bike-shop-testing)
+
+### Flake8 linting
+
+When refactoring my code I used the following command to identify and fix as much pylint errors as possible.
+
+- > $ python3 -m flake8
+
+Most of the problems found were based on lines being too long. I fixed all issues by moving the code around, using the right indentation, curly brackets and testing the site to make sure everything still worked. The only outstanding linting errors I didn't fix are: - 
+
+- vscode/arctictern (auto generated files)
+- migrations (auto generated files)
+- checkout/apps.py (signals import is required)
 
 ## Manual Testing
 
