@@ -50,5 +50,6 @@ class TestCartViews(TestCase):
             'redirect_url': f'/products/{self.product1.id}/'
         }
 
-        response = self.client.post(f'/cart/add/{self.product1.id}/', cart_data)
+        response = self.client.post(f'/cart/add/{self.product1.id}/',
+                                    cart_data)
         self.assertEqual(response.status_code, 302)
