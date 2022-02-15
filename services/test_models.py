@@ -28,7 +28,11 @@ class TestServiceModels(TestCase):
         """
         service = Service.objects.get(pk=3)
         self.assertEqual(
-            service.description, "Sell your bike and put what its worth towards a new one. Book a date and time thats suitable to bring your bike in for a free appraisal"
+            service.description, (
+                "Sell your bike and put what its worth \
+                    towards a new one. Book a date and time \
+                        thats suitable to bring your bike in \
+                            for a free appraisal")
         )
         self.assertNotEqual(service.description, 'test description incorrect')
 
@@ -57,6 +61,8 @@ class TestServiceCategoryModels(TestCase):
         """
         servicecategory = ServiceCategory.objects.get(pk=1)
         self.assertEqual(servicecategory.friendly_name, 'Bike Services')
-        self.assertNotEqual(servicecategory.friendly_name, 'Test Service Category')
+        self.assertNotEqual(
+            servicecategory.friendly_name, 'Test Service Category')
         self.assertEqual(
-            ServiceCategory.get_friendly_name(servicecategory), servicecategory.friendly_name)
+            ServiceCategory.get_friendly_name(servicecategory),
+            servicecategory.friendly_name)
