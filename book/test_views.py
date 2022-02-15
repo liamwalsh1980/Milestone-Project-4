@@ -46,5 +46,6 @@ class TestBookViews(TestCase):
             'redirect_url': f'/services/{self.service1.id}/'
         }
 
-        response = self.client.post(f'/book/add/{self.service1.id}/', book_data)
+        response = self.client.post(f'/book/add/{self.service1.id}/',
+                                    book_data)
         self.assertEqual(response.status_code, 302)
