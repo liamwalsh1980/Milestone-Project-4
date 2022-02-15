@@ -11,9 +11,11 @@ class UserProfileTest(TestCase):
     def setUpTestData(self):
         self.client = Client()
         self.user = User.objects.create_user(
-            username='testusername', email='test@test.com', password='password')
+            username='testusername', email='test@test.com',
+            password='password')
         self.client.login(
-            username='testusername', email='test@test.com', password='password')
+            username='testusername', email='test@test.com',
+            password='password')
 
     def test_getting_user_profile(self):
         """

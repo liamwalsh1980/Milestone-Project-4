@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.contrib.messages import get_messages
 
-from checkout.models import Order
 from .models import UserProfile
 
 
@@ -68,18 +67,3 @@ class TestProfilesViews(TestCase):
         self.assertEqual(
             str(messages[0]), 'Profile updated successfully')
         self.client.logout()
-
-    # def test_order_history_displays_when_requested(self):
-    #     """
-    #     Test that the order history is shown in full when user is logged in
-    #     """
-    #     self.client.login(
-    #         username="testname", email="test@test.com", password="password")
-    #     Order.objects.create(
-    #         order_number='123'
-    #     )
-    #     order_number = '123'
-    #     response = self.client.get(
-    #         f'/profile/order_history/{order_number}/')
-    #     self.assertTemplateUsed(
-    #         response, template_name="checkout/checkout_success.html")
