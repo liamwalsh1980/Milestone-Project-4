@@ -145,7 +145,7 @@ target="_blank">Click here to view The Bike Shop live</a>
 #### Site Owner Goals 
 
 - ‘Admin’ username and password login 
-- Access to 'Product Management’ i.e. orders
+- Access to 'Add Product' i.e. orders
 - Access to 'Admin Panel' i.e. bookings
 - Add a new product  
 - Edit a current product 
@@ -453,7 +453,7 @@ The Navigation menu on desktop screens has a text logo with a bike icon. This ca
 
 Shopowners/Admin users will see additional links when logged in: -
 
-- Product Management (For adding new products)
+- Add Product (For adding new products)
 - Admin Panel (for easy access to the backend Django panel to view, amend and delete orders, bookings and user profiles)
 
 Below the search bar in a horizontal row users can find the following links to click on: - 
@@ -521,7 +521,7 @@ Once this process is complete the user will see notification on the registration
 
 Admin User will have additional access to the following: 
 
-- Product Management page
+- Product Management (Add Product page)
 (CRUD – Create, Read, Update Delete achieved) 
     - View current products and services 
     - Add a product 
@@ -835,7 +835,7 @@ When users click this option they will be greeted with a Logout page asking them
 
 ## Shop Owner Features
 
-Shop owners/administrators with superuser access can login to the admin backend and also access the ‘Product Management’ page at the frontend of the site. Once logged in and with the right level of access, the backend admin is available via the URL (URLADDRESS/admin) or more conveniently by clicking the 'Admin Panel' link found within the 'My Account' at the top right. Users will be able to view, edit, delete and add the following: -
+Shop owners/administrators with superuser access can login to the admin backend and also access the ‘Add Product page at the frontend of the site. Once logged in and with the right level of access, the backend admin is available via the URL (URLADDRESS/admin) or more conveniently by clicking the 'Admin Panel' link found within the 'My Account' at the top right. Users will be able to view, edit, delete and add the following: -
 - Products
 - Product categories
 - Orders
@@ -846,11 +846,11 @@ Shop owners/administrators with superuser access can login to the admin backend 
 - Email address 
 - Sites
  
-These users can access the product management at the frontend by clicking ‘My Account’ from the top right of any page they are on. Users will be able to view, edit, delete and add Products.
+These users can access the product management section (page called Add Product) at the frontend by clicking ‘My Account’ from the top right of any page they are on. Users will be able to view, edit, delete and add Products.
 
 ### Add Products
 
-Clicking the 'Product Management' option will take users to the ‘Add a Product’ page to give them the option to add a new product by adding/selecting the following: - 
+Clicking the 'Add Product' option will take users to the ‘Add a Product’ page to give them the option to add a new product by adding/selecting the following: - 
 
 Category from a dropdown list (mandatory) 
 Name (mandatory) 
