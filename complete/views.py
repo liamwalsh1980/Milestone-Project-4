@@ -5,10 +5,7 @@ from .forms import BookingForm
 from services.models import Service
 from .models import Booking, BookingLineItem
 from django.core.mail import send_mail
-# from django.core.mail import send_mail, BadHeaderError
 from django.template.loader import render_to_string
-# from django.http import HttpResponse
-# from book.contexts import book_contents
 
 
 def complete(request):
@@ -43,25 +40,9 @@ def complete(request):
             )
             booking_line_item.save()
 
-            # subject = render_to_string(
-            #     'complete/confirmation_emails/confirmation_email_subject.txt')
-            # email_template_name = \
-            #     'complete/confirmation_emails/confirmation_email_body.txt'
-            # c = {
-            #     'email': form.cleaned_data['email'],
-            #     }
-            # email = render_to_string(email_template_name, c)
-            # try:
-            #     send_mail(subject, email, settings.DEFAULT_FROM_EMAIL,
-            #               [form.cleaned_data['email']], fail_silently=False)
-            # except BadHeaderError:
-            #     return HttpResponse('Invalid header found.')
-            # messages.success(request, 'Email sent successfully.')
-
             # Return user to a successful page
         return redirect(reverse('booking_success',
                                 args=[booking.booking_number]))
-        # current_book = book_contents(request)
 
     else:
 
