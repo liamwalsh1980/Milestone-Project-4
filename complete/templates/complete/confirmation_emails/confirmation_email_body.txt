@@ -1,10 +1,9 @@
 Hello {{ booking.full_name }}!
 
-This is a confirmation of your booking at The Bike Shop. Your order information is below:
+This is a confirmation of your booking at The Bike Shop. Your booking information is below:
 
 Booking Number: {{ booking.booking_number }}
 Booking Date: {{ booking.date }}
-
 
 We've got your phone number on file as {{ booking.phone_number }}.
 A member of our team will be in touch to confirm your booking within the next 24 hours.
