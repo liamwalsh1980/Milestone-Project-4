@@ -114,9 +114,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="row background-navbar" @click="open = ! open">
+            <div class="row background-navbar">
                 <nav class="navbar navbar-expand-lg navbar-light w-100">
-                    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler border-0" @click="open = ! open" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon" x-show="! open"></span>
                         <span><i id="toggler-color" class="fas fa-times" x-show="open"></i></span>
                     </button>
