@@ -1,15 +1,18 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-# from django.conf import settings
-
+from django.conf import settings
 from .forms import BookingForm
 from services.models import Service
 from .models import Booking, BookingLineItem
+from django.core.mail import send_mail
+# from django.core.mail import send_mail, BadHeaderError
+from django.template.loader import render_to_string
+# from django.http import HttpResponse
 # from book.contexts import book_contents
 
 
 def complete(request):
-    """  """
+    """ Checks that a form is posted """
     # Checking if a form was posted
     if request.method == 'POST':
         book = request.session.get('book', [])
@@ -39,6 +42,22 @@ def complete(request):
                 service=service,
             )
             booking_line_item.save()
+
+            # subject = render_to_string(
+            #     'complete/confirmation_emails/confirmation_email_subject.txt')
+            # email_template_name = \
+            #     'complete/confirmation_emails/confirmation_email_body.txt'
+            # c = {
+            #     'email': form.cleaned_data['email'],
+            #     }
+            # email = render_to_string(email_template_name, c)
+            # try:
+            #     send_mail(subject, email, settings.DEFAULT_FROM_EMAIL,
+            #               [form.cleaned_data['email']], fail_silently=False)
+            # except BadHeaderError:
+            #     return HttpResponse('Invalid header found.')
+            # messages.success(request, 'Email sent successfully.')
+
             # Return user to a successful page
         return redirect(reverse('booking_success',
                                 args=[booking.booking_number]))
@@ -66,5 +85,20 @@ def booking_success(request, booking_number):
     context = {
         'booking': booking,
     }
+
+    cust_email = booking.email
+    subject = render_to_string(
+        'complete/confirmation_emails/confirmation_email_subject.txt',
+        {'booking': booking})
+    body = render_to_string(
+        'complete/confirmation_emails/confirmation_email_body.txt',
+        {'booking': booking, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
 
     return render(request, template, context)
