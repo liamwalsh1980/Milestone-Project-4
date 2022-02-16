@@ -1012,6 +1012,57 @@ Inside settings.py at project level Crispy Forms is installed as an app and buil
 
 ## Deployment 
 
+**GitPod IDE**
+
+| Key | Value |
+|---|---|
+| DEVELOPMENT | ## SET AS TRUE ## |
+| SECRET_KEY | ## SECRET_KEY ## |
+| STRIPE_PUBLIC_KEY | ## STRIPE_PUBLIC_KEY ## |
+| STRIPE_SECRET_KEY | ## STRIPE_SECRET_KEY ## |
+| STRIPE_WH_SECRET | ## STRIPE_WH_SECRET ## |
+| EMAIL_HOST_USER | ## EMAIL ADDRESS ## |
+| EMAIL_HOST_PASS | ## EMAIL APP PASS CODE ## |
+| AWS_ACCESS_KEY_ID | ## AWS_ACCESS_KEY_ID ## |
+| AWS_SECRET_ACCESS_KEY | ## AWS_SECRET_ACCESS_KEY ## |
+| USE_AWS | ## True ## |
+| | |
+
+**Non-GitPod IDE**
+
+```python
+import os
+
+os.environ["DEVELOPMENT"] = "## SET AS TRUE ##"
+os.environ["SECRET_KEY"] = "## SECRET_KEY ##"
+os.environ["DATABASE_URL"] = "## DATABASE_URL ##"
+os.environ["STRIPE_PUBLIC_KEY"] = "## STRIPE_PUBLIC_KEY ##"
+os.environ["STRIPE_SECRET_KEY"] = "## STRIPE_SECRET_KEY ##"
+os.environ["STRIPE_WH_SECRET"] = "## STRIPE_WH_SECRET ##"
+os.environ["EMAIL_HOST_USER"] = "## EMAIL ADDRESS ##"
+os.environ["EMAIL_HOST_PASS"] = "## EMAIL APP PASS CODE ##"
+os.environ["AWS_SECRET_ACCESS_KEY"] = "## AWS_SECRET_ACCESS_KEY ##"
+os.environ["AWS_ACCESS_KEY_ID"] = "## AWS_ACCESS_KEY_ID ##"
+os.environ["USE_AWS"] = True
+os.environ["DEVELOPMENT"] = True
+```
+
+**Heroku Config Vars**
+
+| Key | Value |
+|---|---|
+| AWS_ACCESS_KEY_ID | ## AWS_ACCESS_KEY_ID ## |
+| AWS_SECRET_ACCESS_KEY | ## AWS_SECRET_ACCESS_KEY ## |
+| DATABASE_URL | ## POSTGRES KEY ## |
+| EMAIL_HOST_PASS | ## EMAIL ADDRESS ## |
+| EMAIL_HOST_USER | ## EMAIL APP PASS CODE ## |
+| SECRET_KEY | ## SECRET_KEY ## |
+| STRIPE_PUBLIC_KEY | ## STRIPE PUBLIC_KEY ## |
+| STRIPE_SECRET_KEY | ## STRIPE_SECRET_KEY ## |
+| STRIPE_WH_SECRET | ## STRIPE_WH_SECRET ## |
+| USE_AWS | True |
+| | |
+
 **Requirements**
  
 - An IDE, i.e.GitPod
