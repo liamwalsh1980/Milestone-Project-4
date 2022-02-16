@@ -436,6 +436,9 @@ I tested the site using Chrome development tools on three different screen sizes
 - Booking in Django Admin
 ![Image template](readme/testing/booking_service/booking_a_service8.png)
 
+- Order Confirmation Received. 
+    - The customer will receive an email with the booking number for reference, confirmation on the phone number they provided and the date the booking was submitted. 
+
 [Back to top ⇧](#the-bike-shop-testing)
 
 #### **Signup**
