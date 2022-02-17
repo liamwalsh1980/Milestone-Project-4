@@ -894,6 +894,8 @@ Within the head element I added a head icon that is positioned in the tab of the
 
 - The option for customers to book a service and purchase a product at he same time as one transaction. 
 
+- Stripe payment to take card payments with postcodes aswell as ZIP codes. 
+
 [Back to top ⇧](#the-bike-shop)
 
 ## Stripe 
@@ -1094,17 +1096,18 @@ This site was deployed to Heroku by following these steps:
 **Gitpod**
 
 - To use Postgres the following needs to be installed. 
-    - > $ pip3 install dj_database_url
-    - > $ pip3 install psycopg2-binary
+    > $ pip3 install dj_database_url
+
+    > $ pip3 install psycopg2-binary
 
 - Freeze requirements
-    - > $pip3 freeze > requirements.txt
+    > $pip3 freeze > requirements.txt
 
 - Go to settings.py to setup the new stores database under import os
-    - > import dj_database_url
+    > import dj_database_url
 
 - Then go down to databases and add the dj_database_url with the value found in Heroku Account > settings
-    - >DATABASES = {
+    > DATABASES = {
         'default': dj_database_url.parse(os.environ.get('VALUE HERE'))}
 
 - Make sure the original database default config is commented out.
@@ -1112,20 +1115,23 @@ This site was deployed to Heroku by following these steps:
 - Save file
 
 - As the project is now connected to Postgres run all migrations again by first seeing what needs migrating by using the following command: -
-    - > $ python3 manage.py showmigrations
+    > $ python3 manage.py showmigrations
+
 - Then migrate all using the command: -
-    - > $ python3 manage.py migrate
+    > $ python3 manage.py migrate
 
 - Then import all product data in this order
-    - > $ python3 manage.py loaddata categories
-    - > $ python3 manage.py loaddata products
+    > $ python3 manage.py loaddata categories
+
+    > $ python3 manage.py loaddata products
 
 - Then import all service data in this order
-    - > $ python3 manage.py loaddata servicecategories
-    - > $ python3 manage.py loaddata services
+    > $ python3 manage.py loaddata servicecategories
+
+    > $ python3 manage.py loaddata services
 
 - Then add the superuser account using the same username and password
-    - > $ python3 manage.py createsuperuser
+    > $ python3 manage.py createsuperuser
         - Username: shopowner
         - Email: lwalsh_1980@hotmail.co.uk
         - Password: ************
@@ -1135,31 +1141,32 @@ This site was deployed to Heroku by following these steps:
 - Still in settings.py add an if/else statement so that when the App is running in Heroku where the database URL environment variable will be defined, POSTGRES is connected, otherwise SQLite is connected. This means that if the database URL is in os.environ I'll get its value using dj_database_url.parse and use that as the database setting, otherwise the default configuration is used. 
 
 - In workspace terminal install the following to make sure that deployment would work first time around. First install 'gunicorn' to act as the web server.
-    - > $ pip3 install gunicorn
+    > $ pip3 install gunicorn
 
 - Freeze requirements
-    - > $pip3 freeze > requirements.txt
+    > $pip3 freeze > requirements.txt
 
 - Add a Procfile to the project level and add the following to tell Heroku to create a web dyno which will run 'gunicorn' and serve the Django App. 
-    - > web: gunicorn the_bike_shop.wsgi:application
+    > web: gunicorn the_bike_shop.wsgi:application
 
 - Log into Heroku via the terminal using the following command
-    - > heroku login -i
+    > heroku login -i
 
 - Use the following command to make sure that Heroku won't try to collect static files when the project is deployed.
-    - > $ heroku config:set DISABLE_COLLECTSTATIC=1 --app thebikeshop-project
+    > $ heroku config:set DISABLE_COLLECTSTATIC=1 --app thebikeshop-project
 
 - Still in settings.py add the hostname of the Heroku app to 'ALLOWED_HOSTS' and add 'localhost' as well so that Gitpod will still work. 
-    - > ALLOWED_HOSTS = ['thebikeshop-project.herokuapp.com', 'localhost']
+    > ALLOWED_HOSTS = ['thebikeshop-project.herokuapp.com', 'localhost']
 
 - Then attempt to deploy the app by adding, committing the changes and pushing the code to Github in the terminal.
 
 - Use the following commands in this order as the app was created on the Heroku website
-- > $ heroku git:remote -a thebikeshop-project
-- > $ git push heroku main
+    > $ heroku git:remote -a thebikeshop-project
+    
+    > $ git push heroku main
 
 - Recieve the following url to view (without static files deployed at this stage)
-    - > **https://thebikeshop-project.herokuapp.com/**
+    > **https://thebikeshop-project.herokuapp.com/**
 
 [Back to top ⇧](#the-bike-shop)
 
@@ -1168,7 +1175,7 @@ This site was deployed to Heroku by following these steps:
 Go to my Heroku account and setup automatic deployment for when I push to github.
 
 - In Heroku go to Deploy and search for the relevant repository
-    - > liamwalsh1980/Milestone-Project-4
+    > liamwalsh1980/Milestone-Project-4
 - Select 'Connect'.
 
 - Select 'Enable Automatic Deploys' below and code will automatically deploy to Heroku everytime I push to Github. 
@@ -1179,9 +1186,9 @@ To test this change the secret key value and change the Debug value in settings.
 - Use a Django key generator to get a secure key value.
 - Add it to the config variables in Heroku
 - In settings.py replace the secret key with a call to get from the environment and use an empty string as a default value
-    - > SECRET_KEY = os.environ.get('SECRET_KEY', '')
+    > SECRET_KEY = os.environ.get('SECRET_KEY', '')
 - Below this, replace 'debug = True' with 
-- > DEBUG = 'DEVELOPMENT' in os.environ
+    > DEBUG = 'DEVELOPMENT' in os.environ
 
 ### AWS 
 
@@ -1195,25 +1202,25 @@ AWS S3 - A cloud-based storage service
 - Go to AWS Management Console
 - Search and Select S3
 - Create a new Bucket and name it the same as the Heroku name
-    - > thebikeshop-project
+    > thebikeshop-project
 - Select region
-    - > eu-west-2
+    > eu-west-2
 - Un-check 'Block all public access' and acknowledge this below to continue
 - Then create the Bucket
 - In the new Bucket go to 'Properties'
     - Select 'Use Bucket to host a website"
     - Enter default values in the index and error documents as these won't be used for this project anyway
-        - > index.html
-        - > error.html
+        > index.html
+        > error.html
 - Then save
 - Inside 'Permissions' make the following changes
     - Paste in a CORS configuration to setup the required access between the Heroku app and the S3 Bucket just created. 
     - In the Bucket policy select 'Policy generator' and with the following settings
-        - > S3 Bucket Policy
-        - > Allow all principles by using a * (star)
-        - > Select the action 'Get Object'
+        > S3 Bucket Policy
+        > Allow all principles by using a * (star)
+        > Select the action 'Get Object'
     - Back in the Bucket policy select and copy the ARN
-        - > arn:aws:s3:::thebikeshop-project (Bucket Policy)
+        > arn:aws:s3:::thebikeshop-project (Bucket Policy)
     - Then paste it into the Amazon Resource Name (ARN) box back in the policy generator
     - Click 'Add Statement'
     - Click 'Generate Policy'
@@ -1231,7 +1238,7 @@ In IAM create a group for a user to live in, then create an access policy giving
 
 - Select 'User Groups' from the left hand side
 - Select 'Create New Group' and give it a relevant name 
-    - > manage-thebikeshop
+    > manage-thebikeshop
 - Click 'Create'
 - Select 'Policies' from the left hand side
 - Select 'Create New Policy'
@@ -1239,14 +1246,14 @@ In IAM create a group for a user to live in, then create an access policy giving
 - Select 'Import Managed Policy'
 - Import 'AmazonS3FullAccess'
 - From S3 permissions get the Policy ARN and paste it into the Policy Resources in JSON as a list, making sure to remove "*" first. The first of the list is the Bucket itself and the second adds another rule for everything else in the Bucket. 
-    - > "Resource": [
+    > "Resource": [
                 "arn:aws:s3:::thebikeshop-project",
                 "arn:aws:s3:::thebikeshop-project/*"]
 - Select 'Review Policy'
 - Name given
-    - > thebikeshop-project-policy
+    > thebikeshop-project-policy
 - Description given
-    - > Access to S3 Bucket for The Bike Shop static files
+    > Access to S3 Bucket for The Bike Shop static files
 - Select 'Create Policy'
 - Go to 'Groups' and select the relevant group (manage-thebikeshop)
 - Select 'Attach Policy'
@@ -1255,7 +1262,7 @@ In IAM create a group for a user to live in, then create an access policy giving
 - Select 'Users' from the left hand side
 - Select 'Add Users'
 - Create a user name 
-    - > thebikeshop-staticfiles-user
+    > thebikeshop-staticfiles-user
 - Give the user 'Programatic Access' by ticking the 'Access key - Programmatic access' box
 - Select 'Next:Permissions'
 - Select the group just created (manage-thebikeshop)
@@ -1272,11 +1279,13 @@ This is the stage where Django connects with S3.
 **Gitpod**
 
 - In the terminal install two more packages
-    - > $ pip3 install boto3
-    - > $ pip3 install django-storages
+
+    > $ pip3 install boto3
+
+    > $ pip3 install django-storages
 
 - Freeze requirements
-    - > $pip3 freeze > requirements.txt
+    > $pip3 freeze > requirements.txt
 
 - In settings.py add 'storages' to INSTALLED APPS
 - In settings.py add an if statement only for Heroku to tell it what Bucket to communicate with. This includes Bucket Name, Region, Access Key ID, and Secret Access Key where the values can be found in the CSV file creditials downloaded earlier. 
@@ -1285,16 +1294,16 @@ This is the stage where Django connects with S3.
 
 - Go to settings
 - Config vars and add the following to the environment variables
-    - > AWS_ACCESS_KEY_ID = [VALUE]
-    - > AWS_SECRET_ACCESS_KEY = [VALUE]
-    - > USE_AWS = True
+    > AWS_ACCESS_KEY_ID = [VALUE]
+    > AWS_SECRET_ACCESS_KEY = [VALUE]
+    > USE_AWS = True
 - Remove the DISABLE_COLLECTSTATIC variable from the environment variables
 
 **Gitpod**
 
 - Go to settings.py 
 - Add the following to tell Django where the static files are coming from in production
-    - > AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    > AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 - Create a file called 'customer_storages.py' and include code to tell it to store static files in a location from the settings.
 - In settings.py add a static and media files section to tell Django this is to be used for storing all these files and the locations are in folders called 'static' and 'media'.
 - Also add a Override static and media URLs in production section to override and explicitly set the URLs for statis and media files
@@ -1313,7 +1322,7 @@ This is the stage where Django connects with S3.
 **Live Site**
 
 - Access the live site using the new URL
-    - > https://thebikeshop-project.herokuapp.com/
+    > https://thebikeshop-project.herokuapp.com/
 - Login in with the superuser login details 
 - Go to 'Admin Panel' from the top menu in 'My Account'
 - Go to 'Email Addresses'
@@ -1328,15 +1337,13 @@ Obtain the stripe keys to add to the Heroku config variables and update the webh
 - Login to Stripe
 - On the Dashboard source the 'Publishable Key' and 'Secret Key'
 - Add both to the Heroku config variables
-    - > STRIPE_PUBLIC_KEY = [VALUE]
-    - > STRIPE_SECRET_KEY = [VALUE]
-- Back in Stripe update the webhook endpoint from
-    - > https://8000-cyan-ant-rcoumsr2.ws-eu31.gitpod.io/checkout/wh/
-- with the new live URL
-    - > https://thebikeshop-project.herokuapp.com/checkout/wh/
+    > STRIPE_PUBLIC_KEY = [VALUE]
+    > STRIPE_SECRET_KEY = [VALUE]
+- Back in Stripe update the webhook endpoint with the new live URL
+    > https://thebikeshop-project.herokuapp.com/checkout/wh/
 - Reveal the webhooks signing secret
 - Add this to the Heroku config variables
-    - > STRIPE_WH_SECRET = [VALUE]
+    > STRIPE_WH_SECRET = [VALUE]
 
 **Deployment Completed**
 
@@ -1523,6 +1530,12 @@ For a more in-depth guide about how to Fork a repo please <a href="https://docs.
 - Unfortunately, my mentor changed Jobs during my MS4 project which meant that she was only available either 7.30am or 8.30am, Monday to Thursday. As I work full time and start at 8.30am Monday to Friday I wasn’t able to have a very productive 2nd mentor session on this project due to the fact it was rushed. I therefore, communicated with Code Institute Student Care about this and spoke on email with Miklos (mentor lead) who gave me the option to change mentors in order to have a more productive 3rd mentor session before submitting my final project. We agreed that it wouldn’t be worthwhile doing this as It would require for me to start all over with someone new. I therefore, note that I didn’t have a 3rd mentor session on this project and worked as hard as I could in the timeframe to tick all the boxes. 
 
 - On a more positive note, I don’t need the final mentor session in reference to careers as I have successfully found employment as a Front End Developer where I started in the role in early January. This is thanks to Code Institute as the one to one I had last summer with Yasmine Larkin really helped with structuring my CV and LinkedIn account along with preparing me for the world of software development. 
+
+- To test buying a product(s) please use the following card payment details.
+    - Card Number: 4242 4242 4242 4242
+    - Expiry date: 04/24 (any future month/year)
+    - 3-digit CVC code: 242 (any 3-digit code)
+    - 5-digit ZIP code: 42424 (any ZIP code)
  
 **End of README Documentation**
 

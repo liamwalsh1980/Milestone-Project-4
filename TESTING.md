@@ -389,6 +389,12 @@ I tested the site using Chrome development tools on three different screen sizes
 ![Image template](readme/testing/add_product/adding_a_product4.png)
 ![Image template](readme/testing/add_product/adding_a_product5.png)
 
+- When testing this is used the following card payment details.
+    - Card Number: 4242 4242 4242 4242
+    - Expiry date: 04/24 (any future month/year)
+    - 3-digit CVC code: 242 (any 3-digit code)
+    - 5-digit ZIP code: 42424 (any ZIP code)
+
 - Order processing
 ![Image template](readme/testing/add_product/adding_a_product6.png)
 
@@ -672,7 +678,7 @@ I tested the site using Chrome development tools on three different screen sizes
 
 I tested all internal links across the site making sure that users would be taken to the right page they click on. This included products, services, superusers logged in, standard users logged and guests. 
 
-I test all external links found in the footer of the site. This included the 5 social media icons to Facebook, Instagram, Twitter, Spotify and Youtube. 
+I tested all external links found in the footer of the site. This included the 5 social media icons to Facebook, Instagram, Twitter, Spotify and Youtube. 
 
 ### Bugs
 
@@ -724,6 +730,16 @@ Please see this <a href="https://github.com/Code-Institute-Solutions/boutique_ad
 
 ![Image template](readme/testing/auto_test1.png)
 ![Image template](readme/testing/auto_test2.png)
+
+**Services**
+
+When I created the services app and uploaded the information for each service (Cleaning, Maintenance and Sell You Bike), there was an issue. I therefore created another set of these services meaning the following: -
+
+'Cleaning' is URL/services/1/ on the live site but is URL/services/4/ in production mode
+'Maintenance' is URL/services/2/ on the live site but is URL/services/5/ in production mode
+'Sell You Bike' is URL/services/3/ on the live site but is URL/services/6/ in production mode
+
+Everything still fully works from viewing the services via the menu at the top to booking a service. This is just a small bug which I would look to fix in the future. 
 
 **End of TESTING Documentation**
 
