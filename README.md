@@ -103,8 +103,8 @@ Django Data Structure - MVT architecture (Model Template View)
 
  The Bike Shop is an easy-to-use online shopping experience for cycling lovers to visit and purchase products and book services. Products available to purchase are Men's bikes, Woman's bikes, Urban bikes, Cycling Helmets and general accessories. Before purchasing any product, users can get access to more information about that product with the option to pick a size (if applicable). The services available to book on the site is professional bike cleaning, bike repair and a sell your bike scheme. The user will need to pick a service to book and submit some information for a member of The Bike Shop team to then make contact.  
 
- Date this project started: 20th December 2021 
- Date this project was deployed: TBC
+ - Date this project started: 20th December 2021 
+ - Date this project was submitted: 17th February 2022
 
  <a href="https://thebikeshop-project.herokuapp.com/" 
 target="_blank">Click here to view The Bike Shop live</a>
